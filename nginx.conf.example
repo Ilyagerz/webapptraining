@@ -1,0 +1,60 @@
+# Конфигурация Nginx для training.nubofit.ru
+# Файл: /etc/nginx/sites-available/training.nubofit.ru
+
+server {
+    server_name training.nubofit.ru;
+
+    # Основное приложение (Next.js)
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+    }
+
+    # API проксируется через Next.js
+    location /api {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+    }
+
+    # SSL конфигурация (добавится автоматически через certbot)
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/training.nubofit.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/training.nubofit.ru/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    # Дополнительные настройки безопасности
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+
+    # Увеличиваем размер загружаемых файлов
+    client_max_body_size 10M;
+}
+
+# HTTP -> HTTPS редирект
+server {
+    if ($host = training.nubofit.ru) {
+        return 301 https://$host$request_uri;
+    }
+
+    listen 80;
+    server_name training.nubofit.ru;
+    return 404;
+}
+

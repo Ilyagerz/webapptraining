@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 10 10 10;
+    --card: 255 255 255;
+    --card-foreground: 10 10 10;
+    --primary: 10 10 10;
+    --primary-foreground: 255 255 255;
+    --secondary: 229 229 229;
+    --secondary-foreground: 10 10 10;
+    --accent: 204 255 0;
+    --accent-foreground: 10 10 10;
+    --muted: 229 229 229;
+    --muted-foreground: 115 115 115;
+  }
+
+  .dark {
+    --background: 10 10 10;
+    --foreground: 255 255 255;
+    --card: 26 26 26;
+    --card-foreground: 255 255 255;
+    --primary: 255 255 255;
+    --primary-foreground: 10 10 10;
+    --secondary: 26 26 26;
+    --secondary-foreground: 255 255 255;
+    --accent: 204 255 0;
+    --accent-foreground: 10 10 10;
+    --muted: 38 38 38;
+    --muted-foreground: 163 163 163;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-gray-800;
+  }
+  body {
+    @apply bg-white dark:bg-nubo-dark;
+    color: rgb(10, 10, 10);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  .dark body {
+    color: rgb(255, 255, 255);
+  }
+}
+
+/* Кастомные стили для приложения */
+.glass-effect {
+  @apply bg-white/80 dark:bg-nubo-gray/80 backdrop-blur-lg;
+}
+
+.card-hover {
+  @apply transition-all duration-200 hover:scale-[1.02] active:scale-[0.98];
+}
+
+/* Анимации */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-nubo-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-600;
+}
+
+/* Инпуты */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Safe area для iOS */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* Стили для чекбоксов */
+.checkbox-custom {
+  @apply appearance-none w-6 h-6 border-2 border-gray-300 dark:border-gray-600 
+         rounded-md bg-white dark:bg-nubo-gray cursor-pointer
+         checked:bg-electric-lime checked:border-electric-lime
+         transition-all duration-200;
+}
+
+.checkbox-custom:checked::before {
+  content: '✓';
+  @apply flex items-center justify-center text-nubo-dark font-bold text-lg;
+}
+
+/* Пульсирующий индикатор записи */
+.recording-indicator {
+  @apply relative;
+}
+
+.recording-indicator::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-full rounded-full bg-red-500 animate-ping;
+}
+
+/* Градиент для акцентов */
+.gradient-accent {
+  background: linear-gradient(135deg, #CCFF00 0%, #00FF88 100%);
+}
+
+/* Тень для карточек */
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dark .card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
+              0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Неоморфизм эффект */
+.neumorphic {
+  @apply bg-gray-100 dark:bg-nubo-gray;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+              -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.dark .neumorphic {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+              -5px -5px 10px rgba(255, 255, 255, 0.02);
+}
+
+/* Полоса прогресса */
+.progress-bar {
+  @apply relative overflow-hidden bg-gray-200 dark:bg-gray-700 rounded-full;
+}
+
+.progress-bar::after {
+  content: '';
+  @apply absolute top-0 left-0 h-full bg-electric-lime transition-all duration-300;
+  width: var(--progress, 0%);
+}
+
+
+
