@@ -9,10 +9,17 @@ interface AppState {
   setUser: (user: User | null) => void;
   updateSettings: (settings: Partial<UserSettings>) => void;
   
+  // Workouts
+  workouts: Workout[];
+  addWorkout: (workout: Workout) => void;
+  
   // Active Workout
   activeWorkout: Workout | null;
   setActiveWorkout: (workout: Workout | null) => void;
   updateActiveWorkout: (updates: Partial<Workout>) => void;
+  startWorkout: (workout: Partial<Workout>) => void;
+  updateWorkout: (workout: Workout) => void;
+  completeWorkout: () => void;
   
   // Templates
   templates: WorkoutTemplate[];
@@ -37,6 +44,7 @@ interface AppState {
   restTimerActive: boolean;
   restTimeRemaining: number;
   setRestTimer: (active: boolean, time?: number) => void;
+  startRestTimer: (seconds: number) => void;
   decrementRestTimer: () => void;
   
   // Network State
@@ -61,6 +69,12 @@ export const useAppStore = create<AppState>()(
         } : null,
       })),
       
+      // Workouts
+      workouts: [],
+      addWorkout: (workout) => set((state) => ({
+        workouts: [workout, ...state.workouts],
+      })),
+      
       // Active Workout
       activeWorkout: null,
       setActiveWorkout: (workout) => set({ activeWorkout: workout }),
@@ -70,6 +84,24 @@ export const useAppStore = create<AppState>()(
           ...updates,
         } : null,
       })),
+      startWorkout: (workout) => set({
+        activeWorkout: {
+          id: workout.id || '',
+          userId: workout.userId || get().user?.id || '',
+          name: workout.templateName || 'Тренировка',
+          exercises: workout.exercises || [],
+          startedAt: workout.startedAt || new Date(),
+          templateId: workout.templateId,
+          templateName: workout.templateName,
+          notes: workout.notes || '',
+          isActive: true,
+          totalVolume: 0,
+          totalSets: 0,
+          totalReps: 0,
+        } as Workout,
+      }),
+      updateWorkout: (workout) => set({ activeWorkout: workout }),
+      completeWorkout: () => set({ activeWorkout: null }),
       
       // Templates
       templates: [],
@@ -112,6 +144,10 @@ export const useAppStore = create<AppState>()(
       setRestTimer: (active, time) => set({
         restTimerActive: active,
         restTimeRemaining: time !== undefined ? time : get().restTimeRemaining,
+      }),
+      startRestTimer: (seconds) => set({
+        restTimerActive: true,
+        restTimeRemaining: seconds,
       }),
       decrementRestTimer: () => set((state) => ({
         restTimeRemaining: Math.max(0, state.restTimeRemaining - 1),

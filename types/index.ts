@@ -80,6 +80,11 @@ export interface WorkoutSet {
   actualTime?: number; // фактическое время выполнения
 }
 
+export interface PreviousSetData {
+  weight: number;
+  reps: number;
+}
+
 export interface WorkoutExercise {
   id: string;
   exerciseId: string;
