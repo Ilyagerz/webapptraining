@@ -242,8 +242,3 @@ export default function EditTemplatePage() {
   );
 }
 
-        />
-      )}
-    </div>
-  );
-}

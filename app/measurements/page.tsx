@@ -506,18 +506,3 @@ function AddMeasurementModal({ onClose }: { onClose: () => void }) {
     </div>
   );
 }
-
-
-
-              className="w-full py-4 bg-electric-lime text-nubo-dark rounded-xl font-bold text-lg card-hover disabled:opacity-50"
-            >
-              {saving ? 'Сохранение...' : 'Сохранить замер'}
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
-
-

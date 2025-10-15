@@ -382,9 +382,3 @@ export default function WorkoutSummaryPage() {
   );
 }
 
-
-
-  );
-}
-
-
