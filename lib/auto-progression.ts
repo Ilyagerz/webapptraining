@@ -148,7 +148,7 @@ export function getProgressionSuggestion(
   const lastSet = exercise.sets[exercise.sets.length - 1];
   const weight = lastSet?.weight || 0;
   const reps = lastSet?.reps || 0;
-  const targetReps = lastSet?.targetReps || 10;
+  const targetReps = 10; // Целевое количество повторений по умолчанию
 
   // Проверка на необходимость разгрузки
   if (shouldDeload(recentWorkouts, exercise.exerciseId)) {

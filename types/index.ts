@@ -86,7 +86,9 @@ export interface WorkoutExercise {
   exercise: Exercise;
   sets: WorkoutSet[];
   notes?: string;
-  superset?: string; // ID группы суперсета
+  superset?: string; // ID группы суперсета (legacy)
+  supersetId?: string; // ID группы суперсета
+  supersetOrder?: number; // Порядок в суперсете (1 или 2)
   restTimer?: number; // переопределение таймера отдыха для этого упражнения
 }
 
@@ -129,6 +131,7 @@ export interface WorkoutTemplate {
 }
 
 export interface TemplateExercise {
+  id?: string; // Временный ID для UI
   exerciseId: string;
   exercise: Exercise;
   sets: number;
@@ -137,6 +140,7 @@ export interface TemplateExercise {
   restTimer?: number;
   superset?: string;
   notes?: string;
+  reps?: number; // Для обратной совместимости
 }
 
 export interface WorkoutHistory {
@@ -226,6 +230,10 @@ export interface TelegramInitData {
   auth_date: string;
   hash: string;
 }
+
+
+
+
 
 
 

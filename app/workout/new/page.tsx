@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
 import { generateId } from '@/lib/utils';
-import { getProgressionSuggestions } from '@/lib/auto-progression';
+import { getProgressionSuggestion } from '@/lib/auto-progression';
 import { ProgressionSuggestions } from '@/components/ProgressionSuggestions';
 import type { ProgressionSuggestion } from '@/lib/auto-progression';
 import { ArrowLeft, Plus, Search } from 'lucide-react';

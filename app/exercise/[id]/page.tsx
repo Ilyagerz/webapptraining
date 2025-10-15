@@ -263,13 +263,16 @@ export default function ExerciseDetailPage() {
               </div>
               <div className="h-64">
                 <ProgressChart
-                  data={history.map((entry) => ({
-                    date: entry.date,
-                    value: Math.max(...entry.sets.map((s) => s.weight)),
-                  }))}
+                  data={{
+                    labels: history.map((entry) => 
+                      new Date(entry.date).toLocaleDateString('ru-RU', { day: 'numeric', month: 'short' })
+                    ),
+                    values: history.map((entry) => 
+                      Math.max(...entry.sets.map((s) => s.weight || 0))
+                    ),
+                  }}
                   label="Максимальный вес"
-                  color="#d4ff00"
-                  yAxisLabel="Вес (кг)"
+                  color="#C6FF00"
                 />
               </div>
             </div>

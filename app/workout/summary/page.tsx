@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
 
 export const dynamic = 'force-dynamic';
@@ -21,10 +21,18 @@ import type { Workout, WorkoutRecord, WorkoutExercise } from '@/types';
 
 export default function WorkoutSummaryPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const { user } = useAppStore();
   const [workout, setWorkout] = useState<Workout | null>(null);
   const [loading, setLoading] = useState(true);
+  const [workoutId, setWorkoutId] = useState<string | null>(null);
+  
+  // Получаем ID из URL на клиентской стороне
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      setWorkoutId(params.get('id'));
+    }
+  }, []);
 
   useEffect(() => {
     if (!user) {
@@ -33,8 +41,6 @@ export default function WorkoutSummaryPage() {
     }
 
     const loadWorkout = async () => {
-      const workoutId = searchParams.get('id');
-      
       if (!workoutId) {
         setLoading(false);
         return;
@@ -66,7 +72,7 @@ export default function WorkoutSummaryPage() {
     };
 
     loadWorkout();
-  }, [user, searchParams]);
+  }, [user, workoutId]);
 
   // Функция для вычисления рекордов
   const calculateRecords = async (completedWorkout: Workout) => {
@@ -373,6 +379,11 @@ export default function WorkoutSummaryPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+
+
   );
 }
 

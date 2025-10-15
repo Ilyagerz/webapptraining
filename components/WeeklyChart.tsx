@@ -12,13 +12,17 @@ export function WeeklyChart({ data }: WeeklyChartProps) {
   return (
     <div className="h-32">
       <BarChart
-        data={data}
-        labels={days}
+        data={{
+          labels: days,
+          values: data,
+        }}
         label="Тренировки"
-        color="#d4ff00"
+        color="#C6FF00"
       />
     </div>
   );
 }
+
+
 
 

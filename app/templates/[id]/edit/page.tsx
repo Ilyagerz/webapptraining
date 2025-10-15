@@ -12,7 +12,7 @@ import type { TemplateExercise } from '@/types';
 export default function EditTemplatePage() {
   const router = useRouter();
   const params = useParams();
-  const { user, templates, updateTemplate } = useAppStore();
+  const { user, templates, setTemplates } = useAppStore();
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [exercises, setExercises] = useState<TemplateExercise[]>([]);
@@ -49,11 +49,11 @@ export default function EditTemplatePage() {
     setShowExercisePicker(false);
   };
 
-  const handleRemoveExercise = (id: string) => {
+  const handleRemoveExercise = (id: string | undefined) => {
     setExercises(exercises.filter(e => e.id !== id));
   };
 
-  const handleUpdateExercise = (id: string, field: string, value: any) => {
+  const handleUpdateExercise = (id: string | undefined, field: string, value: any) => {
     setExercises(exercises.map(e =>
       e.id === id ? { ...e, [field]: value } : e
     ));
@@ -70,13 +70,19 @@ export default function EditTemplatePage() {
       return;
     }
 
-    updateTemplate(params.id as string, {
-      name: name.trim(),
-      description: description.trim(),
-      exercises,
-      updatedAt: new Date(),
-    });
-
+    const updatedTemplates = templates.map(t =>
+      t.id === params.id
+        ? {
+            ...t,
+            name: name.trim(),
+            description: description.trim(),
+            exercises,
+            updatedAt: new Date(),
+          }
+        : t
+    );
+    
+    setTemplates(updatedTemplates);
     router.push('/templates');
   };
 
@@ -230,6 +236,12 @@ export default function EditTemplatePage() {
         <ExercisePicker
           onSelect={handleAddExercise}
           onClose={() => setShowExercisePicker(false)}
+        />
+      )}
+    </div>
+  );
+}
+
         />
       )}
     </div>

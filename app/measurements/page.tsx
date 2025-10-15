@@ -161,22 +161,35 @@ export default function MeasurementsPage() {
           </div>
           <div className="h-64">
             <ProgressChart
-              data={measurements
-                .slice()
-                .reverse()
-                .map((m) => ({
-                  date: m.date,
-                  value:
+              data={{
+                labels: measurements
+                  .slice()
+                  .reverse()
+                  .filter((m) => {
+                    const value = selectedMetric === 'weight'
+                      ? m.weight || 0
+                      : selectedMetric === 'bodyFat'
+                      ? m.bodyFat || 0
+                      : m.measurements[selectedMetric] || 0;
+                    return value > 0;
+                  })
+                  .map((m) => 
+                    new Date(m.date).toLocaleDateString('ru-RU', { day: 'numeric', month: 'short' })
+                  ),
+                values: measurements
+                  .slice()
+                  .reverse()
+                  .map((m) => 
                     selectedMetric === 'weight'
                       ? m.weight || 0
                       : selectedMetric === 'bodyFat'
                       ? m.bodyFat || 0
-                      : m.measurements[selectedMetric] || 0,
-                }))
-                .filter((d) => d.value > 0)}
+                      : m.measurements[selectedMetric] || 0
+                  )
+                  .filter((v) => v > 0),
+              }}
               label={metrics.find((m) => m.key === selectedMetric)?.label || ''}
-              color="#d4ff00"
-              yAxisLabel={metrics.find((m) => m.key === selectedMetric)?.unit || ''}
+              color="#C6FF00"
             />
           </div>
         </div>
@@ -483,6 +496,19 @@ function AddMeasurementModal({ onClose }: { onClose: () => void }) {
             <button
               type="submit"
               disabled={saving || (!weight && !bodyFat && !chest && !waist && !hips && !biceps && !thighs && !calves)}
+              className="w-full py-4 bg-electric-lime text-nubo-dark rounded-xl font-bold text-lg card-hover disabled:opacity-50"
+            >
+              {saving ? 'Сохранение...' : 'Сохранить замер'}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+
+
               className="w-full py-4 bg-electric-lime text-nubo-dark rounded-xl font-bold text-lg card-hover disabled:opacity-50"
             >
               {saving ? 'Сохранение...' : 'Сохранить замер'}

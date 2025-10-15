@@ -8,9 +8,9 @@ interface SupersetIndicatorProps {
 }
 
 export function SupersetIndicator({ exercise }: SupersetIndicatorProps) {
-  if (!exercise.supersetId) return null;
+  if (!exercise.superset) return null;
 
-  const color = getSupersetColor(exercise.supersetId);
+  const color = getSupersetColor(exercise.superset);
   const position = getSupersetPosition(exercise);
 
   return (

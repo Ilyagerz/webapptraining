@@ -36,11 +36,11 @@ export default function NewTemplatePage() {
     setShowExercisePicker(false);
   };
 
-  const handleRemoveExercise = (id: string) => {
+  const handleRemoveExercise = (id: string | undefined) => {
     setExercises(exercises.filter(e => e.id !== id));
   };
 
-  const handleUpdateExercise = (id: string, field: string, value: any) => {
+  const handleUpdateExercise = (id: string | undefined, field: string, value: any) => {
     setExercises(exercises.map(e =>
       e.id === id ? { ...e, [field]: value } : e
     ));

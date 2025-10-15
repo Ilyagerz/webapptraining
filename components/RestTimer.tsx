@@ -6,17 +6,17 @@ import { X, Plus, Minus, RotateCcw } from 'lucide-react';
 import { vibrate, playSound } from '@/lib/utils';
 
 export function RestTimer() {
-  const { restTimerActive, restTimerSeconds, setRestTimer } = useAppStore();
-  const [timeLeft, setTimeLeft] = useState(restTimerSeconds);
+  const { restTimerActive, restTimeRemaining, setRestTimer } = useAppStore();
+  const [timeLeft, setTimeLeft] = useState(restTimeRemaining);
 
   useEffect(() => {
-    setTimeLeft(restTimerSeconds);
-  }, [restTimerSeconds]);
+    setTimeLeft(restTimeRemaining);
+  }, [restTimeRemaining]);
 
   useEffect(() => {
     if (!restTimerActive || timeLeft <= 0) {
       if (timeLeft === 0) {
-        vibrate('heavy');
+        vibrate([200, 100, 200]);
         playSound();
       }
       return;
@@ -25,7 +25,7 @@ export function RestTimer() {
     const interval = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
-          vibrate('heavy');
+          vibrate([200, 100, 200]);
           playSound();
           return 0;
         }
@@ -40,7 +40,7 @@ export function RestTimer() {
 
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
-  const progress = ((restTimerSeconds - timeLeft) / restTimerSeconds) * 100;
+  const progress = ((restTimeRemaining - timeLeft) / restTimeRemaining) * 100;
 
   return (
     <div className="fixed inset-x-0 bottom-20 z-40 p-4">
@@ -80,7 +80,7 @@ export function RestTimer() {
           </button>
 
           <button
-            onClick={() => setTimeLeft(restTimerSeconds)}
+            onClick={() => setTimeLeft(restTimeRemaining)}
             className="p-3 rounded-xl glass-effect hover:bg-muted/20 transition-colors"
           >
             <RotateCcw size={20} />

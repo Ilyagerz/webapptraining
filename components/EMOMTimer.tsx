@@ -22,7 +22,7 @@ export function EMOMTimer({ rounds, intervalSeconds, onComplete, onClose }: EMOM
     const interval = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
-          vibrate('medium');
+          vibrate(200);
           
           if (currentRound >= rounds) {
             setIsRunning(false);

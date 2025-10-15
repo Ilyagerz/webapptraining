@@ -23,7 +23,7 @@ export default function PlateCalculatorPage() {
 
   useEffect(() => {
     const result = calculatePlates(targetWeight, barWeight);
-    setPlates(result);
+    setPlates(result.plates);
   }, [targetWeight, barWeight]);
 
   if (!user) {
