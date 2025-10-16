@@ -98,11 +98,12 @@ function authenticateToken(req, res, next) {
 app.post('/api/auth/telegram', (req, res) => {
   const { initData } = req.body;
   
-  // TODO: В продакшене включить валидацию
-  // const isValid = validateTelegramData(initData);
-  // if (!isValid) {
-  //   return res.status(401).json({ error: 'Недействительные данные Telegram' });
-  // }
+  // Валидация Telegram initData
+  const isValid = validateTelegramData(initData);
+  if (!isValid) {
+    console.error('Invalid Telegram initData');
+    return res.status(401).json({ error: 'Недействительные данные Telegram' });
+  }
   
   try {
     const urlParams = new URLSearchParams(initData);

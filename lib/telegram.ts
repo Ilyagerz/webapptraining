@@ -100,3 +100,9 @@ export function notificationHaptic(type: 'error' | 'success' | 'warning') {
     tg.HapticFeedback.notificationOccurred(type);
   }
 }
+
+export function getTelegramColorScheme(): 'light' | 'dark' | null {
+  const tg = getTelegramWebApp();
+  if (!tg) return null;
+  return tg.colorScheme === 'dark' ? 'dark' : 'light';
+}
