@@ -258,7 +258,7 @@ export default function ActiveWorkoutPage() {
   );
 
   return (
-    <div className="min-h-screen pb-32">
+    <div className="min-h-screen pb-32 pt-12 bg-white dark:bg-nubo-dark">
       {/* Header */}
       <div className="sticky top-0 z-10 glass-effect border-b border-border/50 p-4">
         <div className="flex items-center justify-between">

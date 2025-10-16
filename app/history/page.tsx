@@ -44,31 +44,31 @@ export default function HistoryPage() {
   }
 
   return (
-    <div className="min-h-screen pb-6">
+    <div className="min-h-screen pb-32 pt-12 bg-white dark:bg-nubo-dark">
       {/* Header */}
-      <div className="sticky top-0 z-10 glass-effect border-b border-border/50 p-4">
+      <div className="sticky top-0 z-10 bg-white dark:bg-nubo-dark border-b border-gray-200 dark:border-gray-700 p-4 shadow-sm">
         <div className="flex items-center space-x-3">
           <Link href="/dashboard">
-            <ArrowLeft size={24} />
+            <ArrowLeft size={24} className="text-gray-700 dark:text-white" />
           </Link>
           <div className="flex-1">
-            <h1 className="text-xl font-bold">История</h1>
-            <p className="text-sm text-muted-foreground">Все тренировки</p>
+            <h1 className="text-xl font-bold text-black dark:text-white">История</h1>
+            <p className="text-sm text-gray-600 dark:text-gray-300">Все тренировки</p>
           </div>
-          <Calendar size={24} className="text-electric-lime" />
+          <Calendar size={24} className="text-gray-700 dark:text-white" />
         </div>
       </div>
 
       <div className="p-6 space-y-6">
         {/* Stats */}
         <div className="grid grid-cols-3 gap-4">
-          <div className="glass-effect rounded-xl p-4">
-            <p className="text-sm text-muted-foreground mb-1">Всего</p>
-            <p className="text-2xl font-bold">{workouts.length}</p>
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 shadow-sm">
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">Всего</p>
+            <p className="text-2xl font-bold text-black dark:text-white">{workouts.length}</p>
           </div>
 
-          <div className="glass-effect rounded-xl p-4">
-            <p className="text-sm text-muted-foreground mb-1">Этот месяц</p>
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 shadow-sm">
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">Этот месяц</p>
             <p className="text-2xl font-bold">
               {workouts.filter(w => {
                 const date = new Date(w.completedAt || w.startedAt);
@@ -78,9 +78,9 @@ export default function HistoryPage() {
             </p>
           </div>
 
-          <div className="glass-effect rounded-xl p-4">
-            <p className="text-sm text-muted-foreground mb-1">Эта неделя</p>
-            <p className="text-2xl font-bold">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 shadow-sm">
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">Эта неделя</p>
+            <p className="text-2xl font-bold text-black dark:text-white">
               {workouts.filter(w => {
                 const date = new Date(w.completedAt || w.startedAt);
                 const now = new Date();
@@ -93,16 +93,16 @@ export default function HistoryPage() {
 
         {/* Workouts List */}
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold">Тренировки</h2>
+          <h2 className="text-lg font-semibold text-black dark:text-white">Тренировки</h2>
 
           {loading ? (
-            <div className="glass-effect rounded-xl p-8 text-center">
-              <p className="text-muted-foreground">Загрузка...</p>
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
+              <p className="text-gray-600 dark:text-gray-300">Загрузка...</p>
             </div>
           ) : workouts.length === 0 ? (
-            <div className="glass-effect rounded-xl p-8 text-center">
-              <Dumbbell size={48} className="mx-auto mb-4 text-muted-foreground" />
-              <p className="text-muted-foreground mb-4">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
+              <Dumbbell size={48} className="mx-auto mb-4 text-gray-400 dark:text-gray-500" />
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
                 Пока нет тренировок
               </p>
               <Link
@@ -117,18 +117,18 @@ export default function HistoryPage() {
               {workouts.map((workout) => (
                 <Link
                   key={workout.id}
-                  href={`/workout/summary?id=${workout.id}`}
-                  className="block glass-effect rounded-xl p-4 card-hover"
+                  href={`/workout/summary?workoutId=${workout.id}`}
+                  className="block bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 shadow-sm card-hover"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div>
-                      <h3 className="font-semibold">{workout.name}</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="font-semibold text-black dark:text-white">{workout.name}</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         {formatDateShort(new Date(workout.completedAt || workout.startedAt))}
                       </p>
                     </div>
                     {workout.duration && (
-                      <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                      <div className="flex items-center space-x-1 text-sm text-gray-600 dark:text-gray-300">
                         <Clock size={16} />
                         <span>{formatDuration(workout.duration)}</span>
                       </div>
@@ -137,16 +137,16 @@ export default function HistoryPage() {
 
                   <div className="grid grid-cols-3 gap-4 text-sm">
                     <div>
-                      <p className="text-muted-foreground">Упражнений</p>
-                      <p className="font-semibold">{workout.exercises?.length || 0}</p>
+                      <p className="text-gray-600 dark:text-gray-300">Упражнений</p>
+                      <p className="font-semibold text-black dark:text-white">{workout.exercises?.length || 0}</p>
                     </div>
                     <div>
-                      <p className="text-muted-foreground">Подходов</p>
-                      <p className="font-semibold">{workout.totalSets || 0}</p>
+                      <p className="text-gray-600 dark:text-gray-300">Подходов</p>
+                      <p className="font-semibold text-black dark:text-white">{workout.totalSets || 0}</p>
                     </div>
                     <div>
-                      <p className="text-muted-foreground">Объем</p>
-                      <p className="font-semibold">{workout.totalVolume || 0} кг</p>
+                      <p className="text-gray-600 dark:text-gray-300">Объем</p>
+                      <p className="font-semibold text-black dark:text-white">{workout.totalVolume || 0} кг</p>
                     </div>
                   </div>
                 </Link>
