@@ -30,7 +30,7 @@ export default function WorkoutSummaryPage() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
-      setWorkoutId(params.get('id'));
+      setWorkoutId(params.get('workoutId'));
     }
   }, []);
 

@@ -85,55 +85,51 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Центральная кнопка "Начать" */}
-      <div className="flex-1 flex items-center justify-center px-6">
-        <Link
-          href="/workout/new"
-          className="relative group"
-        >
-          <div className="w-48 h-48 rounded-full bg-gradient-to-br from-electric-lime to-green-400 shadow-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-active:scale-95">
-            <div className="text-center">
-              <Play size={64} className="mx-auto mb-2 text-nubo-dark" fill="currentColor" />
-              <span className="text-2xl font-bold text-nubo-dark">
-                Начать
-              </span>
-            </div>
-          </div>
-          {/* Пульсирующее кольцо */}
-          <div className="absolute inset-0 rounded-full bg-electric-lime opacity-20 animate-ping" />
-        </Link>
-      </div>
+      {/* Пустое пространство для контента в будущем */}
+      <div className="flex-1" />
 
-      {/* Нижние кнопки */}
-      <div className="grid grid-cols-2 gap-4 p-6 safe-bottom">
+      {/* Нижние кнопки - все в один ряд */}
+      <div className="grid grid-cols-3 gap-3 p-4 safe-bottom">
         <Link
           href="/history"
-          className="glass-effect rounded-2xl p-6 flex flex-col items-center justify-center space-y-3 card-hover"
+          className="glass-effect rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover"
         >
-          <div className="w-16 h-16 rounded-full bg-electric-lime/10 flex items-center justify-center">
-            <History size={32} className="text-electric-lime" />
+          <div className="w-14 h-14 rounded-full bg-electric-lime/10 flex items-center justify-center">
+            <History size={28} className="text-electric-lime" />
           </div>
-          <span className="text-sm font-semibold text-center">
+          <span className="text-xs font-semibold text-center">
             История
           </span>
         </Link>
 
         <Link
-          href="/profile"
-          className="glass-effect rounded-2xl p-6 flex flex-col items-center justify-center space-y-3 card-hover"
+          href="/workout/new"
+          className="bg-gradient-to-br from-electric-lime to-green-400 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover shadow-lg"
         >
-          <div className="w-16 h-16 rounded-full bg-electric-lime/10 flex items-center justify-center">
+          <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+            <Play size={32} className="text-nubo-dark" fill="currentColor" />
+          </div>
+          <span className="text-xs font-bold text-nubo-dark text-center">
+            Начать
+          </span>
+        </Link>
+
+        <Link
+          href="/profile"
+          className="glass-effect rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover"
+        >
+          <div className="w-14 h-14 rounded-full bg-electric-lime/10 flex items-center justify-center overflow-hidden">
             {user.photoUrl ? (
               <img
                 src={user.photoUrl}
                 alt="Profile"
-                className="w-16 h-16 rounded-full object-cover"
+                className="w-14 h-14 object-cover"
               />
             ) : (
-              <User size={32} className="text-electric-lime" />
+              <User size={28} className="text-electric-lime" />
             )}
           </div>
-          <span className="text-sm font-semibold text-center">
+          <span className="text-xs font-semibold text-center">
             Профиль
           </span>
         </Link>

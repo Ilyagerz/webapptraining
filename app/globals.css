@@ -5,17 +5,17 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 10 10 10;
+    --foreground: 0 0 0;
     --card: 255 255 255;
-    --card-foreground: 10 10 10;
-    --primary: 10 10 10;
+    --card-foreground: 0 0 0;
+    --primary: 0 0 0;
     --primary-foreground: 255 255 255;
     --secondary: 229 229 229;
-    --secondary-foreground: 10 10 10;
+    --secondary-foreground: 0 0 0;
     --accent: 204 255 0;
-    --accent-foreground: 10 10 10;
+    --accent-foreground: 0 0 0;
     --muted: 229 229 229;
-    --muted-foreground: 60 60 60;
+    --muted-foreground: 100 100 100;
   }
 
   .dark {
@@ -30,7 +30,7 @@
     --accent: 204 255 0;
     --accent-foreground: 10 10 10;
     --muted: 38 38 38;
-    --muted-foreground: 163 163 163;
+    --muted-foreground: 200 200 200;
   }
 }
 
@@ -39,12 +39,8 @@
     @apply border-gray-200 dark:border-gray-800;
   }
   body {
-    @apply bg-white dark:bg-nubo-dark;
-    color: rgb(10, 10, 10);
+    @apply bg-white dark:bg-nubo-dark text-black dark:text-white;
     font-feature-settings: "rlig" 1, "calt" 1;
-  }
-  .dark body {
-    color: rgb(255, 255, 255);
   }
 }
 

@@ -24,7 +24,7 @@ import Link from 'next/link';
 
 export default function ProfilePage() {
   const router = useRouter();
-  const { user, theme, setTheme, updateSettings } = useAppStore();
+  const { user, theme, setTheme, updateSettings, workouts } = useAppStore();
   const [showSettings, setShowSettings] = useState(false);
 
   useEffect(() => {
@@ -36,6 +36,28 @@ export default function ProfilePage() {
 
   if (!user) {
     return null;
+  }
+
+  // Рассчитываем реальную статистику
+  const totalWorkouts = workouts.length;
+  const totalVolume = workouts.reduce((sum, w) => sum + (w.totalVolume || 0), 0);
+  const totalRecords = workouts.reduce((sum, w) => sum + (w.records?.length || 0), 0);
+  
+  // Подсчет дней подряд
+  let currentStreak = 0;
+  const sortedWorkouts = [...workouts].sort((a, b) => 
+    new Date(b.completedAt || b.startedAt).getTime() - new Date(a.completedAt || a.startedAt).getTime()
+  );
+  
+  if (sortedWorkouts.length > 0) {
+    currentStreak = 1;
+    for (let i = 1; i < sortedWorkouts.length; i++) {
+      const prevDate = new Date(sortedWorkouts[i-1].completedAt || sortedWorkouts[i-1].startedAt);
+      const currDate = new Date(sortedWorkouts[i].completedAt || sortedWorkouts[i].startedAt);
+      const diffDays = Math.floor((prevDate.getTime() - currDate.getTime()) / (1000 * 60 * 60 * 24));
+      if (diffDays <= 1) currentStreak++;
+      else break;
+    }
   }
 
   const handleLogout = async () => {
@@ -99,22 +121,24 @@ export default function ProfilePage() {
         <div className="grid grid-cols-2 gap-4">
           <div className="glass-effect rounded-xl p-6 text-center">
             <Dumbbell size={24} className="mx-auto mb-2 text-electric-lime" />
-            <div className="text-2xl font-bold">12</div>
+            <div className="text-2xl font-bold">{totalWorkouts}</div>
             <div className="text-sm text-muted-foreground">Тренировок</div>
           </div>
           <div className="glass-effect rounded-xl p-6 text-center">
             <TrendingUp size={24} className="mx-auto mb-2 text-electric-lime" />
-            <div className="text-2xl font-bold">45.2т</div>
+            <div className="text-2xl font-bold">
+              {totalVolume > 1000 ? `${(totalVolume / 1000).toFixed(1)}т` : `${totalVolume}кг`}
+            </div>
             <div className="text-sm text-muted-foreground">Объем</div>
           </div>
           <div className="glass-effect rounded-xl p-6 text-center">
             <Award size={24} className="mx-auto mb-2 text-yellow-500" />
-            <div className="text-2xl font-bold">3</div>
+            <div className="text-2xl font-bold">{totalRecords}</div>
             <div className="text-sm text-muted-foreground">Рекордов</div>
           </div>
           <div className="glass-effect rounded-xl p-6 text-center">
             <Activity size={24} className="mx-auto mb-2 text-electric-lime" />
-            <div className="text-2xl font-bold">7</div>
+            <div className="text-2xl font-bold">{currentStreak}</div>
             <div className="text-sm text-muted-foreground">Дней подряд</div>
           </div>
         </div>
