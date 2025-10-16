@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useAppStore } from '@/lib/store';
-
 export const dynamic = 'force-dynamic';
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAppStore } from '@/lib/store';
 import { ArrowLeft, Play, Pause, X, Check, Plus, Link2 } from 'lucide-react';
 import Link from 'next/link';
 import { ExerciseCard } from '@/components/ExerciseCard';
@@ -16,8 +16,7 @@ import type { WorkoutExercise, Exercise } from '@/types';
 
 export default function ActiveWorkoutPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const templateId = searchParams.get('templateId');
+  const [templateId, setTemplateId] = useState<string | null>(null);
 
   const {
     user,
@@ -33,6 +32,14 @@ export default function ActiveWorkoutPage() {
   const [isPaused, setIsPaused] = useState(false);
   const [showExercisePicker, setShowExercisePicker] = useState(false);
   const [selectedExercises, setSelectedExercises] = useState<string[]>([]);
+
+  // Получаем templateId из URL на клиенте
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      setTemplateId(params.get('templateId'));
+    }
+  }, []);
 
   useEffect(() => {
     if (!user) {
