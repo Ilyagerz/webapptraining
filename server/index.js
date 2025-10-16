@@ -98,24 +98,39 @@ function authenticateToken(req, res, next) {
 app.post('/api/auth/telegram', (req, res) => {
   const { initData } = req.body;
   
+  console.log('🔍 Telegram auth request received');
+  console.log('📦 initData length:', initData?.length);
+  console.log('📦 initData (first 200 chars):', initData?.substring(0, 200));
+  
   // Валидация Telegram initData (временно в режиме предупреждения)
   const isValid = validateTelegramData(initData);
   if (!isValid) {
     console.warn('⚠️ Telegram initData validation failed, but continuing...');
     // В production включить строгую проверку
     // return res.status(401).json({ error: 'Недействительные данные Telegram' });
+  } else {
+    console.log('✅ Telegram initData validation passed');
   }
   
   try {
     const urlParams = new URLSearchParams(initData);
     const userParam = urlParams.get('user');
     
+    console.log('👤 User param:', userParam?.substring(0, 100));
+    
     if (!userParam) {
+      console.error('❌ No user param in initData');
       return res.status(400).json({ error: 'Данные пользователя не найдены' });
     }
     
     const telegramUser = JSON.parse(decodeURIComponent(userParam));
     const userId = `tg-${telegramUser.id}`;
+    
+    console.log('✅ Parsed Telegram user:', {
+      id: telegramUser.id,
+      first_name: telegramUser.first_name,
+      username: telegramUser.username
+    });
     
     // Создаем или обновляем пользователя
     let user = users.get(userId);

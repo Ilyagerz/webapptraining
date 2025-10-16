@@ -13,10 +13,19 @@ export default function Home() {
 
   useEffect(() => {
     const authenticateUser = async () => {
+      // Даем время Telegram SDK загрузиться
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
       const tg = getTelegramWebApp();
+      
+      console.log('🔍 Telegram WebApp:', tg);
+      console.log('🔍 initData:', tg?.initData);
+      console.log('🔍 initDataUnsafe:', tg?.initDataUnsafe);
       
       if (tg && tg.initData) {
         // Авторизация через Telegram
+        console.log('✅ Telegram Web App detected, authenticating...');
+        
         try {
           const response = await fetch('/api/auth/telegram', {
             method: 'POST',
@@ -25,22 +34,27 @@ export default function Home() {
             body: JSON.stringify({ initData: tg.initData }),
           });
 
+          console.log('📡 Response status:', response.status);
+          
           if (response.ok) {
-            const { user: authenticatedUser } = await response.json();
-            setUser(authenticatedUser);
+            const data = await response.json();
+            console.log('✅ Auth successful:', data.user);
+            setUser(data.user);
             router.push('/dashboard');
           } else {
-            console.error('Auth failed');
-            setError('Ошибка авторизации');
+            const errorData = await response.json();
+            console.error('❌ Auth failed:', errorData);
+            setError(errorData.error || 'Ошибка авторизации');
             setLoading(false);
           }
         } catch (error) {
-          console.error('Auth error:', error);
+          console.error('❌ Auth error:', error);
           setError('Ошибка подключения к серверу');
           setLoading(false);
         }
       } else {
         // PWA режим без Telegram
+        console.log('ℹ️ Not in Telegram, checking for existing user...');
         if (user) {
           router.push('/dashboard');
         } else {

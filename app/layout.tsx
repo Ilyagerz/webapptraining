@@ -27,14 +27,21 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <script src="https://telegram.org/js/telegram-web-app.js" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Telegram Web App SDK
-              if (window.Telegram && window.Telegram.WebApp) {
-                window.Telegram.WebApp.ready();
-                window.Telegram.WebApp.expand();
-              }
+              // Telegram Web App SDK initialization
+              window.addEventListener('load', function() {
+                if (window.Telegram && window.Telegram.WebApp) {
+                  console.log('✅ Telegram Web App SDK loaded');
+                  window.Telegram.WebApp.ready();
+                  window.Telegram.WebApp.expand();
+                  console.log('📱 Telegram user:', window.Telegram.WebApp.initDataUnsafe?.user);
+                } else {
+                  console.log('ℹ️ Not running in Telegram Web App');
+                }
+              });
             `,
           }}
         />
