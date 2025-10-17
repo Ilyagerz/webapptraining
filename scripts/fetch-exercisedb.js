@@ -184,15 +184,31 @@ async function fetchExercises() {
     // Можно использовать их открытый GitHub репозиторий или mock данные
     
     console.log('⚠️ ВНИМАНИЕ: Для работы с ExerciseDB API v1 через RapidAPI нужен API ключ.');
-    console.log('📦 Вместо этого используем открытые данные из их GitHub репозитория.\n');
+    console.log('📦 Используем бесплатную базу данных с GIF из wger.de\n');
     
-    // URL к открытым данным ExerciseDB на GitHub
-    const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json';
+    // URL к бесплатной базе с правильными GIF
+    const WGER_API_URL = 'https://wger.de/api/v2/exercise/?language=2&limit=999';
+    const EXERCISE_DB_IMAGES = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises';
     
-    console.log('📥 Загружаем данные с GitHub...');
+    console.log('📥 Загружаем данные...');
+    
+    // Используем подготовленную базу с правильными URL
+    const BACKUP_URL = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json';
     
     // Загружаем данные
-    const exercises = await makeRequest(GITHUB_RAW_URL);
+    let exercises = await makeRequest(BACKUP_URL);
+    
+    // Исправляем GIF URL
+    exercises = exercises.map(ex => {
+      if (ex.images && ex.images.length > 0) {
+        // Берем первое изображение и формируем правильный URL
+        const imagePath = ex.images[0];
+        ex.gifUrl = `${EXERCISE_DB_IMAGES}/${imagePath}`;
+      } else {
+        ex.gifUrl = '';
+      }
+      return ex;
+    });
     
     if (!Array.isArray(exercises)) {
       throw new Error('Не удалось получить массив упражнений');
@@ -218,7 +234,7 @@ async function fetchExercises() {
         bodyParts: translateArray(exercise.bodyPart ? [exercise.bodyPart] : []),
         description: `Упражнение для ${translateArray(exercise.primaryMuscles || []).join(', ')}`,
         instructions: exercise.instructions || [],
-        gifUrl: exercise.images?.[0] || '',
+        gifUrl: exercise.gifUrl || '',  // Теперь используем исправленный gifUrl
         difficulty: exercise.level || 'intermediate',
         category: exercise.category || 'strength',
         force: exercise.force || null,
@@ -241,24 +257,36 @@ async function fetchExercises() {
       console.log(`📁 Создана директория: ${gifsDir}\n`);
     }
     
-    // Загружаем GIF файлы
-    console.log('🎬 Начинаем загрузку GIF анимаций...\n');
+    // Проверяем флаг загрузки GIF
+    const shouldDownloadGifs = !process.argv.includes('--no-gifs');
     
-    let downloadedCount = 0;
-    let skippedCount = 0;
-    let errorCount = 0;
-    
-    for (let i = 0; i < processedExercises.length; i++) {
-      const exercise = processedExercises[i];
+    if (shouldDownloadGifs) {
+      // Загружаем GIF файлы
+      console.log('🎬 Начинаем загрузку GIF анимаций...');
+      console.log('   (Чтобы пропустить, используйте флаг --no-gifs)\n');
       
-      if ((i + 1) % 50 === 0) {
-        console.log(`   Загружено ${downloadedCount} GIF файлов (${i + 1}/${processedExercises.length})...`);
-      }
+      let downloadedCount = 0;
+      let skippedCount = 0;
+      let errorCount = 0;
       
-      if (!exercise.gifUrl) {
-        skippedCount++;
-        continue;
-      }
+      for (let i = 0; i < processedExercises.length; i++) {
+        const exercise = processedExercises[i];
+        
+        if ((i + 1) % 50 === 0) {
+          console.log(`   Загружено ${downloadedCount} GIF файлов (${i + 1}/${processedExercises.length})...`);
+        }
+        
+        if (!exercise.gifUrl) {
+          skippedCount++;
+          continue;
+        }
+        
+        // Проверяем что URL валидный
+        if (!exercise.gifUrl.startsWith('http')) {
+          console.log(`   ⏭️  Пропускаем ${exercise.name}: невалидный URL`);
+          errorCount++;
+          continue;
+        }
       
       try {
         // Получаем имя файла из URL или создаем на основе ID
@@ -289,17 +317,20 @@ async function fetchExercises() {
         // Небольшая задержка чтобы не перегрузить сервер
         await new Promise(resolve => setTimeout(resolve, 100));
         
-      } catch (error) {
-        console.error(`   ❌ Ошибка загрузки GIF для ${exercise.name}: ${error.message}`);
-        errorCount++;
-        // Оставляем оригинальный URL если загрузка не удалась
+        } catch (error) {
+          // Не показываем каждую ошибку, только считаем
+          errorCount++;
+          // Оставляем оригинальный URL если загрузка не удалась
+        }
       }
+      
+      console.log(`\n📊 Результат загрузки GIF:`);
+      console.log(`   ✅ Загружено: ${downloadedCount}`);
+      console.log(`   ⏭️  Пропущено (уже существуют): ${skippedCount}`);
+      console.log(`   ❌ Ошибок: ${errorCount}\n`);
+    } else {
+      console.log('⏭️  Загрузка GIF пропущена (используйте без --no-gifs для загрузки)\n');
     }
-    
-    console.log(`\n📊 Результат загрузки GIF:`);
-    console.log(`   ✅ Загружено: ${downloadedCount}`);
-    console.log(`   ⏭️  Пропущено (уже существуют): ${skippedCount}`);
-    console.log(`   ❌ Ошибок: ${errorCount}\n`);
     
     // Сохраняем в файл
     const outputPath = path.join(dataDir, 'exercises-full.json');

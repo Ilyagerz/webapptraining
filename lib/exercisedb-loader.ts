@@ -3,7 +3,7 @@
  * Использует загруженные данные из data/exercises-full.json
  */
 
-import type { Exercise } from '@/types';
+import type { Exercise, MuscleGroup, Equipment } from '@/types';
 
 // Интерфейс для упражнений из ExerciseDB
 export interface ExerciseDBExercise {
@@ -55,8 +55,8 @@ export async function loadExercisesFromFile(): Promise<ExerciseDBExercise[]> {
  * Конвертирует упражнение из ExerciseDB в формат приложения
  */
 export function convertExerciseDBToAppFormat(ex: ExerciseDBExercise): Omit<Exercise, 'id' | 'userId'> {
-  // Мапинг групп мышц
-  const muscleGroupMap: Record<string, string> = {
+  // Мапинг групп мышц с правильной типизацией
+  const muscleGroupMap: Record<string, MuscleGroup> = {
     'Грудь': 'chest',
     'Спина': 'back',
     'Плечи': 'shoulders',
@@ -69,11 +69,10 @@ export function convertExerciseDBToAppFormat(ex: ExerciseDBExercise): Omit<Exerc
     'Пресс': 'abs',
     'Талия': 'abs',
     'Ягодицы': 'glutes',
-    'Кардио': 'cardio',
   };
 
-  // Мапинг оборудования
-  const equipmentMap: Record<string, string> = {
+  // Мапинг оборудования с правильной типизацией
+  const equipmentMap: Record<string, Equipment> = {
     'Штанга': 'barbell',
     'Гантели': 'dumbbell',
     'Тренажер': 'machine',
@@ -87,7 +86,7 @@ export function convertExerciseDBToAppFormat(ex: ExerciseDBExercise): Omit<Exerc
   };
 
   // Определяем группу мышц
-  let muscleGroup = 'other';
+  let muscleGroup: MuscleGroup = 'other';
   for (const [rus, eng] of Object.entries(muscleGroupMap)) {
     if (ex.muscleGroup.includes(rus)) {
       muscleGroup = eng;
@@ -96,7 +95,7 @@ export function convertExerciseDBToAppFormat(ex: ExerciseDBExercise): Omit<Exerc
   }
 
   // Определяем оборудование
-  const equipmentList: string[] = [];
+  const equipmentList: Equipment[] = [];
   for (const [rus, eng] of Object.entries(equipmentMap)) {
     if (ex.equipment.includes(rus)) {
       if (!equipmentList.includes(eng)) {
@@ -167,7 +166,7 @@ export async function getExercisesByMuscleGroup(muscleGroup: string): Promise<Ex
 /**
  * Фильтр по оборудованию
  */
-export async function getExercisesByEquipment(equipment: string): Promise<Exercise[]> {
+export async function getExercisesByEquipment(equipment: Equipment): Promise<Exercise[]> {
   const exercises = await getAllExercises();
   
   return exercises.filter(ex => ex.equipment.includes(equipment));

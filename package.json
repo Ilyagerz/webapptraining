@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "exercises:fetch": "node scripts/fetch-exercisedb.js",
+    "exercises:fetch-fast": "node scripts/fetch-exercisedb.js --no-gifs",
     "exercises:translate": "node scripts/translate-exercises.js",
     "exercises:fetch-api": "node scripts/fetch-exercisedb.js --rapidapi",
     "exercises:update": "npm run exercises:fetch && npm run exercises:translate"
