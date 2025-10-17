@@ -11,9 +11,9 @@
     "lint": "next lint",
     "exercises:fetch": "node scripts/fetch-exercisedb.js",
     "exercises:fetch-fast": "node scripts/fetch-exercisedb.js --no-gifs",
+    "exercises:fetch-api": "node scripts/fetch-exercisedb-api.js",
     "exercises:translate": "node scripts/translate-exercises.js",
-    "exercises:fetch-api": "node scripts/fetch-exercisedb.js --rapidapi",
-    "exercises:update": "npm run exercises:fetch && npm run exercises:translate"
+    "exercises:update": "npm run exercises:fetch-api && npm run exercises:translate"
   },
   "dependencies": {
     "next": "14.2.0",

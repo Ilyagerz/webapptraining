@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { X, Search, Dumbbell } from 'lucide-react';
 import { getDefaultExercises, MUSCLE_GROUP_NAMES } from '@/lib/exercises-data';
-import type { Exercise } from '@/types';
+import type { Exercise, MuscleGroup } from '@/types';
 
 interface ExercisePickerProps {
   onSelect: (exercise: Exercise) => void;
@@ -83,7 +83,7 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
-                {group === 'all' ? 'Все' : MUSCLE_GROUP_NAMES[group]}
+                {group === 'all' ? 'Все' : MUSCLE_GROUP_NAMES[group as MuscleGroup]}
               </button>
             ))}
           </div>
