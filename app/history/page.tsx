@@ -46,7 +46,7 @@ export default function HistoryPage() {
   }
 
   return (
-    <div className="min-h-screen pb-32 pt-22 bg-white dark:bg-nubo-dark">
+    <div className="min-h-screen pb-24 pt-22 bg-white dark:bg-nubo-dark">
       {/* Header */}
       <div className="sticky top-0 z-10 bg-white dark:bg-nubo-dark border-b border-gray-200 dark:border-gray-700 p-4 shadow-sm">
         <div className="flex items-center space-x-3">

@@ -92,19 +92,19 @@ export function RestTimer() {
           </button>
 
           <button
-            onClick={() => setShowSettings(!showSettings)}
-            className="p-3 rounded-xl glass-effect hover:bg-muted/20 transition-colors"
-            aria-label="Настройки"
-          >
-            <Settings size={20} />
-          </button>
-
-          <button
             onClick={() => setIsPaused(!isPaused)}
             className="p-4 rounded-xl bg-electric-lime text-nubo-dark hover:bg-electric-lime/90 transition-colors"
             aria-label={isPaused ? "Возобновить" : "Пауза"}
           >
             {isPaused ? <Play size={24} /> : <Pause size={24} />}
+          </button>
+
+          <button
+            onClick={() => setShowSettings(!showSettings)}
+            className="p-3 rounded-xl glass-effect hover:bg-muted/20 transition-colors"
+            aria-label="Настройки"
+          >
+            <Settings size={20} />
           </button>
 
           <button
