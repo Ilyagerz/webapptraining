@@ -23,11 +23,14 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
         // Пытаемся использовать ExerciseDB
         const { getExercises } = await import('@/lib/exercises-data');
         const allExercises = await getExercises();
+        console.log(`✅ ExercisePicker: Загружено ${allExercises.length} упражнений`);
         setExercises(allExercises);
         setFilteredExercises(allExercises);
       } catch (error) {
+        console.error('❌ ExercisePicker: Ошибка загрузки упражнений, используем fallback', error);
         // Fallback на встроенную базу
         const allExercises = getDefaultExercises();
+        console.log(`ℹ️ ExercisePicker: Fallback база - ${allExercises.length} упражнений`);
         setExercises(allExercises);
         setFilteredExercises(allExercises);
       }
@@ -56,35 +59,35 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 p-4">
-      <div className="w-full max-w-2xl max-h-[90vh] bg-background rounded-t-3xl sm:rounded-3xl flex flex-col">
+      <div className="w-full max-w-2xl max-h-[90vh] bg-white dark:bg-gray-900 rounded-t-3xl sm:rounded-3xl flex flex-col">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-border/50">
-          <h2 className="text-xl font-bold">Выбери упражнение</h2>
+        <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+          <h2 className="text-xl font-bold text-black dark:text-white">Выбери упражнение</h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-muted/20 rounded-lg transition-colors"
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
           >
-            <X size={24} />
+            <X size={24} className="text-gray-700 dark:text-white" />
           </button>
         </div>
 
         {/* Search */}
-        <div className="p-4 border-b border-border/50">
+        <div className="p-4 border-b border-gray-200 dark:border-gray-700">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400" size={20} />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Поиск упражнения..."
-              className="w-full pl-10 pr-4 py-3 rounded-xl glass-effect border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 focus:border-electric-lime dark:focus:border-electric-lime focus:outline-none text-black dark:text-white"
             />
           </div>
         </div>
 
-        {/* Muscle Groups Filter */}
-        <div className="p-4 border-b border-border/50 overflow-x-auto">
-          <div className="flex space-x-2">
+        {/* Muscle Groups */}
+        <div className="p-4 border-b border-gray-200 dark:border-gray-700 sticky top-0 bg-white dark:bg-gray-900 z-10">
+          <div className="flex space-x-2 overflow-x-auto no-scrollbar">
             {muscleGroups.map((group) => (
               <button
                 key={group}
@@ -92,7 +95,7 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
                 className={`px-4 py-2 rounded-xl font-medium whitespace-nowrap transition-colors ${
                   selectedMuscleGroup === group
                     ? 'bg-electric-lime text-nubo-dark'
-                    : 'glass-effect hover:bg-muted/20'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
                 {group === 'all' ? 'Все' : MUSCLE_GROUP_NAMES[group]}
@@ -105,8 +108,8 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
         <div className="flex-1 overflow-y-auto p-4">
           {filteredExercises.length === 0 ? (
             <div className="text-center py-12">
-              <Dumbbell size={48} className="mx-auto mb-4 text-muted-foreground" />
-              <p className="text-muted-foreground">Упражнения не найдены</p>
+              <Dumbbell size={48} className="mx-auto mb-4 text-gray-400 dark:text-gray-500" />
+              <p className="text-gray-600 dark:text-gray-300">Упражнения не найдены</p>
             </div>
           ) : (
             <div className="space-y-2">
@@ -114,10 +117,10 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
                 <button
                   key={exercise.id}
                   onClick={() => onSelect(exercise)}
-                  className="w-full p-4 rounded-xl glass-effect hover:bg-muted/20 transition-colors text-left"
+                  className="w-full p-4 rounded-xl bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors text-left border border-gray-200 dark:border-gray-700"
                 >
-                  <h3 className="font-semibold mb-1">{exercise.name}</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="font-semibold mb-1 text-black dark:text-white">{exercise.name}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
                     {MUSCLE_GROUP_NAMES[exercise.muscleGroup]}
                   </p>
                 </button>

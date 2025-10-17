@@ -7,7 +7,6 @@ import {
   Dumbbell,
   Calendar,
   User,
-  Play,
   Plus,
   FileText,
 } from 'lucide-react';
@@ -167,7 +166,7 @@ export default function DashboardPage() {
           onClick={() => router.push('/workout/new')}
           className="bg-gradient-to-br from-electric-lime to-green-400 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover shadow-lg"
         >
-          <Play size={24} className="text-nubo-dark" />
+          <Dumbbell size={24} className="text-nubo-dark" />
           <span className="text-xs font-medium text-nubo-dark text-center">
             Начать
           </span>
