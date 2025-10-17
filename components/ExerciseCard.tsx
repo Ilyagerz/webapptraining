@@ -367,7 +367,8 @@ export function ExerciseCard({
                                 weight: parseFloat(e.target.value) || 0,
                               })
                             }
-                            className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white"
+                            placeholder={previousData[index]?.weight ? String(previousData[index].weight) : ''}
+                            className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
                             step="0.5"
                           />
                         ) : (
@@ -385,7 +386,8 @@ export function ExerciseCard({
                                 reps: parseInt(e.target.value) || 0,
                               })
                             }
-                            className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white"
+                            placeholder={previousData[index]?.reps ? String(previousData[index].reps) : ''}
+                            className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
                           />
                         ) : set.completed ? (
                           <span className="text-sm">{set.reps || 0}</span>
