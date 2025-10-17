@@ -25,6 +25,22 @@ export function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalPr
 
         {/* Content */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
+          {/* GIF Animation */}
+          {exercise.gifUrl && (
+            <div className="flex justify-center">
+              <img
+                src={exercise.gifUrl}
+                alt={exercise.name}
+                className="max-w-full h-auto rounded-xl"
+                loading="lazy"
+                onError={(e) => {
+                  // Скрываем изображение если загрузка не удалась
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+            </div>
+          )}
+
           {/* Description */}
           {exercise.description && (
             <div>

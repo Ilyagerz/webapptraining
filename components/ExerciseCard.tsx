@@ -205,7 +205,7 @@ export function ExerciseCard({
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <div className="flex items-center space-x-2">
-              <h3 className="font-semibold">{exercise.exercise.name}</h3>
+              <h3 className="font-semibold text-black dark:text-white">{exercise.exercise.name}</h3>
               {onToggleSelect && (
                 <button
                   onClick={(e) => {
@@ -222,11 +222,11 @@ export function ExerciseCard({
                 </button>
               )}
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-black dark:text-white">
               {exercise.exercise.muscleGroup}
             </p>
             <div className="flex items-center space-x-2 mt-1">
-              <span className="text-sm text-muted-foreground">
+              <span className="text-sm text-black dark:text-white">
                 {completedSets}/{totalSets} подходов
               </span>
               {exercise.superset && onRemoveSuperset && (
@@ -315,7 +315,7 @@ export function ExerciseCard({
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="text-xs text-muted-foreground border-b border-border/50">
+                <tr className="text-xs text-black dark:text-white border-b border-border/50">
                   <th className="px-2 py-2 text-left">Подход</th>
                   <th className="px-2 py-2 text-center">Пред.</th>
                   <th className="px-2 py-2 text-center">Вес (кг)</th>
@@ -367,7 +367,7 @@ export function ExerciseCard({
                                 weight: parseFloat(e.target.value) || 0,
                               })
                             }
-                            className="w-16 px-2 py-1 rounded bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center"
+                            className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white"
                             step="0.5"
                           />
                         ) : (
@@ -385,7 +385,7 @@ export function ExerciseCard({
                                 reps: parseInt(e.target.value) || 0,
                               })
                             }
-                            className="w-16 px-2 py-1 rounded bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center"
+                            className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white"
                           />
                         ) : set.completed ? (
                           <span className="text-sm">{set.reps || 0}</span>
@@ -419,7 +419,7 @@ export function ExerciseCard({
                             placeholder="-"
                             min="1"
                             max="10"
-                            className="w-12 px-2 py-1 rounded bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-sm"
+                            className="w-12 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-sm text-black dark:text-white"
                           />
                         ) : (
                           <span className="text-xs text-muted-foreground">-</span>
@@ -474,7 +474,7 @@ export function ExerciseCard({
                 })
               }
               placeholder="Заметки..."
-              className="w-full px-3 py-2 rounded-lg bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none resize-none text-sm"
+              className="w-full px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none resize-none text-sm text-black dark:text-white"
               rows={2}
             />
           </div>

@@ -17,9 +17,23 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
   const [selectedMuscleGroup, setSelectedMuscleGroup] = useState<string>('all');
 
   useEffect(() => {
-    const allExercises = getDefaultExercises();
-    setExercises(allExercises);
-    setFilteredExercises(allExercises);
+    // Загружаем упражнения асинхронно
+    const loadExercises = async () => {
+      try {
+        // Пытаемся использовать ExerciseDB
+        const { getExercises } = await import('@/lib/exercises-data');
+        const allExercises = await getExercises();
+        setExercises(allExercises);
+        setFilteredExercises(allExercises);
+      } catch (error) {
+        // Fallback на встроенную базу
+        const allExercises = getDefaultExercises();
+        setExercises(allExercises);
+        setFilteredExercises(allExercises);
+      }
+    };
+    
+    loadExercises();
   }, []);
 
   useEffect(() => {

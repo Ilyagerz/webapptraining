@@ -157,42 +157,36 @@ export default function DashboardPage() {
           href="/history"
           className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover border border-gray-200 dark:border-gray-700"
         >
-          <div className="w-14 h-14 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-            <Calendar size={28} className="text-gray-700 dark:text-white" />
-          </div>
-          <span className="text-xs font-semibold text-center text-gray-700 dark:text-white">
+          <Calendar size={24} className="text-gray-700 dark:text-white" />
+          <span className="text-xs font-medium text-center text-gray-700 dark:text-white">
             История
           </span>
         </Link>
 
-        <Link
-          href="/workout/new"
+        <button
+          onClick={() => router.push('/workout/new')}
           className="bg-gradient-to-br from-electric-lime to-green-400 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover shadow-lg"
         >
-          <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
-            <Play size={32} className="text-nubo-dark" fill="currentColor" />
-          </div>
-          <span className="text-xs font-bold text-nubo-dark text-center">
+          <Play size={24} className="text-nubo-dark" />
+          <span className="text-xs font-medium text-nubo-dark text-center">
             Начать
           </span>
-        </Link>
+        </button>
 
         <Link
           href="/profile"
           className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover border border-gray-200 dark:border-gray-700"
         >
-          <div className="w-14 h-14 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
-            {user.photoUrl ? (
-              <img
-                src={user.photoUrl}
-                alt="Profile"
-                className="w-14 h-14 object-cover"
-              />
-            ) : (
-              <User size={28} className="text-gray-700 dark:text-white" />
-            )}
-          </div>
-          <span className="text-xs font-semibold text-center text-gray-700 dark:text-white">
+          {user.photoUrl ? (
+            <img
+              src={user.photoUrl}
+              alt="Profile"
+              className="w-6 h-6 rounded-full object-cover"
+            />
+          ) : (
+            <User size={24} className="text-gray-700 dark:text-white" />
+          )}
+          <span className="text-xs font-medium text-center text-gray-700 dark:text-white">
             Профиль
           </span>
         </Link>

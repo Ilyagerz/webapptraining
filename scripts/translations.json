@@ -1,0 +1,250 @@
+{
+  "muscleGroups": {
+    "chest": "Грудь",
+    "back": "Спина",
+    "shoulders": "Плечи",
+    "biceps": "Бицепс",
+    "triceps": "Трицепс",
+    "legs": "Ноги",
+    "quads": "Квадрицепсы",
+    "quadriceps": "Квадрицепсы",
+    "hamstrings": "Бицепс бедра",
+    "glutes": "Ягодицы",
+    "calves": "Икры",
+    "abs": "Пресс",
+    "abdominals": "Пресс",
+    "obliques": "Косые мышцы живота",
+    "lower back": "Поясница",
+    "lats": "Широчайшие",
+    "upper back": "Верх спины",
+    "middle back": "Середина спины",
+    "traps": "Трапеции",
+    "forearms": "Предплечья",
+    "neck": "Шея",
+    "adductors": "Приводящие",
+    "abductors": "Отводящие",
+    "hip flexors": "Сгибатели бедра",
+    "serratus": "Зубчатая мышца",
+    "pectorals": "Грудные",
+    "delts": "Дельты",
+    "deltoids": "Дельтовидные"
+  },
+  
+  "bodyParts": {
+    "chest": "Грудь",
+    "back": "Спина",
+    "shoulders": "Плечи",
+    "upper arms": "Руки (верх)",
+    "lower arms": "Предплечья",
+    "upper legs": "Ноги (верх)",
+    "lower legs": "Голени",
+    "waist": "Талия",
+    "cardio": "Кардио",
+    "neck": "Шея"
+  },
+  
+  "equipment": {
+    "barbell": "Штанга",
+    "dumbbell": "Гантели",
+    "dumbbells": "Гантели",
+    "cable": "Кабель",
+    "cables": "Кабели",
+    "machine": "Тренажер",
+    "body weight": "Собственный вес",
+    "bodyweight": "Собственный вес",
+    "assisted": "С помощью",
+    "band": "Резинка",
+    "bands": "Резинки",
+    "resistance band": "Эспандер",
+    "medicine ball": "Медбол",
+    "stability ball": "Фитбол",
+    "swiss ball": "Фитбол",
+    "exercise ball": "Фитбол",
+    "kettlebell": "Гиря",
+    "kettlebells": "Гири",
+    "ez barbell": "EZ-штанга",
+    "ez curl bar": "EZ-гриф",
+    "trap bar": "Трэп-гриф",
+    "smith machine": "Машина Смита",
+    "leverage machine": "Рычажный тренажер",
+    "rope": "Канат",
+    "skierg machine": "Лыжный тренажер",
+    "sled machine": "Сани",
+    "upper body ergometer": "Эргометр",
+    "elliptical machine": "Эллипс",
+    "stationary bike": "Велотренажер",
+    "roller": "Ролик",
+    "wheel roller": "Колесо-ролик",
+    "ab wheel": "Ролик для пресса",
+    "bosu ball": "Платформа BOSU",
+    "weighted": "С отягощением",
+    "tire": "Покрышка",
+    "foam roll": "Массажный ролик",
+    "pull-up bar": "Турник",
+    "bench": "Скамья",
+    "incline bench": "Наклонная скамья",
+    "decline bench": "Скамья с обратным наклоном",
+    "flat bench": "Горизонтальная скамья",
+    "preacher bench": "Скамья Скотта",
+    "hack squat machine": "Хак-машина",
+    "leg press": "Жим ногами",
+    "leg curl machine": "Тренажер для сгибания ног",
+    "leg extension machine": "Тренажер для разгибания ног",
+    "lat pulldown machine": "Верхний блок",
+    "seated row machine": "Тренажер для тяги",
+    "pec deck": "Тренажер бабочка",
+    "none": "Без оборудования",
+    "no equipment": "Без оборудования"
+  },
+  
+  "exerciseNames": {
+    "bench press": "жим лежа",
+    "barbell bench press": "жим штанги лежа",
+    "dumbbell bench press": "жим гантелей лежа",
+    "incline bench press": "жим на наклонной скамье",
+    "decline bench press": "жим на скамье с обратным наклоном",
+    
+    "squat": "приседание",
+    "barbell squat": "приседание со штангой",
+    "front squat": "фронтальное приседание",
+    "goblet squat": "гоблет приседание",
+    "bulgarian split squat": "болгарские приседания",
+    
+    "deadlift": "становая тяга",
+    "romanian deadlift": "румынская тяга",
+    "sumo deadlift": "становая тяга сумо",
+    
+    "pull up": "подтягивания",
+    "chin up": "подтягивания обратным хватом",
+    "push up": "отжимания",
+    "dip": "отжимания на брусьях",
+    
+    "curl": "сгибание",
+    "bicep curl": "сгибание на бицепс",
+    "hammer curl": "молотковое сгибание",
+    "preacher curl": "сгибание на скамье Скотта",
+    
+    "press": "жим",
+    "overhead press": "жим над головой",
+    "shoulder press": "жим плечами",
+    "arnold press": "жим Арнольда",
+    
+    "row": "тяга",
+    "barbell row": "тяга штанги",
+    "dumbbell row": "тяга гантели",
+    "seated row": "тяга сидя",
+    "bent over row": "тяга в наклоне",
+    
+    "fly": "разведение",
+    "chest fly": "разведение на грудь",
+    "reverse fly": "обратное разведение",
+    
+    "raise": "подъем",
+    "lateral raise": "махи в стороны",
+    "front raise": "подъем перед собой",
+    "rear delt raise": "махи на задние дельты",
+    
+    "lunge": "выпад",
+    "walking lunge": "выпады в движении",
+    "reverse lunge": "обратные выпады",
+    "side lunge": "боковые выпады",
+    
+    "crunch": "скручивание",
+    "sit up": "подъем корпуса",
+    "plank": "планка",
+    "leg raise": "подъем ног",
+    
+    "extension": "разгибание",
+    "tricep extension": "разгибание на трицепс",
+    "leg extension": "разгибание ног",
+    
+    "kickback": "отведение",
+    "tricep kickback": "отведение на трицепс",
+    
+    "shrug": "шраги",
+    "calf raise": "подъем на носки",
+    
+    "pulldown": "тяга вниз",
+    "lat pulldown": "тяга верхнего блока",
+    
+    "cable crossover": "сведение в кроссовере",
+    "face pull": "протяжка к лицу",
+    
+    "good morning": "доброе утро",
+    "hip thrust": "ягодичный мостик",
+    "glute bridge": "мостик"
+  },
+  
+  "positions": {
+    "standing": "стоя",
+    "seated": "сидя",
+    "lying": "лежа",
+    "kneeling": "на коленях",
+    "incline": "наклонный",
+    "decline": "обратный наклон",
+    "flat": "горизонтальный",
+    "overhead": "над головой",
+    "bent over": "в наклоне",
+    "prone": "лицом вниз",
+    "supine": "лицом вверх",
+    "lateral": "боковой",
+    "front": "передний",
+    "rear": "задний",
+    "close grip": "узкий хват",
+    "wide grip": "широкий хват",
+    "neutral grip": "нейтральный хват",
+    "underhand": "обратный хват",
+    "overhand": "прямой хват",
+    "alternating": "попеременно",
+    "single arm": "одной рукой",
+    "single leg": "одной ногой",
+    "double": "двойной",
+    "split": "разножка"
+  },
+  
+  "difficulty": {
+    "beginner": "Начальный",
+    "intermediate": "Средний",
+    "advanced": "Продвинутый",
+    "expert": "Эксперт"
+  },
+  
+  "category": {
+    "strength": "Силовая",
+    "cardio": "Кардио",
+    "flexibility": "Растяжка",
+    "balance": "Баланс",
+    "endurance": "Выносливость",
+    "power": "Мощность",
+    "plyometrics": "Плиометрика",
+    "olympic weightlifting": "Олимпийская тяжелая атлетика",
+    "strongman": "Силач",
+    "powerlifting": "Пауэрлифтинг"
+  },
+  
+  "force": {
+    "push": "толкание",
+    "pull": "тяга",
+    "static": "статика"
+  },
+  
+  "mechanic": {
+    "compound": "базовое",
+    "isolation": "изолирующее"
+  },
+  
+  "commonWords": {
+    "and": "и",
+    "with": "с",
+    "on": "на",
+    "in": "в",
+    "to": "к",
+    "the": "",
+    "a": "",
+    "an": "",
+    "or": "или",
+    "for": "для",
+    "of": ""
+  }
+}
+

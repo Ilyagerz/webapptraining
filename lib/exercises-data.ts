@@ -1,5 +1,28 @@
 // База упражнений на русском языке
 import type { Exercise } from '@/types';
+import { getAllExercises as getExercisesFromDB, searchExercises as searchExercisesDB, getExercisesByMuscleGroup as getExercisesByMuscleGroupDB } from './exercisedb-loader';
+
+// Флаг использования ExerciseDB
+let useExerciseDB = false;
+let exerciseDBCache: Exercise[] | null = null;
+
+/**
+ * Проверяет доступность ExerciseDB и включает её использование
+ */
+export async function initializeExerciseDB() {
+  try {
+    const exercises = await getExercisesFromDB();
+    if (exercises && exercises.length > 0) {
+      useExerciseDB = true;
+      exerciseDBCache = exercises;
+      console.log(`✅ Загружено ${exercises.length} упражнений из ExerciseDB`);
+      return true;
+    }
+  } catch (error) {
+    console.log('ℹ️ ExerciseDB не доступна, используется встроенная база');
+  }
+  return false;
+}
 
 export const DEFAULT_EXERCISES: Omit<Exercise, 'id' | 'userId'>[] = [
   // ГРУДЬ
@@ -360,10 +383,60 @@ export function generateExerciseId(name: string): string {
 
 // Функция для получения упражнений с ID
 export function getDefaultExercises(): Exercise[] {
+  // Если доступна ExerciseDB - используем её
+  if (useExerciseDB && exerciseDBCache) {
+    return exerciseDBCache;
+  }
+  
+  // Иначе используем встроенную базу
   return DEFAULT_EXERCISES.map(exercise => ({
     ...exercise,
     id: generateExerciseId(exercise.name),
   }));
+}
+
+/**
+ * Асинхронная версия получения упражнений (пытается загрузить из ExerciseDB)
+ */
+export async function getExercises(): Promise<Exercise[]> {
+  // Если еще не инициализирована - пытаемся
+  if (!useExerciseDB && !exerciseDBCache) {
+    await initializeExerciseDB();
+  }
+  
+  return getDefaultExercises();
+}
+
+/**
+ * Поиск упражнений (с поддержкой ExerciseDB)
+ */
+export async function searchExercises(query: string): Promise<Exercise[]> {
+  if (useExerciseDB) {
+    return searchExercisesDB(query);
+  }
+  
+  const exercises = getDefaultExercises();
+  if (!query) return exercises;
+  
+  const lowerQuery = query.toLowerCase();
+  return exercises.filter(ex =>
+    ex.name.toLowerCase().includes(lowerQuery) ||
+    (ex.nameEn && ex.nameEn.toLowerCase().includes(lowerQuery))
+  );
+}
+
+/**
+ * Фильтр по группе мышц (с поддержкой ExerciseDB)
+ */
+export async function getExercisesByMuscleGroup(muscleGroup: string): Promise<Exercise[]> {
+  if (useExerciseDB) {
+    return getExercisesByMuscleGroupDB(muscleGroup);
+  }
+  
+  const exercises = getDefaultExercises();
+  if (muscleGroup === 'all') return exercises;
+  
+  return exercises.filter(ex => ex.muscleGroup === muscleGroup);
 }
 
 // Названия групп мышц на русском

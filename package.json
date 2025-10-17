@@ -8,7 +8,11 @@
     "dev:all": "concurrently \"npm run dev\" \"npm run dev:backend\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "exercises:fetch": "node scripts/fetch-exercisedb.js",
+    "exercises:translate": "node scripts/translate-exercises.js",
+    "exercises:fetch-api": "node scripts/fetch-exercisedb.js --rapidapi",
+    "exercises:update": "npm run exercises:fetch && npm run exercises:translate"
   },
   "dependencies": {
     "next": "14.2.0",
