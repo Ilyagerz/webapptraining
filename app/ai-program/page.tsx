@@ -25,11 +25,6 @@ export default function AIProgramPage() {
   const { user, setTemplates, templates } = useAppStore();
   const [step, setStep] = useState(1);
   const [generating, setGenerating] = useState(false);
-  
-  // Проверка на клиентскую сторону
-  if (typeof window === 'undefined') {
-    return null;
-  }
 
   // Form state
   const [goal, setGoal] = useState<'strength' | 'hypertrophy' | 'endurance' | 'weightLoss'>('hypertrophy');
@@ -40,7 +35,9 @@ export default function AIProgramPage() {
   const [restrictions, setRestrictions] = useState('');
 
   if (!user) {
-    router.push('/');
+    if (typeof window !== 'undefined') {
+      router.push('/');
+    }
     return null;
   }
 

@@ -20,6 +20,7 @@ import {
   Dumbbell,
   Calendar,
   Clock,
+  X,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -183,7 +184,7 @@ export default function ProfilePage() {
           </Link>
 
           <Link
-            href="/stats"
+            href="/history"
             className="bg-white dark:bg-gray-800 rounded-xl p-4 flex items-center justify-between card-hover border border-gray-200 dark:border-gray-700 shadow-sm"
           >
             <div className="flex items-center space-x-3">
@@ -191,9 +192,9 @@ export default function ProfilePage() {
                 <TrendingUp size={20} className="text-electric-lime" />
               </div>
               <div>
-                <div className="font-semibold text-black dark:text-white">Статистика</div>
+                <div className="font-semibold text-black dark:text-white">История тренировок</div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Графики и анализ
+                  Все твои тренировки
                 </div>
               </div>
             </div>
@@ -221,8 +222,17 @@ export default function ProfilePage() {
 
         {/* Settings Panel */}
         {showSettings && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-4 space-y-4 border border-gray-200 dark:border-gray-700 shadow-sm">
-            <h3 className="font-bold text-lg mb-4 text-black dark:text-white">Настройки</h3>
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4" onClick={() => setShowSettings(false)}>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 space-y-4 border border-gray-200 dark:border-gray-700 shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-bold text-xl text-black dark:text-white">Настройки</h3>
+                <button
+                  onClick={() => setShowSettings(false)}
+                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                >
+                  <X size={24} className="text-gray-700 dark:text-white" />
+                </button>
+              </div>
 
             {/* Theme */}
             <div className="flex items-center justify-between">

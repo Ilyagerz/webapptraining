@@ -11,7 +11,12 @@ let exerciseDBCache: Exercise[] | null = null;
  */
 export async function initializeExerciseDB() {
   try {
-    const exercises = await getExercisesFromDB();
+    // Загружаем упражнения через API endpoint
+    const response = await fetch('/api/exercises/all');
+    if (!response.ok) {
+      throw new Error('Failed to fetch exercises from API');
+    }
+    const exercises = await response.json();
     if (exercises && exercises.length > 0) {
       useExerciseDB = true;
       exerciseDBCache = exercises;
@@ -402,6 +407,11 @@ export async function getExercises(): Promise<Exercise[]> {
   // Если еще не инициализирована - пытаемся
   if (!useExerciseDB && !exerciseDBCache) {
     await initializeExerciseDB();
+  }
+  
+  // Используем ExerciseDB если доступна
+  if (useExerciseDB && exerciseDBCache) {
+    return exerciseDBCache;
   }
   
   return getDefaultExercises();

@@ -17,31 +17,27 @@ export default function RecordsPage() {
       return;
     }
 
-    // TODO: Загрузить реальные рекорды из API
-    // Пока демо-данные
-    setRecords([
-      {
-        id: '1',
-        exerciseName: 'Жим штанги лежа',
-        type: 'weight',
-        value: 100,
-        date: new Date('2024-01-15'),
-      },
-      {
-        id: '2',
-        exerciseName: 'Приседания',
-        type: 'weight',
-        value: 140,
-        date: new Date('2024-01-10'),
-      },
-      {
-        id: '3',
-        exerciseName: 'Становая тяга',
-        type: 'weight',
-        value: 160,
-        date: new Date('2024-01-05'),
-      },
-    ]);
+    // Загружаем реальные рекорды из API
+    const loadRecords = async () => {
+      try {
+        const response = await fetch('/api/records', {
+          credentials: 'include',
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          setRecords(data.records || []);
+        } else {
+          // Если нет записей, устанавливаем пустой массив
+          setRecords([]);
+        }
+      } catch (error) {
+        console.error('Failed to load records:', error);
+        setRecords([]);
+      }
+    };
+
+    loadRecords();
   }, [user]);
 
   if (!user) {
@@ -81,7 +77,11 @@ export default function RecordsPage() {
               <TrendingUp size={18} className="text-electric-lime" />
               <span className="text-sm text-muted-foreground">Этот месяц</span>
             </div>
-            <p className="text-2xl font-bold">3</p>
+            <p className="text-2xl font-bold">{records.filter(r => {
+              const date = new Date(r.date);
+              const now = new Date();
+              return date.getMonth() === now.getMonth() && date.getFullYear() === now.getFullYear();
+            }).length}</p>
             <p className="text-xs text-muted-foreground">новых</p>
           </div>
         </div>
@@ -105,24 +105,24 @@ export default function RecordsPage() {
               {records.map((record, index) => (
                 <div
                   key={record.id}
-                  className="glass-effect rounded-xl p-4 flex items-center space-x-4"
+                  className="glass-effect rounded-xl p-4 flex items-center space-x-4 border-2 border-yellow-500/30 dark:border-yellow-400/30"
                 >
-                  <div className="w-12 h-12 rounded-full bg-electric-lime/20 flex items-center justify-center flex-shrink-0">
-                    <Trophy size={24} className="text-electric-lime" />
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Trophy size={24} className="text-yellow-900" />
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="font-semibold">{record.exerciseName}</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-semibold text-black dark:text-white">{record.exerciseName}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
                       {new Date(record.date).toLocaleDateString('ru-RU')}
                     </p>
                   </div>
 
                   <div className="text-right">
-                    <p className="text-2xl font-bold text-electric-lime">
+                    <p className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">
                       {record.value}
                     </p>
-                    <p className="text-xs text-muted-foreground">кг</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">кг</p>
                   </div>
                 </div>
               ))}

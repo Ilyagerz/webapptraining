@@ -32,6 +32,8 @@ export default function ActiveWorkoutPage() {
   const [isPaused, setIsPaused] = useState(false);
   const [showExercisePicker, setShowExercisePicker] = useState(false);
   const [selectedExercises, setSelectedExercises] = useState<string[]>([]);
+  const [isEditingName, setIsEditingName] = useState(false);
+  const [workoutName, setWorkoutName] = useState('');
 
   // Получаем templateId из URL на клиенте
   useEffect(() => {
@@ -84,13 +86,17 @@ export default function ActiveWorkoutPage() {
   }, [user, templateId]);
 
   useEffect(() => {
-    if (activeWorkout && !isPaused) {
-      const startTime = new Date(activeWorkout.startedAt).getTime();
-      const interval = setInterval(() => {
-        setElapsedTime(Math.floor((Date.now() - startTime) / 1000));
-      }, 1000);
+    if (activeWorkout) {
+      setWorkoutName(activeWorkout.name || activeWorkout.templateName || 'Новая тренировка');
+      
+      if (!isPaused) {
+        const startTime = new Date(activeWorkout.startedAt).getTime();
+        const interval = setInterval(() => {
+          setElapsedTime(Math.floor((Date.now() - startTime) / 1000));
+        }, 1000);
 
-      return () => clearInterval(interval);
+        return () => clearInterval(interval);
+      }
     }
   }, [activeWorkout, isPaused]);
 
@@ -266,10 +272,37 @@ export default function ActiveWorkoutPage() {
             <button onClick={handleCancelWorkout} className="text-gray-700 dark:text-white">
               <X size={24} />
             </button>
-            <div>
-              <h1 className="text-lg font-bold text-black dark:text-white">
-                {activeWorkout.templateName || 'Тренировка'}
-              </h1>
+            <div className="flex-1">
+              {isEditingName ? (
+                <input
+                  type="text"
+                  value={workoutName}
+                  onChange={(e) => setWorkoutName(e.target.value)}
+                  onBlur={() => {
+                    setIsEditingName(false);
+                    if (activeWorkout) {
+                      updateWorkout({
+                        ...activeWorkout,
+                        name: workoutName,
+                      });
+                    }
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.currentTarget.blur();
+                    }
+                  }}
+                  autoFocus
+                  className="text-lg font-bold text-black dark:text-white bg-transparent border-b-2 border-electric-lime focus:outline-none w-full"
+                />
+              ) : (
+                <h1
+                  onClick={() => setIsEditingName(true)}
+                  className="text-lg font-bold text-black dark:text-white cursor-pointer hover:text-electric-lime"
+                >
+                  {workoutName}
+                </h1>
+              )}
               <div className="flex items-center space-x-3 text-sm text-gray-600 dark:text-gray-300">
                 <span>{formatDuration(elapsedTime)}</span>
                 <span>•</span>

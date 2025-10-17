@@ -115,9 +115,9 @@ export default function NewWorkoutPage() {
 
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         {/* Empty Workout */}
-        <button
-          onClick={startEmptyWorkout}
-          className="w-full glass-effect rounded-2xl p-6 text-left card-hover card-shadow"
+        <Link
+          href="/workout/active"
+          className="block w-full glass-effect rounded-2xl p-6 text-left card-hover card-shadow"
         >
           <div className="flex items-center justify-between">
             <div>
@@ -130,7 +130,7 @@ export default function NewWorkoutPage() {
               <Plus size={24} className="text-nubo-dark" />
             </div>
           </div>
-        </button>
+        </Link>
 
         {/* Search Templates */}
         <div>
