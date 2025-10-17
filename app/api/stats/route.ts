@@ -2,34 +2,23 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    // TODO: Получить реальные данные из базы данных
-    // Пока возвращаем моковые данные
+    // Данные будут получаться из localStorage на клиенте
+    // Этот endpoint возвращает структуру для типизации
+    
+    // В будущем здесь будет интеграция с реальной БД
+    // const workouts = await db.workouts.findMany({ where: { userId } });
     
     const stats = {
-      totalWorkouts: 45,
-      totalVolume: 285000,
-      totalSets: 680,
-      totalReps: 4250,
-      streak: 7,
-      lastWorkout: new Date(),
-      weeklyWorkouts: [3, 2, 4, 3, 2, 1, 2],
-      monthlyVolume: [
-        { month: 'Янв', volume: 45000 },
-        { month: 'Фев', volume: 52000 },
-        { month: 'Мар', volume: 61000 },
-        { month: 'Апр', volume: 58000 },
-      ],
-      topExercises: [
-        { name: 'Жим штанги лежа', count: 12 },
-        { name: 'Приседания', count: 11 },
-        { name: 'Становая тяга', count: 10 },
-        { name: 'Жим гантелей', count: 8 },
-        { name: 'Подтягивания', count: 7 },
-      ],
-      progressData: Array.from({ length: 30 }, (_, i) => ({
-        date: new Date(Date.now() - (29 - i) * 24 * 60 * 60 * 1000).toISOString(),
-        volume: Math.floor(Math.random() * 10000) + 5000,
-      })),
+      totalWorkouts: 0,
+      totalVolume: 0,
+      totalSets: 0,
+      totalReps: 0,
+      streak: 0,
+      lastWorkout: null,
+      weeklyWorkouts: [0, 0, 0, 0, 0, 0, 0],
+      monthlyVolume: [],
+      topExercises: [],
+      progressData: [],
     };
 
     return NextResponse.json(stats, {
@@ -45,4 +34,3 @@ export async function GET() {
     );
   }
 }
-

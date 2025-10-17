@@ -37,15 +37,9 @@ export default function StatsPage() {
   const loadStats = async () => {
     setLoading(true);
     try {
-      const response = await fetch('/api/stats', {
-        credentials: 'include',
-      });
-      
-      if (response.ok) {
-        const data = await response.json();
-        setStats(data);
-      } else {
-        // Fallback данные
+      // Получаем данные из localStorage (Zustand persist)
+      const storeData = localStorage.getItem('nubo-training-store');
+      if (!storeData) {
         setStats({
           totalWorkouts: 0,
           totalVolume: 0,
@@ -58,9 +52,132 @@ export default function StatsPage() {
           topExercises: [],
           progressData: [],
         });
+        setLoading(false);
+        return;
       }
+
+      const store = JSON.parse(storeData);
+      const workouts = store.state?.workouts || [];
+
+      // Подсчет статистики
+      const totalWorkouts = workouts.length;
+      let totalVolume = 0;
+      let totalSets = 0;
+      let totalReps = 0;
+      
+      // Карта упражнений для топа
+      const exerciseCounts: { [key: string]: { name: string; count: number } } = {};
+
+      workouts.forEach((workout: any) => {
+        workout.exercises?.forEach((exercise: any) => {
+          // Подсчет топа упражнений
+          if (exercise.name) {
+            if (!exerciseCounts[exercise.exerciseId]) {
+              exerciseCounts[exercise.exerciseId] = { name: exercise.name, count: 0 };
+            }
+            exerciseCounts[exercise.exerciseId].count++;
+          }
+
+          exercise.sets?.forEach((set: any) => {
+            if (set.completed) {
+              totalSets++;
+              totalReps += set.reps || 0;
+              totalVolume += (set.weight || 0) * (set.reps || 0);
+            }
+          });
+        });
+      });
+
+      // Активность за неделю
+      const weeklyWorkouts = [0, 0, 0, 0, 0, 0, 0];
+      const now = new Date();
+      const startOfWeek = new Date(now);
+      startOfWeek.setDate(now.getDate() - now.getDay() + 1); // Понедельник
+      
+      workouts.forEach((workout: any) => {
+        const workoutDate = new Date(workout.completedAt);
+        if (workoutDate >= startOfWeek) {
+          const dayIndex = workoutDate.getDay() === 0 ? 6 : workoutDate.getDay() - 1;
+          weeklyWorkouts[dayIndex]++;
+        }
+      });
+
+      // Прогресс за 30 дней
+      const progressData = [];
+      for (let i = 29; i >= 0; i--) {
+        const date = new Date();
+        date.setDate(date.getDate() - i);
+        const dateStr = date.toISOString().split('T')[0];
+        
+        let dayVolume = 0;
+        workouts.forEach((workout: any) => {
+          const workoutDateStr = new Date(workout.completedAt).toISOString().split('T')[0];
+          if (workoutDateStr === dateStr) {
+            workout.exercises?.forEach((exercise: any) => {
+              exercise.sets?.forEach((set: any) => {
+                if (set.completed) {
+                  dayVolume += (set.weight || 0) * (set.reps || 0);
+                }
+              });
+            });
+          }
+        });
+        
+        progressData.push({
+          date: date.toISOString(),
+          volume: dayVolume,
+        });
+      }
+
+      // Топ упражнений
+      const topExercises = Object.values(exerciseCounts)
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 5);
+
+      // Серия дней
+      let streak = 0;
+      let currentDate = new Date();
+      currentDate.setHours(0, 0, 0, 0);
+      
+      while (true) {
+        const hasWorkout = workouts.some((workout: any) => {
+          const workoutDate = new Date(workout.completedAt);
+          workoutDate.setHours(0, 0, 0, 0);
+          return workoutDate.getTime() === currentDate.getTime();
+        });
+        
+        if (!hasWorkout) break;
+        
+        streak++;
+        currentDate.setDate(currentDate.getDate() - 1);
+      }
+
+      setStats({
+        totalWorkouts,
+        totalVolume,
+        totalSets,
+        totalReps,
+        streak,
+        lastWorkout: workouts.length > 0 ? new Date(workouts[0].completedAt) : null,
+        weeklyWorkouts,
+        monthlyVolume: [],
+        topExercises,
+        progressData,
+      });
     } catch (error) {
       console.error('Error loading stats:', error);
+      setStats({
+        totalWorkouts: 0,
+        totalVolume: 0,
+        totalSets: 0,
+        totalReps: 0,
+        streak: 0,
+        lastWorkout: null,
+        weeklyWorkouts: [0, 0, 0, 0, 0, 0, 0],
+        monthlyVolume: [],
+        topExercises: [],
+        progressData: [],
+      });
     } finally {
       setLoading(false);
     }

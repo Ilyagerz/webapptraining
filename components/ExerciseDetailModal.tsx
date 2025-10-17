@@ -42,39 +42,52 @@ export function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalPr
   const loadExerciseData = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`/api/workouts/exercise/${exercise.id}`, {
-        credentials: 'include',
-      });
-      
-      if (response.ok) {
-        const workouts = await response.json();
-        
-        // Обработка истории
-        const historyData = workouts.map((workout: any) => {
-          const exerciseData = workout.exercises.find((e: any) => e.exerciseId === exercise.id);
-          const completedSets = exerciseData?.sets.filter((s: any) => s.completed) || [];
-          const totalVolume = completedSets.reduce((sum: number, s: any) => sum + (s.weight * s.reps), 0);
-          
-          return {
-            date: new Date(workout.completedAt).toLocaleDateString('ru-RU', { 
-              day: 'numeric', 
-              month: 'short',
-              year: 'numeric' 
-            }),
-            completedSets: completedSets.length,
-            totalVolume,
-            sets: completedSets.map((s: any) => ({
-              weight: s.weight,
-              reps: s.reps,
-            })),
-          };
-        });
-        
-        setHistory(historyData);
+      // Получаем данные из localStorage (Zustand persist)
+      const storeData = localStorage.getItem('nubo-training-store');
+      if (!storeData) {
+        setLoading(false);
+        return;
+      }
 
-        // Расчет рекордов
-        if (historyData.length > 0) {
-          const allSets = historyData.flatMap((h: WorkoutHistory) => h.sets);
+      const store = JSON.parse(storeData);
+      const workouts = store.state?.workouts || [];
+      
+      // Фильтруем тренировки, где было это упражнение
+      const relevantWorkouts = workouts
+        .filter((workout: any) => 
+          workout.exercises?.some((e: any) => e.exerciseId === exercise.id)
+        )
+        .sort((a: any, b: any) => 
+          new Date(b.completedAt).getTime() - new Date(a.completedAt).getTime()
+        );
+      
+      // Обработка истории
+      const historyData = relevantWorkouts.map((workout: any) => {
+        const exerciseData = workout.exercises.find((e: any) => e.exerciseId === exercise.id);
+        const completedSets = exerciseData?.sets.filter((s: any) => s.completed && s.weight && s.reps) || [];
+        const totalVolume = completedSets.reduce((sum: number, s: any) => sum + (s.weight * s.reps), 0);
+        
+        return {
+          date: new Date(workout.completedAt).toLocaleDateString('ru-RU', { 
+            day: 'numeric', 
+            month: 'short',
+            year: 'numeric' 
+          }),
+          completedSets: completedSets.length,
+          totalVolume,
+          sets: completedSets.map((s: any) => ({
+            weight: s.weight,
+            reps: s.reps,
+          })),
+        };
+      }).filter((h: WorkoutHistory) => h.sets.length > 0); // Только тренировки с выполненными подходами
+      
+      setHistory(historyData);
+
+      // Расчет рекордов
+      if (historyData.length > 0) {
+        const allSets = historyData.flatMap((h: WorkoutHistory) => h.sets);
+        if (allSets.length > 0) {
           const maxWeight = Math.max(...allSets.map((s: { weight: number; reps: number }) => s.weight));
           const maxVolume = Math.max(...historyData.map((h: WorkoutHistory) => h.totalVolume));
           
@@ -106,8 +119,8 @@ export function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalPr
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-      <div className="w-full max-w-2xl max-h-[90vh] bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl rounded-t-3xl sm:rounded-3xl flex flex-col shadow-2xl border border-white/20 dark:border-gray-700/20">
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 backdrop-blur-sm">
+      <div className="w-full h-[95vh] sm:max-w-2xl sm:h-[90vh] sm:mb-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl rounded-t-3xl sm:rounded-3xl flex flex-col shadow-2xl border border-white/20 dark:border-gray-700/20">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200/50 dark:border-gray-700/50">
           <div>
@@ -246,12 +259,106 @@ export function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalPr
           )}
 
           {activeTab === 'chart' && (
-            <div className="text-center py-12">
-              <BarChart3 size={64} className="mx-auto mb-4 text-gray-300 dark:text-gray-600" />
-              <p className="text-gray-500 dark:text-gray-400">График прогресса</p>
-              <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">
-                Функция в разработке
-              </p>
+            <div className="space-y-6">
+              {loading ? (
+                <div className="text-center py-8 text-gray-500">Загрузка...</div>
+              ) : history.length === 0 ? (
+                <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+                  Недостаточно данных для графика
+                </div>
+              ) : (
+                <>
+                  {/* Progress Chart - Volume */}
+                  <div>
+                    <h3 className="font-semibold mb-3 text-black dark:text-white">Объем (кг)</h3>
+                    <div className="h-48 flex items-end justify-between space-x-1">
+                      {history.slice(0, 12).reverse().map((item, index) => {
+                        const maxVolume = Math.max(...history.slice(0, 12).map(h => h.totalVolume));
+                        const height = maxVolume > 0 ? (item.totalVolume / maxVolume) * 100 : 0;
+                        return (
+                          <div key={index} className="flex-1 flex flex-col items-center space-y-1">
+                            <div className="relative group w-full">
+                              <div
+                                className="w-full bg-gradient-to-t from-electric-lime to-green-400 rounded-t-lg transition-all hover:opacity-80"
+                                style={{ height: `${Math.max(height * 1.92, 10)}px` }}
+                              />
+                              {/* Tooltip */}
+                              <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 hidden group-hover:block bg-black/90 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+                                {item.totalVolume} кг
+                              </div>
+                            </div>
+                            <span className="text-xs text-gray-500 dark:text-gray-400 transform -rotate-45 origin-top-left mt-2">
+                              {item.date.split(' ')[0]}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Max Weight Chart */}
+                  <div>
+                    <h3 className="font-semibold mb-3 text-black dark:text-white">Макс. вес (кг)</h3>
+                    <div className="h-48 flex items-end justify-between space-x-1">
+                      {history.slice(0, 12).reverse().map((item, index) => {
+                        const maxWeight = Math.max(...item.sets.map(s => s.weight));
+                        const allMaxWeights = history.slice(0, 12).map(h => Math.max(...h.sets.map(s => s.weight)));
+                        const maxOfAll = Math.max(...allMaxWeights);
+                        const height = maxOfAll > 0 ? (maxWeight / maxOfAll) * 100 : 0;
+                        return (
+                          <div key={index} className="flex-1 flex flex-col items-center space-y-1">
+                            <div className="relative group w-full">
+                              <div
+                                className="w-full bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-lg transition-all hover:opacity-80"
+                                style={{ height: `${Math.max(height * 1.92, 10)}px` }}
+                              />
+                              {/* Tooltip */}
+                              <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 hidden group-hover:block bg-black/90 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+                                {maxWeight} кг
+                              </div>
+                            </div>
+                            <span className="text-xs text-gray-500 dark:text-gray-400 transform -rotate-45 origin-top-left mt-2">
+                              {item.date.split(' ')[0]}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Average Reps Chart */}
+                  <div>
+                    <h3 className="font-semibold mb-3 text-black dark:text-white">Средние повторения</h3>
+                    <div className="h-48 flex items-end justify-between space-x-1">
+                      {history.slice(0, 12).reverse().map((item, index) => {
+                        const avgReps = item.sets.reduce((sum, s) => sum + s.reps, 0) / item.sets.length;
+                        const allAvgReps = history.slice(0, 12).map(h => 
+                          h.sets.reduce((sum, s) => sum + s.reps, 0) / h.sets.length
+                        );
+                        const maxAvg = Math.max(...allAvgReps);
+                        const height = maxAvg > 0 ? (avgReps / maxAvg) * 100 : 0;
+                        return (
+                          <div key={index} className="flex-1 flex flex-col items-center space-y-1">
+                            <div className="relative group w-full">
+                              <div
+                                className="w-full bg-gradient-to-t from-purple-500 to-purple-400 rounded-t-lg transition-all hover:opacity-80"
+                                style={{ height: `${Math.max(height * 1.92, 10)}px` }}
+                              />
+                              {/* Tooltip */}
+                              <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 hidden group-hover:block bg-black/90 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+                                {avgReps.toFixed(1)} повт
+                              </div>
+                            </div>
+                            <span className="text-xs text-gray-500 dark:text-gray-400 transform -rotate-45 origin-top-left mt-2">
+                              {item.date.split(' ')[0]}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           )}
 
