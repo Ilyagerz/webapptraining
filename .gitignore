@@ -58,3 +58,5 @@ next-env.d.ts
 *.tmp
 *.temp
 .temp/
+# ExerciseDB GIF files (загружаются с GitHub)
+public/exercises/gifs/
