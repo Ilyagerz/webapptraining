@@ -57,7 +57,7 @@ export function RestTimer() {
 
         {/* Timer Display */}
         <div className="text-center mb-4">
-          <div className="text-5xl font-bold text-electric-lime">
+          <div className="text-5xl font-bold text-black dark:text-white">
             {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
           </div>
         </div>

@@ -72,7 +72,7 @@ export default function MeasurementsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-nubo-dark pb-24 pt-12">
+    <div className="min-h-screen bg-white dark:bg-nubo-dark pb-24 pt-22">
       {/* Header */}
       <div className="sticky top-0 bg-white dark:bg-nubo-dark border-b border-gray-200 dark:border-gray-800 safe-top z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">

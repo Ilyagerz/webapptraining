@@ -63,7 +63,7 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Поиск упражнения..."
-              className="w-full pl-10 pr-4 py-3 rounded-xl glass-effect border border-border/50 focus:border-electric-lime focus:outline-none"
+              className="w-full pl-10 pr-4 py-3 rounded-xl glass-effect border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none"
             />
           </div>
         </div>

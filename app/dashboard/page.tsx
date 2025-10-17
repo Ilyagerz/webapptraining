@@ -34,7 +34,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-nubo-dark pt-12">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-nubo-dark pt-22">
       {/* Приветствие */}
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-1 text-black dark:text-white">

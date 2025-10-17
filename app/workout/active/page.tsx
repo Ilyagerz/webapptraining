@@ -258,19 +258,19 @@ export default function ActiveWorkoutPage() {
   );
 
   return (
-    <div className="min-h-screen pb-32 pt-12 bg-white dark:bg-nubo-dark">
+    <div className="min-h-screen pb-32 pt-4 bg-white dark:bg-nubo-dark">
       {/* Header */}
-      <div className="sticky top-0 z-10 glass-effect border-b border-border/50 p-4">
+      <div className="sticky top-0 z-10 bg-white dark:bg-nubo-dark border-b border-gray-200 dark:border-gray-700 p-4 shadow-sm">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <button onClick={handleCancelWorkout}>
+            <button onClick={handleCancelWorkout} className="text-gray-700 dark:text-white">
               <X size={24} />
             </button>
             <div>
-              <h1 className="text-lg font-bold">
+              <h1 className="text-lg font-bold text-black dark:text-white">
                 {activeWorkout.templateName || 'Тренировка'}
               </h1>
-              <div className="flex items-center space-x-3 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-3 text-sm text-gray-600 dark:text-gray-300">
                 <span>{formatDuration(elapsedTime)}</span>
                 <span>•</span>
                 <span>
@@ -282,7 +282,7 @@ export default function ActiveWorkoutPage() {
 
           <button
             onClick={() => setIsPaused(!isPaused)}
-            className="p-2 rounded-lg hover:bg-muted/20"
+            className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-white"
           >
             {isPaused ? <Play size={24} /> : <Pause size={24} />}
           </button>
@@ -292,7 +292,7 @@ export default function ActiveWorkoutPage() {
         {selectedExercises.length > 0 && (
           <div className="mt-3 p-3 bg-electric-lime/10 border border-electric-lime rounded-lg">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium">
+              <span className="text-sm font-medium text-black dark:text-white">
                 {selectedExercises.length === 1
                   ? 'Выбери второе упражнение для суперсета'
                   : 'Создать суперсет?'}
@@ -309,7 +309,7 @@ export default function ActiveWorkoutPage() {
                 )}
                 <button
                   onClick={() => setSelectedExercises([])}
-                  className="px-3 py-1 glass-effect rounded-lg text-sm"
+                  className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm text-black dark:text-white border border-gray-200 dark:border-gray-600"
                 >
                   Отмена
                 </button>
@@ -322,8 +322,8 @@ export default function ActiveWorkoutPage() {
       {/* Exercises */}
       <div className="p-4 space-y-4">
         {activeWorkout.exercises.length === 0 ? (
-          <div className="glass-effect rounded-xl p-8 text-center">
-            <p className="text-muted-foreground mb-4">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
               Пока нет упражнений
             </p>
             <button
@@ -368,10 +368,10 @@ export default function ActiveWorkoutPage() {
       </div>
 
       {/* Complete Button */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 glass-effect border-t border-border/50 safe-bottom">
+      <div className="fixed bottom-4 left-0 right-0 p-4 bg-white dark:bg-nubo-dark border-t border-gray-200 dark:border-gray-700 safe-bottom">
         <button
           onClick={handleCompleteWorkout}
-          className="w-full py-4 bg-electric-lime text-nubo-dark rounded-xl font-bold text-lg card-hover flex items-center justify-center space-x-2"
+          className="w-full py-4 bg-electric-lime text-nubo-dark rounded-xl font-bold text-lg card-hover flex items-center justify-center space-x-2 shadow-lg"
         >
           <Check size={24} />
           <span>Завершить тренировку</span>

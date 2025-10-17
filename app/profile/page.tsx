@@ -19,6 +19,7 @@ import {
   User,
   Dumbbell,
   Calendar,
+  Clock,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -68,7 +69,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-nubo-dark pb-24 pt-12">
+    <div className="min-h-screen bg-white dark:bg-nubo-dark pb-24 pt-22">
       {/* Header */}
       <div className="sticky top-0 bg-white dark:bg-nubo-dark border-b border-gray-200 dark:border-gray-800 safe-top z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">
@@ -119,27 +120,27 @@ export default function ProfilePage() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 gap-4">
-          <div className="glass-effect rounded-xl p-6 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
             <Dumbbell size={24} className="mx-auto mb-2 text-electric-lime" />
-            <div className="text-2xl font-bold">{totalWorkouts}</div>
-            <div className="text-sm text-muted-foreground">Тренировок</div>
+            <div className="text-2xl font-bold text-black dark:text-white">{totalWorkouts}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Тренировок</div>
           </div>
-          <div className="glass-effect rounded-xl p-6 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
             <TrendingUp size={24} className="mx-auto mb-2 text-electric-lime" />
-            <div className="text-2xl font-bold">
+            <div className="text-2xl font-bold text-black dark:text-white">
               {totalVolume > 1000 ? `${(totalVolume / 1000).toFixed(1)}т` : `${totalVolume}кг`}
             </div>
-            <div className="text-sm text-muted-foreground">Объем</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Объем</div>
           </div>
-          <div className="glass-effect rounded-xl p-6 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
             <Award size={24} className="mx-auto mb-2 text-yellow-500" />
-            <div className="text-2xl font-bold">{totalRecords}</div>
-            <div className="text-sm text-muted-foreground">Рекордов</div>
+            <div className="text-2xl font-bold text-black dark:text-white">{totalRecords}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Рекордов</div>
           </div>
-          <div className="glass-effect rounded-xl p-6 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
             <Activity size={24} className="mx-auto mb-2 text-electric-lime" />
-            <div className="text-2xl font-bold">{currentStreak}</div>
-            <div className="text-sm text-muted-foreground">Дней подряд</div>
+            <div className="text-2xl font-bold text-black dark:text-white">{currentStreak}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Дней подряд</div>
           </div>
         </div>
 
@@ -147,95 +148,95 @@ export default function ProfilePage() {
         <div className="space-y-3">
           <Link
             href="/measurements"
-            className="glass-effect rounded-xl p-4 flex items-center justify-between card-hover"
+            className="bg-white dark:bg-gray-800 rounded-xl p-4 flex items-center justify-between card-hover border border-gray-200 dark:border-gray-700 shadow-sm"
           >
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-electric-lime/20 flex items-center justify-center">
                 <Ruler size={20} className="text-electric-lime" />
               </div>
               <div>
-                <div className="font-semibold">Замеры</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="font-semibold text-black dark:text-white">Замеры</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
                   Отслеживай изменения
                 </div>
               </div>
             </div>
-            <span className="text-muted-foreground">→</span>
+            <span className="text-gray-600 dark:text-gray-300">→</span>
           </Link>
 
           <Link
             href="/records"
-            className="glass-effect rounded-xl p-4 flex items-center justify-between card-hover"
+            className="bg-white dark:bg-gray-800 rounded-xl p-4 flex items-center justify-between card-hover border border-gray-200 dark:border-gray-700 shadow-sm"
           >
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
                 <Award size={20} className="text-yellow-500" />
               </div>
               <div>
-                <div className="font-semibold">Рекорды</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="font-semibold text-black dark:text-white">Рекорды</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
                   Твои достижения
                 </div>
               </div>
             </div>
-            <span className="text-muted-foreground">→</span>
+            <span className="text-gray-600 dark:text-gray-300">→</span>
           </Link>
 
           <Link
             href="/stats"
-            className="glass-effect rounded-xl p-4 flex items-center justify-between card-hover"
+            className="bg-white dark:bg-gray-800 rounded-xl p-4 flex items-center justify-between card-hover border border-gray-200 dark:border-gray-700 shadow-sm"
           >
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-electric-lime/20 flex items-center justify-center">
                 <TrendingUp size={20} className="text-electric-lime" />
               </div>
               <div>
-                <div className="font-semibold">Статистика</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="font-semibold text-black dark:text-white">Статистика</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
                   Графики и анализ
                 </div>
               </div>
             </div>
-            <span className="text-muted-foreground">→</span>
+            <span className="text-gray-600 dark:text-gray-300">→</span>
           </Link>
 
           <Link
             href="/plate-calculator"
-            className="glass-effect rounded-xl p-4 flex items-center justify-between card-hover"
+            className="bg-white dark:bg-gray-800 rounded-xl p-4 flex items-center justify-between card-hover border border-gray-200 dark:border-gray-700 shadow-sm"
           >
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-electric-lime/20 flex items-center justify-center">
                 <Dumbbell size={20} className="text-electric-lime" />
               </div>
               <div>
-                <div className="font-semibold">Плейт-калькулятор</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="font-semibold text-black dark:text-white">Плейт-калькулятор</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
                   Какие диски ставить
                 </div>
               </div>
             </div>
-            <span className="text-muted-foreground">→</span>
+            <span className="text-gray-600 dark:text-gray-300">→</span>
           </Link>
         </div>
 
         {/* Settings Panel */}
         {showSettings && (
-          <div className="glass-effect rounded-xl p-4 space-y-4">
-            <h3 className="font-bold text-lg mb-4">Настройки</h3>
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-4 space-y-4 border border-gray-200 dark:border-gray-700 shadow-sm">
+            <h3 className="font-bold text-lg mb-4 text-black dark:text-white">Настройки</h3>
 
             {/* Theme */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 {theme === 'dark' ? (
-                  <Moon size={20} className="text-muted-foreground" />
+                  <Moon size={20} className="text-gray-600 dark:text-gray-300" />
                 ) : (
-                  <Sun size={20} className="text-muted-foreground" />
+                  <Sun size={20} className="text-gray-600 dark:text-gray-300" />
                 )}
-                <span className="font-medium">Тема</span>
+                <span className="font-medium text-black dark:text-white">Тема</span>
               </div>
               <button
                 onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-                className="px-4 py-2 glass-effect rounded-lg font-medium"
+                className="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg font-medium text-black dark:text-white border border-gray-200 dark:border-gray-600"
               >
                 {theme === 'light' ? 'Светлая' : 'Тёмная'}
               </button>
@@ -244,8 +245,8 @@ export default function ProfilePage() {
             {/* Sound */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <Volume2 size={20} className="text-muted-foreground" />
-                <span className="font-medium">Звук</span>
+                <Volume2 size={20} className="text-gray-600 dark:text-gray-300" />
+                <span className="font-medium text-black dark:text-white">Звук</span>
               </div>
               <label className="relative inline-block w-12 h-6">
                 <input
@@ -264,8 +265,8 @@ export default function ProfilePage() {
             {/* Vibration */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <Vibrate size={20} className="text-muted-foreground" />
-                <span className="font-medium">Вибрация</span>
+                <Vibrate size={20} className="text-gray-600 dark:text-gray-300" />
+                <span className="font-medium text-black dark:text-white">Вибрация</span>
               </div>
               <label className="relative inline-block w-12 h-6">
                 <input
@@ -279,6 +280,29 @@ export default function ProfilePage() {
                 <span className="absolute inset-0 bg-gray-300 dark:bg-gray-600 rounded-full peer-checked:bg-electric-lime transition-colors cursor-pointer"></span>
                 <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full peer-checked:translate-x-6 transition-transform"></span>
               </label>
+            </div>
+
+            {/* Rest Timer */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <Clock size={20} className="text-gray-600 dark:text-gray-300" />
+                <span className="font-medium text-black dark:text-white">Таймер отдыха</span>
+              </div>
+              <select
+                value={user.settings.restTimerDefault}
+                onChange={(e) =>
+                  updateSettings({ restTimerDefault: Number(e.target.value) })
+                }
+                className="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg font-medium text-black dark:text-white border border-gray-200 dark:border-gray-600"
+              >
+                <option value={30}>30 сек</option>
+                <option value={60}>1 мин</option>
+                <option value={90}>1.5 мин</option>
+                <option value={120}>2 мин</option>
+                <option value={180}>3 мин</option>
+                <option value={240}>4 мин</option>
+                <option value={300}>5 мин</option>
+              </select>
             </div>
 
             {/* Auto Timer */}

@@ -62,7 +62,7 @@ export default function PlateCalculatorPage() {
               onChange={(e) => setTargetWeight(parseFloat(e.target.value) || 0)}
               min="0"
               step="2.5"
-              className="w-full px-4 py-3 rounded-xl glass-effect border border-border/50 focus:border-electric-lime focus:outline-none text-center text-2xl font-bold"
+              className="w-full px-4 py-3 rounded-xl glass-effect border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-2xl font-bold"
             />
           </div>
 

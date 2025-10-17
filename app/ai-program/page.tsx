@@ -396,7 +396,7 @@ export default function AIProgramPage() {
                 value={restrictions}
                 onChange={(e) => setRestrictions(e.target.value)}
                 placeholder="Травмы, проблемы со здоровьем, упражнения которые нельзя делать..."
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-transparent focus:outline-none focus:border-electric-lime resize-none"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-transparent focus:outline-none focus:border-gray-400 dark:focus:border-gray-500 resize-none"
                 rows={4}
               />
             </div>

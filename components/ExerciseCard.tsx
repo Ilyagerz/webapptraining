@@ -320,6 +320,7 @@ export function ExerciseCard({
                   <th className="px-2 py-2 text-center">Пред.</th>
                   <th className="px-2 py-2 text-center">Вес (кг)</th>
                   <th className="px-2 py-2 text-center">Повт.</th>
+                  <th className="px-2 py-2 text-center">RPE</th>
                   <th className="px-2 py-2 text-center">✓</th>
                   <th className="px-2 py-2"></th>
                 </tr>
@@ -366,7 +367,7 @@ export function ExerciseCard({
                                 weight: parseFloat(e.target.value) || 0,
                               })
                             }
-                            className="w-16 px-2 py-1 rounded bg-muted/20 border border-border/50 focus:border-electric-lime focus:outline-none text-center"
+                            className="w-16 px-2 py-1 rounded bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center"
                             step="0.5"
                           />
                         ) : (
@@ -384,7 +385,7 @@ export function ExerciseCard({
                                 reps: parseInt(e.target.value) || 0,
                               })
                             }
-                            className="w-16 px-2 py-1 rounded bg-muted/20 border border-border/50 focus:border-electric-lime focus:outline-none text-center"
+                            className="w-16 px-2 py-1 rounded bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center"
                           />
                         ) : set.completed ? (
                           <span className="text-sm">{set.reps || 0}</span>
@@ -401,6 +402,27 @@ export function ExerciseCard({
                           >
                             Старт
                           </button>
+                        )}
+                      </td>
+
+                      {/* RPE Column */}
+                      <td className="px-2 py-2">
+                        {set.completed ? (
+                          <input
+                            type="number"
+                            value={set.rpe || ''}
+                            onChange={(e) =>
+                              updateSet(index, {
+                                rpe: parseInt(e.target.value) || undefined,
+                              })
+                            }
+                            placeholder="-"
+                            min="1"
+                            max="10"
+                            className="w-12 px-2 py-1 rounded bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-sm"
+                          />
+                        ) : (
+                          <span className="text-xs text-muted-foreground">-</span>
                         )}
                       </td>
 
@@ -452,7 +474,7 @@ export function ExerciseCard({
                 })
               }
               placeholder="Заметки..."
-              className="w-full px-3 py-2 rounded-lg bg-muted/20 border border-border/50 focus:border-electric-lime focus:outline-none resize-none text-sm"
+              className="w-full px-3 py-2 rounded-lg bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none resize-none text-sm"
               rows={2}
             />
           </div>

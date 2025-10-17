@@ -165,7 +165,7 @@ export default function WorkoutSummaryPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center pt-12 bg-white dark:bg-nubo-dark">
+      <div className="min-h-screen flex items-center justify-center pt-22 bg-white dark:bg-nubo-dark">
         <div className="flex space-x-2">
           <div className="w-2 h-2 bg-electric-lime rounded-full animate-bounce" />
           <div className="w-2 h-2 bg-electric-lime rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
@@ -182,7 +182,7 @@ export default function WorkoutSummaryPage() {
   const hasRecords = workout.records && workout.records.length > 0;
 
   return (
-    <div className="min-h-screen bg-white dark:bg-nubo-dark pb-24 pt-12">
+    <div className="min-h-screen bg-white dark:bg-nubo-dark pb-24 pt-22">
       {/* Success Banner */}
       <div className="bg-gradient-to-br from-electric-lime to-green-400 text-nubo-dark safe-top">
         <div className="max-w-7xl mx-auto px-4 py-12 text-center">

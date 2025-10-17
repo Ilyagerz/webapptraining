@@ -3,15 +3,17 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
-import { ArrowLeft, Calendar, Clock, Dumbbell, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Dumbbell, TrendingUp, Play, User } from 'lucide-react';
 import Link from 'next/link';
 import { formatDuration, formatDateShort } from '@/lib/utils';
+import { WorkoutCalendar } from '@/components/WorkoutCalendar';
 
 export default function HistoryPage() {
   const router = useRouter();
   const { user } = useAppStore();
   const [workouts, setWorkouts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showCalendar, setShowCalendar] = useState(false);
 
   useEffect(() => {
     if (!user) {
@@ -44,7 +46,7 @@ export default function HistoryPage() {
   }
 
   return (
-    <div className="min-h-screen pb-32 pt-12 bg-white dark:bg-nubo-dark">
+    <div className="min-h-screen pb-32 pt-22 bg-white dark:bg-nubo-dark">
       {/* Header */}
       <div className="sticky top-0 z-10 bg-white dark:bg-nubo-dark border-b border-gray-200 dark:border-gray-700 p-4 shadow-sm">
         <div className="flex items-center space-x-3">
@@ -55,7 +57,12 @@ export default function HistoryPage() {
             <h1 className="text-xl font-bold text-black dark:text-white">История</h1>
             <p className="text-sm text-gray-600 dark:text-gray-300">Все тренировки</p>
           </div>
-          <Calendar size={24} className="text-gray-700 dark:text-white" />
+          <button
+            onClick={() => setShowCalendar(true)}
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+          >
+            <Calendar size={24} className="text-gray-700 dark:text-white" />
+          </button>
         </div>
       </div>
 
@@ -155,6 +162,61 @@ export default function HistoryPage() {
           )}
         </div>
       </div>
+
+      {/* Нижние кнопки навигации */}
+      <div className="fixed bottom-0 left-0 right-0 grid grid-cols-3 gap-3 p-4 safe-bottom bg-white dark:bg-nubo-dark border-t border-gray-200 dark:border-gray-700">
+        <Link
+          href="/history"
+          className="bg-electric-lime/20 dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 border-2 border-electric-lime dark:border-gray-700"
+        >
+          <div className="w-14 h-14 rounded-full bg-electric-lime/30 dark:bg-gray-700 flex items-center justify-center">
+            <Calendar size={28} className="text-gray-700 dark:text-white" />
+          </div>
+          <span className="text-xs font-semibold text-center text-gray-700 dark:text-white">
+            История
+          </span>
+        </Link>
+
+        <Link
+          href="/workout/new"
+          className="bg-gradient-to-br from-electric-lime to-green-400 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover shadow-lg"
+        >
+          <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+            <Play size={32} className="text-nubo-dark" fill="currentColor" />
+          </div>
+          <span className="text-xs font-bold text-nubo-dark text-center">
+            Начать
+          </span>
+        </Link>
+
+        <Link
+          href="/profile"
+          className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover border border-gray-200 dark:border-gray-700"
+        >
+          <div className="w-14 h-14 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+            {user?.photoUrl ? (
+              <img
+                src={user.photoUrl}
+                alt="Profile"
+                className="w-14 h-14 object-cover"
+              />
+            ) : (
+              <User size={28} className="text-gray-700 dark:text-white" />
+            )}
+          </div>
+          <span className="text-xs font-semibold text-center text-gray-700 dark:text-white">
+            Профиль
+          </span>
+        </Link>
+      </div>
+
+      {/* Calendar Modal */}
+      {showCalendar && (
+        <WorkoutCalendar
+          workouts={workouts}
+          onClose={() => setShowCalendar(false)}
+        />
+      )}
     </div>
   );
 }

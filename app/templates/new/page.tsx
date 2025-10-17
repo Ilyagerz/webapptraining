@@ -78,7 +78,7 @@ export default function NewTemplatePage() {
   }
 
   return (
-    <div className="min-h-screen pb-6 pt-12 bg-white dark:bg-nubo-dark">
+    <div className="min-h-screen pb-6 pt-22 bg-white dark:bg-nubo-dark">
       {/* Header */}
       <div className="sticky top-0 z-10 glass-effect border-b border-border/50 p-4">
         <div className="flex items-center justify-between">
@@ -110,7 +110,7 @@ export default function NewTemplatePage() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Например: Грудь + Трицепс"
-              className="w-full px-4 py-3 rounded-xl glass-effect border border-border/50 focus:border-electric-lime focus:outline-none"
+              className="w-full px-4 py-3 rounded-xl glass-effect border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none"
             />
           </div>
 
@@ -123,7 +123,7 @@ export default function NewTemplatePage() {
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Краткое описание программы"
               rows={3}
-              className="w-full px-4 py-3 rounded-xl glass-effect border border-border/50 focus:border-electric-lime focus:outline-none resize-none"
+              className="w-full px-4 py-3 rounded-xl glass-effect border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none resize-none"
             />
           </div>
         </div>
@@ -182,7 +182,7 @@ export default function NewTemplatePage() {
                         }
                         min="1"
                         max="10"
-                        className="w-full px-3 py-2 rounded-lg bg-muted/20 border border-border/50 focus:border-electric-lime focus:outline-none text-center"
+                        className="w-full px-3 py-2 rounded-lg bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center"
                       />
                     </div>
 
@@ -198,7 +198,7 @@ export default function NewTemplatePage() {
                         }
                         min="1"
                         max="50"
-                        className="w-full px-3 py-2 rounded-lg bg-muted/20 border border-border/50 focus:border-electric-lime focus:outline-none text-center"
+                        className="w-full px-3 py-2 rounded-lg bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center"
                       />
                     </div>
 
@@ -215,7 +215,7 @@ export default function NewTemplatePage() {
                         min="30"
                         max="300"
                         step="15"
-                        className="w-full px-3 py-2 rounded-lg bg-muted/20 border border-border/50 focus:border-electric-lime focus:outline-none text-center"
+                        className="w-full px-3 py-2 rounded-lg bg-muted/20 border border-border/50 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center"
                       />
                     </div>
                   </div>
