@@ -184,7 +184,7 @@ export default function ProfilePage() {
           </Link>
 
           <Link
-            href="/history"
+            href="/stats"
             className="bg-white dark:bg-gray-800 rounded-xl p-4 flex items-center justify-between card-hover border border-gray-200 dark:border-gray-700 shadow-sm"
           >
             <div className="flex items-center space-x-3">
