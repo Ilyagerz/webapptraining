@@ -192,27 +192,9 @@ export default function ProfilePage() {
                 <TrendingUp size={20} className="text-electric-lime" />
               </div>
               <div>
-                <div className="font-semibold text-black dark:text-white">История тренировок</div>
+                <div className="font-semibold text-black dark:text-white">Статистика</div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Все твои тренировки
-                </div>
-              </div>
-            </div>
-            <span className="text-gray-600 dark:text-gray-300">→</span>
-          </Link>
-
-          <Link
-            href="/plate-calculator"
-            className="bg-white dark:bg-gray-800 rounded-xl p-4 flex items-center justify-between card-hover border border-gray-200 dark:border-gray-700 shadow-sm"
-          >
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-full bg-electric-lime/20 flex items-center justify-center">
-                <Dumbbell size={20} className="text-electric-lime" />
-              </div>
-              <div>
-                <div className="font-semibold text-black dark:text-white">Плейт-калькулятор</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">
-                  Какие диски ставить
+                  Прогресс и достижения
                 </div>
               </div>
             </div>
@@ -349,32 +331,44 @@ export default function ProfilePage() {
       </div>
 
       {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-nubo-dark border-t border-gray-200 dark:border-gray-800 safe-bottom">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-3 gap-4 py-3">
-            <Link
-              href="/history"
-              className="flex flex-col items-center justify-center space-y-1 py-2 rounded-xl transition-colors hover:bg-gray-100 dark:hover:bg-nubo-gray"
-            >
-              <Calendar size={24} />
-              <span className="text-xs">История</span>
-            </Link>
-            <Link
-              href="/dashboard"
-              className="flex flex-col items-center justify-center space-y-1 py-2 rounded-xl transition-colors hover:bg-gray-100 dark:hover:bg-nubo-gray"
-            >
-              <Dumbbell size={24} />
-              <span className="text-xs">Начать</span>
-            </Link>
-            <Link
-              href="/profile"
-              className="flex flex-col items-center justify-center space-y-1 py-2 rounded-xl bg-electric-lime text-nubo-dark"
-            >
-              <User size={24} />
-              <span className="text-xs font-medium">Профиль</span>
-            </Link>
-          </div>
-        </div>
+      <nav className="fixed bottom-0 left-0 right-0 grid grid-cols-3 gap-3 p-4 safe-bottom bg-white dark:bg-nubo-dark border-t border-gray-200 dark:border-gray-700 z-50">
+        <Link
+          href="/history"
+          className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover border border-gray-200 dark:border-gray-700"
+        >
+          <Calendar size={24} className="text-gray-700 dark:text-white" />
+          <span className="text-xs font-medium text-center text-gray-700 dark:text-white">
+            История
+          </span>
+        </Link>
+
+        <Link
+          href="/dashboard"
+          className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover border border-gray-200 dark:border-gray-700"
+        >
+          <Dumbbell size={24} className="text-gray-700 dark:text-white" />
+          <span className="text-xs font-medium text-center text-gray-700 dark:text-white">
+            Начать
+          </span>
+        </Link>
+
+        <Link
+          href="/profile"
+          className="bg-electric-lime text-nubo-dark rounded-2xl p-4 flex flex-col items-center justify-center space-y-2"
+        >
+          {user?.photoUrl ? (
+            <img
+              src={user.photoUrl}
+              alt="Profile"
+              className="w-6 h-6 rounded-full object-cover"
+            />
+          ) : (
+            <User size={24} className="text-nubo-dark" />
+          )}
+          <span className="text-xs font-medium text-center text-nubo-dark">
+            Профиль
+          </span>
+        </Link>
       </nav>
     </div>
   );

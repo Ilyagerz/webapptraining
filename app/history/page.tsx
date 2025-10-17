@@ -164,26 +164,26 @@ export default function HistoryPage() {
       </div>
 
       {/* Нижние кнопки навигации */}
-      <div className="fixed bottom-0 left-0 right-0 grid grid-cols-3 gap-3 p-4 safe-bottom bg-white dark:bg-nubo-dark border-t border-gray-200 dark:border-gray-700">
+      <div className="fixed bottom-0 left-0 right-0 grid grid-cols-3 gap-3 p-4 safe-bottom bg-white dark:bg-nubo-dark border-t border-gray-200 dark:border-gray-700 z-50">
         <Link
           href="/history"
-          className="bg-electric-lime/20 dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2"
+          className="bg-electric-lime text-nubo-dark rounded-2xl p-4 flex flex-col items-center justify-center space-y-2"
         >
-          <Calendar size={24} className="text-gray-700 dark:text-white" />
-          <span className="text-xs font-medium text-center text-gray-700 dark:text-white">
+          <Calendar size={24} className="text-nubo-dark" />
+          <span className="text-xs font-medium text-center text-nubo-dark">
             История
           </span>
         </Link>
 
-        <button
-          onClick={() => router.push('/workout/new')}
-          className="bg-gradient-to-br from-electric-lime to-green-400 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover shadow-lg"
+        <Link
+          href="/workout/new"
+          className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover border border-gray-200 dark:border-gray-700"
         >
-          <Dumbbell size={24} className="text-nubo-dark" />
-          <span className="text-xs font-medium text-nubo-dark text-center">
+          <Dumbbell size={24} className="text-gray-700 dark:text-white" />
+          <span className="text-xs font-medium text-gray-700 dark:text-white text-center">
             Начать
           </span>
-        </button>
+        </Link>
 
         <Link
           href="/profile"

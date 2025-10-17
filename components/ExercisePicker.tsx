@@ -17,26 +17,11 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
   const [selectedMuscleGroup, setSelectedMuscleGroup] = useState<string>('all');
 
   useEffect(() => {
-    // Загружаем упражнения асинхронно
-    const loadExercises = async () => {
-      try {
-        // Пытаемся использовать ExerciseDB
-        const { getExercises } = await import('@/lib/exercises-data');
-        const allExercises = await getExercises();
-        console.log(`✅ ExercisePicker: Загружено ${allExercises.length} упражнений`);
-        setExercises(allExercises);
-        setFilteredExercises(allExercises);
-      } catch (error) {
-        console.error('❌ ExercisePicker: Ошибка загрузки упражнений, используем fallback', error);
-        // Fallback на встроенную базу
-        const allExercises = getDefaultExercises();
-        console.log(`ℹ️ ExercisePicker: Fallback база - ${allExercises.length} упражнений`);
-        setExercises(allExercises);
-        setFilteredExercises(allExercises);
-      }
-    };
-    
-    loadExercises();
+    // Используем встроенные упражнения напрямую
+    const allExercises = getDefaultExercises();
+    console.log(`✅ ExercisePicker: Загружено ${allExercises.length} упражнений`);
+    setExercises(allExercises);
+    setFilteredExercises(allExercises);
   }, []);
 
   useEffect(() => {

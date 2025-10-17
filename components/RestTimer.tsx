@@ -6,10 +6,11 @@ import { X, Plus, Minus, RotateCcw, Pause, Play, Settings } from 'lucide-react';
 import { vibrate, playSound } from '@/lib/utils';
 
 export function RestTimer() {
-  const { restTimerActive, restTimeRemaining, setRestTimer } = useAppStore();
+  const { restTimerActive, restTimeRemaining, setRestTimer, user, updateSettings } = useAppStore();
   const [timeLeft, setTimeLeft] = useState(restTimeRemaining);
   const [isPaused, setIsPaused] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const defaultRestTime = user?.settings?.restTimerDefault || 90;
 
   useEffect(() => {
     setTimeLeft(restTimeRemaining);
@@ -91,19 +92,19 @@ export function RestTimer() {
           </button>
 
           <button
-            onClick={() => setIsPaused(!isPaused)}
-            className="p-4 rounded-xl bg-electric-lime text-nubo-dark hover:bg-electric-lime/90 transition-colors"
-            aria-label={isPaused ? "Возобновить" : "Пауза"}
-          >
-            {isPaused ? <Play size={24} /> : <Pause size={24} />}
-          </button>
-
-          <button
             onClick={() => setShowSettings(!showSettings)}
             className="p-3 rounded-xl glass-effect hover:bg-muted/20 transition-colors"
             aria-label="Настройки"
           >
             <Settings size={20} />
+          </button>
+
+          <button
+            onClick={() => setIsPaused(!isPaused)}
+            className="p-4 rounded-xl bg-electric-lime text-nubo-dark hover:bg-electric-lime/90 transition-colors"
+            aria-label={isPaused ? "Возобновить" : "Пауза"}
+          >
+            {isPaused ? <Play size={24} /> : <Pause size={24} />}
           </button>
 
           <button
@@ -118,21 +119,29 @@ export function RestTimer() {
         {/* Settings Panel */}
         {showSettings && (
           <div className="mt-4 p-4 glass-effect rounded-xl space-y-3">
-            <h4 className="text-sm font-semibold text-center mb-2">Настройка времени отдыха</h4>
+            <h4 className="text-sm font-semibold text-center mb-2">Время отдыха по умолчанию</h4>
             <div className="grid grid-cols-3 gap-2">
               {[30, 60, 90, 120, 150, 180].map((seconds) => (
                 <button
                   key={seconds}
                   onClick={() => {
+                    updateSettings({ restTimerDefault: seconds });
                     setTimeLeft(seconds);
                     setShowSettings(false);
                   }}
-                  className="px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-electric-lime hover:text-nubo-dark transition-colors text-sm font-medium"
+                  className={`px-3 py-2 rounded-lg transition-colors text-sm font-medium ${
+                    defaultRestTime === seconds
+                      ? 'bg-electric-lime text-nubo-dark'
+                      : 'bg-gray-100 dark:bg-gray-700 hover:bg-electric-lime hover:text-nubo-dark'
+                  }`}
                 >
                   {Math.floor(seconds / 60)}:{String(seconds % 60).padStart(2, '0')}
                 </button>
               ))}
             </div>
+            <p className="text-xs text-center text-gray-600 dark:text-gray-400">
+              Это время будет использоваться для всех отдыхов
+            </p>
           </div>
         )}
 

@@ -145,10 +145,10 @@ export const useAppStore = create<AppState>()(
         restTimerActive: active,
         restTimeRemaining: time !== undefined ? time : get().restTimeRemaining,
       }),
-      startRestTimer: (seconds) => set({
+      startRestTimer: (seconds) => set((state) => ({
         restTimerActive: true,
-        restTimeRemaining: seconds,
-      }),
+        restTimeRemaining: seconds || state.user?.settings?.restTimerDefault || 90,
+      })),
       decrementRestTimer: () => set((state) => ({
         restTimeRemaining: Math.max(0, state.restTimeRemaining - 1),
         restTimerActive: state.restTimeRemaining > 1,
