@@ -343,6 +343,7 @@ export default function ProfilePage() {
               <LogOut size={18} />
               <span>Выйти</span>
             </button>
+            </div>
           </div>
         )}
       </div>
