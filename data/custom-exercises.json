@@ -1,0 +1,62 @@
+[
+  {
+    "id": "VPPtusI",
+    "name": "inverted row bent knees",
+    "nameEn": "inverted row bent knees",
+    "category": "strength",
+    "muscleGroup": "Спина",
+    "equipment": [
+      "Собственный вес"
+    ],
+    "instructions": [
+      "Step:1 Set up a bar at waist height and lie underneath it.",
+      "Step:2 Grab the bar with an overhand grip, slightly wider than shoulder-width apart.",
+      "Step:3 Position your body so that your heels are on the ground and your body is straight.",
+      "Step:4 Pull your chest up towards the bar by squeezing your shoulder blades together.",
+      "Step:5 Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+      "Step:6 Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/VPPtusI.gif",
+    "targetMuscles": [
+      "upper back"
+    ],
+    "secondaryMuscles": [
+      "biceps",
+      "forearms"
+    ],
+    "bodyParts": [
+      "back"
+    ],
+    "description": "Упражнение для Спина",
+    "isCustom": false
+  },
+  {
+    "id": "ztAa1RK",
+    "name": "band alternating v-up",
+    "nameEn": "band alternating v-up",
+    "category": "strength",
+    "muscleGroup": "Пресс",
+    "equipment": [
+      "Резинка"
+    ],
+    "instructions": [
+      "Step:1 Lie flat on your back with your legs straight and your arms extended overhead, holding the band.",
+      "Step:2 Engage your abs and lift your legs and upper body off the ground simultaneously, reaching your hands towards your toes.",
+      "Step:3 As you lower your legs and upper body back down, switch the position of your legs, crossing one over the other.",
+      "Step:4 Repeat the movement, alternating the position of your legs with each repetition.",
+      "Step:5 Continue for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/ztAa1RK.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Пресс",
+    "isCustom": false
+  }
+]
