@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { X, Search, Dumbbell } from 'lucide-react';
-import { getDefaultExercises, MUSCLE_GROUP_NAMES } from '@/lib/exercises-data';
+import { getExercises, MUSCLE_GROUP_NAMES } from '@/lib/exercises-data';
 import type { Exercise, MuscleGroup } from '@/types';
 
 interface ExercisePickerProps {
@@ -15,13 +15,24 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
   const [filteredExercises, setFilteredExercises] = useState<Exercise[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMuscleGroup, setSelectedMuscleGroup] = useState<string>('all');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Используем встроенные упражнения напрямую
-    const allExercises = getDefaultExercises();
-    console.log(`✅ ExercisePicker: Загружено ${allExercises.length} упражнений`);
-    setExercises(allExercises);
-    setFilteredExercises(allExercises);
+    // Загружаем упражнения асинхронно
+    async function loadExercises() {
+      try {
+        const allExercises = await getExercises();
+        console.log(`✅ ExercisePicker: Загружено ${allExercises.length} упражнений`);
+        setExercises(allExercises);
+        setFilteredExercises(allExercises);
+      } catch (error) {
+        console.error('Ошибка загрузки упражнений:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    
+    loadExercises();
   }, []);
 
   useEffect(() => {
@@ -47,7 +58,9 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
       <div className="w-full max-w-2xl max-h-[90vh] bg-white dark:bg-gray-900 rounded-t-3xl sm:rounded-3xl flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-          <h2 className="text-xl font-bold text-black dark:text-white">Выбери упражнение</h2>
+          <h2 className="text-xl font-bold text-black dark:text-white">
+            Выбери упражнение {!loading && `(${exercises.length})`}
+          </h2>
           <button
             onClick={onClose}
             className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
@@ -91,7 +104,12 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
 
         {/* Exercise List */}
         <div className="flex-1 overflow-y-auto p-4">
-          {filteredExercises.length === 0 ? (
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-electric-lime"></div>
+              <p className="mt-4 text-gray-600 dark:text-gray-300">Загрузка упражнений...</p>
+            </div>
+          ) : filteredExercises.length === 0 ? (
             <div className="text-center py-12">
               <Dumbbell size={48} className="mx-auto mb-4 text-gray-400 dark:text-gray-500" />
               <p className="text-gray-600 dark:text-gray-300">Упражнения не найдены</p>
