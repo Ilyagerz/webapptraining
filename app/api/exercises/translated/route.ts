@@ -4,7 +4,8 @@ import { join } from 'path';
 
 export async function GET() {
   try {
-    const filePath = join(process.cwd(), 'data', 'exercises-translated.json');
+    // Используем custom-exercises.json - вашу персональную базу из 107 упражнений!
+    const filePath = join(process.cwd(), 'data', 'custom-exercises.json');
     
     if (!existsSync(filePath)) {
       return NextResponse.json(
