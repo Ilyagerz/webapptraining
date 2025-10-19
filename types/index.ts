@@ -48,6 +48,7 @@ export type MuscleGroup =
   | 'arms'       // Руки
   | 'legs'       // Ноги
   | 'abs'        // Пресс
+  | 'cardio'     // Кардио
   | 'glutes'     // Ягодицы
   | 'fullBody'   // Все тело
   | 'other';
