@@ -176,6 +176,36 @@ export const useAppStore = create<AppState>()(
         measurements: state.measurements,
         workouts: state.workouts,
       }),
+      // Deserialize dates from strings
+      onRehydrateStorage: () => (state) => {
+        if (state) {
+          // Fix measurements dates
+          if (state.measurements) {
+            state.measurements = state.measurements.map(m => ({
+              ...m,
+              date: typeof m.date === 'string' ? new Date(m.date) : m.date,
+            }));
+          }
+          
+          // Fix workouts dates
+          if (state.workouts) {
+            state.workouts = state.workouts.map(w => ({
+              ...w,
+              startedAt: typeof w.startedAt === 'string' ? new Date(w.startedAt) : w.startedAt,
+              completedAt: w.completedAt ? (typeof w.completedAt === 'string' ? new Date(w.completedAt) : w.completedAt) : undefined,
+            }));
+          }
+          
+          // Fix templates dates
+          if (state.templates) {
+            state.templates = state.templates.map(t => ({
+              ...t,
+              createdAt: typeof t.createdAt === 'string' ? new Date(t.createdAt) : t.createdAt,
+              updatedAt: typeof t.updatedAt === 'string' ? new Date(t.updatedAt) : t.updatedAt,
+            }));
+          }
+        }
+      },
     }
   )
 );

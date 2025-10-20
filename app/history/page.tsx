@@ -5,12 +5,13 @@ import { useRouter } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
 import { ArrowLeft, Calendar, Clock, Dumbbell, TrendingUp, User } from 'lucide-react';
 import Link from 'next/link';
-import { formatDuration, formatDateShort } from '@/lib/utils';
+import { formatDuration, formatDateShort, generateId } from '@/lib/utils';
+import type { Workout } from '@/types';
 import { WorkoutCalendar } from '@/components/WorkoutCalendar';
 
 export default function HistoryPage() {
   const router = useRouter();
-  const { user } = useAppStore();
+  const { user, setActiveWorkout } = useAppStore();
   const [workouts, setWorkouts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCalendar, setShowCalendar] = useState(false);
@@ -175,15 +176,30 @@ export default function HistoryPage() {
           </span>
         </Link>
 
-        <Link
-          href="/workout/new"
+        <button
+          onClick={() => {
+            if (!user) return;
+            const newWorkout: Workout = {
+              id: generateId(),
+              userId: user.id,
+              name: 'Новая тренировка',
+              startedAt: new Date(),
+              exercises: [],
+              totalVolume: 0,
+              totalSets: 0,
+              totalReps: 0,
+              isActive: true,
+            };
+            setActiveWorkout(newWorkout);
+            router.push('/workout/active');
+          }}
           className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover border border-gray-200 dark:border-gray-700"
         >
           <Dumbbell size={24} className="text-gray-700 dark:text-white" />
           <span className="text-xs font-medium text-gray-700 dark:text-white text-center">
             Начать
           </span>
-        </Link>
+        </button>
 
         <Link
           href="/profile"
