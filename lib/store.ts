@@ -173,6 +173,8 @@ export const useAppStore = create<AppState>()(
         user: state.user,
         theme: state.theme,
         templates: state.templates,
+        measurements: state.measurements,
+        workouts: state.workouts,
       }),
     }
   )

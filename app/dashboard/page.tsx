@@ -11,11 +11,31 @@ import {
   FileText,
 } from 'lucide-react';
 import Link from 'next/link';
-import { getWeeksData } from '@/lib/utils';
+import { getWeeksData, generateId } from '@/lib/utils';
+import type { Workout } from '@/types';
 
 export default function DashboardPage() {
   const router = useRouter();
-  const { user, workouts, templates } = useAppStore();
+  const { user, workouts, templates, setActiveWorkout } = useAppStore();
+
+  const startEmptyWorkout = () => {
+    if (!user) return;
+    
+    const newWorkout: Workout = {
+      id: generateId(),
+      userId: user.id,
+      name: 'Новая тренировка',
+      startedAt: new Date(),
+      exercises: [],
+      totalVolume: 0,
+      totalSets: 0,
+      totalReps: 0,
+      isActive: true,
+    };
+
+    setActiveWorkout(newWorkout);
+    router.push('/workout/active');
+  };
   const [weekData, setWeekData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -89,9 +109,9 @@ export default function DashboardPage() {
       {/* Быстрые действия */}
       <div className="px-6 pb-6 space-y-3">
         {/* Пустая тренировка */}
-        <Link
-          href="/workout/new"
-          className="block bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700 shadow-sm card-hover"
+        <button
+          onClick={startEmptyWorkout}
+          className="block w-full bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700 shadow-sm card-hover text-left"
         >
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
@@ -102,7 +122,7 @@ export default function DashboardPage() {
               <div className="text-sm text-gray-600 dark:text-gray-300">Начать без шаблона</div>
             </div>
           </div>
-        </Link>
+        </button>
 
         {/* Шаблоны */}
         {templates.length > 0 && (
