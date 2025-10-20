@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, Search, Dumbbell } from 'lucide-react';
+import { X, Search, Dumbbell, Plus, Info } from 'lucide-react';
 import { getExercises, MUSCLE_GROUP_NAMES } from '@/lib/exercises-data';
 import type { Exercise, MuscleGroup } from '@/types';
+import { ExerciseDetailModal } from './ExerciseDetailModal';
 
 interface ExercisePickerProps {
   onSelect: (exercise: Exercise) => void;
@@ -16,6 +17,8 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMuscleGroup, setSelectedMuscleGroup] = useState<string>('all');
   const [loading, setLoading] = useState(true);
+  const [selectedExercise, setSelectedExercise] = useState<Exercise | null>(null);
+  const [showCreateForm, setShowCreateForm] = useState(false);
 
   useEffect(() => {
     // Загружаем упражнения асинхронно
@@ -44,7 +47,8 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
 
     if (searchQuery) {
       filtered = filtered.filter(ex =>
-        ex.name.toLowerCase().includes(searchQuery.toLowerCase())
+        ex.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        ex.nameEn?.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
 
@@ -61,12 +65,21 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
           <h2 className="text-xl font-bold text-black dark:text-white">
             Выбери упражнение {!loading && `(${exercises.length})`}
           </h2>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-          >
-            <X size={24} className="text-gray-700 dark:text-white" />
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowCreateForm(true)}
+              className="p-2 hover:bg-electric-lime hover:text-nubo-dark rounded-lg transition-colors bg-gray-100 dark:bg-gray-800"
+              title="Создать своё упражнение"
+            >
+              <Plus size={24} className="text-gray-700 dark:text-white hover:text-nubo-dark" />
+            </button>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            >
+              <X size={24} className="text-gray-700 dark:text-white" />
+            </button>
+          </div>
         </div>
 
         {/* Search */}
@@ -117,21 +130,83 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
           ) : (
             <div className="space-y-2">
               {filteredExercises.map((exercise) => (
-                <button
+                <div
                   key={exercise.id}
-                  onClick={() => onSelect(exercise)}
-                  className="w-full p-4 rounded-xl bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors text-left border border-gray-200 dark:border-gray-700"
+                  className="flex items-center gap-3 w-full p-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-electric-lime transition-colors"
                 >
-                  <h3 className="font-semibold mb-1 text-black dark:text-white">{exercise.name}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
-                    {MUSCLE_GROUP_NAMES[exercise.muscleGroup]}
-                  </p>
-                </button>
+                  {/* GIF Thumbnail */}
+                  {exercise.gifUrl && (
+                    <div className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+                      <img
+                        src={exercise.gifUrl}
+                        alt={exercise.name}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+
+                  {/* Exercise Info */}
+                  <button
+                    onClick={() => onSelect(exercise)}
+                    className="flex-1 text-left"
+                  >
+                    <h3 className="font-semibold mb-1 text-black dark:text-white">
+                      {exercise.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      {MUSCLE_GROUP_NAMES[exercise.muscleGroup]}
+                    </p>
+                  </button>
+
+                  {/* Info Button */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedExercise(exercise);
+                    }}
+                    className="flex-shrink-0 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    title="Подробная информация"
+                  >
+                    <Info size={20} className="text-gray-600 dark:text-gray-400" />
+                  </button>
+                </div>
               ))}
             </div>
           )}
         </div>
       </div>
+
+      {/* Exercise Detail Modal */}
+      {selectedExercise && (
+        <ExerciseDetailModal
+          exercise={selectedExercise}
+          onClose={() => setSelectedExercise(null)}
+        />
+      )}
+
+      {/* Create Custom Exercise Form - TODO: Implement */}
+      {showCreateForm && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 p-4">
+          <div className="w-full max-w-md bg-white dark:bg-gray-900 rounded-3xl p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-bold text-black dark:text-white">Создать упражнение</h3>
+              <button onClick={() => setShowCreateForm(false)}>
+                <X size={24} className="text-gray-700 dark:text-white" />
+              </button>
+            </div>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Функционал создания собственных упражнений будет добавлен в следующем обновлении.
+            </p>
+            <button
+              onClick={() => setShowCreateForm(false)}
+              className="w-full py-3 bg-electric-lime text-nubo-dark rounded-xl font-semibold"
+            >
+              Понятно
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

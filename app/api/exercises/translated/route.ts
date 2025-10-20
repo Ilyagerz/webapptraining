@@ -4,8 +4,14 @@ import { join } from 'path';
 
 export async function GET() {
   try {
-    // Используем custom-exercises.json - вашу персональную базу из 107 упражнений!
-    const filePath = join(process.cwd(), 'data', 'custom-exercises.json');
+    // Пробуем загрузить переведенную версию
+    let filePath = join(process.cwd(), 'data', 'custom-exercises-ru.json');
+    
+    // Если её нет, загружаем оригинальную
+    if (!existsSync(filePath)) {
+      console.log('⚠️ custom-exercises-ru.json не найден, используем custom-exercises.json');
+      filePath = join(process.cwd(), 'data', 'custom-exercises.json');
+    }
     
     if (!existsSync(filePath)) {
       return NextResponse.json(
