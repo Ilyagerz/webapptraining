@@ -5,14 +5,14 @@ export const dynamic = 'force-dynamic';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
-import { ArrowLeft, Play, Pause, X, Check, Plus, Link2 } from 'lucide-react';
+import { ArrowLeft, Play, Pause, X, Check, Plus, Link2, Save } from 'lucide-react';
 import Link from 'next/link';
 import { ExerciseCard } from '@/components/ExerciseCard';
 import { RestTimer } from '@/components/RestTimer';
 import { ExercisePicker } from '@/components/ExercisePicker';
 import { generateId, formatDuration } from '@/lib/utils';
 import { createSuperset, removeSupersetGroup } from '@/lib/superset-utils';
-import type { WorkoutExercise, Exercise } from '@/types';
+import type { WorkoutExercise, Exercise, WorkoutTemplate } from '@/types';
 
 export default function ActiveWorkoutPage() {
   const router = useRouter();
@@ -26,6 +26,7 @@ export default function ActiveWorkoutPage() {
     updateWorkout,
     completeWorkout: storeCompleteWorkout,
     addWorkout,
+    addTemplate,
   } = useAppStore();
 
   const [elapsedTime, setElapsedTime] = useState(0);
@@ -250,6 +251,33 @@ export default function ActiveWorkoutPage() {
     }
   };
 
+  const handleSaveAsTemplate = () => {
+    if (!activeWorkout || !user) return;
+
+    const templateName = prompt('Название шаблона:', workoutName || 'Моя тренировка');
+    if (!templateName) return;
+
+    const template: WorkoutTemplate = {
+      id: generateId(),
+      userId: user.id,
+      name: templateName,
+      exercises: activeWorkout.exercises.map((we) => ({
+        exerciseId: we.exerciseId,
+        exercise: we.exercise,
+        sets: we.sets.length,
+        reps: we.sets[0]?.reps || 0,
+        restTimer: we.restTimer,
+      })),
+      usageCount: 0,
+      isSystemTemplate: false,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+
+    addTemplate(template);
+    alert(`Шаблон "${templateName}" сохранен!`);
+  };
+
   if (!user || !activeWorkout) {
     return null;
   }
@@ -400,15 +428,24 @@ export default function ActiveWorkoutPage() {
         )}
       </div>
 
-      {/* Complete Button */}
+      {/* Action Buttons */}
       <div className="fixed bottom-4 left-0 right-0 p-4 bg-white dark:bg-nubo-dark border-t border-gray-200 dark:border-gray-700 safe-bottom">
-        <button
-          onClick={handleCompleteWorkout}
-          className="w-full py-4 bg-electric-lime text-nubo-dark rounded-xl font-bold text-lg card-hover flex items-center justify-center space-x-2 shadow-lg"
-        >
-          <Check size={24} />
-          <span>Завершить тренировку</span>
-        </button>
+        <div className="flex gap-3">
+          <button
+            onClick={handleSaveAsTemplate}
+            className="flex-1 py-4 bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-xl font-semibold text-lg card-hover flex items-center justify-center space-x-2"
+          >
+            <Save size={20} />
+            <span>Сохранить как шаблон</span>
+          </button>
+          <button
+            onClick={handleCompleteWorkout}
+            className="flex-1 py-4 bg-electric-lime text-nubo-dark rounded-xl font-bold text-lg card-hover flex items-center justify-center space-x-2 shadow-lg"
+          >
+            <Check size={24} />
+            <span>Завершить</span>
+          </button>
+        </div>
       </div>
 
       {/* Exercise Picker Modal */}
