@@ -14,6 +14,7 @@
     "exercises:fetch-api": "node scripts/fetch-exercisedb-api.js",
     "exercises:translate": "node scripts/translate-exercises.js",
     "exercises:translate-names": "node scripts/translate-exercise-names.js",
+    "exercises:apply-translations": "node scripts/apply-manual-translations.js",
     "exercises:update": "npm run exercises:fetch-api && npm run exercises:translate"
   },
   "dependencies": {
