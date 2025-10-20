@@ -4,9 +4,9 @@
     "name": "Приседания со штангой (вид сзади)",
     "nameEn": "Barbell full squat (back pov)",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, toes slightly turned out.",
@@ -39,9 +39,9 @@
     "name": "Подъемы на носки стоя со штангой",
     "nameEn": "Standing calf raise (on a staircase)",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand on the edge of a step or a sturdy platform with your heels hanging off and your toes on the step.",
@@ -69,9 +69,9 @@
     "name": "Подъемы на носки стоя со штангой",
     "nameEn": "Standing calf raise (on a staircase)",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand on the edge of a step or a sturdy platform with your heels hanging off and your toes on the step.",
@@ -99,9 +99,9 @@
     "name": "Подъемы на носки стоя со штангой",
     "nameEn": "Standing calf raise (on a staircase)",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand on the edge of a step or a sturdy platform with your heels hanging off and your toes on the step.",
@@ -129,9 +129,9 @@
     "name": "Подъемы на носки стоя со штангой",
     "nameEn": "Standing calf raise (on a staircase)",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand on the edge of a step or a sturdy platform with your heels hanging off and your toes on the step.",
@@ -159,9 +159,9 @@
     "name": "Подъемы на носки стоя со штангой",
     "nameEn": "Standing calf raise (on a staircase)",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand on the edge of a step or a sturdy platform with your heels hanging off and your toes on the step.",
@@ -189,9 +189,9 @@
     "name": "Подъём на платформу с резинкой",
     "nameEn": "Band step-up",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Резинка"
+      "bands"
     ],
     "instructions": [
       "Step:1 Place a band around your thighs, just above your knees.",
@@ -222,9 +222,9 @@
     "name": "Румынская тяга с гантелями",
     "nameEn": "Dumbbell straight leg deadlift",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
@@ -252,9 +252,9 @@
     "name": "Становая тяга с трэп-грифом",
     "nameEn": "Trap bar deadlift",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart and the trap bar on the ground in front of you.",
@@ -284,9 +284,9 @@
     "name": "Подъём корпуса на скамье для ягодиц и бёдер",
     "nameEn": "Glute-ham raise",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Adjust the glute-ham raise machine to fit your body.",
@@ -316,9 +316,9 @@
     "name": "Гакк-присед в тренажёре",
     "nameEn": "Sled hack squat",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the sled machine to a comfortable position for your height.",
@@ -349,9 +349,9 @@
     "name": "Приведение бедра лёжа на боку (мужской вариант)",
     "nameEn": "Side lying hip adduction (male)",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Lie on your side with your legs straight and stacked on top of each other.",
@@ -379,9 +379,9 @@
     "name": "Приседания с прыжком",
     "nameEn": "Jump squat",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart.",
@@ -411,9 +411,9 @@
     "name": "Подъём на носки в тренажёре для жима ногами",
     "nameEn": "Lever seated squat calf raise on leg press machine",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the seat of the leg press machine so that your knees are slightly bent when your feet are on the footplate.",
@@ -444,9 +444,9 @@
     "name": "Разгибания ног с резинкой на наклонной",
     "nameEn": "Resistance band leg extension declined",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Резинка"
+      "bands"
     ],
     "instructions": [
       "Step:1 Attach the resistance band to a sturdy anchor point and secure it around your ankle.",
@@ -473,9 +473,9 @@
     "name": "Жим ногами в Смите",
     "nameEn": "Smith leg press",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the seat and footplate of the smith machine to a comfortable position.",
@@ -506,9 +506,9 @@
     "name": "Скалолаз",
     "nameEn": "Mountain climber",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start in a high plank position with your hands directly under your shoulders and your body in a straight line.",
@@ -537,9 +537,9 @@
     "name": "Пистолетик с гирей",
     "nameEn": "Kettlebell pistol squat",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Гиря"
+      "kettlebell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, holding a kettlebell in front of your chest with both hands.",
@@ -568,9 +568,9 @@
     "name": "Прыжок с тумбы с приземлением на одну ногу",
     "nameEn": "Box jump down with one leg stabilization",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand in front of a box or platform with your feet shoulder-width apart.",
@@ -600,9 +600,9 @@
     "name": "Боковой сплит-присед со штангой",
     "nameEn": "Barbell side split squat",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet wider than shoulder-width apart, toes pointing slightly outward.",
@@ -632,9 +632,9 @@
     "name": "Протяжка через канат",
     "nameEn": "Cable pull through (with rope)",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Кабель"
+      "cable"
     ],
     "instructions": [
       "Step:1 Stand facing away from the cable machine with your feet shoulder-width apart.",
@@ -662,9 +662,9 @@
     "name": "Жим носками в тренажёре для ног",
     "nameEn": "Sled calf press on leg press",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the seat of the leg press machine so that your knees are slightly bent when your feet are on the sled.",
@@ -692,9 +692,9 @@
     "name": "Жим носками в тренажёре для ног",
     "nameEn": "Sled calf press on leg press",
     "category": "strength",
-    "muscleGroup": "Ноги",
+    "muscleGroup": "legs",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the seat of the leg press machine so that your knees are slightly bent when your feet are on the sled.",
@@ -722,9 +722,9 @@
     "name": "Подтягивания с весом на одной руке",
     "nameEn": "Weighted one hand pull up",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Grab the pull-up bar with an overhand grip, slightly wider than shoulder-width apart.",
@@ -753,9 +753,9 @@
     "name": "Тяга гантелей к подбородку (вид сзади)",
     "nameEn": "Dumbbell upright row (back pov)",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
@@ -784,9 +784,9 @@
     "name": "Тяга горизонтального блока широким хватом",
     "nameEn": "Cable seated wide-grip row",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Кабель"
+      "cable"
     ],
     "instructions": [
       "Step:1 Sit on the cable row machine with your feet flat on the footrests and your knees slightly bent.",
@@ -816,9 +816,9 @@
     "name": "Тяга верхнего блока к груди с полным диапазоном",
     "nameEn": "Cable lat pulldown full range of motion",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Кабель"
+      "cable"
     ],
     "instructions": [
       "Step:1 Sit on the lat pulldown machine with your knees positioned under the pads.",
@@ -848,9 +848,9 @@
     "name": "Подтягивания лучником",
     "nameEn": "Archer pull up",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start by hanging from a pull-up bar with an overhand grip, slightly wider than shoulder-width apart.",
@@ -879,9 +879,9 @@
     "name": "Подтягивания",
     "nameEn": "Pull up (neutral grip)",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Hang from a pull-up bar with a neutral grip (palms facing each other) and your arms fully extended.",
@@ -910,9 +910,9 @@
     "name": "Гиперэкстензия на тренажёре",
     "nameEn": "Lever back extension",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the machine to fit your body size and range of motion.",
@@ -942,9 +942,9 @@
     "name": "Гиперэкстензия на фитболе с отрывом колен",
     "nameEn": "Exercise ball back extension with knees off ground",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Фитбол"
+      "фитбол"
     ],
     "instructions": [
       "Step:1 Place the stability ball on the ground and lie face down on top of it, with your hips resting on the ball and your feet against a wall for stability.",
@@ -972,9 +972,9 @@
     "name": "Тяга штанги в наклоне в Смите",
     "nameEn": "Smith bent over row with declined",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Set up the smith machine with the bar at hip height.",
@@ -1004,9 +1004,9 @@
     "name": "Подтягивание обратным хватом",
     "nameEn": "Chin-up",
     "category": "strength",
-    "muscleGroup": "Спина",
+    "muscleGroup": "back",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Hang from a pull-up bar with your palms facing towards you and your hands shoulder-width apart.",
@@ -1034,9 +1034,9 @@
     "name": "Тяга верхнего блока обратным хватом",
     "nameEn": "Reverse grip machine lat pulldown",
     "category": "strength",
-    "muscleGroup": "Плечи",
+    "muscleGroup": "shoulders",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the seat height and position yourself on the machine with your knees under the pads and your feet flat on the ground.",
@@ -1065,9 +1065,9 @@
     "name": "Жим гантелей сидя (параллельный хват)",
     "nameEn": "Dumbbell seated shoulder press (parallel grip)",
     "category": "strength",
-    "muscleGroup": "Плечи",
+    "muscleGroup": "shoulders",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Sit on a bench with a dumbbell in each hand, palms facing inward.",
@@ -1095,9 +1095,9 @@
     "name": "Разведение гантелей в наклоне с упором головой",
     "nameEn": "Dumbbell rear lateral raise (support head)",
     "category": "strength",
-    "muscleGroup": "Плечи",
+    "muscleGroup": "shoulders",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
@@ -1125,9 +1125,9 @@
     "name": "Разведение гантелей в наклоне с упором головой",
     "nameEn": "Dumbbell rear lateral raise (support head)",
     "category": "strength",
-    "muscleGroup": "Плечи",
+    "muscleGroup": "shoulders",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
@@ -1155,9 +1155,9 @@
     "name": "Толчковый жим гантелей",
     "nameEn": "Dumbbell push press",
     "category": "strength",
-    "muscleGroup": "Плечи",
+    "muscleGroup": "shoulders",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand at shoulder level.",
@@ -1184,9 +1184,9 @@
     "name": "Подъём штанги перед собой и пуловер",
     "nameEn": "Barbell front raise and pullover",
     "category": "strength",
-    "muscleGroup": "Плечи",
+    "muscleGroup": "shoulders",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart and hold a barbell with an overhand grip, palms facing down.",
@@ -1215,9 +1215,9 @@
     "name": "Подъём гантелей перед собой выше головы",
     "nameEn": "Dumbbell standing front raise above head",
     "category": "strength",
-    "muscleGroup": "Плечи",
+    "muscleGroup": "shoulders",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
@@ -1244,9 +1244,9 @@
     "name": "Отжимания на брусьях на трицепс",
     "nameEn": "Triceps dip",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Sit on the edge of a bench or chair with your hands gripping the edge, fingers pointing forward.",
@@ -1274,9 +1274,9 @@
     "name": "Разгибание рук в тренажёре",
     "nameEn": "Lever triceps extension",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the seat height and position yourself on the machine with your back against the pad.",
@@ -1303,9 +1303,9 @@
     "name": "Французский жим штанги лёжа",
     "nameEn": "Barbell lying triceps extension double",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Lie flat on a bench with your feet flat on the ground and your head at the end of the bench.",
@@ -1332,9 +1332,9 @@
     "name": "Французский жим штанги лёжа",
     "nameEn": "Barbell lying triceps extension double",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Lie flat on a bench with your feet flat on the ground and your head at the end of the bench.",
@@ -1361,9 +1361,9 @@
     "name": "Разгибание рук с канатом из-за головы",
     "nameEn": "Cable overhead triceps extension (rope attachment)",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Кабель"
+      "cable"
     ],
     "instructions": [
       "Step:1 Attach a rope to a cable machine at a high position.",
@@ -1392,9 +1392,9 @@
     "name": "Тяга гантелей к подбородку (вид сзади)",
     "nameEn": "Dumbbell upright row (back pov)",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
@@ -1423,9 +1423,9 @@
     "name": "Ролик для предплечий",
     "nameEn": "Wrist rollerer",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Attach a weight to one end of a rope or bar.",
@@ -1454,9 +1454,9 @@
     "name": "Dumbbell seated revers grip concentration curl",
     "nameEn": "Dumbbell seated revers grip concentration curl",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Sit on a bench with your feet flat on the ground and hold a dumbbell in one hand, palm facing up.",
@@ -1484,9 +1484,9 @@
     "name": "Сгибания запястий с гантелями сидя (ладони вверх)",
     "nameEn": "Dumbbell seated palms up wrist curl",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Sit on a bench with your feet flat on the ground and hold a dumbbell in each hand, palms facing up.",
@@ -1514,9 +1514,9 @@
     "name": "Обратные сгибания на скамье Скотта",
     "nameEn": "Barbell reverse preacher curl inclined",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Sit on a preacher bench with your chest against the pad and your arms extended straight down, holding a barbell with an overhand grip.",
@@ -1544,9 +1544,9 @@
     "name": "Молотковые сгибания и жим стоя поочерёдно",
     "nameEn": "Dumbbell standing alternate hammer curl and press",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Stand up straight with a dumbbell in each hand, palms facing your body.",
@@ -1580,9 +1580,9 @@
     "name": "Отжимания между тремя скамьями",
     "nameEn": "Three bench dip",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Sit on a bench with your hands gripping the edge, fingers pointing forward.",
@@ -1610,9 +1610,9 @@
     "name": "Разгибания на блоке (кикбэк)",
     "nameEn": "Cable kickback",
     "category": "strength",
-    "muscleGroup": "Руки",
+    "muscleGroup": "arms",
     "equipment": [
-      "Кабель"
+      "cable"
     ],
     "instructions": [
       "Step:1 Stand facing a cable machine with your feet shoulder-width apart.",
@@ -1641,9 +1641,9 @@
     "name": "Отжимания «Супермен»",
     "nameEn": "Superman push-up",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start in a high plank position with your hands slightly wider than shoulder-width apart and your feet together.",
@@ -1672,9 +1672,9 @@
     "name": "Выход силой",
     "nameEn": "Muscle up",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start by hanging from a pull-up bar with your palms facing away from you and your arms fully extended.",
@@ -1705,9 +1705,9 @@
     "name": "Обратные скручивания",
     "nameEn": "Reverse crunch",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Lie flat on your back with your arms extended along your sides.",
@@ -1734,9 +1734,9 @@
     "name": "Обратная планка с подъёмом ноги",
     "nameEn": "Reverse plank with leg lift",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Sit on the ground with your legs extended in front of you and your hands resting on the ground behind you, fingers pointing towards your feet.",
@@ -1766,9 +1766,9 @@
     "name": "Русские скручивания",
     "nameEn": "Russian twist",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Sit on the ground with your knees bent and feet flat on the floor.",
@@ -1797,9 +1797,9 @@
     "name": "Боковые наклоны с весом на фитболе",
     "nameEn": "Weighted side bend (on stability ball)",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Sit on a stability ball with your feet shoulder-width apart and flat on the ground.",
@@ -1827,9 +1827,9 @@
     "name": "Боковая планка на наклонной поверхности",
     "nameEn": "Bodyweight incline side plank",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start by lying on your side with your legs extended and stacked on top of each other.",
@@ -1857,9 +1857,9 @@
     "name": "Скручивания с согнутыми коленями",
     "nameEn": "Flexion leg sit up (bent knee)",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Lie flat on your back with your knees bent and feet flat on the ground.",
@@ -1887,9 +1887,9 @@
     "name": "Косые скручивания на полу",
     "nameEn": "Oblique crunches floor",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Lie on your back with your knees bent and feet flat on the floor.",
@@ -1916,9 +1916,9 @@
     "name": "Планка с утяжелением",
     "nameEn": "Weighted front plank",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start by lying face down on the floor.",
@@ -1949,9 +1949,9 @@
     "name": "Подъём коленей в висе с поддержкой",
     "nameEn": "Assisted hanging knee raise",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
@@ -1978,9 +1978,9 @@
     "name": "Подъемы ног в висе",
     "nameEn": "Hanging leg raise",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
@@ -2007,9 +2007,9 @@
     "name": "Скручивания «ножницы»",
     "nameEn": "Jackknife sit-up",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Lie flat on your back with your legs extended and your arms overhead.",
@@ -2035,9 +2035,9 @@
     "name": "Раскатка колёсом стоя",
     "nameEn": "Standing wheel rollerout",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start by standing tall with your feet shoulder-width apart and the wheel roller in front of you.",
@@ -2065,9 +2065,9 @@
     "name": "Велосипед с резинкой",
     "nameEn": "Band bicycle crunch",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Резинка"
+      "bands"
     ],
     "instructions": [
       "Step:1 Lie flat on your back with your hands behind your head and your knees bent.",
@@ -2095,9 +2095,9 @@
     "name": "Велосипед с резинкой",
     "nameEn": "Band bicycle crunch",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Резинка"
+      "bands"
     ],
     "instructions": [
       "Step:1 Lie flat on your back with your hands behind your head and your knees bent.",
@@ -2125,9 +2125,9 @@
     "name": "Повороты на блоке",
     "nameEn": "Cable twist",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Кабель"
+      "cable"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, facing the cable machine.",
@@ -2156,9 +2156,9 @@
     "name": "Перекрестные скручивания",
     "nameEn": "Cross body crunch",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Lie flat on your back with your knees bent and feet flat on the ground.",
@@ -2186,9 +2186,9 @@
     "name": "Скручивания с весом",
     "nameEn": "Weighted crunch",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Lie flat on your back with your knees bent and feet flat on the ground.",
@@ -2215,9 +2215,9 @@
     "name": "Скручивания",
     "nameEn": "Crunch (on stability ball)",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Фитбол"
+      "фитбол"
     ],
     "instructions": [
       "Step:1 Sit on the stability ball with your feet flat on the ground and your knees bent at a 90-degree angle.",
@@ -2245,9 +2245,9 @@
     "name": "Скручивания на наклонной скамье",
     "nameEn": "Decline crunch",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Lie on a decline bench with your feet secured and your knees bent at a 90-degree angle.",
@@ -2274,9 +2274,9 @@
     "name": "Подъём коленей в висе с поддержкой",
     "nameEn": "Assisted hanging knee raise",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
@@ -2303,9 +2303,9 @@
     "name": "Подъём прямых ног в висе",
     "nameEn": "Hanging straight leg raise",
     "category": "strength",
-    "muscleGroup": "Кор",
+    "muscleGroup": "abs",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
@@ -2332,9 +2332,9 @@
     "name": "Выпады с ходьбой",
     "nameEn": "Walking lunge",
     "category": "strength",
-    "muscleGroup": "Кардио",
+    "muscleGroup": "cardio",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart.",
@@ -2364,9 +2364,9 @@
     "name": "Поза бабочки (йога)",
     "nameEn": "Butterfly yoga pose",
     "category": "strength",
-    "muscleGroup": "Кардио",
+    "muscleGroup": "cardio",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Sit on the floor with your legs extended in front of you.",
@@ -2396,9 +2396,9 @@
     "name": "Упражнение «Доброе утро» со штангой",
     "nameEn": "Barbell good morning",
     "category": "strength",
-    "muscleGroup": "Кардио",
+    "muscleGroup": "cardio",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Start by standing with your feet shoulder-width apart and the barbell resting on your upper back.",
@@ -2425,9 +2425,9 @@
     "name": "Попеременный жим гирь",
     "nameEn": "Kettlebell alternating press",
     "category": "strength",
-    "muscleGroup": "Кардио",
+    "muscleGroup": "cardio",
     "equipment": [
-      "Гиря"
+      "kettlebell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, holding a kettlebell in each hand at shoulder height.",
@@ -2455,9 +2455,9 @@
     "name": "Прыжки на скакалке",
     "nameEn": "Jump rope",
     "category": "strength",
-    "muscleGroup": "Кардио",
+    "muscleGroup": "cardio",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Hold the handles of the jump rope with your hands, palms facing inward.",
@@ -2487,9 +2487,9 @@
     "name": "Упражнение с канатами",
     "nameEn": "Battling ropes",
     "category": "strength",
-    "muscleGroup": "Кардио",
+    "muscleGroup": "cardio",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart and knees slightly bent.",
@@ -2517,9 +2517,9 @@
     "name": "Поза вытянутого большого пальца ноги с ремнём (йога)",
     "nameEn": "Reclining big toe pose with rope",
     "category": "strength",
-    "muscleGroup": "Кардио",
+    "muscleGroup": "cardio",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Lie on your back with your legs extended and your arms by your sides.",
@@ -2548,9 +2548,9 @@
     "name": "Ходьба на эллипсоиде",
     "nameEn": "Walk elliptical cross trainer",
     "category": "strength",
-    "muscleGroup": "Кардио",
+    "muscleGroup": "cardio",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the resistance level and incline of the elliptical machine to your desired settings.",
@@ -2582,9 +2582,9 @@
     "name": "Отжимания от стены",
     "nameEn": "Push-up (wall)",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand facing a wall, about arm's length away.",
@@ -2613,9 +2613,9 @@
     "name": "Отжимания узким хватом (на коленях)",
     "nameEn": "Close-grip push-up (on knees)",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start by getting on your hands and knees, with your hands shoulder-width apart and your knees hip-width apart.",
@@ -2643,9 +2643,9 @@
     "name": "Плиометрические отжимания",
     "nameEn": "Plyo push up",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start in a high plank position with your hands slightly wider than shoulder-width apart.",
@@ -2674,9 +2674,9 @@
     "name": "Жим штанги сидя на наклонной скамье",
     "nameEn": "Barbell incline bench press seated",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Set up an incline bench at a 45-degree angle.",
@@ -2705,9 +2705,9 @@
     "name": "Жим штанги сидя на наклонной скамье",
     "nameEn": "Barbell incline bench press seated",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Set up an incline bench at a 45-degree angle.",
@@ -2736,9 +2736,9 @@
     "name": "Жим штанги сидя на наклонной скамье",
     "nameEn": "Barbell incline bench press seated",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Set up an incline bench at a 45-degree angle.",
@@ -2767,9 +2767,9 @@
     "name": "Круги гантелями стоя («Around the World»)",
     "nameEn": "Dumbbell standing around world",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Гантели"
+      "dumbbell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
@@ -2797,9 +2797,9 @@
     "name": "Жим штанги сидя на наклонной скамье",
     "nameEn": "Barbell incline bench press seated",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Set up an incline bench at a 45-degree angle.",
@@ -2828,9 +2828,9 @@
     "name": "Кроссовер на блочном тренажёре (вариация)",
     "nameEn": "Cable cross-over variation",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Кабель"
+      "cable"
     ],
     "instructions": [
       "Step:1 Adjust the cable pulleys to chest height.",
@@ -2860,9 +2860,9 @@
     "name": "Отжимания на брусьях на грудь",
     "nameEn": "Chest dip",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Position yourself on parallel bars with your arms fully extended and your body straight.",
@@ -2889,9 +2889,9 @@
     "name": "Разведение одной рукой вниз на кроссовере",
     "nameEn": "Cable one arm decline chest fly",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Кабель"
+      "cable"
     ],
     "instructions": [
       "Step:1 Attach a D-handle to a low pulley cable machine and set the bench to a decline angle.",
@@ -2920,9 +2920,9 @@
     "name": "Подъём на носки в тренажёре для жима ногами",
     "nameEn": "Lever seated squat calf raise on leg press machine",
     "category": "strength",
-    "muscleGroup": "Грудь",
+    "muscleGroup": "chest",
     "equipment": [
-      "Тренажер"
+      "machine"
     ],
     "instructions": [
       "Step:1 Adjust the seat of the leg press machine so that your knees are slightly bent when your feet are on the footplate.",
@@ -2953,9 +2953,9 @@
     "name": "Жим гирей одной рукой лёжа с полной амплитудой",
     "nameEn": "Contracted kettlebell extended range one arm press on floor",
     "category": "strength",
-    "muscleGroup": "Все тело",
+    "muscleGroup": "fullBody",
     "equipment": [
-      "Гиря"
+      "kettlebell"
     ],
     "instructions": [
       "Step:1 Start by lying on your back on the floor with your knees bent and feet flat on the ground.",
@@ -2983,9 +2983,9 @@
     "name": "Выход силой",
     "nameEn": "Muscle up",
     "category": "strength",
-    "muscleGroup": "Все тело",
+    "muscleGroup": "fullBody",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start by hanging from a pull-up bar with your palms facing away from you and your arms fully extended.",
@@ -3016,9 +3016,9 @@
     "name": "Растяжка широчайших на фитболе",
     "nameEn": "Exercise ball lat stretch",
     "category": "strength",
-    "muscleGroup": "Все тело",
+    "muscleGroup": "fullBody",
     "equipment": [
-      "Фитбол"
+      "фитбол"
     ],
     "instructions": [
       "Step:1 Sit on a stability ball with your feet flat on the ground and your back straight.",
@@ -3046,9 +3046,9 @@
     "name": "Берпи",
     "nameEn": "Burpee",
     "category": "strength",
-    "muscleGroup": "Все тело",
+    "muscleGroup": "fullBody",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start in a standing position with your feet shoulder-width apart.",
@@ -3081,9 +3081,9 @@
     "name": "Махи гирей",
     "nameEn": "Kettlebell swing",
     "category": "strength",
-    "muscleGroup": "Все тело",
+    "muscleGroup": "fullBody",
     "equipment": [
-      "Гиря"
+      "kettlebell"
     ],
     "instructions": [
       "Step:1 Stand with your feet shoulder-width apart, toes pointed slightly outward.",
@@ -3112,9 +3112,9 @@
     "name": "Турецкий подъем с гирей",
     "nameEn": "Kettlebell turkish get up (squat style)",
     "category": "strength",
-    "muscleGroup": "Все тело",
+    "muscleGroup": "fullBody",
     "equipment": [
-      "Гиря"
+      "kettlebell"
     ],
     "instructions": [
       "Step:1 Start by lying on your back with your legs extended and the kettlebell held in your right hand, arm fully extended above your shoulder.",
@@ -3147,9 +3147,9 @@
     "name": "Киппинг-масл-ап",
     "nameEn": "Kipping muscle up",
     "category": "strength",
-    "muscleGroup": "Все тело",
+    "muscleGroup": "fullBody",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Start by hanging from a pull-up bar with an overhand grip, hands slightly wider than shoulder-width apart.",
@@ -3180,9 +3180,9 @@
     "name": "Взятие на грудь в полуподсед",
     "nameEn": "Power clean",
     "category": "strength",
-    "muscleGroup": "Олимпийские упражнения",
+    "muscleGroup": "fullBody",
     "equipment": [
-      "Штанга"
+      "barbell"
     ],
     "instructions": [
       "Step:1 Start with the barbell on the ground in front of you, with your feet shoulder-width apart.",
@@ -3214,9 +3214,9 @@
     "name": "Растяжка трицепса",
     "nameEn": "Triceps stretch",
     "category": "strength",
-    "muscleGroup": "Другое",
+    "muscleGroup": "other",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand or sit upright with your back straight.",
@@ -3243,9 +3243,9 @@
     "name": "Отжимания в стойке на руках",
     "nameEn": "Handstand push-up",
     "category": "strength",
-    "muscleGroup": "Другое",
+    "muscleGroup": "other",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Find a wall and face away from it, standing a few feet away.",
@@ -3274,9 +3274,9 @@
     "name": "Высокое поднимание коленей у стены",
     "nameEn": "High knee against wall",
     "category": "strength",
-    "muscleGroup": "Другое",
+    "muscleGroup": "other",
     "equipment": [
-      "Собственный вес"
+      "bodyweight"
     ],
     "instructions": [
       "Step:1 Stand facing a wall with your feet hip-width apart.",

@@ -99,8 +99,56 @@ async function applyManualTranslations() {
   let notFoundCount = 0;
   const notFound = [];
   
+  // Маппинг русских групп мышц в английские enum
+  const russianToEnglishMuscleGroup = {
+    'Ноги': 'legs',
+    'Спина': 'back',
+    'Плечи': 'shoulders',
+    'Руки': 'arms',
+    'Кор': 'abs',
+    'Кардио': 'cardio',
+    'Грудь': 'chest',
+    'Все тело': 'fullBody',
+    'Олимпийские упражнения': 'fullBody',
+    'Другое': 'other'
+  };
+
+  // Маппинг русского оборудования в английские enum
+  const russianToEnglishEquipment = {
+    'Штанга': 'barbell',
+    'Гантели': 'dumbbell',
+    'Гантель': 'dumbbell',
+    'Гиря': 'kettlebell',
+    'Кабель': 'cable',
+    'Тренажер': 'machine',
+    'Резинка': 'bands',
+    'Резинкой': 'bands',
+    'Собственный вес': 'bodyweight',
+    'Bodyweight': 'bodyweight',
+    'Без оборудования': 'bodyweight',
+    'Машина Смита': 'machine',
+    'Смит': 'machine'
+  };
+
   const translatedExercises = exercises.map((exercise, index) => {
     const translation = findTranslation(exercise.name, translations);
+    
+    // Конвертируем muscleGroup если она на русском
+    let muscleGroupEnum = exercise.muscleGroup;
+    if (typeof exercise.muscleGroup === 'string' && russianToEnglishMuscleGroup[exercise.muscleGroup]) {
+      muscleGroupEnum = russianToEnglishMuscleGroup[exercise.muscleGroup];
+    }
+
+    // Конвертируем equipment если на русском
+    let equipmentEnum = exercise.equipment;
+    if (Array.isArray(exercise.equipment)) {
+      equipmentEnum = exercise.equipment.map(eq => {
+        if (russianToEnglishEquipment[eq]) {
+          return russianToEnglishEquipment[eq];
+        }
+        return eq.toLowerCase();
+      });
+    }
     
     if (translation) {
       translatedCount++;
@@ -110,7 +158,9 @@ async function applyManualTranslations() {
       return {
         ...exercise,
         name: translation,
-        nameEn: exercise.name
+        nameEn: exercise.name,
+        muscleGroup: muscleGroupEnum,
+        equipment: equipmentEnum
       };
     } else {
       notFoundCount++;
@@ -118,7 +168,9 @@ async function applyManualTranslations() {
       console.log(`⚠️  ${index + 1}/${exercises.length}: ${exercise.name} - ПЕРЕВОД НЕ НАЙДЕН`);
       return {
         ...exercise,
-        nameEn: exercise.name
+        nameEn: exercise.name,
+        muscleGroup: muscleGroupEnum,
+        equipment: equipmentEnum
         // Оставляем name как есть
       };
     }
