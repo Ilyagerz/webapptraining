@@ -83,8 +83,11 @@ async function loadExercises() {
   return fallbackExercises;
 }
 
-export async function getExercises(): Promise<Exercise[]> {
-  return await loadExercises();
+export async function getExercises(customExercises: Exercise[] = []): Promise<Exercise[]> {
+  const apiExercises = await loadExercises();
+  
+  // Объединяем API упражнения с кастомными
+  return [...customExercises, ...apiExercises];
 }
 
 export async function searchExercises(query: string): Promise<Exercise[]> {

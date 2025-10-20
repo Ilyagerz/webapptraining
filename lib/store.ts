@@ -2,6 +2,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import type { User, Workout, WorkoutTemplate, Exercise, UserSettings, BodyMeasurement } from '@/types';
+import { generateId } from '@/lib/utils';
 
 interface AppState {
   // User
@@ -35,6 +36,11 @@ interface AppState {
   measurements: BodyMeasurement[];
   setMeasurements: (measurements: BodyMeasurement[]) => void;
   addMeasurement: (measurement: BodyMeasurement) => void;
+  
+  // Custom Exercises
+  customExercises: Exercise[];
+  addCustomExercise: (exercise: Omit<Exercise, 'id' | 'category' | 'isCustom'>) => void;
+  deleteCustomExercise: (id: string) => void;
   
   // UI State
   theme: 'light' | 'dark';
@@ -161,6 +167,23 @@ export const useAppStore = create<AppState>()(
       // Loading States
       isLoading: false,
       setIsLoading: (loading) => set({ isLoading: loading }),
+      
+      // Custom Exercises
+      customExercises: [],
+      addCustomExercise: (exercise) => set((state) => ({
+        customExercises: [
+          ...state.customExercises,
+          {
+            ...exercise,
+            id: generateId(),
+            category: 'strength' as const,
+            isCustom: true,
+          },
+        ],
+      })),
+      deleteCustomExercise: (id) => set((state) => ({
+        customExercises: state.customExercises.filter(ex => ex.id !== id),
+      })),
     }),
     {
       name: 'nubo-training-storage',
@@ -175,6 +198,7 @@ export const useAppStore = create<AppState>()(
         templates: state.templates,
         measurements: state.measurements,
         workouts: state.workouts,
+        customExercises: state.customExercises,
       }),
       // Deserialize dates from strings
       onRehydrateStorage: () => (state) => {

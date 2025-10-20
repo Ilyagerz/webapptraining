@@ -5,6 +5,8 @@ import { X, Search, Dumbbell, Plus, Info } from 'lucide-react';
 import { getExercises, MUSCLE_GROUP_NAMES } from '@/lib/exercises-data';
 import type { Exercise, MuscleGroup } from '@/types';
 import { ExerciseDetailModal } from './ExerciseDetailModal';
+import { CreateCustomExercise } from './CreateCustomExercise';
+import { useAppStore } from '@/lib/store';
 
 interface ExercisePickerProps {
   onSelect: (exercise: Exercise) => void;
@@ -12,6 +14,7 @@ interface ExercisePickerProps {
 }
 
 export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
+  const { customExercises, addCustomExercise } = useAppStore();
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [filteredExercises, setFilteredExercises] = useState<Exercise[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -24,8 +27,8 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
     // Загружаем упражнения асинхронно
     async function loadExercises() {
       try {
-        const allExercises = await getExercises();
-        console.log(`✅ ExercisePicker: Загружено ${allExercises.length} упражнений`);
+        const allExercises = await getExercises(customExercises);
+        console.log(`✅ ExercisePicker: Загружено ${allExercises.length} упражнений (${customExercises.length} кастомных)`);
         setExercises(allExercises);
         setFilteredExercises(allExercises);
       } catch (error) {
@@ -36,7 +39,7 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
     }
     
     loadExercises();
-  }, []);
+  }, [customExercises]);
 
   useEffect(() => {
     let filtered = exercises;
