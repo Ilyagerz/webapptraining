@@ -41,20 +41,22 @@ const russianToEnglishEquipment: Record<string, Equipment> = {
 };
 
 // Загрузка упражнений из translated файла
-let allExercises: Exercise[] = [];
-let isLoaded = false;
-
 async function loadExercises() {
-  if (isLoaded) return allExercises;
-
   try {
-    // Пытаемся загрузить переведенные упражнения
-    const response = await fetch('/api/exercises/translated');
+    // Пытаемся загрузить переведенные упражнения БЕЗ КЭША
+    const response = await fetch('/api/exercises/translated', {
+      cache: 'no-store', // Отключаем кэш браузера
+      headers: {
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache',
+      },
+    });
+    
     if (response.ok) {
       const data = await response.json();
       
       // Преобразуем формат
-      allExercises = data.map((ex: any) => ({
+      const exercises = data.map((ex: any) => ({
         id: ex.id,
         name: ex.name || ex.originalName,
         nameEn: ex.originalName || ex.nameEn,
@@ -68,18 +70,17 @@ async function loadExercises() {
         description: ex.description,
       }));
       
-      isLoaded = true;
-      console.log(`✅ Загружено ${allExercises.length} упражнений`);
-      return allExercises;
+      console.log(`✅ Загружено ${exercises.length} упражнений из API (без кэша)`);
+      return exercises;
     }
   } catch (error) {
     console.error('Error loading exercises:', error);
   }
 
   // Fallback to default exercises
-  allExercises = getDefaultExercises();
-  isLoaded = true;
-  return allExercises;
+  const fallbackExercises = getDefaultExercises();
+  console.log(`⚠️ Используем fallback: ${fallbackExercises.length} упражнений`);
+  return fallbackExercises;
 }
 
 export async function getExercises(): Promise<Exercise[]> {
@@ -91,11 +92,11 @@ export async function searchExercises(query: string): Promise<Exercise[]> {
   const lowerQuery = query.toLowerCase();
   
   return exercises.filter(
-    (ex) =>
+    (ex: Exercise) =>
       ex.name.toLowerCase().includes(lowerQuery) ||
       (ex.nameEn && ex.nameEn.toLowerCase().includes(lowerQuery)) ||
       ex.muscleGroup.toLowerCase().includes(lowerQuery) ||
-      ex.equipment.some((eq) => eq.toLowerCase().includes(lowerQuery))
+      ex.equipment.some((eq: Equipment) => eq.toLowerCase().includes(lowerQuery))
   );
 }
 
@@ -103,7 +104,7 @@ export async function getExercisesByMuscleGroup(
   muscleGroup: MuscleGroup
 ): Promise<Exercise[]> {
   const exercises = await loadExercises();
-  return exercises.filter((ex) => ex.muscleGroup === muscleGroup);
+  return exercises.filter((ex: Exercise) => ex.muscleGroup === muscleGroup);
 }
 
 export const MUSCLE_GROUP_NAMES: Record<MuscleGroup, string> = {
