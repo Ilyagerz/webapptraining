@@ -115,13 +115,13 @@ export default function NewWorkoutPage() {
 
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         {/* Empty Workout */}
-        <Link
-          href="/workout/active"
+        <button
+          onClick={startEmptyWorkout}
           className="block w-full glass-effect rounded-2xl p-6 text-left card-hover card-shadow"
         >
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold mb-1">Пустая тренировка</h3>
+              <h3 className="text-lg font-bold mb-1 text-black dark:text-white">Пустая тренировка</h3>
               <p className="text-sm text-muted-foreground">
                 Начни с нуля и добавляй упражнения по ходу
               </p>
@@ -130,7 +130,7 @@ export default function NewWorkoutPage() {
               <Plus size={24} className="text-nubo-dark" />
             </div>
           </div>
-        </Link>
+        </button>
 
         {/* Search Templates */}
         <div>

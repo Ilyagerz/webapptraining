@@ -55,7 +55,15 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
     setFilteredExercises(filtered);
   }, [searchQuery, selectedMuscleGroup, exercises]);
 
-  const muscleGroups = ['all', 'chest', 'back', 'shoulders', 'legs', 'arms', 'abs'];
+  const muscleGroups: { key: MuscleGroup | 'all'; label: string }[] = [
+    { key: 'all', label: 'Все' },
+    { key: 'chest', label: 'Грудь' },
+    { key: 'back', label: 'Спина' },
+    { key: 'shoulders', label: 'Плечи' },
+    { key: 'legs', label: 'Ноги' },
+    { key: 'arms', label: 'Руки' },
+    { key: 'abs', label: 'Пресс' },
+  ];
 
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 p-4">
@@ -63,7 +71,7 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
           <h2 className="text-xl font-bold text-black dark:text-white">
-            Выбери упражнение {!loading && `(${exercises.length})`}
+            Выбери упражнение {!loading && `(${filteredExercises.length})`}
           </h2>
           <div className="flex items-center gap-2">
             <button
@@ -101,15 +109,15 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
           <div className="flex space-x-2 overflow-x-auto no-scrollbar">
             {muscleGroups.map((group) => (
               <button
-                key={group}
-                onClick={() => setSelectedMuscleGroup(group)}
+                key={group.key}
+                onClick={() => setSelectedMuscleGroup(group.key)}
                 className={`px-4 py-2 rounded-xl font-medium whitespace-nowrap transition-colors ${
-                  selectedMuscleGroup === group
+                  selectedMuscleGroup === group.key
                     ? 'bg-electric-lime text-nubo-dark'
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
-                {group === 'all' ? 'Все' : MUSCLE_GROUP_NAMES[group as MuscleGroup]}
+                {group.label}
               </button>
             ))}
           </div>

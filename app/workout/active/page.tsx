@@ -35,6 +35,7 @@ export default function ActiveWorkoutPage() {
   const [selectedExercises, setSelectedExercises] = useState<string[]>([]);
   const [isEditingName, setIsEditingName] = useState(false);
   const [workoutName, setWorkoutName] = useState('');
+  const [hideButtons, setHideButtons] = useState(false);
 
   // Получаем templateId из URL на клиенте
   useEffect(() => {
@@ -42,6 +43,29 @@ export default function ActiveWorkoutPage() {
       const params = new URLSearchParams(window.location.search);
       setTemplateId(params.get('templateId'));
     }
+  }, []);
+
+  // Скрываем кнопки при фокусе на input
+  useEffect(() => {
+    const handleFocusIn = (e: FocusEvent) => {
+      if ((e.target as HTMLElement).tagName === 'INPUT') {
+        setHideButtons(true);
+      }
+    };
+
+    const handleFocusOut = (e: FocusEvent) => {
+      if ((e.target as HTMLElement).tagName === 'INPUT') {
+        setHideButtons(false);
+      }
+    };
+
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
+
+    return () => {
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
+    };
   }, []);
 
   useEffect(() => {
@@ -429,24 +453,27 @@ export default function ActiveWorkoutPage() {
       </div>
 
       {/* Action Buttons */}
-      <div className="fixed bottom-4 left-0 right-0 p-4 bg-white dark:bg-nubo-dark border-t border-gray-200 dark:border-gray-700 safe-bottom">
-        <div className="flex gap-3">
-          <button
-            onClick={handleSaveAsTemplate}
-            className="flex-1 py-4 bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-xl font-semibold text-lg card-hover flex items-center justify-center space-x-2"
-          >
-            <Save size={20} />
-            <span>Сохранить как шаблон</span>
-          </button>
-          <button
-            onClick={handleCompleteWorkout}
-            className="flex-1 py-4 bg-electric-lime text-nubo-dark rounded-xl font-bold text-lg card-hover flex items-center justify-center space-x-2 shadow-lg"
-          >
-            <Check size={24} />
-            <span>Завершить</span>
-          </button>
+      {!hideButtons && (
+        <div className="fixed bottom-4 left-0 right-0 p-3 bg-white dark:bg-nubo-dark border-t border-gray-200 dark:border-gray-700 safe-bottom transition-all">
+          <div className="flex gap-2 max-w-7xl mx-auto">
+            <button
+              onClick={handleSaveAsTemplate}
+              className="flex-1 py-2.5 bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-lg font-medium text-sm card-hover flex items-center justify-center space-x-1.5"
+            >
+              <Save size={16} />
+              <span className="hidden sm:inline">Сохранить</span>
+              <span className="sm:hidden">Шаблон</span>
+            </button>
+            <button
+              onClick={handleCompleteWorkout}
+              className="flex-1 py-2.5 bg-electric-lime text-nubo-dark rounded-lg font-bold text-sm card-hover flex items-center justify-center space-x-1.5 shadow-lg"
+            >
+              <Check size={18} />
+              <span>Завершить</span>
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Exercise Picker Modal */}
       {showExercisePicker && (

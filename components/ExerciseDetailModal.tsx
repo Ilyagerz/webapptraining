@@ -119,8 +119,11 @@ export function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalPr
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 backdrop-blur-sm">
-      <div className="w-full h-[95vh] sm:max-w-2xl sm:h-[90vh] sm:mb-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl rounded-t-3xl sm:rounded-3xl flex flex-col shadow-2xl border border-white/20 dark:border-gray-700/20">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4" onClick={onClose}>
+      <div 
+        className="w-full max-w-2xl max-h-[95vh] bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl rounded-3xl flex flex-col shadow-2xl border border-white/20 dark:border-gray-700/20 overflow-hidden" 
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200/50 dark:border-gray-700/50">
           <div>
