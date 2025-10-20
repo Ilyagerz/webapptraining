@@ -1,7 +1,7 @@
 [
   {
     "id": "DhMl549",
-    "name": "Barbell full squat (back pov)",
+    "name": "Приседания со штангой (вид сзади)",
     "nameEn": "Barbell full squat (back pov)",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -186,7 +186,7 @@
   },
   {
     "id": "d5bTEPV",
-    "name": "Band step-up",
+    "name": "Подъём на платформу с резинкой",
     "nameEn": "Band step-up",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -219,7 +219,7 @@
   },
   {
     "id": "oom75KC",
-    "name": "Dumbbell straight leg deadlift",
+    "name": "Румынская тяга с гантелями",
     "nameEn": "Dumbbell straight leg deadlift",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -281,7 +281,7 @@
   },
   {
     "id": "Vvwjz6N",
-    "name": "Glute-ham raise",
+    "name": "Подъём корпуса на скамье для ягодиц и бёдер",
     "nameEn": "Glute-ham raise",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -313,7 +313,7 @@
   },
   {
     "id": "Qa55kX1",
-    "name": "Sled hack squat",
+    "name": "Гакк-присед в тренажёре",
     "nameEn": "Sled hack squat",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -346,7 +346,7 @@
   },
   {
     "id": "c8f5cSY",
-    "name": "Side lying hip adduction (male)",
+    "name": "Приведение бедра лёжа на боку (мужской вариант)",
     "nameEn": "Side lying hip adduction (male)",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -408,7 +408,7 @@
   },
   {
     "id": "IeDEXTe",
-    "name": "Lever seated squat calf raise on leg press machine",
+    "name": "Подъём на носки в тренажёре для жима ногами",
     "nameEn": "Lever seated squat calf raise on leg press machine",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -441,7 +441,7 @@
   },
   {
     "id": "Ul5OFSV",
-    "name": "Resistance band leg extension declined",
+    "name": "Разгибания ног с резинкой на наклонной",
     "nameEn": "Resistance band leg extension declined",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -470,7 +470,7 @@
   },
   {
     "id": "7zdxRTl",
-    "name": "Smith leg press",
+    "name": "Жим ногами в Смите",
     "nameEn": "Smith leg press",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -534,7 +534,7 @@
   },
   {
     "id": "5bpPTHv",
-    "name": "Kettlebell pistol squat",
+    "name": "Пистолетик с гирей",
     "nameEn": "Kettlebell pistol squat",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -565,7 +565,7 @@
   },
   {
     "id": "iPm26QU",
-    "name": "Box jump down with one leg stabilization",
+    "name": "Прыжок с тумбы с приземлением на одну ногу",
     "nameEn": "Box jump down with one leg stabilization",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -597,7 +597,7 @@
   },
   {
     "id": "W31mMjd",
-    "name": "Barbell side split squat",
+    "name": "Боковой сплит-присед со штангой",
     "nameEn": "Barbell side split squat",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -659,7 +659,7 @@
   },
   {
     "id": "ykHcWme",
-    "name": "Sled calf press on leg press",
+    "name": "Жим носками в тренажёре для ног",
     "nameEn": "Sled calf press on leg press",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -689,7 +689,7 @@
   },
   {
     "id": "ykHcWme",
-    "name": "Sled calf press on leg press",
+    "name": "Жим носками в тренажёре для ног",
     "nameEn": "Sled calf press on leg press",
     "category": "strength",
     "muscleGroup": "Ноги",
@@ -719,7 +719,7 @@
   },
   {
     "id": "fXfqg1E",
-    "name": "Weighted one hand pull up",
+    "name": "Подтягивания с весом на одной руке",
     "nameEn": "Weighted one hand pull up",
     "category": "strength",
     "muscleGroup": "Спина",
@@ -750,7 +750,7 @@
   },
   {
     "id": "Iptlv6x",
-    "name": "Dumbbell upright row (back pov)",
+    "name": "Тяга гантелей к подбородку (вид сзади)",
     "nameEn": "Dumbbell upright row (back pov)",
     "category": "strength",
     "muscleGroup": "Спина",
@@ -781,7 +781,7 @@
   },
   {
     "id": "qcY50ZD",
-    "name": "Cable seated wide-grip row",
+    "name": "Тяга горизонтального блока широким хватом",
     "nameEn": "Cable seated wide-grip row",
     "category": "strength",
     "muscleGroup": "Спина",
@@ -813,7 +813,7 @@
   },
   {
     "id": "LEprlgG",
-    "name": "Cable lat pulldown full range of motion",
+    "name": "Тяга верхнего блока к груди с полным диапазоном",
     "nameEn": "Cable lat pulldown full range of motion",
     "category": "strength",
     "muscleGroup": "Спина",
@@ -845,7 +845,7 @@
   },
   {
     "id": "72BC5Za",
-    "name": "Archer pull up",
+    "name": "Подтягивания лучником",
     "nameEn": "Archer pull up",
     "category": "strength",
     "muscleGroup": "Спина",
@@ -907,7 +907,7 @@
   },
   {
     "id": "rUXfn3R",
-    "name": "Lever back extension",
+    "name": "Гиперэкстензия на тренажёре",
     "nameEn": "Lever back extension",
     "category": "strength",
     "muscleGroup": "Спина",
@@ -939,7 +939,7 @@
   },
   {
     "id": "WME869U",
-    "name": "Exercise ball back extension with knees off ground",
+    "name": "Гиперэкстензия на фитболе с отрывом колен",
     "nameEn": "Exercise ball back extension with knees off ground",
     "category": "strength",
     "muscleGroup": "Спина",
@@ -969,7 +969,7 @@
   },
   {
     "id": "5lE7XRz",
-    "name": "Smith bent over row with declined",
+    "name": "Тяга штанги в наклоне в Смите",
     "nameEn": "Smith bent over row with declined",
     "category": "strength",
     "muscleGroup": "Спина",
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "T2mxWqc",
-    "name": "Chin-up",
+    "name": "Подтягивание обратным хватом",
     "nameEn": "Chin-up",
     "category": "strength",
     "muscleGroup": "Спина",
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "ecpY0rH",
-    "name": "Reverse grip machine lat pulldown",
+    "name": "Тяга верхнего блока обратным хватом",
     "nameEn": "Reverse grip machine lat pulldown",
     "category": "strength",
     "muscleGroup": "Плечи",
@@ -1062,7 +1062,7 @@
   },
   {
     "id": "f1jf47L",
-    "name": "Dumbbell seated shoulder press (parallel grip)",
+    "name": "Жим гантелей сидя (параллельный хват)",
     "nameEn": "Dumbbell seated shoulder press (parallel grip)",
     "category": "strength",
     "muscleGroup": "Плечи",
@@ -1092,7 +1092,7 @@
   },
   {
     "id": "UzkLrem",
-    "name": "Dumbbell rear lateral raise (support head)",
+    "name": "Разведение гантелей в наклоне с упором головой",
     "nameEn": "Dumbbell rear lateral raise (support head)",
     "category": "strength",
     "muscleGroup": "Плечи",
@@ -1122,7 +1122,7 @@
   },
   {
     "id": "UzkLrem",
-    "name": "Dumbbell rear lateral raise (support head)",
+    "name": "Разведение гантелей в наклоне с упором головой",
     "nameEn": "Dumbbell rear lateral raise (support head)",
     "category": "strength",
     "muscleGroup": "Плечи",
@@ -1152,7 +1152,7 @@
   },
   {
     "id": "FS63wTN",
-    "name": "Dumbbell push press",
+    "name": "Толчковый жим гантелей",
     "nameEn": "Dumbbell push press",
     "category": "strength",
     "muscleGroup": "Плечи",
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "33AzZeV",
-    "name": "Barbell front raise and pullover",
+    "name": "Подъём штанги перед собой и пуловер",
     "nameEn": "Barbell front raise and pullover",
     "category": "strength",
     "muscleGroup": "Плечи",
@@ -1212,7 +1212,7 @@
   },
   {
     "id": "laVRfDf",
-    "name": "Dumbbell standing front raise above head",
+    "name": "Подъём гантелей перед собой выше головы",
     "nameEn": "Dumbbell standing front raise above head",
     "category": "strength",
     "muscleGroup": "Плечи",
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "Ser9eQp",
-    "name": "Lever triceps extension",
+    "name": "Разгибание рук в тренажёре",
     "nameEn": "Lever triceps extension",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1300,7 +1300,7 @@
   },
   {
     "id": "1TVoin7",
-    "name": "Barbell lying triceps extension double",
+    "name": "Французский жим штанги лёжа",
     "nameEn": "Barbell lying triceps extension double",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1329,7 +1329,7 @@
   },
   {
     "id": "1TVoin7",
-    "name": "Barbell lying triceps extension double",
+    "name": "Французский жим штанги лёжа",
     "nameEn": "Barbell lying triceps extension double",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1358,7 +1358,7 @@
   },
   {
     "id": "2IxROQ1",
-    "name": "Cable overhead triceps extension (rope attachment)",
+    "name": "Разгибание рук с канатом из-за головы",
     "nameEn": "Cable overhead triceps extension (rope attachment)",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1389,7 +1389,7 @@
   },
   {
     "id": "Iptlv6x",
-    "name": "Dumbbell upright row (back pov)",
+    "name": "Тяга гантелей к подбородку (вид сзади)",
     "nameEn": "Dumbbell upright row (back pov)",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1420,7 +1420,7 @@
   },
   {
     "id": "bd5b860",
-    "name": "Wrist rollerer",
+    "name": "Ролик для предплечий",
     "nameEn": "Wrist rollerer",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "2dImyQ8",
-    "name": "Dumbbell seated palms up wrist curl",
+    "name": "Сгибания запястий с гантелями сидя (ладони вверх)",
     "nameEn": "Dumbbell seated palms up wrist curl",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "EqHIIjJ",
-    "name": "Barbell reverse preacher curl inclined",
+    "name": "Обратные сгибания на скамье Скотта",
     "nameEn": "Barbell reverse preacher curl inclined",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "LeaZOIz",
-    "name": "Dumbbell standing alternate hammer curl and press",
+    "name": "Молотковые сгибания и жим стоя поочерёдно",
     "nameEn": "Dumbbell standing alternate hammer curl and press",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1577,7 +1577,7 @@
   },
   {
     "id": "DQ0cqkT",
-    "name": "Three bench dip",
+    "name": "Отжимания между тремя скамьями",
     "nameEn": "Three bench dip",
     "category": "strength",
     "muscleGroup": "Руки",
@@ -1638,7 +1638,7 @@
   },
   {
     "id": "4GqRrAk",
-    "name": "Superman push-up",
+    "name": "Отжимания «Супермен»",
     "nameEn": "Superman push-up",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -1731,7 +1731,7 @@
   },
   {
     "id": "tFToB7l",
-    "name": "Reverse plank with leg lift",
+    "name": "Обратная планка с подъёмом ноги",
     "nameEn": "Reverse plank with leg lift",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -1794,7 +1794,7 @@
   },
   {
     "id": "6bOA1Oi",
-    "name": "Weighted side bend (on stability ball)",
+    "name": "Боковые наклоны с весом на фитболе",
     "nameEn": "Weighted side bend (on stability ball)",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -1824,7 +1824,7 @@
   },
   {
     "id": "5VXmnV5",
-    "name": "Bodyweight incline side plank",
+    "name": "Боковая планка на наклонной поверхности",
     "nameEn": "Bodyweight incline side plank",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -1854,7 +1854,7 @@
   },
   {
     "id": "AR0ig3o",
-    "name": "Flexion leg sit up (bent knee)",
+    "name": "Скручивания с согнутыми коленями",
     "nameEn": "Flexion leg sit up (bent knee)",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -1884,7 +1884,7 @@
   },
   {
     "id": "QUDd8WS",
-    "name": "Oblique crunches floor",
+    "name": "Косые скручивания на полу",
     "nameEn": "Oblique crunches floor",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -1913,7 +1913,7 @@
   },
   {
     "id": "VBAWRPG",
-    "name": "Weighted front plank",
+    "name": "Планка с утяжелением",
     "nameEn": "Weighted front plank",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "03lzqwk",
-    "name": "Assisted hanging knee raise",
+    "name": "Подъём коленей в висе с поддержкой",
     "nameEn": "Assisted hanging knee raise",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -2004,7 +2004,7 @@
   },
   {
     "id": "mbkgB44",
-    "name": "Jackknife sit-up",
+    "name": "Скручивания «ножницы»",
     "nameEn": "Jackknife sit-up",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -2032,7 +2032,7 @@
   },
   {
     "id": "KtRomty",
-    "name": "Standing wheel rollerout",
+    "name": "Раскатка колёсом стоя",
     "nameEn": "Standing wheel rollerout",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -2062,7 +2062,7 @@
   },
   {
     "id": "tZkGYZ9",
-    "name": "Band bicycle crunch",
+    "name": "Велосипед с резинкой",
     "nameEn": "Band bicycle crunch",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -2092,7 +2092,7 @@
   },
   {
     "id": "tZkGYZ9",
-    "name": "Band bicycle crunch",
+    "name": "Велосипед с резинкой",
     "nameEn": "Band bicycle crunch",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -2183,7 +2183,7 @@
   },
   {
     "id": "s8nrDXF",
-    "name": "Weighted crunch",
+    "name": "Скручивания с весом",
     "nameEn": "Weighted crunch",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -2271,7 +2271,7 @@
   },
   {
     "id": "03lzqwk",
-    "name": "Assisted hanging knee raise",
+    "name": "Подъём коленей в висе с поддержкой",
     "nameEn": "Assisted hanging knee raise",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -2300,7 +2300,7 @@
   },
   {
     "id": "4Ml7QFO",
-    "name": "Hanging straight leg raise",
+    "name": "Подъём прямых ног в висе",
     "nameEn": "Hanging straight leg raise",
     "category": "strength",
     "muscleGroup": "Кор",
@@ -2329,7 +2329,7 @@
   },
   {
     "id": "IZVHb27",
-    "name": "Walking lunge",
+    "name": "Выпады с ходьбой",
     "nameEn": "Walking lunge",
     "category": "strength",
     "muscleGroup": "Кардио",
@@ -2361,7 +2361,7 @@
   },
   {
     "id": "bWlZvXh",
-    "name": "Butterfly yoga pose",
+    "name": "Поза бабочки (йога)",
     "nameEn": "Butterfly yoga pose",
     "category": "strength",
     "muscleGroup": "Кардио",
@@ -2393,7 +2393,7 @@
   },
   {
     "id": "XlZ4lAC",
-    "name": "Barbell good morning",
+    "name": "Упражнение «Доброе утро» со штангой",
     "nameEn": "Barbell good morning",
     "category": "strength",
     "muscleGroup": "Кардио",
@@ -2422,7 +2422,7 @@
   },
   {
     "id": "5KLbZWx",
-    "name": "Kettlebell alternating press",
+    "name": "Попеременный жим гирь",
     "nameEn": "Kettlebell alternating press",
     "category": "strength",
     "muscleGroup": "Кардио",
@@ -2484,7 +2484,7 @@
   },
   {
     "id": "RJa4tCo",
-    "name": "Battling ropes",
+    "name": "Упражнение с канатами",
     "nameEn": "Battling ropes",
     "category": "strength",
     "muscleGroup": "Кардио",
@@ -2514,7 +2514,7 @@
   },
   {
     "id": "K5xgdvI",
-    "name": "Reclining big toe pose with rope",
+    "name": "Поза вытянутого большого пальца ноги с ремнём (йога)",
     "nameEn": "Reclining big toe pose with rope",
     "category": "strength",
     "muscleGroup": "Кардио",
@@ -2545,7 +2545,7 @@
   },
   {
     "id": "rjtuP6X",
-    "name": "Walk elliptical cross trainer",
+    "name": "Ходьба на эллипсоиде",
     "nameEn": "Walk elliptical cross trainer",
     "category": "strength",
     "muscleGroup": "Кардио",
@@ -2579,7 +2579,7 @@
   },
   {
     "id": "LEH9jxP",
-    "name": "Push-up (wall)",
+    "name": "Отжимания от стены",
     "nameEn": "Push-up (wall)",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2610,7 +2610,7 @@
   },
   {
     "id": "v3vLFW0",
-    "name": "Close-grip push-up (on knees)",
+    "name": "Отжимания узким хватом (на коленях)",
     "nameEn": "Close-grip push-up (on knees)",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2640,7 +2640,7 @@
   },
   {
     "id": "Snj1wSv",
-    "name": "Plyo push up",
+    "name": "Плиометрические отжимания",
     "nameEn": "Plyo push up",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2671,7 +2671,7 @@
   },
   {
     "id": "9Z23cLE",
-    "name": "Barbell incline bench press seated",
+    "name": "Жим штанги сидя на наклонной скамье",
     "nameEn": "Barbell incline bench press seated",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2702,7 +2702,7 @@
   },
   {
     "id": "9Z23cLE",
-    "name": "Barbell incline bench press seated",
+    "name": "Жим штанги сидя на наклонной скамье",
     "nameEn": "Barbell incline bench press seated",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2733,7 +2733,7 @@
   },
   {
     "id": "9Z23cLE",
-    "name": "Barbell incline bench press seated",
+    "name": "Жим штанги сидя на наклонной скамье",
     "nameEn": "Barbell incline bench press seated",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2764,7 +2764,7 @@
   },
   {
     "id": "RSOsp5d",
-    "name": "Dumbbell standing around world",
+    "name": "Круги гантелями стоя («Around the World»)",
     "nameEn": "Dumbbell standing around world",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2794,7 +2794,7 @@
   },
   {
     "id": "9Z23cLE",
-    "name": "Barbell incline bench press seated",
+    "name": "Жим штанги сидя на наклонной скамье",
     "nameEn": "Barbell incline bench press seated",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2825,7 +2825,7 @@
   },
   {
     "id": "0CXGHya",
-    "name": "Cable cross-over variation",
+    "name": "Кроссовер на блочном тренажёре (вариация)",
     "nameEn": "Cable cross-over variation",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2886,7 +2886,7 @@
   },
   {
     "id": "w4dLzSx",
-    "name": "Cable one arm decline chest fly",
+    "name": "Разведение одной рукой вниз на кроссовере",
     "nameEn": "Cable one arm decline chest fly",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2917,7 +2917,7 @@
   },
   {
     "id": "IeDEXTe",
-    "name": "Lever seated squat calf raise on leg press machine",
+    "name": "Подъём на носки в тренажёре для жима ногами",
     "nameEn": "Lever seated squat calf raise on leg press machine",
     "category": "strength",
     "muscleGroup": "Грудь",
@@ -2950,7 +2950,7 @@
   },
   {
     "id": "j6uIfep",
-    "name": "Contracted kettlebell extended range one arm press on floor",
+    "name": "Жим гирей одной рукой лёжа с полной амплитудой",
     "nameEn": "Contracted kettlebell extended range one arm press on floor",
     "category": "strength",
     "muscleGroup": "Все тело",
@@ -3013,7 +3013,7 @@
   },
   {
     "id": "sM84pE4",
-    "name": "Exercise ball lat stretch",
+    "name": "Растяжка широчайших на фитболе",
     "nameEn": "Exercise ball lat stretch",
     "category": "strength",
     "muscleGroup": "Все тело",
@@ -3144,7 +3144,7 @@
   },
   {
     "id": "pM07UxU",
-    "name": "Kipping muscle up",
+    "name": "Киппинг-масл-ап",
     "nameEn": "Kipping muscle up",
     "category": "strength",
     "muscleGroup": "Все тело",
@@ -3211,7 +3211,7 @@
   },
   {
     "id": "uOV3Itw",
-    "name": "Triceps stretch",
+    "name": "Растяжка трицепса",
     "nameEn": "Triceps stretch",
     "category": "strength",
     "muscleGroup": "Другое",
@@ -3240,7 +3240,7 @@
   },
   {
     "id": "rQxwMxO",
-    "name": "Handstand push-up",
+    "name": "Отжимания в стойке на руках",
     "nameEn": "Handstand push-up",
     "category": "strength",
     "muscleGroup": "Другое",
@@ -3271,7 +3271,7 @@
   },
   {
     "id": "ealLwvX",
-    "name": "High knee against wall",
+    "name": "Высокое поднимание коленей у стены",
     "nameEn": "High knee against wall",
     "category": "strength",
     "muscleGroup": "Другое",
