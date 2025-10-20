@@ -63,6 +63,9 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
     { key: 'legs', label: 'Ноги' },
     { key: 'arms', label: 'Руки' },
     { key: 'abs', label: 'Пресс' },
+    { key: 'cardio', label: 'Кардио' },
+    { key: 'fullBody', label: 'Все тело' },
+    { key: 'other', label: 'Другое' },
   ];
 
   return (
