@@ -150,7 +150,7 @@ export function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalPr
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center space-x-2 px-4 py-3 font-medium transition-colors whitespace-nowrap ${
                   activeTab === tab.id
-                    ? 'text-electric-lime border-b-2 border-electric-lime'
+                    ? 'text-black dark:text-white border-b-2 border-gray-800 dark:border-gray-300 bg-gray-100 dark:bg-gray-800'
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
                 }`}
               >
@@ -187,7 +187,7 @@ export function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalPr
                   <ol className="space-y-3">
                     {exercise.instructions.map((instruction, index) => (
                       <li key={index} className="flex space-x-3">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-electric-lime/20 text-electric-lime flex items-center justify-center text-sm font-semibold">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-700 text-black dark:text-white flex items-center justify-center text-sm font-semibold">
                           {index + 1}
                         </span>
                         <span className="text-gray-700 dark:text-gray-300">{instruction}</span>
