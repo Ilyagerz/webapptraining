@@ -1,7 +1,7 @@
 // Zustand store для управления состоянием приложения
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import type { User, Workout, WorkoutTemplate, Exercise, UserSettings, BodyMeasurement } from '@/types';
+import type { User, Workout, WorkoutTemplate, Exercise, UserSettings, BodyMeasurement, MuscleGroup, Equipment } from '@/types';
 import { generateId } from '@/lib/utils';
 
 interface AppState {
@@ -39,7 +39,15 @@ interface AppState {
   
   // Custom Exercises
   customExercises: Exercise[];
-  addCustomExercise: (exercise: Omit<Exercise, 'id' | 'category' | 'isCustom'>) => void;
+  addCustomExercise: (exercise: {
+    name: string;
+    nameEn?: string;
+    muscleGroup: MuscleGroup;
+    equipment: Equipment[];
+    instructions?: string[];
+    description?: string;
+    gifUrl?: string;
+  }) => void;
   deleteCustomExercise: (id: string) => void;
   
   // UI State
@@ -175,6 +183,9 @@ export const useAppStore = create<AppState>()(
           ...state.customExercises,
           {
             ...exercise,
+            nameEn: exercise.nameEn || exercise.name,
+            instructions: exercise.instructions || [],
+            description: exercise.description || '',
             id: generateId(),
             category: 'strength' as const,
             isCustom: true,

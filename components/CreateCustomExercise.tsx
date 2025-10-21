@@ -7,10 +7,10 @@ import type { MuscleGroup, Equipment } from '@/types';
 interface CreateCustomExerciseProps {
   onSave: (exercise: {
     name: string;
-    nameEn: string;
+    nameEn?: string;
     muscleGroup: MuscleGroup;
     equipment: Equipment[];
-    instructions: string[];
+    instructions?: string[];
     description?: string;
     gifUrl?: string;
   }) => void;

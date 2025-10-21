@@ -199,27 +199,15 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
         />
       )}
 
-      {/* Create Custom Exercise Form - TODO: Implement */}
+      {/* Create Custom Exercise Modal */}
       {showCreateForm && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 p-4">
-          <div className="w-full max-w-md bg-white dark:bg-gray-900 rounded-3xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold text-black dark:text-white">Создать упражнение</h3>
-              <button onClick={() => setShowCreateForm(false)}>
-                <X size={24} className="text-gray-700 dark:text-white" />
-              </button>
-            </div>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Функционал создания собственных упражнений будет добавлен в следующем обновлении.
-            </p>
-            <button
-              onClick={() => setShowCreateForm(false)}
-              className="w-full py-3 bg-electric-lime text-nubo-dark rounded-xl font-semibold"
-            >
-              Понятно
-            </button>
-          </div>
-        </div>
+        <CreateCustomExercise
+          onSave={(newExercise) => {
+            addCustomExercise(newExercise);
+            setShowCreateForm(false);
+          }}
+          onClose={() => setShowCreateForm(false)}
+        />
       )}
     </div>
   );

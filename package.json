@@ -16,6 +16,7 @@
     "exercises:translate-names": "node scripts/translate-exercise-names.js",
     "exercises:apply-translations": "node scripts/apply-manual-translations.js",
     "exercises:get-all": "node scripts/get-all-exercise-names.js",
+    "exercises:add": "node scripts/add-exercises.js",
     "exercises:update": "npm run exercises:fetch-api && npm run exercises:translate"
   },
   "dependencies": {

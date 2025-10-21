@@ -47,22 +47,30 @@ export default function WorkoutSummaryPage() {
       }
 
       try {
-        const response = await fetch(`/api/workouts/${workoutId}`, {
-          credentials: 'include',
-        });
-
-        if (response.ok) {
-          const { workout: loadedWorkout } = await response.json();
+        // Загружаем тренировку из Zustand store (localStorage)
+        const storedData = typeof window !== 'undefined' ? localStorage.getItem('nubo-training-storage') : null;
+        if (storedData) {
+          const { state } = JSON.parse(storedData);
+          const loadedWorkout = state.workouts?.find((w: Workout) => w.id === workoutId);
           
-          // Вычисляем рекорды
-          const records = await calculateRecords(loadedWorkout);
-          
-          setWorkout({
-            ...loadedWorkout,
-            records,
-          });
-        } else {
-          console.error('Failed to load workout');
+          if (loadedWorkout) {
+            // Преобразуем даты из строк в Date объекты
+            const workout = {
+              ...loadedWorkout,
+              startedAt: new Date(loadedWorkout.startedAt),
+              completedAt: loadedWorkout.completedAt ? new Date(loadedWorkout.completedAt) : undefined,
+            };
+            
+            // Вычисляем рекорды
+            const records = await calculateRecords(workout);
+            
+            setWorkout({
+              ...workout,
+              records,
+            });
+          } else {
+            console.error('Workout not found in store');
+          }
         }
       } catch (error) {
         console.error('Error loading workout:', error);

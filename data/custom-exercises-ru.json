@@ -1,100 +1,1306 @@
 [
   {
-    "id": "DhMl549",
-    "name": "Приседания со штангой (вид сзади)",
-    "nameEn": "Barbell full squat (back pov)",
+    "id": "5VXmnV5",
+    "name": "Боковая планка на наклонной поверхности",
+    "nameEn": "Bodyweight incline side plank",
     "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "barbell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart, toes slightly turned out.",
-      "Шаг 2: Hold the barbell across your upper back, resting it on your traps or rear delts.",
-      "Шаг 3: Engage your core and keep your chest up as you begin to lower your body down.",
-      "Шаг 4: Bend at the knees and hips, pushing your hips back and down as if sitting into a chair.",
-      "Шаг 5: Lower your body until your thighs are parallel to the ground or slightly below.",
-      "Шаг 6: Keep your knees in line with your toes and your weight in your heels.",
-      "Шаг 7: Drive through your heels to stand back up, extending your hips and knees.",
-      "Шаг 8: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/DhMl549.gif",
-    "targetMuscles": [
-      "glutes"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "calves",
-      "core"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "6HmFgmx",
-    "name": "Подъемы на носки стоя со штангой",
-    "nameEn": "Standing calf raise (on a staircase)",
-    "category": "strength",
-    "muscleGroup": "legs",
+    "muscleGroup": "abs",
     "equipment": [
       "bodyweight"
     ],
     "instructions": [
-      "Шаг 1: Stand on the edge of a step or a sturdy platform with your heels hanging off and your toes on the step.",
-      "Шаг 2: Hold onto a railing or wall for balance if needed.",
-      "Шаг 3: Slowly raise your heels as high as possible, lifting your body weight onto the balls of your feet.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
+      "Шаг 1: Start by lying on your side with your legs extended and stacked on top of each other.",
+      "Шаг 2: Place your forearm on the ground directly below your shoulder, with your elbow bent at a 90-degree angle.",
+      "Шаг 3: Engage your core and lift your hips off the ground, creating a straight line from your head to your feet.",
+      "Шаг 4: Hold this position for the desired amount of time.",
+      "Шаг 5: Lower your hips back down to the ground and repeat on the other side."
     ],
-    "gifUrl": "/exercises/gifs/6HmFgmx.gif",
+    "gifUrl": "/exercises/gifs/5VXmnV5.gif",
     "targetMuscles": [
-      "calves"
+      "abs"
     ],
     "secondaryMuscles": [
-      "ankles",
-      "feet"
+      "obliques",
+      "shoulders"
     ],
     "bodyParts": [
-      "lower legs"
+      "waist"
     ],
-    "description": "Упражнение для Ноги",
+    "description": "Упражнение для Кор",
     "isCustom": false
   },
   {
-    "id": "d5bTEPV",
-    "name": "Подъём на платформу с резинкой",
-    "nameEn": "Band step-up",
+    "id": "6bOA1Oi",
+    "name": "Боковые наклоны с весом на фитболе",
+    "nameEn": "Weighted side bend (on stability ball)",
     "category": "strength",
-    "muscleGroup": "legs",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on a stability ball with your feet shoulder-width apart and flat on the ground.",
+      "Шаг 2: Hold a weight in one hand and place your other hand on your hip.",
+      "Шаг 3: Engage your core and slowly bend sideways towards the weighted side, keeping your back straight.",
+      "Шаг 4: Pause for a moment at the bottom, then slowly return to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions, then switch sides."
+    ],
+    "gifUrl": "/exercises/gifs/6bOA1Oi.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques",
+      "lower back"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "add_034",
+    "name": "Велосипед",
+    "nameEn": "Bicycle Crunch",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Лягте на пол, руки за головой",
+      "Поднимите ноги и плечи",
+      "Подтягивайте локоть к противоположному колену",
+      "Чередуйте стороны"
+    ],
+    "description": "Упражнение для косых мышц пресса",
+    "gifUrl": "/exercises/gifs/bicycle_crunch.gif"
+  },
+  {
+    "id": "tZkGYZ9",
+    "name": "Велосипед с резинкой",
+    "nameEn": "Band bicycle crunch",
+    "category": "strength",
+    "muscleGroup": "abs",
     "equipment": [
       "bands"
     ],
     "instructions": [
-      "Шаг 1: Place a band around your thighs, just above your knees.",
-      "Шаг 2: Stand facing a step or platform with your feet hip-width apart.",
-      "Шаг 3: Step up onto the platform with your right foot, pushing through your heel.",
-      "Шаг 4: Extend your left leg behind you, keeping it straight.",
-      "Шаг 5: Lower your left foot back down to the ground.",
-      "Шаг 6: Repeat with your left foot stepping up onto the platform.",
-      "Шаг 7: Continue alternating legs for the desired number of repetitions."
+      "Шаг 1: Lie flat on your back with your hands behind your head and your knees bent.",
+      "Шаг 2: Lift your feet off the ground and bring your right knee towards your chest while simultaneously twisting your torso to bring your left elbow towards your right knee.",
+      "Шаг 3: Straighten your right leg while bringing your left knee towards your chest and twisting your torso to bring your right elbow towards your left knee.",
+      "Шаг 4: Continue alternating the twisting motion, as if you are pedaling a bicycle, while keeping your core engaged throughout the movement.",
+      "Шаг 5: Repeat for the desired number of repetitions."
     ],
-    "gifUrl": "/exercises/gifs/d5bTEPV.gif",
+    "gifUrl": "/exercises/gifs/tZkGYZ9.gif",
     "targetMuscles": [
-      "glutes"
+      "abs"
     ],
     "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "calves"
+      "hip flexors",
+      "obliques"
     ],
     "bodyParts": [
-      "upper legs"
+      "waist"
     ],
-    "description": "Упражнение для Ноги",
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "yJUHKTn",
+    "name": "Выход силой",
+    "nameEn": "Muscle up",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Start by hanging from a pull-up bar with your palms facing away from you and your arms fully extended.",
+      "Шаг 2: Engage your core and pull your body up towards the bar, leading with your chest.",
+      "Шаг 3: As you reach the top of the movement, transition your grip so that your palms are facing towards you.",
+      "Шаг 4: Continue pulling yourself up until your chest is above the bar and your arms are fully flexed.",
+      "Шаг 5: Reverse the movement by slowly lowering yourself back down to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/yJUHKTn.gif",
+    "targetMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "biceps",
+      "triceps",
+      "shoulders",
+      "chest"
+    ],
+    "bodyParts": [
+      "back"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "QUDd8WS",
+    "name": "Косые скручивания на полу",
+    "nameEn": "Oblique crunches floor",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Lie on your back with your knees bent and feet flat on the floor.",
+      "Шаг 2: Place your hands behind your head or cross them over your chest.",
+      "Шаг 3: Engage your abs and lift your shoulder blades off the floor, rotating your torso to one side.",
+      "Шаг 4: Pause for a moment, then lower your shoulder blades back down to the floor.",
+      "Шаг 5: Repeat on the other side, alternating sides with each repetition."
+    ],
+    "gifUrl": "/exercises/gifs/QUDd8WS.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "0CXGHya",
+    "name": "Кроссовер на блочном тренажёре (вариация)",
+    "nameEn": "Cable cross-over variation",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "cable"
+    ],
+    "instructions": [
+      "Шаг 1: Adjust the cable pulleys to chest height.",
+      "Шаг 2: Stand in the center of the cable machine with one foot in front of the other.",
+      "Шаг 3: Grasp the handles with your palms facing down and your arms extended out to the sides.",
+      "Шаг 4: Take a step forward, keeping your arms slightly bent.",
+      "Шаг 5: With a slight bend in your elbows, bring your hands together in front of your chest.",
+      "Шаг 6: Pause for a moment, then slowly return your arms back to the starting position.",
+      "Шаг 7: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/0CXGHya.gif",
+    "targetMuscles": [
+      "pectorals"
+    ],
+    "secondaryMuscles": [
+      "deltoids",
+      "triceps"
+    ],
+    "bodyParts": [
+      "chest"
+    ],
+    "description": "Упражнение для Грудь",
+    "isCustom": false
+  },
+  {
+    "id": "tFToB7l",
+    "name": "Обратная планка с подъёмом ноги",
+    "nameEn": "Reverse plank with leg lift",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on the ground with your legs extended in front of you and your hands resting on the ground behind you, fingers pointing towards your feet.",
+      "Шаг 2: Press through your hands and lift your hips off the ground, coming into a reverse plank position.",
+      "Шаг 3: Engage your core and lift one leg off the ground, extending it straight up towards the ceiling.",
+      "Шаг 4: Hold for a moment, then lower your leg back down.",
+      "Шаг 5: Repeat with the other leg.",
+      "Шаг 6: Continue alternating legs for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/tFToB7l.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "hamstrings",
+      "shoulders"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "nCU1Ekp",
+    "name": "Обратные скручивания",
+    "nameEn": "Reverse crunch",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Lie flat on your back with your arms extended along your sides.",
+      "Шаг 2: Bend your knees and lift your feet off the ground, bringing your thighs perpendicular to the floor.",
+      "Шаг 3: Contract your abs and curl your hips off the floor, bringing your knees towards your chest.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your hips back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/nCU1Ekp.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "4GqRrAk",
+    "name": "Отжимания «Супермен»",
+    "nameEn": "Superman push-up",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Start in a high plank position with your hands slightly wider than shoulder-width apart and your feet together.",
+      "Шаг 2: Engage your core and lower your body towards the ground, keeping your elbows close to your sides.",
+      "Шаг 3: As you lower your body, simultaneously lift your right arm and left leg off the ground, extending them straight out.",
+      "Шаг 4: Pause for a moment at the top, then lower your arm and leg back down while pushing yourself back up to the starting position.",
+      "Шаг 5: Repeat the movement, this time lifting your left arm and right leg.",
+      "Шаг 6: Continue alternating sides for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/4GqRrAk.gif",
+    "targetMuscles": [
+      "pectorals"
+    ],
+    "secondaryMuscles": [
+      "core",
+      "shoulders"
+    ],
+    "bodyParts": [
+      "chest"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "rbu5UUb",
+    "name": "Перекрестные скручивания",
+    "nameEn": "Cross body crunch",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Lie flat on your back with your knees bent and feet flat on the ground.",
+      "Шаг 2: Place your hands behind your head with your elbows pointing outwards.",
+      "Шаг 3: Engaging your abs, lift your upper body off the ground and twist to bring your right elbow towards your left knee.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
+      "Шаг 5: Repeat on the other side, bringing your left elbow towards your right knee.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/rbu5UUb.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "VBAWRPG",
+    "name": "Планка с утяжелением",
+    "nameEn": "Weighted front plank",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Start by lying face down on the floor.",
+      "Шаг 2: Place your forearms on the ground, with your elbows directly under your shoulders.",
+      "Шаг 3: Extend your legs straight out behind you, with your toes on the ground.",
+      "Шаг 4: Engage your core and lift your body off the ground, balancing on your forearms and toes.",
+      "Шаг 5: Keep your body in a straight line from your head to your heels.",
+      "Шаг 6: Hold this position for the desired amount of time.",
+      "Шаг 7: Lower your body back down to the starting position.",
+      "Шаг 8: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/VBAWRPG.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "shoulders",
+      "lower back"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "aVs3BR3",
+    "name": "Повороты на блоке",
+    "nameEn": "Cable twist",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "cable"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart, facing the cable machine.",
+      "Шаг 2: Hold the cable handle with both hands in front of your chest, keeping your arms slightly bent.",
+      "Шаг 3: Engage your core and twist your torso to the right, pulling the cable across your body.",
+      "Шаг 4: Pause for a moment at the end of the movement, feeling the contraction in your abs and obliques.",
+      "Шаг 5: Slowly return to the starting position, resisting the cable's pull.",
+      "Шаг 6: Repeat the movement to the left side.",
+      "Шаг 7: Continue alternating sides for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/aVs3BR3.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "laVRfDf",
+    "name": "Подъём гантелей перед собой выше головы",
+    "nameEn": "Dumbbell standing front raise above head",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
+      "Шаг 2: Keep your arms straight and lift the dumbbells in front of you, raising them above your head.",
+      "Шаг 3: Pause for a moment at the top, then slowly lower the dumbbells back to the starting position.",
+      "Шаг 4: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/laVRfDf.gif",
+    "targetMuscles": [
+      "delts"
+    ],
+    "secondaryMuscles": [
+      "trapezius",
+      "biceps"
+    ],
+    "bodyParts": [
+      "shoulders"
+    ],
+    "description": "Упражнение для Плечи",
+    "isCustom": false
+  },
+  {
+    "id": "03lzqwk",
+    "name": "Подъём коленей в висе с поддержкой",
+    "nameEn": "Assisted hanging knee raise",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Шаг 1: Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
+      "Шаг 2: Engage your core muscles and lift your knees towards your chest, bending at the hips and knees.",
+      "Шаг 3: Pause for a moment at the top of the movement, squeezing your abs.",
+      "Шаг 4: Slowly lower your legs back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/03lzqwk.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "HEJ6DIX",
+    "name": "Разгибания на блоке (кикбэк)",
+    "nameEn": "Cable kickback",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "cable"
+    ],
+    "instructions": [
+      "Шаг 1: Stand facing a cable machine with your feet shoulder-width apart.",
+      "Шаг 2: Hold the cable handle with your right hand and step back to create tension in the cable.",
+      "Шаг 3: Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
+      "Шаг 4: Keep your upper arm close to your body and your elbow bent at a 90-degree angle.",
+      "Шаг 5: Extend your forearm backward, straightening your arm fully.",
+      "Шаг 6: Pause for a moment, then slowly return to the starting position.",
+      "Шаг 7: Repeat for the desired number of repetitions, then switch sides."
+    ],
+    "gifUrl": "/exercises/gifs/HEJ6DIX.gif",
+    "targetMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [
+      "shoulders"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "KtRomty",
+    "name": "Раскатка колёсом стоя",
+    "nameEn": "Standing wheel rollerout",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Start by standing tall with your feet shoulder-width apart and the wheel roller in front of you.",
+      "Шаг 2: Bend at your waist and slowly roll the wheel forward, keeping your back straight and your core engaged.",
+      "Шаг 3: Continue rolling forward until you feel a stretch in your abs and your body is extended as far as possible.",
+      "Шаг 4: Pause for a moment, then slowly roll the wheel back towards your body, returning to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/KtRomty.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "lower back",
+      "shoulders"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "XVDdcoj",
+    "name": "Русские скручивания",
+    "nameEn": "Russian twist",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on the ground with your knees bent and feet flat on the floor.",
+      "Шаг 2: Lean back slightly while keeping your back straight and your core engaged.",
+      "Шаг 3: Hold your hands together in front of your chest or hold a weight if desired.",
+      "Шаг 4: Lift your feet off the ground, balancing on your sit bones.",
+      "Шаг 5: Twist your torso to the right, bringing your hands or weight towards the right side of your body.",
+      "Шаг 6: Pause for a moment, then twist your torso to the left, bringing your hands or weight towards the left side of your body.",
+      "Шаг 7: Continue alternating sides for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/XVDdcoj.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "MCUhf1F",
+    "name": "Скручивания",
+    "nameEn": "Crunch (on stability ball)",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "фитбол"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on the stability ball with your feet flat on the ground and your knees bent at a 90-degree angle.",
+      "Шаг 2: Lie back on the ball until your lower back is supported and your upper body is parallel to the floor.",
+      "Шаг 3: Place your hands behind your head or across your chest.",
+      "Шаг 4: Engage your abs and lift your upper body towards your knees, curling your torso forward.",
+      "Шаг 5: Pause for a moment at the top of the movement, then slowly lower your upper body back down to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/MCUhf1F.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "mbkgB44",
+    "name": "Скручивания «ножницы»",
+    "nameEn": "Jackknife sit-up",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Lie flat on your back with your legs extended and your arms overhead.",
+      "Шаг 2: Engage your core and lift your legs and upper body simultaneously, reaching your hands towards your toes.",
+      "Шаг 3: Pause for a moment at the top, then slowly lower your legs and upper body back down to the starting position.",
+      "Шаг 4: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/mbkgB44.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "9Ap7miY",
+    "name": "Скручивания на наклонной скамье",
+    "nameEn": "Decline crunch",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Lie on a decline bench with your feet secured and your knees bent at a 90-degree angle.",
+      "Шаг 2: Place your hands behind your head or across your chest.",
+      "Шаг 3: Engage your abs and lift your upper body towards your knees, curling your torso.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/9Ap7miY.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "s8nrDXF",
+    "name": "Скручивания с весом",
+    "nameEn": "Weighted crunch",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Lie flat on your back with your knees bent and feet flat on the ground.",
+      "Шаг 2: Hold a weight plate or dumbbell on your chest.",
+      "Шаг 3: Engage your abs and lift your upper body off the ground, curling forward until your shoulder blades are off the ground.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/s8nrDXF.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "AR0ig3o",
+    "name": "Скручивания с согнутыми коленями",
+    "nameEn": "Flexion leg sit up (bent knee)",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Lie flat on your back with your knees bent and feet flat on the ground.",
+      "Шаг 2: Place your hands behind your head with your elbows pointing outwards.",
+      "Шаг 3: Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.",
+      "Шаг 4: At the same time, lift your legs off the ground, bending your knees and bringing them towards your chest.",
+      "Шаг 5: Pause for a moment at the top, then slowly lower your upper body and legs back down to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/AR0ig3o.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "add_031",
+    "name": "Жим лежа узким хватом",
+    "nameEn": "Close Grip Bench Press",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Лягте на скамью, возьмите штангу узким хватом",
+      "Опустите штангу к груди",
+      "Выжмите штангу вверх"
+    ],
+    "description": "Упражнение для трицепсов и внутренней части груди",
+    "gifUrl": "/exercises/gifs/close_grip_bench.gif"
+  },
+  {
+    "id": "add_028",
+    "name": "Молот с гантелями",
+    "nameEn": "Hammer Curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Встаньте прямо, гантели в руках нейтральным хватом",
+      "Согните руки в локтях, подняв гантели к плечам",
+      "Опустите гантели вниз"
+    ],
+    "description": "Упражнение для бицепсов и брахиалиса",
+    "gifUrl": "/exercises/gifs/hammer_curl.gif"
+  },
+  {
+    "id": "EqHIIjJ",
+    "name": "Обратные сгибания на скамье Скотта",
+    "nameEn": "Barbell reverse preacher curl inclined",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on a preacher bench with your chest against the pad and your arms extended straight down, holding a barbell with an overhand grip.",
+      "Шаг 2: Keeping your upper arms stationary, exhale and curl the barbell upward while contracting your biceps.",
+      "Шаг 3: Continue to raise the barbell until your biceps are fully contracted and the barbell is at shoulder level. Perform with inclined intensity.",
+      "Шаг 4: Hold the contracted position for a brief pause as you squeeze your biceps.",
+      "Шаг 5: Inhale and slowly lower the barbell back to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/EqHIIjJ.gif",
+    "targetMuscles": [
+      "biceps"
+    ],
+    "secondaryMuscles": [
+      "forearms"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "DQ0cqkT",
+    "name": "Отжимания между тремя скамьями",
+    "nameEn": "Three bench dip",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on a bench with your hands gripping the edge, fingers pointing forward.",
+      "Шаг 2: Slide your butt off the bench, supporting your weight with your hands.",
+      "Шаг 3: Bend your elbows and lower your body until your upper arms are parallel to the ground.",
+      "Шаг 4: Push yourself back up to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/DQ0cqkT.gif",
+    "targetMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [
+      "chest",
+      "shoulders"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "X6C6i5Y",
+    "name": "Отжимания на брусьях на трицепс",
+    "nameEn": "Triceps dip",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on the edge of a bench or chair with your hands gripping the edge, fingers pointing forward.",
+      "Шаг 2: Slide your butt off the bench, supporting your weight with your hands.",
+      "Шаг 3: Bend your elbows and lower your body towards the ground, keeping your back close to the bench.",
+      "Шаг 4: Pause for a moment at the bottom, then push yourself back up to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/X6C6i5Y.gif",
+    "targetMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [
+      "chest",
+      "shoulders"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "add_027",
+    "name": "Подъем гантелей на бицепс",
+    "nameEn": "Dumbbell Curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Встаньте прямо, гантели в руках",
+      "Согните руки в локтях, подняв гантели к плечам",
+      "Опустите гантели вниз"
+    ],
+    "description": "Классическое упражнение для бицепсов",
+    "gifUrl": "/exercises/gifs/dumbbell_curl.gif"
+  },
+  {
+    "id": "add_029",
+    "name": "Подъем на скамье Скотта",
+    "nameEn": "Preacher Curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Сядьте на скамью Скотта, положите руки на подушку",
+      "Возьмите штангу хватом снизу",
+      "Согните руки в локтях, подняв штангу",
+      "Опустите штангу вниз"
+    ],
+    "description": "Изолирующее упражнение для бицепсов",
+    "gifUrl": "/exercises/gifs/preacher_curl.gif"
+  },
+  {
+    "id": "add_026",
+    "name": "Подъем штанги на бицепс стоя",
+    "nameEn": "Barbell Curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Встаньте прямо, возьмите штангу хватом снизу",
+      "Согните руки в локтях, подняв штангу к плечам",
+      "Опустите штангу вниз"
+    ],
+    "description": "Базовое упражнение для бицепсов",
+    "gifUrl": "/exercises/gifs/barbell_curl.gif"
+  },
+  {
+    "id": "Ser9eQp",
+    "name": "Разгибание рук в тренажёре",
+    "nameEn": "Lever triceps extension",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Шаг 1: Adjust the seat height and position yourself on the machine with your back against the pad.",
+      "Шаг 2: Grasp the handles with an overhand grip and fully extend your arms in front of you.",
+      "Шаг 3: Keeping your upper arms stationary, slowly lower the handles towards your forehead by bending your elbows.",
+      "Шаг 4: Pause for a moment at the bottom, then push the handles back up to the starting position by extending your arms.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/Ser9eQp.gif",
+    "targetMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [
+      "shoulders"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "add_032",
+    "name": "Разгибание рук на верхнем блоке",
+    "nameEn": "Tricep Pushdown",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "cable"
+    ],
+    "instructions": [
+      "Встаньте у верхнего блока, возьмитесь за рукоятку",
+      "Разогните руки вниз, напрягая трицепсы",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для трицепсов",
+    "gifUrl": "/exercises/gifs/tricep_pushdown.gif"
+  },
+  {
+    "id": "uOV3Itw",
+    "name": "Растяжка трицепса",
+    "nameEn": "Triceps stretch",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Stand or sit upright with your back straight.",
+      "Шаг 2: Extend one arm overhead, bending it at the elbow.",
+      "Шаг 3: Place your opposite hand on the bent elbow and gently pull it towards your head.",
+      "Шаг 4: Hold the stretch for 15-30 seconds, feeling a gentle stretch in your triceps.",
+      "Шаг 5: Release the stretch and repeat on the other arm."
+    ],
+    "gifUrl": "/exercises/gifs/uOV3Itw.gif",
+    "targetMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [
+      "shoulders"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Другое",
+    "isCustom": false
+  },
+  {
+    "id": "2dImyQ8",
+    "name": "Сгибания запястий с гантелями сидя (ладони вверх)",
+    "nameEn": "Dumbbell seated palms up wrist curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on a bench with your feet flat on the ground and hold a dumbbell in each hand, palms facing up.",
+      "Шаг 2: Rest your forearms on your thighs, allowing your wrists to hang off the edge.",
+      "Шаг 3: Slowly curl your wrists upward, squeezing your forearms at the top of the movement.",
+      "Шаг 4: Pause for a moment, then lower your wrists back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/2dImyQ8.gif",
+    "targetMuscles": [
+      "forearms"
+    ],
+    "secondaryMuscles": [
+      "biceps",
+      "shoulders"
+    ],
+    "bodyParts": [
+      "lower arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "add_030",
+    "name": "Французский жим лежа",
+    "nameEn": "Lying Tricep Extension",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Лягте на скамью, штанга над грудью",
+      "Опустите штангу ко лбу, сгибая руки в локтях",
+      "Разогните руки, вернув штангу вверх"
+    ],
+    "description": "Упражнение для трицепсов",
+    "gifUrl": "/exercises/gifs/skull_crusher.gif"
+  },
+  {
+    "id": "1TVoin7",
+    "name": "Французский жим штанги лёжа",
+    "nameEn": "Barbell lying triceps extension double",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Шаг 1: Lie flat on a bench with your feet flat on the ground and your head at the end of the bench.",
+      "Шаг 2: Hold the barbell with an overhand grip, hands shoulder-width apart, and extend your arms straight up over your chest.",
+      "Шаг 3: Keeping your upper arms stationary, slowly lower the barbell towards your forehead by bending your elbows. Focus on double movement.",
+      "Шаг 4: Pause for a moment at the bottom, then extend your arms back up to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/1TVoin7.gif",
+    "targetMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [
+      "shoulders"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "lyKCLmK",
+    "name": "Dumbbell seated revers grip concentration curl",
+    "nameEn": "Dumbbell seated revers grip concentration curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on a bench with your feet flat on the ground and hold a dumbbell in one hand, palm facing up.",
+      "Шаг 2: Rest your elbow on the inside of your thigh, just above the knee.",
+      "Шаг 3: Keeping your upper arm stationary, exhale and curl the dumbbell towards your shoulder.",
+      "Шаг 4: Pause for a moment at the top, squeezing your biceps.",
+      "Шаг 5: Inhale and slowly lower the dumbbell back to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions, then switch arms."
+    ],
+    "gifUrl": "/exercises/gifs/lyKCLmK.gif",
+    "targetMuscles": [
+      "biceps"
+    ],
+    "secondaryMuscles": [
+      "forearms"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "add_014",
+    "name": "Гиперэкстензия",
+    "nameEn": "Hyperextension",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Лягте в тренажер лицом вниз, закрепите ноги",
+      "Опустите корпус вниз",
+      "Поднимите корпус вверх, напрягая поясницу",
+      "Не переразгибайтесь в верхней точке"
+    ],
+    "description": "Упражнение для поясницы и задней цепи",
+    "gifUrl": "/exercises/gifs/hyperextension.gif"
+  },
+  {
+    "id": "rUXfn3R",
+    "name": "Гиперэкстензия на тренажёре",
+    "nameEn": "Lever back extension",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Шаг 1: Adjust the machine to fit your body size and range of motion.",
+      "Шаг 2: Sit on the machine with your back against the pad and your feet secured.",
+      "Шаг 3: Place your hands on the handles or grip bars.",
+      "Шаг 4: Engage your core and slowly lean forward, allowing your back to round slightly.",
+      "Шаг 5: Pause for a moment at the bottom position, feeling a stretch in your lower back.",
+      "Шаг 6: Using your back muscles, slowly raise your torso back to the starting position.",
+      "Шаг 7: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/rUXfn3R.gif",
+    "targetMuscles": [
+      "spine"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "hamstrings"
+    ],
+    "bodyParts": [
+      "back"
+    ],
+    "description": "Упражнение для Спина",
+    "isCustom": false
+  },
+  {
+    "id": "WME869U",
+    "name": "Гиперэкстензия на фитболе с отрывом колен",
+    "nameEn": "Exercise ball back extension with knees off ground",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "фитбол"
+    ],
+    "instructions": [
+      "Шаг 1: Place the stability ball on the ground and lie face down on top of it, with your hips resting on the ball and your feet against a wall for stability.",
+      "Шаг 2: Position your hands behind your head or crossed over your chest.",
+      "Шаг 3: Engage your core and slowly lift your upper body off the ball, extending your back until your body forms a straight line from your head to your heels.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/WME869U.gif",
+    "targetMuscles": [
+      "spine"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "hamstrings"
+    ],
+    "bodyParts": [
+      "back"
+    ],
+    "description": "Упражнение для Спина",
+    "isCustom": false
+  },
+  {
+    "id": "T2mxWqc",
+    "name": "Подтягивание обратным хватом",
+    "nameEn": "Chin-up",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Hang from a pull-up bar with your palms facing towards you and your hands shoulder-width apart.",
+      "Шаг 2: Engage your core and pull your body up towards the bar, leading with your chest.",
+      "Шаг 3: Continue pulling until your chin is above the bar.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/T2mxWqc.gif",
+    "targetMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "biceps",
+      "forearms"
+    ],
+    "bodyParts": [
+      "back"
+    ],
+    "description": "Упражнение для Спина",
+    "isCustom": false
+  },
+  {
+    "id": "0V2YQjW",
+    "name": "Подтягивания",
+    "nameEn": "Pull up (neutral grip)",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Hang from a pull-up bar with a neutral grip (palms facing each other) and your arms fully extended.",
+      "Шаг 2: Engage your core and squeeze your shoulder blades together.",
+      "Шаг 3: Pull your body up towards the bar by bending your elbows and driving your elbows down towards your hips.",
+      "Шаг 4: Continue pulling until your chin is above the bar.",
+      "Шаг 5: Pause for a moment at the top, then slowly lower your body back down to the starting position with control.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/0V2YQjW.gif",
+    "targetMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "biceps",
+      "forearms"
+    ],
+    "bodyParts": [
+      "back"
+    ],
+    "description": "Упражнение для Спина",
+    "isCustom": false
+  },
+  {
+    "id": "72BC5Za",
+    "name": "Подтягивания лучником",
+    "nameEn": "Archer pull up",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Start by hanging from a pull-up bar with an overhand grip, slightly wider than shoulder-width apart.",
+      "Шаг 2: Engage your core and pull your shoulder blades down and back.",
+      "Шаг 3: As you pull yourself up, bend one arm and bring your elbow towards your side, while keeping the other arm straight.",
+      "Шаг 4: Continue pulling until your chin is above the bar and your bent arm is fully flexed.",
+      "Шаг 5: Lower yourself back down with control, straightening the bent arm and repeating the movement on the other side.",
+      "Шаг 6: Alternate sides with each repetition."
+    ],
+    "gifUrl": "/exercises/gifs/72BC5Za.gif",
+    "targetMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "biceps",
+      "forearms"
+    ],
+    "bodyParts": [
+      "back"
+    ],
+    "description": "Упражнение для Спина",
+    "isCustom": false
+  },
+  {
+    "id": "fXfqg1E",
+    "name": "Подтягивания с весом на одной руке",
+    "nameEn": "Weighted one hand pull up",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Grab the pull-up bar with an overhand grip, slightly wider than shoulder-width apart.",
+      "Шаг 2: Hang from the bar with your arm fully extended and your body straight.",
+      "Шаг 3: Engage your core and pull your body up towards the bar by bending your elbow and squeezing your back muscles.",
+      "Шаг 4: Continue pulling until your chin is above the bar.",
+      "Шаг 5: Lower your body back down to the starting position with control.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/fXfqg1E.gif",
+    "targetMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "biceps",
+      "forearms"
+    ],
+    "bodyParts": [
+      "back"
+    ],
+    "description": "Упражнение для Спина",
+    "isCustom": false
+  },
+  {
+    "id": "UzkLrem",
+    "name": "Разведение гантелей в наклоне с упором головой",
+    "nameEn": "Dumbbell rear lateral raise (support head)",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
+      "Шаг 2: Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
+      "Шаг 3: Raise your arms out to the sides, keeping a slight bend in your elbows, until they are parallel to the ground.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your arms back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/UzkLrem.gif",
+    "targetMuscles": [
+      "delts"
+    ],
+    "secondaryMuscles": [
+      "traps",
+      "rhomboids"
+    ],
+    "bodyParts": [
+      "shoulders"
+    ],
+    "description": "Упражнение для Плечи",
+    "isCustom": false
+  },
+  {
+    "id": "sM84pE4",
+    "name": "Растяжка широчайших на фитболе",
+    "nameEn": "Exercise ball lat stretch",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "фитбол"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on a stability ball with your feet flat on the ground and your back straight.",
+      "Шаг 2: Hold a dumbbell in one hand and extend your arm straight up overhead.",
+      "Шаг 3: Slowly lean to the opposite side, feeling a stretch in your lat muscle.",
+      "Шаг 4: Hold the stretch for 20-30 seconds, then return to the starting position.",
+      "Шаг 5: Repeat on the other side."
+    ],
+    "gifUrl": "/exercises/gifs/sM84pE4.gif",
+    "targetMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "shoulders",
+      "triceps"
+    ],
+    "bodyParts": [
+      "back"
+    ],
+    "description": "Упражнение для Все тело",
     "isCustom": false
   },
   {
@@ -160,508 +1366,6 @@
     "isCustom": false
   },
   {
-    "id": "Vvwjz6N",
-    "name": "Подъём корпуса на скамье для ягодиц и бёдер",
-    "nameEn": "Glute-ham raise",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Adjust the glute-ham raise machine to fit your body.",
-      "Шаг 2: Position yourself face down on the machine with your ankles secured.",
-      "Шаг 3: Place your hands on your chest or cross them over your chest.",
-      "Шаг 4: Engage your hamstrings and glutes to lift your upper body up towards the ceiling.",
-      "Шаг 5: Continue lifting until your body is in a straight line from your head to your heels.",
-      "Шаг 6: Pause for a moment at the top, then slowly lower your body back down to the starting position.",
-      "Шаг 7: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/Vvwjz6N.gif",
-    "targetMuscles": [
-      "hamstrings"
-    ],
-    "secondaryMuscles": [
-      "glutes",
-      "lower back"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "Qa55kX1",
-    "name": "Гакк-присед в тренажёре",
-    "nameEn": "Sled hack squat",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "machine"
-    ],
-    "instructions": [
-      "Шаг 1: Adjust the sled machine to a comfortable position for your height.",
-      "Шаг 2: Stand with your feet shoulder-width apart on the platform, toes slightly pointed outwards.",
-      "Шаг 3: Hold onto the handles or bars for stability.",
-      "Шаг 4: Lower your body by bending your knees and hips, keeping your back straight and chest up.",
-      "Шаг 5: Continue lowering until your thighs are parallel to the ground or slightly below.",
-      "Шаг 6: Pause for a moment, then push through your heels to raise your body back up to the starting position.",
-      "Шаг 7: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/Qa55kX1.gif",
-    "targetMuscles": [
-      "glutes"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "calves"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "c8f5cSY",
-    "name": "Приведение бедра лёжа на боку (мужской вариант)",
-    "nameEn": "Side lying hip adduction (male)",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Lie on your side with your legs straight and stacked on top of each other.",
-      "Шаг 2: Place your bottom arm under your head for support.",
-      "Шаг 3: Engage your adductors and lift your top leg as high as possible without rotating your hips or leaning backward.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your leg back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions, then switch sides."
-    ],
-    "gifUrl": "/exercises/gifs/c8f5cSY.gif",
-    "targetMuscles": [
-      "adductors"
-    ],
-    "secondaryMuscles": [
-      "glutes",
-      "hamstrings"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "LIlE5Tn",
-    "name": "Приседания с прыжком",
-    "nameEn": "Jump squat",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart.",
-      "Шаг 2: Lower your body into a squat position by bending your knees and pushing your hips back.",
-      "Шаг 3: Jump explosively off the ground, extending your hips, knees, and ankles.",
-      "Шаг 4: While in mid-air, quickly bring your arms forward for balance.",
-      "Шаг 5: Land softly on the balls of your feet and immediately go into the next repetition.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/LIlE5Tn.gif",
-    "targetMuscles": [
-      "glutes"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "calves"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "IeDEXTe",
-    "name": "Подъём на носки в тренажёре для жима ногами",
-    "nameEn": "Lever seated squat calf raise on leg press machine",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "machine"
-    ],
-    "instructions": [
-      "Шаг 1: Adjust the seat of the leg press machine so that your knees are slightly bent when your feet are on the footplate.",
-      "Шаг 2: Sit on the machine with your back against the backrest and your feet flat on the footplate, shoulder-width apart.",
-      "Шаг 3: Place your toes and the balls of your feet on the footplate, keeping your heels off the edge.",
-      "Шаг 4: Release the safety handles and push the footplate away from you by extending your knees.",
-      "Шаг 5: Once your knees are fully extended, slowly lower your heels by flexing your calves.",
-      "Шаг 6: Pause for a moment at the bottom, then push the footplate back up by extending your calves.",
-      "Шаг 7: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/IeDEXTe.gif",
-    "targetMuscles": [
-      "calves"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "glutes"
-    ],
-    "bodyParts": [
-      "lower legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "Ul5OFSV",
-    "name": "Разгибания ног с резинкой на наклонной",
-    "nameEn": "Resistance band leg extension declined",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "bands"
-    ],
-    "instructions": [
-      "Шаг 1: Attach the resistance band to a sturdy anchor point and secure it around your ankle.",
-      "Шаг 2: Stand facing the anchor point with your feet shoulder-width apart.",
-      "Шаг 3: Keeping your core engaged and your upper body stable, extend your leg straight out in front of you.",
-      "Шаг 4: Pause for a moment at the top, then slowly return your leg to the starting position. Focus on declined movement.",
-      "Шаг 5: Repeat for the desired number of repetitions, then switch legs."
-    ],
-    "gifUrl": "/exercises/gifs/Ul5OFSV.gif",
-    "targetMuscles": [
-      "quads"
-    ],
-    "secondaryMuscles": [
-      "hamstrings"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "7zdxRTl",
-    "name": "Жим ногами в Смите",
-    "nameEn": "Smith leg press",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "machine"
-    ],
-    "instructions": [
-      "Шаг 1: Adjust the seat and footplate of the smith machine to a comfortable position.",
-      "Шаг 2: Sit on the machine with your back against the backrest and your feet shoulder-width apart on the footplate.",
-      "Шаг 3: Grasp the handles or sides of the machine for stability.",
-      "Шаг 4: Push the footplate away from you by extending your legs, keeping your back against the backrest.",
-      "Шаг 5: Pause for a moment at the fully extended position.",
-      "Шаг 6: Slowly bend your knees and lower the footplate back towards you, returning to the starting position.",
-      "Шаг 7: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/7zdxRTl.gif",
-    "targetMuscles": [
-      "glutes"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "calves"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "RJgzwny",
-    "name": "Скалолаз",
-    "nameEn": "Mountain climber",
-    "category": "strength",
-    "muscleGroup": "cardio",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Start in a high plank position with your hands directly under your shoulders and your body in a straight line.",
-      "Шаг 2: Engage your core and bring your right knee towards your chest, then quickly switch and bring your left knee towards your chest.",
-      "Шаг 3: Continue alternating legs in a running motion, keeping your hips low and your core engaged.",
-      "Шаг 4: Maintain a steady pace and breathe evenly throughout the exercise.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/RJgzwny.gif",
-    "targetMuscles": [
-      "cardiovascular system"
-    ],
-    "secondaryMuscles": [
-      "core",
-      "shoulders",
-      "triceps"
-    ],
-    "bodyParts": [
-      "cardio"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "5bpPTHv",
-    "name": "Пистолетик с гирей",
-    "nameEn": "Kettlebell pistol squat",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "kettlebell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart, holding a kettlebell in front of your chest with both hands.",
-      "Шаг 2: Lift your left foot off the ground and extend it forward, keeping it parallel to the ground.",
-      "Шаг 3: Slowly lower your body down into a squat position, keeping your right foot flat on the ground and your left leg extended.",
-      "Шаг 4: Pause for a moment at the bottom of the squat, then push through your right heel to return to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions, then switch legs."
-    ],
-    "gifUrl": "/exercises/gifs/5bpPTHv.gif",
-    "targetMuscles": [
-      "glutes"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "calves"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "iPm26QU",
-    "name": "Прыжок с тумбы с приземлением на одну ногу",
-    "nameEn": "Box jump down with one leg stabilization",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Stand in front of a box or platform with your feet shoulder-width apart.",
-      "Шаг 2: Bend your knees and jump onto the box, landing softly with one foot on the box and the other foot hanging off the edge.",
-      "Шаг 3: Stabilize yourself on the box with the foot that is on it, while keeping the other foot off the ground.",
-      "Шаг 4: Hold this position for a few seconds, engaging your calf muscles to maintain balance.",
-      "Шаг 5: Slowly step down with the foot that is on the box, returning to the starting position.",
-      "Шаг 6: Repeat the exercise with the other leg."
-    ],
-    "gifUrl": "/exercises/gifs/iPm26QU.gif",
-    "targetMuscles": [
-      "calves"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "glutes"
-    ],
-    "bodyParts": [
-      "lower legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "W31mMjd",
-    "name": "Боковой сплит-присед со штангой",
-    "nameEn": "Barbell side split squat",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "barbell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet wider than shoulder-width apart, toes pointing slightly outward.",
-      "Шаг 2: Hold a barbell across your upper back, resting it on your traps.",
-      "Шаг 3: Engage your core and keep your chest up as you lower your body down into a squat position, bending at the knees and hips.",
-      "Шаг 4: As you lower, push your knees out to the sides and keep your weight on your heels.",
-      "Шаг 5: Lower until your thighs are parallel to the ground, then push through your heels to return to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/W31mMjd.gif",
-    "targetMuscles": [
-      "quads"
-    ],
-    "secondaryMuscles": [
-      "glutes",
-      "hamstrings",
-      "calves"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "OM46QHm",
-    "name": "Протяжка через канат",
-    "nameEn": "Cable pull through (with rope)",
-    "category": "strength",
-    "muscleGroup": "cardio",
-    "equipment": [
-      "cable"
-    ],
-    "instructions": [
-      "Шаг 1: Stand facing away from the cable machine with your feet shoulder-width apart.",
-      "Шаг 2: Grab the rope attachment with both hands and step forward, creating tension in the cable.",
-      "Шаг 3: Bend at the hips and lower your upper body until it is parallel to the ground, keeping your back straight.",
-      "Шаг 4: Engage your glutes and hamstrings to pull your body back up to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/OM46QHm.gif",
-    "targetMuscles": [
-      "glutes"
-    ],
-    "secondaryMuscles": [
-      "hamstrings",
-      "lower back"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "ykHcWme",
-    "name": "Жим носками в тренажёре для ног",
-    "nameEn": "Sled calf press on leg press",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "machine"
-    ],
-    "instructions": [
-      "Шаг 1: Adjust the seat of the leg press machine so that your knees are slightly bent when your feet are on the sled.",
-      "Шаг 2: Place your feet shoulder-width apart on the sled, with your toes pointing forward.",
-      "Шаг 3: Release the safety handles and push the sled away from you by extending your knees and ankles.",
-      "Шаг 4: Pause for a moment at the top of the movement, then slowly lower the sled back down by bending your knees and ankles.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/ykHcWme.gif",
-    "targetMuscles": [
-      "calves"
-    ],
-    "secondaryMuscles": [
-      "hamstrings",
-      "quadriceps"
-    ],
-    "bodyParts": [
-      "lower legs"
-    ],
-    "description": "Упражнение для Ноги",
-    "isCustom": false
-  },
-  {
-    "id": "fXfqg1E",
-    "name": "Подтягивания с весом на одной руке",
-    "nameEn": "Weighted one hand pull up",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Grab the pull-up bar with an overhand grip, slightly wider than shoulder-width apart.",
-      "Шаг 2: Hang from the bar with your arm fully extended and your body straight.",
-      "Шаг 3: Engage your core and pull your body up towards the bar by bending your elbow and squeezing your back muscles.",
-      "Шаг 4: Continue pulling until your chin is above the bar.",
-      "Шаг 5: Lower your body back down to the starting position with control.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/fXfqg1E.gif",
-    "targetMuscles": [
-      "lats"
-    ],
-    "secondaryMuscles": [
-      "biceps",
-      "forearms"
-    ],
-    "bodyParts": [
-      "back"
-    ],
-    "description": "Упражнение для Спина",
-    "isCustom": false
-  },
-  {
-    "id": "Iptlv6x",
-    "name": "Тяга гантелей к подбородку (вид сзади)",
-    "nameEn": "Dumbbell upright row (back pov)",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "dumbbell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
-      "Шаг 2: Let the dumbbells hang in front of your thighs, with your arms fully extended and your palms facing your body.",
-      "Шаг 3: Keeping your back straight and your core engaged, exhale and lift the dumbbells straight up towards your chin, leading with your elbows.",
-      "Шаг 4: Continue lifting until the dumbbells are at shoulder height, with your elbows pointing out to the sides.",
-      "Шаг 5: Pause for a moment at the top, then inhale and slowly lower the dumbbells back down to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/Iptlv6x.gif",
-    "targetMuscles": [
-      "delts"
-    ],
-    "secondaryMuscles": [
-      "traps",
-      "biceps"
-    ],
-    "bodyParts": [
-      "shoulders"
-    ],
-    "description": "Упражнение для Спина",
-    "isCustom": false
-  },
-  {
-    "id": "qcY50ZD",
-    "name": "Тяга горизонтального блока широким хватом",
-    "nameEn": "Cable seated wide-grip row",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "cable"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on the cable row machine with your feet flat on the footrests and your knees slightly bent.",
-      "Шаг 2: Grasp the handle with a wide overhand grip, palms facing down.",
-      "Шаг 3: Keep your back straight and lean slightly forward from the hips.",
-      "Шаг 4: Pull the handle towards your lower chest, squeezing your shoulder blades together.",
-      "Шаг 5: Pause for a moment at the peak of the contraction.",
-      "Шаг 6: Slowly release the handle back to the starting position, fully extending your arms.",
-      "Шаг 7: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/qcY50ZD.gif",
-    "targetMuscles": [
-      "upper back"
-    ],
-    "secondaryMuscles": [
-      "biceps",
-      "forearms"
-    ],
-    "bodyParts": [
-      "back"
-    ],
-    "description": "Упражнение для Спина",
-    "isCustom": false
-  },
-  {
     "id": "LEprlgG",
     "name": "Тяга верхнего блока к груди с полным диапазоном",
     "nameEn": "Cable lat pulldown full range of motion",
@@ -686,192 +1390,6 @@
       "biceps",
       "rhomboids",
       "rear deltoids"
-    ],
-    "bodyParts": [
-      "back"
-    ],
-    "description": "Упражнение для Спина",
-    "isCustom": false
-  },
-  {
-    "id": "72BC5Za",
-    "name": "Подтягивания лучником",
-    "nameEn": "Archer pull up",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Start by hanging from a pull-up bar with an overhand grip, slightly wider than shoulder-width apart.",
-      "Шаг 2: Engage your core and pull your shoulder blades down and back.",
-      "Шаг 3: As you pull yourself up, bend one arm and bring your elbow towards your side, while keeping the other arm straight.",
-      "Шаг 4: Continue pulling until your chin is above the bar and your bent arm is fully flexed.",
-      "Шаг 5: Lower yourself back down with control, straightening the bent arm and repeating the movement on the other side.",
-      "Шаг 6: Alternate sides with each repetition."
-    ],
-    "gifUrl": "/exercises/gifs/72BC5Za.gif",
-    "targetMuscles": [
-      "lats"
-    ],
-    "secondaryMuscles": [
-      "biceps",
-      "forearms"
-    ],
-    "bodyParts": [
-      "back"
-    ],
-    "description": "Упражнение для Спина",
-    "isCustom": false
-  },
-  {
-    "id": "0V2YQjW",
-    "name": "Подтягивания",
-    "nameEn": "Pull up (neutral grip)",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Hang from a pull-up bar with a neutral grip (palms facing each other) and your arms fully extended.",
-      "Шаг 2: Engage your core and squeeze your shoulder blades together.",
-      "Шаг 3: Pull your body up towards the bar by bending your elbows and driving your elbows down towards your hips.",
-      "Шаг 4: Continue pulling until your chin is above the bar.",
-      "Шаг 5: Pause for a moment at the top, then slowly lower your body back down to the starting position with control.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/0V2YQjW.gif",
-    "targetMuscles": [
-      "lats"
-    ],
-    "secondaryMuscles": [
-      "biceps",
-      "forearms"
-    ],
-    "bodyParts": [
-      "back"
-    ],
-    "description": "Упражнение для Спина",
-    "isCustom": false
-  },
-  {
-    "id": "rUXfn3R",
-    "name": "Гиперэкстензия на тренажёре",
-    "nameEn": "Lever back extension",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "machine"
-    ],
-    "instructions": [
-      "Шаг 1: Adjust the machine to fit your body size and range of motion.",
-      "Шаг 2: Sit on the machine with your back against the pad and your feet secured.",
-      "Шаг 3: Place your hands on the handles or grip bars.",
-      "Шаг 4: Engage your core and slowly lean forward, allowing your back to round slightly.",
-      "Шаг 5: Pause for a moment at the bottom position, feeling a stretch in your lower back.",
-      "Шаг 6: Using your back muscles, slowly raise your torso back to the starting position.",
-      "Шаг 7: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/rUXfn3R.gif",
-    "targetMuscles": [
-      "spine"
-    ],
-    "secondaryMuscles": [
-      "glutes",
-      "hamstrings"
-    ],
-    "bodyParts": [
-      "back"
-    ],
-    "description": "Упражнение для Спина",
-    "isCustom": false
-  },
-  {
-    "id": "WME869U",
-    "name": "Гиперэкстензия на фитболе с отрывом колен",
-    "nameEn": "Exercise ball back extension with knees off ground",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "фитбол"
-    ],
-    "instructions": [
-      "Шаг 1: Place the stability ball on the ground and lie face down on top of it, with your hips resting on the ball and your feet against a wall for stability.",
-      "Шаг 2: Position your hands behind your head or crossed over your chest.",
-      "Шаг 3: Engage your core and slowly lift your upper body off the ball, extending your back until your body forms a straight line from your head to your heels.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/WME869U.gif",
-    "targetMuscles": [
-      "spine"
-    ],
-    "secondaryMuscles": [
-      "glutes",
-      "hamstrings"
-    ],
-    "bodyParts": [
-      "back"
-    ],
-    "description": "Упражнение для Спина",
-    "isCustom": false
-  },
-  {
-    "id": "5lE7XRz",
-    "name": "Тяга штанги в наклоне в Смите",
-    "nameEn": "Smith bent over row with declined",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "machine"
-    ],
-    "instructions": [
-      "Шаг 1: Set up the smith machine with the bar at hip height.",
-      "Шаг 2: Stand facing the bar with your feet shoulder-width apart.",
-      "Шаг 3: Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
-      "Шаг 4: Grasp the bar with an overhand grip, hands slightly wider than shoulder-width apart.",
-      "Шаг 5: Pull the bar towards your lower chest, squeezing your shoulder blades together. Perform with declined intensity.",
-      "Шаг 6: Pause for a moment at the top, then slowly lower the bar back down to the starting position.",
-      "Шаг 7: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/5lE7XRz.gif",
-    "targetMuscles": [
-      "upper back"
-    ],
-    "secondaryMuscles": [
-      "biceps",
-      "forearms"
-    ],
-    "bodyParts": [
-      "back"
-    ],
-    "description": "Упражнение для Спина",
-    "isCustom": false
-  },
-  {
-    "id": "T2mxWqc",
-    "name": "Подтягивание обратным хватом",
-    "nameEn": "Chin-up",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Hang from a pull-up bar with your palms facing towards you and your hands shoulder-width apart.",
-      "Шаг 2: Engage your core and pull your body up towards the bar, leading with your chest.",
-      "Шаг 3: Continue pulling until your chin is above the bar.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your body back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/T2mxWqc.gif",
-    "targetMuscles": [
-      "lats"
-    ],
-    "secondaryMuscles": [
-      "biceps",
-      "forearms"
     ],
     "bodyParts": [
       "back"
@@ -911,1214 +1429,187 @@
     "isCustom": false
   },
   {
-    "id": "f1jf47L",
-    "name": "Жим гантелей сидя (параллельный хват)",
-    "nameEn": "Dumbbell seated shoulder press (parallel grip)",
-    "category": "strength",
-    "muscleGroup": "shoulders",
-    "equipment": [
-      "dumbbell"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on a bench with a dumbbell in each hand, palms facing inward.",
-      "Шаг 2: Raise the dumbbells to shoulder height, elbows bent and palms facing forward.",
-      "Шаг 3: Press the dumbbells upward until your arms are fully extended overhead.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower the dumbbells back to shoulder height.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/f1jf47L.gif",
-    "targetMuscles": [
-      "delts"
-    ],
-    "secondaryMuscles": [
-      "triceps",
-      "upper back"
-    ],
-    "bodyParts": [
-      "shoulders"
-    ],
-    "description": "Упражнение для Плечи",
-    "isCustom": false
-  },
-  {
-    "id": "UzkLrem",
-    "name": "Разведение гантелей в наклоне с упором головой",
-    "nameEn": "Dumbbell rear lateral raise (support head)",
+    "id": "Iptlv6x",
+    "name": "Тяга гантелей к подбородку (вид сзади)",
+    "nameEn": "Dumbbell upright row (back pov)",
     "category": "strength",
     "muscleGroup": "back",
     "equipment": [
       "dumbbell"
     ],
     "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
-      "Шаг 2: Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
-      "Шаг 3: Raise your arms out to the sides, keeping a slight bend in your elbows, until they are parallel to the ground.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your arms back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
+      "Шаг 1: Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
+      "Шаг 2: Let the dumbbells hang in front of your thighs, with your arms fully extended and your palms facing your body.",
+      "Шаг 3: Keeping your back straight and your core engaged, exhale and lift the dumbbells straight up towards your chin, leading with your elbows.",
+      "Шаг 4: Continue lifting until the dumbbells are at shoulder height, with your elbows pointing out to the sides.",
+      "Шаг 5: Pause for a moment at the top, then inhale and slowly lower the dumbbells back down to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions."
     ],
-    "gifUrl": "/exercises/gifs/UzkLrem.gif",
+    "gifUrl": "/exercises/gifs/Iptlv6x.gif",
     "targetMuscles": [
       "delts"
     ],
     "secondaryMuscles": [
       "traps",
-      "rhomboids"
-    ],
-    "bodyParts": [
-      "shoulders"
-    ],
-    "description": "Упражнение для Плечи",
-    "isCustom": false
-  },
-  {
-    "id": "FS63wTN",
-    "name": "Толчковый жим гантелей",
-    "nameEn": "Dumbbell push press",
-    "category": "strength",
-    "muscleGroup": "shoulders",
-    "equipment": [
-      "dumbbell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart, holding a dumbbell in each hand at shoulder level.",
-      "Шаг 2: Bend your knees slightly and dip your body down, then explosively extend your legs and press the dumbbells overhead.",
-      "Шаг 3: Lock out your arms at the top of the movement, then lower the dumbbells back to shoulder level.",
-      "Шаг 4: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/FS63wTN.gif",
-    "targetMuscles": [
-      "delts"
-    ],
-    "secondaryMuscles": [
-      "triceps",
-      "core"
-    ],
-    "bodyParts": [
-      "shoulders"
-    ],
-    "description": "Упражнение для Плечи",
-    "isCustom": false
-  },
-  {
-    "id": "33AzZeV",
-    "name": "Подъём штанги перед собой и пуловер",
-    "nameEn": "Barbell front raise and pullover",
-    "category": "strength",
-    "muscleGroup": "shoulders",
-    "equipment": [
-      "barbell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart and hold a barbell with an overhand grip, palms facing down.",
-      "Шаг 2: Keep your arms straight and raise the barbell in front of you until it reaches shoulder height.",
-      "Шаг 3: Pause for a moment at the top, then slowly lower the barbell back down to the starting position.",
-      "Шаг 4: Next, lower the barbell behind your head, keeping your arms straight.",
-      "Шаг 5: Pause for a moment at the bottom, then raise the barbell back up to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/33AzZeV.gif",
-    "targetMuscles": [
-      "pectorals"
-    ],
-    "secondaryMuscles": [
-      "deltoids",
-      "triceps"
-    ],
-    "bodyParts": [
-      "chest"
-    ],
-    "description": "Упражнение для Плечи",
-    "isCustom": false
-  },
-  {
-    "id": "laVRfDf",
-    "name": "Подъём гантелей перед собой выше головы",
-    "nameEn": "Dumbbell standing front raise above head",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "dumbbell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
-      "Шаг 2: Keep your arms straight and lift the dumbbells in front of you, raising them above your head.",
-      "Шаг 3: Pause for a moment at the top, then slowly lower the dumbbells back to the starting position.",
-      "Шаг 4: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/laVRfDf.gif",
-    "targetMuscles": [
-      "delts"
-    ],
-    "secondaryMuscles": [
-      "trapezius",
       "biceps"
     ],
     "bodyParts": [
       "shoulders"
     ],
-    "description": "Упражнение для Плечи",
+    "description": "Упражнение для Спина",
     "isCustom": false
   },
   {
-    "id": "X6C6i5Y",
-    "name": "Отжимания на брусьях на трицепс",
-    "nameEn": "Triceps dip",
+    "id": "add_012",
+    "name": "Тяга гантели одной рукой",
+    "nameEn": "Single Arm Dumbbell Row",
     "category": "strength",
-    "muscleGroup": "arms",
+    "muscleGroup": "back",
     "equipment": [
-      "bodyweight"
+      "dumbbell"
     ],
     "instructions": [
-      "Шаг 1: Sit on the edge of a bench or chair with your hands gripping the edge, fingers pointing forward.",
-      "Шаг 2: Slide your butt off the bench, supporting your weight with your hands.",
-      "Шаг 3: Bend your elbows and lower your body towards the ground, keeping your back close to the bench.",
-      "Шаг 4: Pause for a moment at the bottom, then push yourself back up to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
+      "Упритесь коленом и рукой в скамью",
+      "Возьмите гантель в другую руку",
+      "Подтяните гантель к поясу",
+      "Опустите гантель вниз"
     ],
-    "gifUrl": "/exercises/gifs/X6C6i5Y.gif",
-    "targetMuscles": [
-      "triceps"
-    ],
-    "secondaryMuscles": [
-      "chest",
-      "shoulders"
-    ],
-    "bodyParts": [
-      "upper arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
+    "description": "Упражнение для широчайших мышц спины",
+    "gifUrl": "/exercises/gifs/dumbbell_row.gif"
   },
   {
-    "id": "Ser9eQp",
-    "name": "Разгибание рук в тренажёре",
-    "nameEn": "Lever triceps extension",
+    "id": "qcY50ZD",
+    "name": "Тяга горизонтального блока широким хватом",
+    "nameEn": "Cable seated wide-grip row",
     "category": "strength",
-    "muscleGroup": "arms",
-    "equipment": [
-      "machine"
-    ],
-    "instructions": [
-      "Шаг 1: Adjust the seat height and position yourself on the machine with your back against the pad.",
-      "Шаг 2: Grasp the handles with an overhand grip and fully extend your arms in front of you.",
-      "Шаг 3: Keeping your upper arms stationary, slowly lower the handles towards your forehead by bending your elbows.",
-      "Шаг 4: Pause for a moment at the bottom, then push the handles back up to the starting position by extending your arms.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/Ser9eQp.gif",
-    "targetMuscles": [
-      "triceps"
-    ],
-    "secondaryMuscles": [
-      "shoulders"
-    ],
-    "bodyParts": [
-      "upper arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "1TVoin7",
-    "name": "Французский жим штанги лёжа",
-    "nameEn": "Barbell lying triceps extension double",
-    "category": "strength",
-    "muscleGroup": "arms",
-    "equipment": [
-      "barbell"
-    ],
-    "instructions": [
-      "Шаг 1: Lie flat on a bench with your feet flat on the ground and your head at the end of the bench.",
-      "Шаг 2: Hold the barbell with an overhand grip, hands shoulder-width apart, and extend your arms straight up over your chest.",
-      "Шаг 3: Keeping your upper arms stationary, slowly lower the barbell towards your forehead by bending your elbows. Focus on double movement.",
-      "Шаг 4: Pause for a moment at the bottom, then extend your arms back up to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/1TVoin7.gif",
-    "targetMuscles": [
-      "triceps"
-    ],
-    "secondaryMuscles": [
-      "shoulders"
-    ],
-    "bodyParts": [
-      "upper arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "2IxROQ1",
-    "name": "Разгибание рук с канатом из-за головы",
-    "nameEn": "Cable overhead triceps extension (rope attachment)",
-    "category": "strength",
-    "muscleGroup": "cardio",
+    "muscleGroup": "back",
     "equipment": [
       "cable"
     ],
     "instructions": [
-      "Шаг 1: Attach a rope to a cable machine at a high position.",
-      "Шаг 2: Stand facing away from the machine with your feet shoulder-width apart.",
-      "Шаг 3: Grasp the rope with both hands, palms facing each other, and bring your hands above your head.",
-      "Шаг 4: Keep your upper arms close to your head and your elbows pointing forward.",
-      "Шаг 5: Slowly lower the rope behind your head by bending your elbows.",
-      "Шаг 6: Pause for a moment, then extend your arms back up to the starting position.",
+      "Шаг 1: Sit on the cable row machine with your feet flat on the footrests and your knees slightly bent.",
+      "Шаг 2: Grasp the handle with a wide overhand grip, palms facing down.",
+      "Шаг 3: Keep your back straight and lean slightly forward from the hips.",
+      "Шаг 4: Pull the handle towards your lower chest, squeezing your shoulder blades together.",
+      "Шаг 5: Pause for a moment at the peak of the contraction.",
+      "Шаг 6: Slowly release the handle back to the starting position, fully extending your arms.",
       "Шаг 7: Repeat for the desired number of repetitions."
     ],
-    "gifUrl": "/exercises/gifs/2IxROQ1.gif",
+    "gifUrl": "/exercises/gifs/qcY50ZD.gif",
     "targetMuscles": [
-      "triceps"
-    ],
-    "secondaryMuscles": [
-      "shoulders"
-    ],
-    "bodyParts": [
-      "upper arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "bd5b860",
-    "name": "Ролик для предплечий",
-    "nameEn": "Wrist rollerer",
-    "category": "strength",
-    "muscleGroup": "shoulders",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Attach a weight to one end of a rope or bar.",
-      "Шаг 2: Hold the other end of the rope or bar with both hands, palms facing down.",
-      "Шаг 3: Stand with your feet shoulder-width apart and your arms fully extended in front of you.",
-      "Шаг 4: Slowly roll the weight up towards your hands by flexing your wrists.",
-      "Шаг 5: Pause for a moment at the top, then slowly lower the weight back down to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/bd5b860.gif",
-    "targetMuscles": [
-      "forearms"
+      "upper back"
     ],
     "secondaryMuscles": [
       "biceps",
-      "triceps"
-    ],
-    "bodyParts": [
-      "lower arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "lyKCLmK",
-    "name": "Dumbbell seated revers grip concentration curl",
-    "nameEn": "Dumbbell seated revers grip concentration curl",
-    "category": "strength",
-    "muscleGroup": "arms",
-    "equipment": [
-      "dumbbell"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on a bench with your feet flat on the ground and hold a dumbbell in one hand, palm facing up.",
-      "Шаг 2: Rest your elbow on the inside of your thigh, just above the knee.",
-      "Шаг 3: Keeping your upper arm stationary, exhale and curl the dumbbell towards your shoulder.",
-      "Шаг 4: Pause for a moment at the top, squeezing your biceps.",
-      "Шаг 5: Inhale and slowly lower the dumbbell back to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions, then switch arms."
-    ],
-    "gifUrl": "/exercises/gifs/lyKCLmK.gif",
-    "targetMuscles": [
-      "biceps"
-    ],
-    "secondaryMuscles": [
       "forearms"
-    ],
-    "bodyParts": [
-      "upper arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "2dImyQ8",
-    "name": "Сгибания запястий с гантелями сидя (ладони вверх)",
-    "nameEn": "Dumbbell seated palms up wrist curl",
-    "category": "strength",
-    "muscleGroup": "arms",
-    "equipment": [
-      "dumbbell"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on a bench with your feet flat on the ground and hold a dumbbell in each hand, palms facing up.",
-      "Шаг 2: Rest your forearms on your thighs, allowing your wrists to hang off the edge.",
-      "Шаг 3: Slowly curl your wrists upward, squeezing your forearms at the top of the movement.",
-      "Шаг 4: Pause for a moment, then lower your wrists back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/2dImyQ8.gif",
-    "targetMuscles": [
-      "forearms"
-    ],
-    "secondaryMuscles": [
-      "biceps",
-      "shoulders"
-    ],
-    "bodyParts": [
-      "lower arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "EqHIIjJ",
-    "name": "Обратные сгибания на скамье Скотта",
-    "nameEn": "Barbell reverse preacher curl inclined",
-    "category": "strength",
-    "muscleGroup": "arms",
-    "equipment": [
-      "barbell"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on a preacher bench with your chest against the pad and your arms extended straight down, holding a barbell with an overhand grip.",
-      "Шаг 2: Keeping your upper arms stationary, exhale and curl the barbell upward while contracting your biceps.",
-      "Шаг 3: Continue to raise the barbell until your biceps are fully contracted and the barbell is at shoulder level. Perform with inclined intensity.",
-      "Шаг 4: Hold the contracted position for a brief pause as you squeeze your biceps.",
-      "Шаг 5: Inhale and slowly lower the barbell back to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/EqHIIjJ.gif",
-    "targetMuscles": [
-      "biceps"
-    ],
-    "secondaryMuscles": [
-      "forearms"
-    ],
-    "bodyParts": [
-      "upper arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "LeaZOIz",
-    "name": "Молотковые сгибания и жим стоя поочерёдно",
-    "nameEn": "Dumbbell standing alternate hammer curl and press",
-    "category": "strength",
-    "muscleGroup": "shoulders",
-    "equipment": [
-      "dumbbell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand up straight with a dumbbell in each hand, palms facing your body.",
-      "Шаг 2: Keep your elbows close to your torso and your back straight.",
-      "Шаг 3: Exhale and curl the dumbbell in your right hand towards your shoulder, keeping your upper arm stationary.",
-      "Шаг 4: Continue to raise the dumbbell until your biceps are fully contracted and the dumbbell is at shoulder level.",
-      "Шаг 5: Inhale and slowly lower the dumbbell back to the starting position.",
-      "Шаг 6: Repeat the curl with your left hand.",
-      "Шаг 7: After completing the curl with your left hand, exhale and press the dumbbell in your right hand overhead.",
-      "Шаг 8: Extend your arm fully and hold for a moment at the top.",
-      "Шаг 9: Inhale and slowly lower the dumbbell back to the starting position.",
-      "Шаг 10: Repeat the press with your left hand.",
-      "Шаг 11: Continue alternating between curls and presses for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/LeaZOIz.gif",
-    "targetMuscles": [
-      "biceps"
-    ],
-    "secondaryMuscles": [
-      "forearms",
-      "shoulders"
-    ],
-    "bodyParts": [
-      "upper arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "DQ0cqkT",
-    "name": "Отжимания между тремя скамьями",
-    "nameEn": "Three bench dip",
-    "category": "strength",
-    "muscleGroup": "arms",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on a bench with your hands gripping the edge, fingers pointing forward.",
-      "Шаг 2: Slide your butt off the bench, supporting your weight with your hands.",
-      "Шаг 3: Bend your elbows and lower your body until your upper arms are parallel to the ground.",
-      "Шаг 4: Push yourself back up to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/DQ0cqkT.gif",
-    "targetMuscles": [
-      "triceps"
-    ],
-    "secondaryMuscles": [
-      "chest",
-      "shoulders"
-    ],
-    "bodyParts": [
-      "upper arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "HEJ6DIX",
-    "name": "Разгибания на блоке (кикбэк)",
-    "nameEn": "Cable kickback",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "cable"
-    ],
-    "instructions": [
-      "Шаг 1: Stand facing a cable machine with your feet shoulder-width apart.",
-      "Шаг 2: Hold the cable handle with your right hand and step back to create tension in the cable.",
-      "Шаг 3: Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
-      "Шаг 4: Keep your upper arm close to your body and your elbow bent at a 90-degree angle.",
-      "Шаг 5: Extend your forearm backward, straightening your arm fully.",
-      "Шаг 6: Pause for a moment, then slowly return to the starting position.",
-      "Шаг 7: Repeat for the desired number of repetitions, then switch sides."
-    ],
-    "gifUrl": "/exercises/gifs/HEJ6DIX.gif",
-    "targetMuscles": [
-      "triceps"
-    ],
-    "secondaryMuscles": [
-      "shoulders"
-    ],
-    "bodyParts": [
-      "upper arms"
-    ],
-    "description": "Упражнение для Руки",
-    "isCustom": false
-  },
-  {
-    "id": "4GqRrAk",
-    "name": "Отжимания «Супермен»",
-    "nameEn": "Superman push-up",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Start in a high plank position with your hands slightly wider than shoulder-width apart and your feet together.",
-      "Шаг 2: Engage your core and lower your body towards the ground, keeping your elbows close to your sides.",
-      "Шаг 3: As you lower your body, simultaneously lift your right arm and left leg off the ground, extending them straight out.",
-      "Шаг 4: Pause for a moment at the top, then lower your arm and leg back down while pushing yourself back up to the starting position.",
-      "Шаг 5: Repeat the movement, this time lifting your left arm and right leg.",
-      "Шаг 6: Continue alternating sides for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/4GqRrAk.gif",
-    "targetMuscles": [
-      "pectorals"
-    ],
-    "secondaryMuscles": [
-      "core",
-      "shoulders"
-    ],
-    "bodyParts": [
-      "chest"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "yJUHKTn",
-    "name": "Выход силой",
-    "nameEn": "Muscle up",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Start by hanging from a pull-up bar with your palms facing away from you and your arms fully extended.",
-      "Шаг 2: Engage your core and pull your body up towards the bar, leading with your chest.",
-      "Шаг 3: As you reach the top of the movement, transition your grip so that your palms are facing towards you.",
-      "Шаг 4: Continue pulling yourself up until your chest is above the bar and your arms are fully flexed.",
-      "Шаг 5: Reverse the movement by slowly lowering yourself back down to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/yJUHKTn.gif",
-    "targetMuscles": [
-      "lats"
-    ],
-    "secondaryMuscles": [
-      "biceps",
-      "triceps",
-      "shoulders",
-      "chest"
     ],
     "bodyParts": [
       "back"
     ],
-    "description": "Упражнение для Кор",
+    "description": "Упражнение для Спина",
     "isCustom": false
   },
   {
-    "id": "nCU1Ekp",
-    "name": "Обратные скручивания",
-    "nameEn": "Reverse crunch",
+    "id": "add_013",
+    "name": "Тяга Т-грифа",
+    "nameEn": "T-Bar Row",
     "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Lie flat on your back with your arms extended along your sides.",
-      "Шаг 2: Bend your knees and lift your feet off the ground, bringing your thighs perpendicular to the floor.",
-      "Шаг 3: Contract your abs and curl your hips off the floor, bringing your knees towards your chest.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your hips back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/nCU1Ekp.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "hip flexors"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "tFToB7l",
-    "name": "Обратная планка с подъёмом ноги",
-    "nameEn": "Reverse plank with leg lift",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on the ground with your legs extended in front of you and your hands resting on the ground behind you, fingers pointing towards your feet.",
-      "Шаг 2: Press through your hands and lift your hips off the ground, coming into a reverse plank position.",
-      "Шаг 3: Engage your core and lift one leg off the ground, extending it straight up towards the ceiling.",
-      "Шаг 4: Hold for a moment, then lower your leg back down.",
-      "Шаг 5: Repeat with the other leg.",
-      "Шаг 6: Continue alternating legs for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/tFToB7l.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "glutes",
-      "hamstrings",
-      "shoulders"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "XVDdcoj",
-    "name": "Русские скручивания",
-    "nameEn": "Russian twist",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on the ground with your knees bent and feet flat on the floor.",
-      "Шаг 2: Lean back slightly while keeping your back straight and your core engaged.",
-      "Шаг 3: Hold your hands together in front of your chest or hold a weight if desired.",
-      "Шаг 4: Lift your feet off the ground, balancing on your sit bones.",
-      "Шаг 5: Twist your torso to the right, bringing your hands or weight towards the right side of your body.",
-      "Шаг 6: Pause for a moment, then twist your torso to the left, bringing your hands or weight towards the left side of your body.",
-      "Шаг 7: Continue alternating sides for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/XVDdcoj.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "obliques"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "6bOA1Oi",
-    "name": "Боковые наклоны с весом на фитболе",
-    "nameEn": "Weighted side bend (on stability ball)",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on a stability ball with your feet shoulder-width apart and flat on the ground.",
-      "Шаг 2: Hold a weight in one hand and place your other hand on your hip.",
-      "Шаг 3: Engage your core and slowly bend sideways towards the weighted side, keeping your back straight.",
-      "Шаг 4: Pause for a moment at the bottom, then slowly return to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions, then switch sides."
-    ],
-    "gifUrl": "/exercises/gifs/6bOA1Oi.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "obliques",
-      "lower back"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "5VXmnV5",
-    "name": "Боковая планка на наклонной поверхности",
-    "nameEn": "Bodyweight incline side plank",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Start by lying on your side with your legs extended and stacked on top of each other.",
-      "Шаг 2: Place your forearm on the ground directly below your shoulder, with your elbow bent at a 90-degree angle.",
-      "Шаг 3: Engage your core and lift your hips off the ground, creating a straight line from your head to your feet.",
-      "Шаг 4: Hold this position for the desired amount of time.",
-      "Шаг 5: Lower your hips back down to the ground and repeat on the other side."
-    ],
-    "gifUrl": "/exercises/gifs/5VXmnV5.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "obliques",
-      "shoulders"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "AR0ig3o",
-    "name": "Скручивания с согнутыми коленями",
-    "nameEn": "Flexion leg sit up (bent knee)",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Lie flat on your back with your knees bent and feet flat on the ground.",
-      "Шаг 2: Place your hands behind your head with your elbows pointing outwards.",
-      "Шаг 3: Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.",
-      "Шаг 4: At the same time, lift your legs off the ground, bending your knees and bringing them towards your chest.",
-      "Шаг 5: Pause for a moment at the top, then slowly lower your upper body and legs back down to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/AR0ig3o.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "hip flexors"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "QUDd8WS",
-    "name": "Косые скручивания на полу",
-    "nameEn": "Oblique crunches floor",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Lie on your back with your knees bent and feet flat on the floor.",
-      "Шаг 2: Place your hands behind your head or cross them over your chest.",
-      "Шаг 3: Engage your abs and lift your shoulder blades off the floor, rotating your torso to one side.",
-      "Шаг 4: Pause for a moment, then lower your shoulder blades back down to the floor.",
-      "Шаг 5: Repeat on the other side, alternating sides with each repetition."
-    ],
-    "gifUrl": "/exercises/gifs/QUDd8WS.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "obliques"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "VBAWRPG",
-    "name": "Планка с утяжелением",
-    "nameEn": "Weighted front plank",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Start by lying face down on the floor.",
-      "Шаг 2: Place your forearms on the ground, with your elbows directly under your shoulders.",
-      "Шаг 3: Extend your legs straight out behind you, with your toes on the ground.",
-      "Шаг 4: Engage your core and lift your body off the ground, balancing on your forearms and toes.",
-      "Шаг 5: Keep your body in a straight line from your head to your heels.",
-      "Шаг 6: Hold this position for the desired amount of time.",
-      "Шаг 7: Lower your body back down to the starting position.",
-      "Шаг 8: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/VBAWRPG.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "shoulders",
-      "lower back"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "03lzqwk",
-    "name": "Подъём коленей в висе с поддержкой",
-    "nameEn": "Assisted hanging knee raise",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "machine"
-    ],
-    "instructions": [
-      "Шаг 1: Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
-      "Шаг 2: Engage your core muscles and lift your knees towards your chest, bending at the hips and knees.",
-      "Шаг 3: Pause for a moment at the top of the movement, squeezing your abs.",
-      "Шаг 4: Slowly lower your legs back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/03lzqwk.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "hip flexors"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "I3tsCnC",
-    "name": "Подъемы ног в висе",
-    "nameEn": "Hanging leg raise",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
-      "Шаг 2: Engage your core and lift your legs up in front of you, keeping them straight.",
-      "Шаг 3: Continue lifting until your legs are parallel to the ground or as high as you can comfortably go.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your legs back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/I3tsCnC.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "hip flexors"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "mbkgB44",
-    "name": "Скручивания «ножницы»",
-    "nameEn": "Jackknife sit-up",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Lie flat on your back with your legs extended and your arms overhead.",
-      "Шаг 2: Engage your core and lift your legs and upper body simultaneously, reaching your hands towards your toes.",
-      "Шаг 3: Pause for a moment at the top, then slowly lower your legs and upper body back down to the starting position.",
-      "Шаг 4: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/mbkgB44.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "hip flexors"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "KtRomty",
-    "name": "Раскатка колёсом стоя",
-    "nameEn": "Standing wheel rollerout",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Start by standing tall with your feet shoulder-width apart and the wheel roller in front of you.",
-      "Шаг 2: Bend at your waist and slowly roll the wheel forward, keeping your back straight and your core engaged.",
-      "Шаг 3: Continue rolling forward until you feel a stretch in your abs and your body is extended as far as possible.",
-      "Шаг 4: Pause for a moment, then slowly roll the wheel back towards your body, returning to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/KtRomty.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "lower back",
-      "shoulders"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "tZkGYZ9",
-    "name": "Велосипед с резинкой",
-    "nameEn": "Band bicycle crunch",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bands"
-    ],
-    "instructions": [
-      "Шаг 1: Lie flat on your back with your hands behind your head and your knees bent.",
-      "Шаг 2: Lift your feet off the ground and bring your right knee towards your chest while simultaneously twisting your torso to bring your left elbow towards your right knee.",
-      "Шаг 3: Straighten your right leg while bringing your left knee towards your chest and twisting your torso to bring your right elbow towards your left knee.",
-      "Шаг 4: Continue alternating the twisting motion, as if you are pedaling a bicycle, while keeping your core engaged throughout the movement.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/tZkGYZ9.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "hip flexors",
-      "obliques"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "aVs3BR3",
-    "name": "Повороты на блоке",
-    "nameEn": "Cable twist",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "cable"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart, facing the cable machine.",
-      "Шаг 2: Hold the cable handle with both hands in front of your chest, keeping your arms slightly bent.",
-      "Шаг 3: Engage your core and twist your torso to the right, pulling the cable across your body.",
-      "Шаг 4: Pause for a moment at the end of the movement, feeling the contraction in your abs and obliques.",
-      "Шаг 5: Slowly return to the starting position, resisting the cable's pull.",
-      "Шаг 6: Repeat the movement to the left side.",
-      "Шаг 7: Continue alternating sides for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/aVs3BR3.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "obliques"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "rbu5UUb",
-    "name": "Перекрестные скручивания",
-    "nameEn": "Cross body crunch",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Lie flat on your back with your knees bent and feet flat on the ground.",
-      "Шаг 2: Place your hands behind your head with your elbows pointing outwards.",
-      "Шаг 3: Engaging your abs, lift your upper body off the ground and twist to bring your right elbow towards your left knee.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
-      "Шаг 5: Repeat on the other side, bringing your left elbow towards your right knee.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/rbu5UUb.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "obliques"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "s8nrDXF",
-    "name": "Скручивания с весом",
-    "nameEn": "Weighted crunch",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Lie flat on your back with your knees bent and feet flat on the ground.",
-      "Шаг 2: Hold a weight plate or dumbbell on your chest.",
-      "Шаг 3: Engage your abs and lift your upper body off the ground, curling forward until your shoulder blades are off the ground.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/s8nrDXF.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "obliques"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "MCUhf1F",
-    "name": "Скручивания",
-    "nameEn": "Crunch (on stability ball)",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "фитбол"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on the stability ball with your feet flat on the ground and your knees bent at a 90-degree angle.",
-      "Шаг 2: Lie back on the ball until your lower back is supported and your upper body is parallel to the floor.",
-      "Шаг 3: Place your hands behind your head or across your chest.",
-      "Шаг 4: Engage your abs and lift your upper body towards your knees, curling your torso forward.",
-      "Шаг 5: Pause for a moment at the top of the movement, then slowly lower your upper body back down to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/MCUhf1F.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "hip flexors"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "9Ap7miY",
-    "name": "Скручивания на наклонной скамье",
-    "nameEn": "Decline crunch",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Lie on a decline bench with your feet secured and your knees bent at a 90-degree angle.",
-      "Шаг 2: Place your hands behind your head or across your chest.",
-      "Шаг 3: Engage your abs and lift your upper body towards your knees, curling your torso.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/9Ap7miY.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "hip flexors"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "4Ml7QFO",
-    "name": "Подъём прямых ног в висе",
-    "nameEn": "Hanging straight leg raise",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
-      "Шаг 2: Engage your core and lift your legs up in front of you, keeping them straight.",
-      "Шаг 3: Continue lifting until your legs are parallel to the ground or as high as you can comfortably go.",
-      "Шаг 4: Pause for a moment at the top, then slowly lower your legs back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/4Ml7QFO.gif",
-    "targetMuscles": [
-      "abs"
-    ],
-    "secondaryMuscles": [
-      "hip flexors"
-    ],
-    "bodyParts": [
-      "waist"
-    ],
-    "description": "Упражнение для Кор",
-    "isCustom": false
-  },
-  {
-    "id": "IZVHb27",
-    "name": "Выпады с ходьбой",
-    "nameEn": "Walking lunge",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart.",
-      "Шаг 2: Take a step forward with your right leg, lowering your body into a lunge position.",
-      "Шаг 3: Keep your torso upright and your front knee aligned with your ankle.",
-      "Шаг 4: Push off with your right foot and bring your left foot forward, stepping into a lunge position with your left leg.",
-      "Шаг 5: Continue alternating legs and walking forward, maintaining a controlled and steady pace.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/IZVHb27.gif",
-    "targetMuscles": [
-      "glutes"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "calves"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Кардио",
-    "isCustom": false
-  },
-  {
-    "id": "bWlZvXh",
-    "name": "Поза бабочки (йога)",
-    "nameEn": "Butterfly yoga pose",
-    "category": "strength",
-    "muscleGroup": "chest",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on the floor with your legs extended in front of you.",
-      "Шаг 2: Bend your knees and bring the soles of your feet together, allowing your knees to fall out to the sides.",
-      "Шаг 3: Hold onto your ankles or feet with your hands.",
-      "Шаг 4: Sit up tall and lengthen your spine.",
-      "Шаг 5: Gently press your knees down towards the floor, feeling a stretch in your inner thighs.",
-      "Шаг 6: Hold this position for a few breaths.",
-      "Шаг 7: To release, slowly bring your knees back up and extend your legs."
-    ],
-    "gifUrl": "/exercises/gifs/bWlZvXh.gif",
-    "targetMuscles": [
-      "adductors"
-    ],
-    "secondaryMuscles": [
-      "hamstrings",
-      "groin"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Кардио",
-    "isCustom": false
-  },
-  {
-    "id": "XlZ4lAC",
-    "name": "Упражнение «Доброе утро» со штангой",
-    "nameEn": "Barbell good morning",
-    "category": "strength",
-    "muscleGroup": "cardio",
+    "muscleGroup": "back",
     "equipment": [
       "barbell"
     ],
     "instructions": [
-      "Шаг 1: Start by standing with your feet shoulder-width apart and the barbell resting on your upper back.",
-      "Шаг 2: Keeping your back straight and your core engaged, hinge forward at the hips, pushing your buttocks back as if you were trying to touch the wall behind you with your glutes.",
-      "Шаг 3: Lower your torso until it is parallel to the ground, feeling a stretch in your hamstrings.",
-      "Шаг 4: Pause for a moment, then return to the starting position by squeezing your glutes and pushing your hips forward.",
-      "Шаг 5: Repeat for the desired number of repetitions."
+      "Встаньте над Т-грифом, ноги на ширине плеч",
+      "Наклонитесь и возьмитесь за рукоятки",
+      "Подтяните гриф к груди",
+      "Опустите гриф вниз"
     ],
-    "gifUrl": "/exercises/gifs/XlZ4lAC.gif",
+    "description": "Упражнение для середины спины",
+    "gifUrl": "/exercises/gifs/t_bar_row.gif"
+  },
+  {
+    "id": "add_011",
+    "name": "Тяга штанги в наклоне",
+    "nameEn": "Barbell Row",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Возьмите штангу хватом на ширине плеч",
+      "Наклонитесь вперед, держа спину прямой",
+      "Подтяните штангу к поясу",
+      "Медленно опустите штангу вниз"
+    ],
+    "description": "Базовое упражнение для толщины спины",
+    "gifUrl": "/exercises/gifs/barbell_row.gif"
+  },
+  {
+    "id": "5lE7XRz",
+    "name": "Тяга штанги в наклоне в Смите",
+    "nameEn": "Smith bent over row with declined",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Шаг 1: Set up the smith machine with the bar at hip height.",
+      "Шаг 2: Stand facing the bar with your feet shoulder-width apart.",
+      "Шаг 3: Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
+      "Шаг 4: Grasp the bar with an overhand grip, hands slightly wider than shoulder-width apart.",
+      "Шаг 5: Pull the bar towards your lower chest, squeezing your shoulder blades together. Perform with declined intensity.",
+      "Шаг 6: Pause for a moment at the top, then slowly lower the bar back down to the starting position.",
+      "Шаг 7: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/5lE7XRz.gif",
     "targetMuscles": [
-      "hamstrings"
+      "upper back"
     ],
     "secondaryMuscles": [
-      "lower back"
+      "biceps",
+      "forearms"
     ],
     "bodyParts": [
-      "upper legs"
+      "back"
     ],
-    "description": "Упражнение для Кардио",
+    "description": "Упражнение для Спина",
+    "isCustom": false
+  },
+  {
+    "id": "dK9394r",
+    "name": "Берпи",
+    "nameEn": "Burpee",
+    "category": "strength",
+    "muscleGroup": "cardio",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Start in a standing position with your feet shoulder-width apart.",
+      "Шаг 2: Lower your body into a squat position by bending your knees and placing your hands on the floor in front of you.",
+      "Шаг 3: Kick your feet back into a push-up position.",
+      "Шаг 4: Perform a push-up, keeping your body in a straight line.",
+      "Шаг 5: Jump your feet back into the squat position.",
+      "Шаг 6: Jump up explosively, reaching your arms overhead.",
+      "Шаг 7: Land softly and immediately lower back into a squat position to begin the next repetition."
+    ],
+    "gifUrl": "/exercises/gifs/dK9394r.gif",
+    "targetMuscles": [
+      "cardiovascular system"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "calves",
+      "shoulders",
+      "chest"
+    ],
+    "bodyParts": [
+      "cardio"
+    ],
+    "description": "Упражнение для Все тело",
     "isCustom": false
   },
   {
@@ -2149,6 +1640,36 @@
       "shoulders"
     ],
     "description": "Упражнение для Кардио",
+    "isCustom": false
+  },
+  {
+    "id": "OM46QHm",
+    "name": "Протяжка через канат",
+    "nameEn": "Cable pull through (with rope)",
+    "category": "strength",
+    "muscleGroup": "cardio",
+    "equipment": [
+      "cable"
+    ],
+    "instructions": [
+      "Шаг 1: Stand facing away from the cable machine with your feet shoulder-width apart.",
+      "Шаг 2: Grab the rope attachment with both hands and step forward, creating tension in the cable.",
+      "Шаг 3: Bend at the hips and lower your upper body until it is parallel to the ground, keeping your back straight.",
+      "Шаг 4: Engage your glutes and hamstrings to pull your body back up to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/OM46QHm.gif",
+    "targetMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "lower back"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
     "isCustom": false
   },
   {
@@ -2184,6 +1705,97 @@
     "isCustom": false
   },
   {
+    "id": "2IxROQ1",
+    "name": "Разгибание рук с канатом из-за головы",
+    "nameEn": "Cable overhead triceps extension (rope attachment)",
+    "category": "strength",
+    "muscleGroup": "cardio",
+    "equipment": [
+      "cable"
+    ],
+    "instructions": [
+      "Шаг 1: Attach a rope to a cable machine at a high position.",
+      "Шаг 2: Stand facing away from the machine with your feet shoulder-width apart.",
+      "Шаг 3: Grasp the rope with both hands, palms facing each other, and bring your hands above your head.",
+      "Шаг 4: Keep your upper arms close to your head and your elbows pointing forward.",
+      "Шаг 5: Slowly lower the rope behind your head by bending your elbows.",
+      "Шаг 6: Pause for a moment, then extend your arms back up to the starting position.",
+      "Шаг 7: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/2IxROQ1.gif",
+    "targetMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [
+      "shoulders"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "RJgzwny",
+    "name": "Скалолаз",
+    "nameEn": "Mountain climber",
+    "category": "strength",
+    "muscleGroup": "cardio",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Start in a high plank position with your hands directly under your shoulders and your body in a straight line.",
+      "Шаг 2: Engage your core and bring your right knee towards your chest, then quickly switch and bring your left knee towards your chest.",
+      "Шаг 3: Continue alternating legs in a running motion, keeping your hips low and your core engaged.",
+      "Шаг 4: Maintain a steady pace and breathe evenly throughout the exercise.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/RJgzwny.gif",
+    "targetMuscles": [
+      "cardiovascular system"
+    ],
+    "secondaryMuscles": [
+      "core",
+      "shoulders",
+      "triceps"
+    ],
+    "bodyParts": [
+      "cardio"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "XlZ4lAC",
+    "name": "Упражнение «Доброе утро» со штангой",
+    "nameEn": "Barbell good morning",
+    "category": "strength",
+    "muscleGroup": "cardio",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Шаг 1: Start by standing with your feet shoulder-width apart and the barbell resting on your upper back.",
+      "Шаг 2: Keeping your back straight and your core engaged, hinge forward at the hips, pushing your buttocks back as if you were trying to touch the wall behind you with your glutes.",
+      "Шаг 3: Lower your torso until it is parallel to the ground, feeling a stretch in your hamstrings.",
+      "Шаг 4: Pause for a moment, then return to the starting position by squeezing your glutes and pushing your hips forward.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/XlZ4lAC.gif",
+    "targetMuscles": [
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "lower back"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Кардио",
+    "isCustom": false
+  },
+  {
     "id": "RJa4tCo",
     "name": "Упражнение с канатами",
     "nameEn": "Battling ropes",
@@ -2209,37 +1821,6 @@
     ],
     "bodyParts": [
       "shoulders"
-    ],
-    "description": "Упражнение для Кардио",
-    "isCustom": false
-  },
-  {
-    "id": "K5xgdvI",
-    "name": "Поза вытянутого большого пальца ноги с ремнём (йога)",
-    "nameEn": "Reclining big toe pose with rope",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Lie on your back with your legs extended and your arms by your sides.",
-      "Шаг 2: Loop the rope around the ball of your right foot and hold the ends of the rope with your hands.",
-      "Шаг 3: Slowly raise your right leg towards your chest, keeping your knee straight and your foot flexed.",
-      "Шаг 4: Hold the stretch for a few seconds, then slowly lower your leg back down to the starting position.",
-      "Шаг 5: Repeat with your left leg.",
-      "Шаг 6: Continue alternating legs for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/K5xgdvI.gif",
-    "targetMuscles": [
-      "hamstrings"
-    ],
-    "secondaryMuscles": [
-      "calves",
-      "glutes"
-    ],
-    "bodyParts": [
-      "upper legs"
     ],
     "description": "Упражнение для Кардио",
     "isCustom": false
@@ -2276,6 +1857,166 @@
       "cardio"
     ],
     "description": "Упражнение для Кардио",
+    "isCustom": false
+  },
+  {
+    "id": "SiWCcTN",
+    "name": "Взятие на грудь в полуподсед",
+    "nameEn": "Power clean",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Шаг 1: Start with the barbell on the ground in front of you, with your feet shoulder-width apart.",
+      "Шаг 2: Bend down and grip the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+      "Шаг 3: Keep your back straight and chest up as you lift the barbell off the ground, extending your hips and knees.",
+      "Шаг 4: As the barbell reaches your mid-thigh, explosively pull it upwards, shrugging your shoulders and pulling your elbows high and to the sides.",
+      "Шаг 5: As the barbell reaches its highest point, quickly drop underneath it, rotating your elbows around and catching the barbell on your shoulders in a front squat position.",
+      "Шаг 6: Stand up with the barbell, fully extending your hips and knees.",
+      "Шаг 7: Lower the barbell back down to the starting position, keeping control of the weight throughout the movement.",
+      "Шаг 8: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/SiWCcTN.gif",
+    "targetMuscles": [
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "quadriceps",
+      "calves"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Олимпийские упражнения",
+    "isCustom": false
+  },
+  {
+    "id": "add_015",
+    "name": "Жим гантелей на наклонной скамье",
+    "nameEn": "Incline Dumbbell Press",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Лягте на наклонную скамью (30-45 градусов)",
+      "Возьмите гантели и поднимите их над грудью",
+      "Опустите гантели по бокам груди",
+      "Выжмите гантели вверх"
+    ],
+    "description": "Упражнение для верхней части груди",
+    "gifUrl": "/exercises/gifs/incline_dumbbell_press.gif"
+  },
+  {
+    "id": "9Z23cLE",
+    "name": "Жим штанги сидя на наклонной скамье",
+    "nameEn": "Barbell incline bench press seated",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Шаг 1: Set up an incline bench at a 45-degree angle.",
+      "Шаг 2: (seated variation) Lie down on the bench with your feet flat on the ground.",
+      "Шаг 3: Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+      "Шаг 4: Unrack the barbell and lower it slowly towards your chest, keeping your elbows at a 45-degree angle.",
+      "Шаг 5: Pause for a moment at the bottom, then push the barbell back up to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/9Z23cLE.gif",
+    "targetMuscles": [
+      "pectorals"
+    ],
+    "secondaryMuscles": [
+      "shoulders",
+      "triceps"
+    ],
+    "bodyParts": [
+      "chest"
+    ],
+    "description": "Упражнение для Грудь",
+    "isCustom": false
+  },
+  {
+    "id": "RSOsp5d",
+    "name": "Круги гантелями стоя («Around the World»)",
+    "nameEn": "Dumbbell standing around world",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
+      "Шаг 2: Extend your arms straight out to the sides at shoulder height, palms facing down.",
+      "Шаг 3: Keeping your arms straight, slowly rotate your arms in a circular motion, bringing the dumbbells in front of your body and then overhead.",
+      "Шаг 4: Continue the circular motion, bringing the dumbbells back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/RSOsp5d.gif",
+    "targetMuscles": [
+      "delts"
+    ],
+    "secondaryMuscles": [
+      "triceps",
+      "forearms"
+    ],
+    "bodyParts": [
+      "shoulders"
+    ],
+    "description": "Упражнение для Грудь",
+    "isCustom": false
+  },
+  {
+    "id": "add_016",
+    "name": "Отжимания на брусьях",
+    "nameEn": "Chest Dips",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Возьмитесь за брусья и поднимитесь вверх",
+      "Наклоните корпус вперед",
+      "Опуститесь вниз, сгибая руки в локтях",
+      "Поднимитесь вверх, разгибая руки"
+    ],
+    "description": "Базовое упражнение для нижней части груди",
+    "gifUrl": "/exercises/gifs/chest_dips.gif"
+  },
+  {
+    "id": "9WTm7dq",
+    "name": "Отжимания на брусьях на грудь",
+    "nameEn": "Chest dip",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Position yourself on parallel bars with your arms fully extended and your body straight.",
+      "Шаг 2: Lower your body by bending your elbows until your shoulders are below your elbows.",
+      "Шаг 3: Push yourself back up to the starting position by straightening your arms.",
+      "Шаг 4: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/9WTm7dq.gif",
+    "targetMuscles": [
+      "pectorals"
+    ],
+    "secondaryMuscles": [
+      "triceps",
+      "shoulders"
+    ],
+    "bodyParts": [
+      "chest"
+    ],
+    "description": "Упражнение для Грудь",
     "isCustom": false
   },
   {
@@ -2371,125 +2112,35 @@
     "isCustom": false
   },
   {
-    "id": "9Z23cLE",
-    "name": "Жим штанги сидя на наклонной скамье",
-    "nameEn": "Barbell incline bench press seated",
-    "category": "strength",
-    "muscleGroup": "chest",
-    "equipment": [
-      "barbell"
-    ],
-    "instructions": [
-      "Шаг 1: Set up an incline bench at a 45-degree angle.",
-      "Шаг 2: (seated variation) Lie down on the bench with your feet flat on the ground.",
-      "Шаг 3: Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
-      "Шаг 4: Unrack the barbell and lower it slowly towards your chest, keeping your elbows at a 45-degree angle.",
-      "Шаг 5: Pause for a moment at the bottom, then push the barbell back up to the starting position.",
-      "Шаг 6: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/9Z23cLE.gif",
-    "targetMuscles": [
-      "pectorals"
-    ],
-    "secondaryMuscles": [
-      "shoulders",
-      "triceps"
-    ],
-    "bodyParts": [
-      "chest"
-    ],
-    "description": "Упражнение для Грудь",
-    "isCustom": false
-  },
-  {
-    "id": "RSOsp5d",
-    "name": "Круги гантелями стоя («Around the World»)",
-    "nameEn": "Dumbbell standing around world",
-    "category": "strength",
-    "muscleGroup": "chest",
-    "equipment": [
-      "dumbbell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
-      "Шаг 2: Extend your arms straight out to the sides at shoulder height, palms facing down.",
-      "Шаг 3: Keeping your arms straight, slowly rotate your arms in a circular motion, bringing the dumbbells in front of your body and then overhead.",
-      "Шаг 4: Continue the circular motion, bringing the dumbbells back down to the starting position.",
-      "Шаг 5: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/RSOsp5d.gif",
-    "targetMuscles": [
-      "delts"
-    ],
-    "secondaryMuscles": [
-      "triceps",
-      "forearms"
-    ],
-    "bodyParts": [
-      "shoulders"
-    ],
-    "description": "Упражнение для Грудь",
-    "isCustom": false
-  },
-  {
-    "id": "0CXGHya",
-    "name": "Кроссовер на блочном тренажёре (вариация)",
-    "nameEn": "Cable cross-over variation",
-    "category": "strength",
-    "muscleGroup": "abs",
-    "equipment": [
-      "cable"
-    ],
-    "instructions": [
-      "Шаг 1: Adjust the cable pulleys to chest height.",
-      "Шаг 2: Stand in the center of the cable machine with one foot in front of the other.",
-      "Шаг 3: Grasp the handles with your palms facing down and your arms extended out to the sides.",
-      "Шаг 4: Take a step forward, keeping your arms slightly bent.",
-      "Шаг 5: With a slight bend in your elbows, bring your hands together in front of your chest.",
-      "Шаг 6: Pause for a moment, then slowly return your arms back to the starting position.",
-      "Шаг 7: Repeat for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/0CXGHya.gif",
-    "targetMuscles": [
-      "pectorals"
-    ],
-    "secondaryMuscles": [
-      "deltoids",
-      "triceps"
-    ],
-    "bodyParts": [
-      "chest"
-    ],
-    "description": "Упражнение для Грудь",
-    "isCustom": false
-  },
-  {
-    "id": "9WTm7dq",
-    "name": "Отжимания на брусьях на грудь",
-    "nameEn": "Chest dip",
+    "id": "bWlZvXh",
+    "name": "Поза бабочки (йога)",
+    "nameEn": "Butterfly yoga pose",
     "category": "strength",
     "muscleGroup": "chest",
     "equipment": [
       "bodyweight"
     ],
     "instructions": [
-      "Шаг 1: Position yourself on parallel bars with your arms fully extended and your body straight.",
-      "Шаг 2: Lower your body by bending your elbows until your shoulders are below your elbows.",
-      "Шаг 3: Push yourself back up to the starting position by straightening your arms.",
-      "Шаг 4: Repeat for the desired number of repetitions."
+      "Шаг 1: Sit on the floor with your legs extended in front of you.",
+      "Шаг 2: Bend your knees and bring the soles of your feet together, allowing your knees to fall out to the sides.",
+      "Шаг 3: Hold onto your ankles or feet with your hands.",
+      "Шаг 4: Sit up tall and lengthen your spine.",
+      "Шаг 5: Gently press your knees down towards the floor, feeling a stretch in your inner thighs.",
+      "Шаг 6: Hold this position for a few breaths.",
+      "Шаг 7: To release, slowly bring your knees back up and extend your legs."
     ],
-    "gifUrl": "/exercises/gifs/9WTm7dq.gif",
+    "gifUrl": "/exercises/gifs/bWlZvXh.gif",
     "targetMuscles": [
-      "pectorals"
+      "adductors"
     ],
     "secondaryMuscles": [
-      "triceps",
-      "shoulders"
+      "hamstrings",
+      "groin"
     ],
     "bodyParts": [
-      "chest"
+      "upper legs"
     ],
-    "description": "Упражнение для Грудь",
+    "description": "Упражнение для Кардио",
     "isCustom": false
   },
   {
@@ -2524,6 +2175,60 @@
     "isCustom": false
   },
   {
+    "id": "add_019",
+    "name": "Разводка гантелей лежа",
+    "nameEn": "Dumbbell Fly",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Лягте на скамью с гантелями в руках",
+      "Поднимите гантели над грудью",
+      "Разведите руки в стороны, слегка согнув локти",
+      "Сведите гантели над грудью"
+    ],
+    "description": "Упражнение для растяжки грудных мышц",
+    "gifUrl": "/exercises/gifs/dumbbell_fly.gif"
+  },
+  {
+    "id": "add_017",
+    "name": "Сведение рук в кроссовере",
+    "nameEn": "Cable Crossover",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": [
+      "cable"
+    ],
+    "instructions": [
+      "Встаньте между блоками кроссовера",
+      "Возьмитесь за рукоятки",
+      "Сведите руки перед собой, напрягая грудь",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для груди",
+    "gifUrl": "/exercises/gifs/cable_crossover.gif"
+  },
+  {
+    "id": "add_018",
+    "name": "Сведение рук в тренажере «бабочка»",
+    "nameEn": "Pec Deck Fly",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Сядьте в тренажер, прижмите спину к подушке",
+      "Возьмитесь за рукоятки",
+      "Сведите руки перед собой",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для груди в тренажере",
+    "gifUrl": "/exercises/gifs/pec_deck.gif"
+  },
+  {
     "id": "j6uIfep",
     "name": "Жим гирей одной рукой лёжа с полной амплитудой",
     "nameEn": "Contracted kettlebell extended range one arm press on floor",
@@ -2549,137 +2254,6 @@
     ],
     "bodyParts": [
       "chest"
-    ],
-    "description": "Упражнение для Все тело",
-    "isCustom": false
-  },
-  {
-    "id": "sM84pE4",
-    "name": "Растяжка широчайших на фитболе",
-    "nameEn": "Exercise ball lat stretch",
-    "category": "strength",
-    "muscleGroup": "back",
-    "equipment": [
-      "фитбол"
-    ],
-    "instructions": [
-      "Шаг 1: Sit on a stability ball with your feet flat on the ground and your back straight.",
-      "Шаг 2: Hold a dumbbell in one hand and extend your arm straight up overhead.",
-      "Шаг 3: Slowly lean to the opposite side, feeling a stretch in your lat muscle.",
-      "Шаг 4: Hold the stretch for 20-30 seconds, then return to the starting position.",
-      "Шаг 5: Repeat on the other side."
-    ],
-    "gifUrl": "/exercises/gifs/sM84pE4.gif",
-    "targetMuscles": [
-      "lats"
-    ],
-    "secondaryMuscles": [
-      "shoulders",
-      "triceps"
-    ],
-    "bodyParts": [
-      "back"
-    ],
-    "description": "Упражнение для Все тело",
-    "isCustom": false
-  },
-  {
-    "id": "dK9394r",
-    "name": "Берпи",
-    "nameEn": "Burpee",
-    "category": "strength",
-    "muscleGroup": "cardio",
-    "equipment": [
-      "bodyweight"
-    ],
-    "instructions": [
-      "Шаг 1: Start in a standing position with your feet shoulder-width apart.",
-      "Шаг 2: Lower your body into a squat position by bending your knees and placing your hands on the floor in front of you.",
-      "Шаг 3: Kick your feet back into a push-up position.",
-      "Шаг 4: Perform a push-up, keeping your body in a straight line.",
-      "Шаг 5: Jump your feet back into the squat position.",
-      "Шаг 6: Jump up explosively, reaching your arms overhead.",
-      "Шаг 7: Land softly and immediately lower back into a squat position to begin the next repetition."
-    ],
-    "gifUrl": "/exercises/gifs/dK9394r.gif",
-    "targetMuscles": [
-      "cardiovascular system"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "calves",
-      "shoulders",
-      "chest"
-    ],
-    "bodyParts": [
-      "cardio"
-    ],
-    "description": "Упражнение для Все тело",
-    "isCustom": false
-  },
-  {
-    "id": "UHJlbu3",
-    "name": "Махи гирей",
-    "nameEn": "Kettlebell swing",
-    "category": "strength",
-    "muscleGroup": "fullBody",
-    "equipment": [
-      "kettlebell"
-    ],
-    "instructions": [
-      "Шаг 1: Stand with your feet shoulder-width apart, toes pointed slightly outward.",
-      "Шаг 2: Hold the kettlebell with both hands in front of your body, arms extended.",
-      "Шаг 3: Bend your knees slightly and hinge at the hips, pushing your butt back.",
-      "Шаг 4: Swing the kettlebell back between your legs, keeping your arms straight and maintaining a flat back.",
-      "Шаг 5: Drive your hips forward and swing the kettlebell up to shoulder height, using the momentum generated by your hips.",
-      "Шаг 6: Allow the kettlebell to swing back down between your legs and repeat the movement for the desired number of repetitions."
-    ],
-    "gifUrl": "/exercises/gifs/UHJlbu3.gif",
-    "targetMuscles": [
-      "glutes"
-    ],
-    "secondaryMuscles": [
-      "hamstrings",
-      "core"
-    ],
-    "bodyParts": [
-      "upper legs"
-    ],
-    "description": "Упражнение для Все тело",
-    "isCustom": false
-  },
-  {
-    "id": "Ha7SZ3y",
-    "name": "Турецкий подъем с гирей",
-    "nameEn": "Kettlebell turkish get up (squat style)",
-    "category": "strength",
-    "muscleGroup": "legs",
-    "equipment": [
-      "kettlebell"
-    ],
-    "instructions": [
-      "Шаг 1: Start by lying on your back with your legs extended and the kettlebell held in your right hand, arm fully extended above your shoulder.",
-      "Шаг 2: Bend your right knee and place your right foot flat on the ground, keeping your left leg extended.",
-      "Шаг 3: Pressing through your right foot, lift your hips off the ground, coming into a bridge position.",
-      "Шаг 4: Slide your left leg underneath your body, bending your left knee and placing your left foot flat on the ground.",
-      "Шаг 5: Rotate your torso to the left, bringing your left hand to the ground for support.",
-      "Шаг 6: Pressing through your right foot and left hand, lift your torso off the ground, coming into a kneeling position.",
-      "Шаг 7: From the kneeling position, stand up, keeping the kettlebell extended overhead.",
-      "Шаг 8: Reverse the movement to return to the starting position.",
-      "Шаг 9: Repeat the exercise on the other side, starting with the kettlebell in your left hand."
-    ],
-    "gifUrl": "/exercises/gifs/Ha7SZ3y.gif",
-    "targetMuscles": [
-      "glutes"
-    ],
-    "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "core"
-    ],
-    "bodyParts": [
-      "upper legs"
     ],
     "description": "Упражнение для Все тело",
     "isCustom": false
@@ -2718,64 +2292,850 @@
     "isCustom": false
   },
   {
-    "id": "SiWCcTN",
-    "name": "Взятие на грудь в полуподсед",
-    "nameEn": "Power clean",
+    "id": "UHJlbu3",
+    "name": "Махи гирей",
+    "nameEn": "Kettlebell swing",
     "category": "strength",
-    "muscleGroup": "chest",
+    "muscleGroup": "fullBody",
+    "equipment": [
+      "kettlebell"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart, toes pointed slightly outward.",
+      "Шаг 2: Hold the kettlebell with both hands in front of your body, arms extended.",
+      "Шаг 3: Bend your knees slightly and hinge at the hips, pushing your butt back.",
+      "Шаг 4: Swing the kettlebell back between your legs, keeping your arms straight and maintaining a flat back.",
+      "Шаг 5: Drive your hips forward and swing the kettlebell up to shoulder height, using the momentum generated by your hips.",
+      "Шаг 6: Allow the kettlebell to swing back down between your legs and repeat the movement for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/UHJlbu3.gif",
+    "targetMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "core"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Все тело",
+    "isCustom": false
+  },
+  {
+    "id": "W31mMjd",
+    "name": "Боковой сплит-присед со штангой",
+    "nameEn": "Barbell side split squat",
+    "category": "strength",
+    "muscleGroup": "legs",
     "equipment": [
       "barbell"
     ],
     "instructions": [
-      "Шаг 1: Start with the barbell on the ground in front of you, with your feet shoulder-width apart.",
-      "Шаг 2: Bend down and grip the barbell with an overhand grip, slightly wider than shoulder-width apart.",
-      "Шаг 3: Keep your back straight and chest up as you lift the barbell off the ground, extending your hips and knees.",
-      "Шаг 4: As the barbell reaches your mid-thigh, explosively pull it upwards, shrugging your shoulders and pulling your elbows high and to the sides.",
-      "Шаг 5: As the barbell reaches its highest point, quickly drop underneath it, rotating your elbows around and catching the barbell on your shoulders in a front squat position.",
-      "Шаг 6: Stand up with the barbell, fully extending your hips and knees.",
-      "Шаг 7: Lower the barbell back down to the starting position, keeping control of the weight throughout the movement.",
-      "Шаг 8: Repeat for the desired number of repetitions."
+      "Шаг 1: Stand with your feet wider than shoulder-width apart, toes pointing slightly outward.",
+      "Шаг 2: Hold a barbell across your upper back, resting it on your traps.",
+      "Шаг 3: Engage your core and keep your chest up as you lower your body down into a squat position, bending at the knees and hips.",
+      "Шаг 4: As you lower, push your knees out to the sides and keep your weight on your heels.",
+      "Шаг 5: Lower until your thighs are parallel to the ground, then push through your heels to return to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions."
     ],
-    "gifUrl": "/exercises/gifs/SiWCcTN.gif",
+    "gifUrl": "/exercises/gifs/W31mMjd.gif",
     "targetMuscles": [
-      "hamstrings"
+      "quads"
     ],
     "secondaryMuscles": [
       "glutes",
-      "quadriceps",
+      "hamstrings",
       "calves"
     ],
     "bodyParts": [
       "upper legs"
     ],
-    "description": "Упражнение для Олимпийские упражнения",
+    "description": "Упражнение для Ноги",
     "isCustom": false
   },
   {
-    "id": "uOV3Itw",
-    "name": "Растяжка трицепса",
-    "nameEn": "Triceps stretch",
+    "id": "add_002",
+    "name": "Болгарские выпады",
+    "nameEn": "Bulgarian Split Squat",
     "category": "strength",
-    "muscleGroup": "arms",
+    "muscleGroup": "legs",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Встаньте спиной к скамье, положите одну ногу на скамью позади себя",
+      "Держите гантели в руках по бокам",
+      "Опуститесь вниз, сгибая переднюю ногу",
+      "Вернитесь в исходное положение, отталкиваясь пяткой передней ноги"
+    ],
+    "description": "Эффективное упражнение для ног и ягодиц с акцентом на баланс",
+    "gifUrl": "/exercises/gifs/bulgarian_split_squat.gif"
+  },
+  {
+    "id": "IZVHb27",
+    "name": "Выпады с ходьбой",
+    "nameEn": "Walking lunge",
+    "category": "strength",
+    "muscleGroup": "legs",
     "equipment": [
       "bodyweight"
     ],
     "instructions": [
-      "Шаг 1: Stand or sit upright with your back straight.",
-      "Шаг 2: Extend one arm overhead, bending it at the elbow.",
-      "Шаг 3: Place your opposite hand on the bent elbow and gently pull it towards your head.",
-      "Шаг 4: Hold the stretch for 15-30 seconds, feeling a gentle stretch in your triceps.",
-      "Шаг 5: Release the stretch and repeat on the other arm."
+      "Шаг 1: Stand with your feet shoulder-width apart.",
+      "Шаг 2: Take a step forward with your right leg, lowering your body into a lunge position.",
+      "Шаг 3: Keep your torso upright and your front knee aligned with your ankle.",
+      "Шаг 4: Push off with your right foot and bring your left foot forward, stepping into a lunge position with your left leg.",
+      "Шаг 5: Continue alternating legs and walking forward, maintaining a controlled and steady pace.",
+      "Шаг 6: Repeat for the desired number of repetitions."
     ],
-    "gifUrl": "/exercises/gifs/uOV3Itw.gif",
+    "gifUrl": "/exercises/gifs/IZVHb27.gif",
     "targetMuscles": [
-      "triceps"
+      "glutes"
     ],
     "secondaryMuscles": [
-      "shoulders"
+      "quadriceps",
+      "hamstrings",
+      "calves"
     ],
     "bodyParts": [
-      "upper arms"
+      "upper legs"
+    ],
+    "description": "Упражнение для Кардио",
+    "isCustom": false
+  },
+  {
+    "id": "Qa55kX1",
+    "name": "Гакк-присед в тренажёре",
+    "nameEn": "Sled hack squat",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Шаг 1: Adjust the sled machine to a comfortable position for your height.",
+      "Шаг 2: Stand with your feet shoulder-width apart on the platform, toes slightly pointed outwards.",
+      "Шаг 3: Hold onto the handles or bars for stability.",
+      "Шаг 4: Lower your body by bending your knees and hips, keeping your back straight and chest up.",
+      "Шаг 5: Continue lowering until your thighs are parallel to the ground or slightly below.",
+      "Шаг 6: Pause for a moment, then push through your heels to raise your body back up to the starting position.",
+      "Шаг 7: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/Qa55kX1.gif",
+    "targetMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "calves"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "add_007",
+    "name": "Гакк-приседания",
+    "nameEn": "Hack Squat",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Встаньте в тренажер для гакк-приседаний, прижмите спину к подушке",
+      "Поставьте ноги на платформу на ширине плеч",
+      "Снимите упоры и присядьте, сгибая колени",
+      "Вернитесь в исходное положение, разгибая ноги"
+    ],
+    "description": "Упражнение для квадрицепсов с акцентом на переднюю часть бедра",
+    "gifUrl": "/exercises/gifs/hack_squat.gif"
+  },
+  {
+    "id": "7zdxRTl",
+    "name": "Жим ногами в Смите",
+    "nameEn": "Smith leg press",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Шаг 1: Adjust the seat and footplate of the smith machine to a comfortable position.",
+      "Шаг 2: Sit on the machine with your back against the backrest and your feet shoulder-width apart on the footplate.",
+      "Шаг 3: Grasp the handles or sides of the machine for stability.",
+      "Шаг 4: Push the footplate away from you by extending your legs, keeping your back against the backrest.",
+      "Шаг 5: Pause for a moment at the fully extended position.",
+      "Шаг 6: Slowly bend your knees and lower the footplate back towards you, returning to the starting position.",
+      "Шаг 7: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/7zdxRTl.gif",
+    "targetMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "calves"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "add_001",
+    "name": "Жим ногами в тренажере",
+    "nameEn": "Leg Press",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Сядьте в тренажер для жима ногами и поставьте ноги на платформу на ширине плеч",
+      "Снимите упоры безопасности и опустите платформу, сгибая колени",
+      "Выжмите платформу вверх, разгибая ноги, не блокируя колени полностью",
+      "Медленно вернитесь в исходное положение"
+    ],
+    "description": "Базовое упражнение для развития мышц ног",
+    "gifUrl": "/exercises/gifs/leg_press.gif"
+  },
+  {
+    "id": "ykHcWme",
+    "name": "Жим носками в тренажёре для ног",
+    "nameEn": "Sled calf press on leg press",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Шаг 1: Adjust the seat of the leg press machine so that your knees are slightly bent when your feet are on the sled.",
+      "Шаг 2: Place your feet shoulder-width apart on the sled, with your toes pointing forward.",
+      "Шаг 3: Release the safety handles and push the sled away from you by extending your knees and ankles.",
+      "Шаг 4: Pause for a moment at the top of the movement, then slowly lower the sled back down by bending your knees and ankles.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/ykHcWme.gif",
+    "targetMuscles": [
+      "calves"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "quadriceps"
+    ],
+    "bodyParts": [
+      "lower legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "add_003",
+    "name": "Зашагивания на скамью",
+    "nameEn": "Step Up",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Встаньте перед скамьей или платформой",
+      "Держите гантели в руках",
+      "Поставьте одну ногу на скамью",
+      "Поднимитесь вверх, перенося вес тела на ногу на скамье",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Функциональное упражнение для ног и ягодиц",
+    "gifUrl": "/exercises/gifs/step_up.gif"
+  },
+  {
+    "id": "add_009",
+    "name": "Махи ногой назад",
+    "nameEn": "Kickback",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "cable"
+    ],
+    "instructions": [
+      "Встаньте лицом к тренажеру, закрепите манжету на лодыжке",
+      "Возьмитесь за ручки для опоры",
+      "Отведите ногу назад, напрягая ягодицы",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для ягодиц",
+    "gifUrl": "/exercises/gifs/cable_kickback.gif"
+  },
+  {
+    "id": "5bpPTHv",
+    "name": "Пистолетик с гирей",
+    "nameEn": "Kettlebell pistol squat",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "kettlebell"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart, holding a kettlebell in front of your chest with both hands.",
+      "Шаг 2: Lift your left foot off the ground and extend it forward, keeping it parallel to the ground.",
+      "Шаг 3: Slowly lower your body down into a squat position, keeping your right foot flat on the ground and your left leg extended.",
+      "Шаг 4: Pause for a moment at the bottom of the squat, then push through your right heel to return to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions, then switch legs."
+    ],
+    "gifUrl": "/exercises/gifs/5bpPTHv.gif",
+    "targetMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "calves"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "Vvwjz6N",
+    "name": "Подъём корпуса на скамье для ягодиц и бёдер",
+    "nameEn": "Glute-ham raise",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Adjust the glute-ham raise machine to fit your body.",
+      "Шаг 2: Position yourself face down on the machine with your ankles secured.",
+      "Шаг 3: Place your hands on your chest or cross them over your chest.",
+      "Шаг 4: Engage your hamstrings and glutes to lift your upper body up towards the ceiling.",
+      "Шаг 5: Continue lifting until your body is in a straight line from your head to your heels.",
+      "Шаг 6: Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+      "Шаг 7: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/Vvwjz6N.gif",
+    "targetMuscles": [
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "lower back"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "IeDEXTe",
+    "name": "Подъём на носки в тренажёре для жима ногами",
+    "nameEn": "Lever seated squat calf raise on leg press machine",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Шаг 1: Adjust the seat of the leg press machine so that your knees are slightly bent when your feet are on the footplate.",
+      "Шаг 2: Sit on the machine with your back against the backrest and your feet flat on the footplate, shoulder-width apart.",
+      "Шаг 3: Place your toes and the balls of your feet on the footplate, keeping your heels off the edge.",
+      "Шаг 4: Release the safety handles and push the footplate away from you by extending your knees.",
+      "Шаг 5: Once your knees are fully extended, slowly lower your heels by flexing your calves.",
+      "Шаг 6: Pause for a moment at the bottom, then push the footplate back up by extending your calves.",
+      "Шаг 7: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/IeDEXTe.gif",
+    "targetMuscles": [
+      "calves"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "glutes"
+    ],
+    "bodyParts": [
+      "lower legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "d5bTEPV",
+    "name": "Подъём на платформу с резинкой",
+    "nameEn": "Band step-up",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bands"
+    ],
+    "instructions": [
+      "Шаг 1: Place a band around your thighs, just above your knees.",
+      "Шаг 2: Stand facing a step or platform with your feet hip-width apart.",
+      "Шаг 3: Step up onto the platform with your right foot, pushing through your heel.",
+      "Шаг 4: Extend your left leg behind you, keeping it straight.",
+      "Шаг 5: Lower your left foot back down to the ground.",
+      "Шаг 6: Repeat with your left foot stepping up onto the platform.",
+      "Шаг 7: Continue alternating legs for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/d5bTEPV.gif",
+    "targetMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "calves"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "4Ml7QFO",
+    "name": "Подъём прямых ног в висе",
+    "nameEn": "Hanging straight leg raise",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
+      "Шаг 2: Engage your core and lift your legs up in front of you, keeping them straight.",
+      "Шаг 3: Continue lifting until your legs are parallel to the ground or as high as you can comfortably go.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your legs back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/4Ml7QFO.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "6HmFgmx",
+    "name": "Подъемы на носки стоя со штангой",
+    "nameEn": "Standing calf raise (on a staircase)",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Stand on the edge of a step or a sturdy platform with your heels hanging off and your toes on the step.",
+      "Шаг 2: Hold onto a railing or wall for balance if needed.",
+      "Шаг 3: Slowly raise your heels as high as possible, lifting your body weight onto the balls of your feet.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/6HmFgmx.gif",
+    "targetMuscles": [
+      "calves"
+    ],
+    "secondaryMuscles": [
+      "ankles",
+      "feet"
+    ],
+    "bodyParts": [
+      "lower legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "I3tsCnC",
+    "name": "Подъемы ног в висе",
+    "nameEn": "Hanging leg raise",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Hang from a pull-up bar with your arms fully extended and your palms facing away from you.",
+      "Шаг 2: Engage your core and lift your legs up in front of you, keeping them straight.",
+      "Шаг 3: Continue lifting until your legs are parallel to the ground or as high as you can comfortably go.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your legs back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/I3tsCnC.gif",
+    "targetMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "hip flexors"
+    ],
+    "bodyParts": [
+      "waist"
+    ],
+    "description": "Упражнение для Кор",
+    "isCustom": false
+  },
+  {
+    "id": "K5xgdvI",
+    "name": "Поза вытянутого большого пальца ноги с ремнём (йога)",
+    "nameEn": "Reclining big toe pose with rope",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Lie on your back with your legs extended and your arms by your sides.",
+      "Шаг 2: Loop the rope around the ball of your right foot and hold the ends of the rope with your hands.",
+      "Шаг 3: Slowly raise your right leg towards your chest, keeping your knee straight and your foot flexed.",
+      "Шаг 4: Hold the stretch for a few seconds, then slowly lower your leg back down to the starting position.",
+      "Шаг 5: Repeat with your left leg.",
+      "Шаг 6: Continue alternating legs for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/K5xgdvI.gif",
+    "targetMuscles": [
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "calves",
+      "glutes"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Кардио",
+    "isCustom": false
+  },
+  {
+    "id": "c8f5cSY",
+    "name": "Приведение бедра лёжа на боку (мужской вариант)",
+    "nameEn": "Side lying hip adduction (male)",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Lie on your side with your legs straight and stacked on top of each other.",
+      "Шаг 2: Place your bottom arm under your head for support.",
+      "Шаг 3: Engage your adductors and lift your top leg as high as possible without rotating your hips or leaning backward.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower your leg back down to the starting position.",
+      "Шаг 5: Repeat for the desired number of repetitions, then switch sides."
+    ],
+    "gifUrl": "/exercises/gifs/c8f5cSY.gif",
+    "targetMuscles": [
+      "adductors"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "hamstrings"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "add_006",
+    "name": "Приседания в тренажере Смита",
+    "nameEn": "Smith Machine Squat",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Встаньте под гриф в тренажере Смита",
+      "Положите гриф на плечи, снимите с упоров",
+      "Присядьте, отводя таз назад и сгибая колени",
+      "Поднимитесь в исходное положение"
+    ],
+    "description": "Приседания с фиксированной траекторией движения",
+    "gifUrl": "/exercises/gifs/smith_machine_squat.gif"
+  },
+  {
+    "id": "LIlE5Tn",
+    "name": "Приседания с прыжком",
+    "nameEn": "Jump squat",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart.",
+      "Шаг 2: Lower your body into a squat position by bending your knees and pushing your hips back.",
+      "Шаг 3: Jump explosively off the ground, extending your hips, knees, and ankles.",
+      "Шаг 4: While in mid-air, quickly bring your arms forward for balance.",
+      "Шаг 5: Land softly on the balls of your feet and immediately go into the next repetition.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/LIlE5Tn.gif",
+    "targetMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "calves"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "DhMl549",
+    "name": "Приседания со штангой (вид сзади)",
+    "nameEn": "Barbell full squat (back pov)",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart, toes slightly turned out.",
+      "Шаг 2: Hold the barbell across your upper back, resting it on your traps or rear delts.",
+      "Шаг 3: Engage your core and keep your chest up as you begin to lower your body down.",
+      "Шаг 4: Bend at the knees and hips, pushing your hips back and down as if sitting into a chair.",
+      "Шаг 5: Lower your body until your thighs are parallel to the ground or slightly below.",
+      "Шаг 6: Keep your knees in line with your toes and your weight in your heels.",
+      "Шаг 7: Drive through your heels to stand back up, extending your hips and knees.",
+      "Шаг 8: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/DhMl549.gif",
+    "targetMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "calves",
+      "core"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "iPm26QU",
+    "name": "Прыжок с тумбы с приземлением на одну ногу",
+    "nameEn": "Box jump down with one leg stabilization",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Stand in front of a box or platform with your feet shoulder-width apart.",
+      "Шаг 2: Bend your knees and jump onto the box, landing softly with one foot on the box and the other foot hanging off the edge.",
+      "Шаг 3: Stabilize yourself on the box with the foot that is on it, while keeping the other foot off the ground.",
+      "Шаг 4: Hold this position for a few seconds, engaging your calf muscles to maintain balance.",
+      "Шаг 5: Slowly step down with the foot that is on the box, returning to the starting position.",
+      "Шаг 6: Repeat the exercise with the other leg."
+    ],
+    "gifUrl": "/exercises/gifs/iPm26QU.gif",
+    "targetMuscles": [
+      "calves"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "glutes"
+    ],
+    "bodyParts": [
+      "lower legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "add_010",
+    "name": "Разведение ног сидя",
+    "nameEn": "Hip Abduction Machine",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Сядьте в тренажер, прижмите спину к подушке",
+      "Поставьте ноги на подушки",
+      "Разведите ноги в стороны, преодолевая сопротивление",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Упражнение для средней ягодичной мышцы",
+    "gifUrl": "/exercises/gifs/hip_abduction.gif"
+  },
+  {
+    "id": "add_004",
+    "name": "Разгибание ног в тренажере",
+    "nameEn": "Leg Extension",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Сядьте в тренажер, заведите ноги под валики",
+      "Возьмитесь за ручки по бокам",
+      "Разогните ноги в коленях, поднимая валики вверх",
+      "Задержитесь на секунду в верхней точке",
+      "Медленно вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для квадрицепсов",
+    "gifUrl": "/exercises/gifs/leg_extension.gif"
+  },
+  {
+    "id": "Ul5OFSV",
+    "name": "Разгибания ног с резинкой на наклонной",
+    "nameEn": "Resistance band leg extension declined",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "bands"
+    ],
+    "instructions": [
+      "Шаг 1: Attach the resistance band to a sturdy anchor point and secure it around your ankle.",
+      "Шаг 2: Stand facing the anchor point with your feet shoulder-width apart.",
+      "Шаг 3: Keeping your core engaged and your upper body stable, extend your leg straight out in front of you.",
+      "Шаг 4: Pause for a moment at the top, then slowly return your leg to the starting position. Focus on declined movement.",
+      "Шаг 5: Repeat for the desired number of repetitions, then switch legs."
+    ],
+    "gifUrl": "/exercises/gifs/Ul5OFSV.gif",
+    "targetMuscles": [
+      "quads"
+    ],
+    "secondaryMuscles": [
+      "hamstrings"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Ноги",
+    "isCustom": false
+  },
+  {
+    "id": "add_005",
+    "name": "Сгибание ног в тренажере",
+    "nameEn": "Leg Curl",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "machine"
+    ],
+    "instructions": [
+      "Лягте на тренажер лицом вниз, заведите ноги под валики",
+      "Возьмитесь за ручки",
+      "Согните ноги в коленях, подтягивая валики к ягодицам",
+      "Медленно вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для бицепсов бедра",
+    "gifUrl": "/exercises/gifs/leg_curl.gif"
+  },
+  {
+    "id": "Ha7SZ3y",
+    "name": "Турецкий подъем с гирей",
+    "nameEn": "Kettlebell turkish get up (squat style)",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "kettlebell"
+    ],
+    "instructions": [
+      "Шаг 1: Start by lying on your back with your legs extended and the kettlebell held in your right hand, arm fully extended above your shoulder.",
+      "Шаг 2: Bend your right knee and place your right foot flat on the ground, keeping your left leg extended.",
+      "Шаг 3: Pressing through your right foot, lift your hips off the ground, coming into a bridge position.",
+      "Шаг 4: Slide your left leg underneath your body, bending your left knee and placing your left foot flat on the ground.",
+      "Шаг 5: Rotate your torso to the left, bringing your left hand to the ground for support.",
+      "Шаг 6: Pressing through your right foot and left hand, lift your torso off the ground, coming into a kneeling position.",
+      "Шаг 7: From the kneeling position, stand up, keeping the kettlebell extended overhead.",
+      "Шаг 8: Reverse the movement to return to the starting position.",
+      "Шаг 9: Repeat the exercise on the other side, starting with the kettlebell in your left hand."
+    ],
+    "gifUrl": "/exercises/gifs/Ha7SZ3y.gif",
+    "targetMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "core"
+    ],
+    "bodyParts": [
+      "upper legs"
+    ],
+    "description": "Упражнение для Все тело",
+    "isCustom": false
+  },
+  {
+    "id": "add_008",
+    "name": "Ягодичный мостик",
+    "nameEn": "Glute Bridge",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Лягте на пол, согните ноги в коленях",
+      "Положите штангу на бедра",
+      "Поднимите таз вверх, напрягая ягодицы",
+      "Задержитесь в верхней точке",
+      "Опустите таз вниз"
+    ],
+    "description": "Лучшее упражнение для ягодичных мышц",
+    "gifUrl": "/exercises/gifs/glute_bridge.gif"
+  },
+  {
+    "id": "ealLwvX",
+    "name": "Высокое поднимание коленей у стены",
+    "nameEn": "High knee against wall",
+    "category": "strength",
+    "muscleGroup": "other",
+    "equipment": [
+      "bodyweight"
+    ],
+    "instructions": [
+      "Шаг 1: Stand facing a wall with your feet hip-width apart.",
+      "Шаг 2: Place your hands on the wall for support.",
+      "Шаг 3: Engage your core and lift your right knee up towards your chest, while keeping your left foot on the ground.",
+      "Шаг 4: Quickly switch legs, bringing your left knee up towards your chest and lowering your right foot back down.",
+      "Шаг 5: Continue alternating legs in a running motion, bringing your knees up as high as possible.",
+      "Шаг 6: Maintain a fast pace and keep your upper body stable throughout the exercise.",
+      "Шаг 7: Repeat for the desired duration or number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/ealLwvX.gif",
+    "targetMuscles": [
+      "cardiovascular system"
+    ],
+    "secondaryMuscles": [
+      "quadriceps",
+      "hamstrings",
+      "glutes",
+      "calves"
+    ],
+    "bodyParts": [
+      "cardio"
     ],
     "description": "Упражнение для Другое",
     "isCustom": false
@@ -2812,37 +3172,266 @@
     "isCustom": false
   },
   {
-    "id": "ealLwvX",
-    "name": "Высокое поднимание коленей у стены",
-    "nameEn": "High knee against wall",
+    "id": "add_022",
+    "name": "Жим Арнольда",
+    "nameEn": "Arnold Press",
     "category": "strength",
-    "muscleGroup": "other",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Сядьте на скамью, гантели на уровне плеч, ладони к себе",
+      "Выжимая гантели вверх, разворачивайте ладони вперед",
+      "В верхней точке ладони направлены вперед",
+      "Опустите гантели, разворачивая ладони обратно"
+    ],
+    "description": "Вариация жима гантелей с поворотом",
+    "gifUrl": "/exercises/gifs/arnold_press.gif"
+  },
+  {
+    "id": "add_021",
+    "name": "Жим гантелей над головой",
+    "nameEn": "Overhead Dumbbell Press",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Сядьте на скамью с вертикальной спинкой",
+      "Возьмите гантели и поднимите их на уровень плеч",
+      "Выжмите гантели вверх над головой",
+      "Опустите гантели на уровень плеч"
+    ],
+    "description": "Жим гантелей для развития дельт",
+    "gifUrl": "/exercises/gifs/dumbbell_shoulder_press.gif"
+  },
+  {
+    "id": "f1jf47L",
+    "name": "Жим гантелей сидя (параллельный хват)",
+    "nameEn": "Dumbbell seated shoulder press (parallel grip)",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Шаг 1: Sit on a bench with a dumbbell in each hand, palms facing inward.",
+      "Шаг 2: Raise the dumbbells to shoulder height, elbows bent and palms facing forward.",
+      "Шаг 3: Press the dumbbells upward until your arms are fully extended overhead.",
+      "Шаг 4: Pause for a moment at the top, then slowly lower the dumbbells back to shoulder height.",
+      "Шаг 5: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/f1jf47L.gif",
+    "targetMuscles": [
+      "delts"
+    ],
+    "secondaryMuscles": [
+      "triceps",
+      "upper back"
+    ],
+    "bodyParts": [
+      "shoulders"
+    ],
+    "description": "Упражнение для Плечи",
+    "isCustom": false
+  },
+  {
+    "id": "add_020",
+    "name": "Жим штанги стоя (армейский жим)",
+    "nameEn": "Military Press",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Встаньте прямо, возьмите штангу хватом на ширине плеч",
+      "Поднимите штангу на уровень плеч",
+      "Выжмите штангу вверх над головой",
+      "Опустите штангу на уровень плеч"
+    ],
+    "description": "Базовое упражнение для плеч",
+    "gifUrl": "/exercises/gifs/military_press.gif"
+  },
+  {
+    "id": "add_024",
+    "name": "Махи в наклоне с гантелями",
+    "nameEn": "Bent Over Lateral Raise",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Наклонитесь вперед, гантели в руках",
+      "Разведите руки в стороны",
+      "Опустите руки вниз"
+    ],
+    "description": "Упражнение для задних дельт",
+    "gifUrl": "/exercises/gifs/bent_over_raise.gif"
+  },
+  {
+    "id": "LeaZOIz",
+    "name": "Молотковые сгибания и жим стоя поочерёдно",
+    "nameEn": "Dumbbell standing alternate hammer curl and press",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Шаг 1: Stand up straight with a dumbbell in each hand, palms facing your body.",
+      "Шаг 2: Keep your elbows close to your torso and your back straight.",
+      "Шаг 3: Exhale and curl the dumbbell in your right hand towards your shoulder, keeping your upper arm stationary.",
+      "Шаг 4: Continue to raise the dumbbell until your biceps are fully contracted and the dumbbell is at shoulder level.",
+      "Шаг 5: Inhale and slowly lower the dumbbell back to the starting position.",
+      "Шаг 6: Repeat the curl with your left hand.",
+      "Шаг 7: After completing the curl with your left hand, exhale and press the dumbbell in your right hand overhead.",
+      "Шаг 8: Extend your arm fully and hold for a moment at the top.",
+      "Шаг 9: Inhale and slowly lower the dumbbell back to the starting position.",
+      "Шаг 10: Repeat the press with your left hand.",
+      "Шаг 11: Continue alternating between curls and presses for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/LeaZOIz.gif",
+    "targetMuscles": [
+      "biceps"
+    ],
+    "secondaryMuscles": [
+      "forearms",
+      "shoulders"
+    ],
+    "bodyParts": [
+      "upper arms"
+    ],
+    "description": "Упражнение для Руки",
+    "isCustom": false
+  },
+  {
+    "id": "33AzZeV",
+    "name": "Подъём штанги перед собой и пуловер",
+    "nameEn": "Barbell front raise and pullover",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart and hold a barbell with an overhand grip, palms facing down.",
+      "Шаг 2: Keep your arms straight and raise the barbell in front of you until it reaches shoulder height.",
+      "Шаг 3: Pause for a moment at the top, then slowly lower the barbell back down to the starting position.",
+      "Шаг 4: Next, lower the barbell behind your head, keeping your arms straight.",
+      "Шаг 5: Pause for a moment at the bottom, then raise the barbell back up to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/33AzZeV.gif",
+    "targetMuscles": [
+      "pectorals"
+    ],
+    "secondaryMuscles": [
+      "deltoids",
+      "triceps"
+    ],
+    "bodyParts": [
+      "chest"
+    ],
+    "description": "Упражнение для Плечи",
+    "isCustom": false
+  },
+  {
+    "id": "add_023",
+    "name": "Разведение рук с гантелями стоя",
+    "nameEn": "Lateral Raise",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Встаньте прямо, гантели в руках по бокам",
+      "Слегка согните руки в локтях",
+      "Разведите руки в стороны до уровня плеч",
+      "Опустите руки вниз"
+    ],
+    "description": "Упражнение для средних дельт",
+    "gifUrl": "/exercises/gifs/lateral_raise.gif"
+  },
+  {
+    "id": "bd5b860",
+    "name": "Ролик для предплечий",
+    "nameEn": "Wrist rollerer",
+    "category": "strength",
+    "muscleGroup": "shoulders",
     "equipment": [
       "bodyweight"
     ],
     "instructions": [
-      "Шаг 1: Stand facing a wall with your feet hip-width apart.",
-      "Шаг 2: Place your hands on the wall for support.",
-      "Шаг 3: Engage your core and lift your right knee up towards your chest, while keeping your left foot on the ground.",
-      "Шаг 4: Quickly switch legs, bringing your left knee up towards your chest and lowering your right foot back down.",
-      "Шаг 5: Continue alternating legs in a running motion, bringing your knees up as high as possible.",
-      "Шаг 6: Maintain a fast pace and keep your upper body stable throughout the exercise.",
-      "Шаг 7: Repeat for the desired duration or number of repetitions."
+      "Шаг 1: Attach a weight to one end of a rope or bar.",
+      "Шаг 2: Hold the other end of the rope or bar with both hands, palms facing down.",
+      "Шаг 3: Stand with your feet shoulder-width apart and your arms fully extended in front of you.",
+      "Шаг 4: Slowly roll the weight up towards your hands by flexing your wrists.",
+      "Шаг 5: Pause for a moment at the top, then slowly lower the weight back down to the starting position.",
+      "Шаг 6: Repeat for the desired number of repetitions."
     ],
-    "gifUrl": "/exercises/gifs/ealLwvX.gif",
+    "gifUrl": "/exercises/gifs/bd5b860.gif",
     "targetMuscles": [
-      "cardiovascular system"
+      "forearms"
     ],
     "secondaryMuscles": [
-      "quadriceps",
-      "hamstrings",
-      "glutes",
-      "calves"
+      "biceps",
+      "triceps"
     ],
     "bodyParts": [
-      "cardio"
+      "lower arms"
     ],
-    "description": "Упражнение для Другое",
+    "description": "Упражнение для Руки",
     "isCustom": false
+  },
+  {
+    "id": "FS63wTN",
+    "name": "Толчковый жим гантелей",
+    "nameEn": "Dumbbell push press",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "dumbbell"
+    ],
+    "instructions": [
+      "Шаг 1: Stand with your feet shoulder-width apart, holding a dumbbell in each hand at shoulder level.",
+      "Шаг 2: Bend your knees slightly and dip your body down, then explosively extend your legs and press the dumbbells overhead.",
+      "Шаг 3: Lock out your arms at the top of the movement, then lower the dumbbells back to shoulder level.",
+      "Шаг 4: Repeat for the desired number of repetitions."
+    ],
+    "gifUrl": "/exercises/gifs/FS63wTN.gif",
+    "targetMuscles": [
+      "delts"
+    ],
+    "secondaryMuscles": [
+      "triceps",
+      "core"
+    ],
+    "bodyParts": [
+      "shoulders"
+    ],
+    "description": "Упражнение для Плечи",
+    "isCustom": false
+  },
+  {
+    "id": "add_025",
+    "name": "Тяга штанги к подбородку",
+    "nameEn": "Upright Row",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": [
+      "barbell"
+    ],
+    "instructions": [
+      "Встаньте прямо, возьмите штангу узким хватом",
+      "Подтяните штангу к подбородку, разводя локти в стороны",
+      "Опустите штангу вниз"
+    ],
+    "description": "Упражнение для плеч и трапеций",
+    "gifUrl": "/exercises/gifs/upright_row.gif"
   }
 ]

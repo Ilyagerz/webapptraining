@@ -1,0 +1,542 @@
+[
+  {
+    "id": "add_001",
+    "name": "Жим ногами в тренажере",
+    "nameEn": "Leg Press",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["machine"],
+    "instructions": [
+      "Сядьте в тренажер для жима ногами и поставьте ноги на платформу на ширине плеч",
+      "Снимите упоры безопасности и опустите платформу, сгибая колени",
+      "Выжмите платформу вверх, разгибая ноги, не блокируя колени полностью",
+      "Медленно вернитесь в исходное положение"
+    ],
+    "description": "Базовое упражнение для развития мышц ног",
+    "gifUrl": "/exercises/gifs/leg_press.gif"
+  },
+  {
+    "id": "add_002",
+    "name": "Болгарские выпады",
+    "nameEn": "Bulgarian Split Squat",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Встаньте спиной к скамье, положите одну ногу на скамью позади себя",
+      "Держите гантели в руках по бокам",
+      "Опуститесь вниз, сгибая переднюю ногу",
+      "Вернитесь в исходное положение, отталкиваясь пяткой передней ноги"
+    ],
+    "description": "Эффективное упражнение для ног и ягодиц с акцентом на баланс",
+    "gifUrl": "/exercises/gifs/bulgarian_split_squat.gif"
+  },
+  {
+    "id": "add_003",
+    "name": "Зашагивания на скамью",
+    "nameEn": "Step Up",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Встаньте перед скамьей или платформой",
+      "Держите гантели в руках",
+      "Поставьте одну ногу на скамью",
+      "Поднимитесь вверх, перенося вес тела на ногу на скамье",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Функциональное упражнение для ног и ягодиц",
+    "gifUrl": "/exercises/gifs/step_up.gif"
+  },
+  {
+    "id": "add_004",
+    "name": "Разгибание ног в тренажере",
+    "nameEn": "Leg Extension",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["machine"],
+    "instructions": [
+      "Сядьте в тренажер, заведите ноги под валики",
+      "Возьмитесь за ручки по бокам",
+      "Разогните ноги в коленях, поднимая валики вверх",
+      "Задержитесь на секунду в верхней точке",
+      "Медленно вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для квадрицепсов",
+    "gifUrl": "/exercises/gifs/leg_extension.gif"
+  },
+  {
+    "id": "add_005",
+    "name": "Сгибание ног в тренажере",
+    "nameEn": "Leg Curl",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["machine"],
+    "instructions": [
+      "Лягте на тренажер лицом вниз, заведите ноги под валики",
+      "Возьмитесь за ручки",
+      "Согните ноги в коленях, подтягивая валики к ягодицам",
+      "Медленно вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для бицепсов бедра",
+    "gifUrl": "/exercises/gifs/leg_curl.gif"
+  },
+  {
+    "id": "add_006",
+    "name": "Приседания в тренажере Смита",
+    "nameEn": "Smith Machine Squat",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["machine"],
+    "instructions": [
+      "Встаньте под гриф в тренажере Смита",
+      "Положите гриф на плечи, снимите с упоров",
+      "Присядьте, отводя таз назад и сгибая колени",
+      "Поднимитесь в исходное положение"
+    ],
+    "description": "Приседания с фиксированной траекторией движения",
+    "gifUrl": "/exercises/gifs/smith_machine_squat.gif"
+  },
+  {
+    "id": "add_007",
+    "name": "Гакк-приседания",
+    "nameEn": "Hack Squat",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["machine"],
+    "instructions": [
+      "Встаньте в тренажер для гакк-приседаний, прижмите спину к подушке",
+      "Поставьте ноги на платформу на ширине плеч",
+      "Снимите упоры и присядьте, сгибая колени",
+      "Вернитесь в исходное положение, разгибая ноги"
+    ],
+    "description": "Упражнение для квадрицепсов с акцентом на переднюю часть бедра",
+    "gifUrl": "/exercises/gifs/hack_squat.gif"
+  },
+  {
+    "id": "add_008",
+    "name": "Ягодичный мостик",
+    "nameEn": "Glute Bridge",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Лягте на пол, согните ноги в коленях",
+      "Положите штангу на бедра",
+      "Поднимите таз вверх, напрягая ягодицы",
+      "Задержитесь в верхней точке",
+      "Опустите таз вниз"
+    ],
+    "description": "Лучшее упражнение для ягодичных мышц",
+    "gifUrl": "/exercises/gifs/glute_bridge.gif"
+  },
+  {
+    "id": "add_009",
+    "name": "Махи ногой назад",
+    "nameEn": "Kickback",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["cable"],
+    "instructions": [
+      "Встаньте лицом к тренажеру, закрепите манжету на лодыжке",
+      "Возьмитесь за ручки для опоры",
+      "Отведите ногу назад, напрягая ягодицы",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для ягодиц",
+    "gifUrl": "/exercises/gifs/cable_kickback.gif"
+  },
+  {
+    "id": "add_010",
+    "name": "Разведение ног сидя",
+    "nameEn": "Hip Abduction Machine",
+    "category": "strength",
+    "muscleGroup": "legs",
+    "equipment": ["machine"],
+    "instructions": [
+      "Сядьте в тренажер, прижмите спину к подушке",
+      "Поставьте ноги на подушки",
+      "Разведите ноги в стороны, преодолевая сопротивление",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Упражнение для средней ягодичной мышцы",
+    "gifUrl": "/exercises/gifs/hip_abduction.gif"
+  },
+  {
+    "id": "add_011",
+    "name": "Тяга штанги в наклоне",
+    "nameEn": "Barbell Row",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Возьмите штангу хватом на ширине плеч",
+      "Наклонитесь вперед, держа спину прямой",
+      "Подтяните штангу к поясу",
+      "Медленно опустите штангу вниз"
+    ],
+    "description": "Базовое упражнение для толщины спины",
+    "gifUrl": "/exercises/gifs/barbell_row.gif"
+  },
+  {
+    "id": "add_012",
+    "name": "Тяга гантели одной рукой",
+    "nameEn": "Single Arm Dumbbell Row",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Упритесь коленом и рукой в скамью",
+      "Возьмите гантель в другую руку",
+      "Подтяните гантель к поясу",
+      "Опустите гантель вниз"
+    ],
+    "description": "Упражнение для широчайших мышц спины",
+    "gifUrl": "/exercises/gifs/dumbbell_row.gif"
+  },
+  {
+    "id": "add_013",
+    "name": "Тяга Т-грифа",
+    "nameEn": "T-Bar Row",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Встаньте над Т-грифом, ноги на ширине плеч",
+      "Наклонитесь и возьмитесь за рукоятки",
+      "Подтяните гриф к груди",
+      "Опустите гриф вниз"
+    ],
+    "description": "Упражнение для середины спины",
+    "gifUrl": "/exercises/gifs/t_bar_row.gif"
+  },
+  {
+    "id": "add_014",
+    "name": "Гиперэкстензия",
+    "nameEn": "Hyperextension",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": ["machine"],
+    "instructions": [
+      "Лягте в тренажер лицом вниз, закрепите ноги",
+      "Опустите корпус вниз",
+      "Поднимите корпус вверх, напрягая поясницу",
+      "Не переразгибайтесь в верхней точке"
+    ],
+    "description": "Упражнение для поясницы и задней цепи",
+    "gifUrl": "/exercises/gifs/hyperextension.gif"
+  },
+  {
+    "id": "add_015",
+    "name": "Жим гантелей на наклонной скамье",
+    "nameEn": "Incline Dumbbell Press",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Лягте на наклонную скамью (30-45 градусов)",
+      "Возьмите гантели и поднимите их над грудью",
+      "Опустите гантели по бокам груди",
+      "Выжмите гантели вверх"
+    ],
+    "description": "Упражнение для верхней части груди",
+    "gifUrl": "/exercises/gifs/incline_dumbbell_press.gif"
+  },
+  {
+    "id": "add_016",
+    "name": "Отжимания на брусьях",
+    "nameEn": "Chest Dips",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": ["bodyweight"],
+    "instructions": [
+      "Возьмитесь за брусья и поднимитесь вверх",
+      "Наклоните корпус вперед",
+      "Опуститесь вниз, сгибая руки в локтях",
+      "Поднимитесь вверх, разгибая руки"
+    ],
+    "description": "Базовое упражнение для нижней части груди",
+    "gifUrl": "/exercises/gifs/chest_dips.gif"
+  },
+  {
+    "id": "add_017",
+    "name": "Сведение рук в кроссовере",
+    "nameEn": "Cable Crossover",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": ["cable"],
+    "instructions": [
+      "Встаньте между блоками кроссовера",
+      "Возьмитесь за рукоятки",
+      "Сведите руки перед собой, напрягая грудь",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для груди",
+    "gifUrl": "/exercises/gifs/cable_crossover.gif"
+  },
+  {
+    "id": "add_018",
+    "name": "Сведение рук в тренажере «бабочка»",
+    "nameEn": "Pec Deck Fly",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": ["machine"],
+    "instructions": [
+      "Сядьте в тренажер, прижмите спину к подушке",
+      "Возьмитесь за рукоятки",
+      "Сведите руки перед собой",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для груди в тренажере",
+    "gifUrl": "/exercises/gifs/pec_deck.gif"
+  },
+  {
+    "id": "add_019",
+    "name": "Разводка гантелей лежа",
+    "nameEn": "Dumbbell Fly",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Лягте на скамью с гантелями в руках",
+      "Поднимите гантели над грудью",
+      "Разведите руки в стороны, слегка согнув локти",
+      "Сведите гантели над грудью"
+    ],
+    "description": "Упражнение для растяжки грудных мышц",
+    "gifUrl": "/exercises/gifs/dumbbell_fly.gif"
+  },
+  {
+    "id": "add_020",
+    "name": "Жим штанги стоя (армейский жим)",
+    "nameEn": "Military Press",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Встаньте прямо, возьмите штангу хватом на ширине плеч",
+      "Поднимите штангу на уровень плеч",
+      "Выжмите штангу вверх над головой",
+      "Опустите штангу на уровень плеч"
+    ],
+    "description": "Базовое упражнение для плеч",
+    "gifUrl": "/exercises/gifs/military_press.gif"
+  },
+  {
+    "id": "add_021",
+    "name": "Жим гантелей над головой",
+    "nameEn": "Overhead Dumbbell Press",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Сядьте на скамью с вертикальной спинкой",
+      "Возьмите гантели и поднимите их на уровень плеч",
+      "Выжмите гантели вверх над головой",
+      "Опустите гантели на уровень плеч"
+    ],
+    "description": "Жим гантелей для развития дельт",
+    "gifUrl": "/exercises/gifs/dumbbell_shoulder_press.gif"
+  },
+  {
+    "id": "add_022",
+    "name": "Жим Арнольда",
+    "nameEn": "Arnold Press",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Сядьте на скамью, гантели на уровне плеч, ладони к себе",
+      "Выжимая гантели вверх, разворачивайте ладони вперед",
+      "В верхней точке ладони направлены вперед",
+      "Опустите гантели, разворачивая ладони обратно"
+    ],
+    "description": "Вариация жима гантелей с поворотом",
+    "gifUrl": "/exercises/gifs/arnold_press.gif"
+  },
+  {
+    "id": "add_023",
+    "name": "Разведение рук с гантелями стоя",
+    "nameEn": "Lateral Raise",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Встаньте прямо, гантели в руках по бокам",
+      "Слегка согните руки в локтях",
+      "Разведите руки в стороны до уровня плеч",
+      "Опустите руки вниз"
+    ],
+    "description": "Упражнение для средних дельт",
+    "gifUrl": "/exercises/gifs/lateral_raise.gif"
+  },
+  {
+    "id": "add_024",
+    "name": "Махи в наклоне с гантелями",
+    "nameEn": "Bent Over Lateral Raise",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Наклонитесь вперед, гантели в руках",
+      "Разведите руки в стороны",
+      "Опустите руки вниз"
+    ],
+    "description": "Упражнение для задних дельт",
+    "gifUrl": "/exercises/gifs/bent_over_raise.gif"
+  },
+  {
+    "id": "add_025",
+    "name": "Тяга штанги к подбородку",
+    "nameEn": "Upright Row",
+    "category": "strength",
+    "muscleGroup": "shoulders",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Встаньте прямо, возьмите штангу узким хватом",
+      "Подтяните штангу к подбородку, разводя локти в стороны",
+      "Опустите штангу вниз"
+    ],
+    "description": "Упражнение для плеч и трапеций",
+    "gifUrl": "/exercises/gifs/upright_row.gif"
+  },
+  {
+    "id": "add_026",
+    "name": "Подъем штанги на бицепс стоя",
+    "nameEn": "Barbell Curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Встаньте прямо, возьмите штангу хватом снизу",
+      "Согните руки в локтях, подняв штангу к плечам",
+      "Опустите штангу вниз"
+    ],
+    "description": "Базовое упражнение для бицепсов",
+    "gifUrl": "/exercises/gifs/barbell_curl.gif"
+  },
+  {
+    "id": "add_027",
+    "name": "Подъем гантелей на бицепс",
+    "nameEn": "Dumbbell Curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Встаньте прямо, гантели в руках",
+      "Согните руки в локтях, подняв гантели к плечам",
+      "Опустите гантели вниз"
+    ],
+    "description": "Классическое упражнение для бицепсов",
+    "gifUrl": "/exercises/gifs/dumbbell_curl.gif"
+  },
+  {
+    "id": "add_028",
+    "name": "Молот с гантелями",
+    "nameEn": "Hammer Curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": ["dumbbell"],
+    "instructions": [
+      "Встаньте прямо, гантели в руках нейтральным хватом",
+      "Согните руки в локтях, подняв гантели к плечам",
+      "Опустите гантели вниз"
+    ],
+    "description": "Упражнение для бицепсов и брахиалиса",
+    "gifUrl": "/exercises/gifs/hammer_curl.gif"
+  },
+  {
+    "id": "add_029",
+    "name": "Подъем на скамье Скотта",
+    "nameEn": "Preacher Curl",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Сядьте на скамью Скотта, положите руки на подушку",
+      "Возьмите штангу хватом снизу",
+      "Согните руки в локтях, подняв штангу",
+      "Опустите штангу вниз"
+    ],
+    "description": "Изолирующее упражнение для бицепсов",
+    "gifUrl": "/exercises/gifs/preacher_curl.gif"
+  },
+  {
+    "id": "add_030",
+    "name": "Французский жим лежа",
+    "nameEn": "Lying Tricep Extension",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Лягте на скамью, штанга над грудью",
+      "Опустите штангу ко лбу, сгибая руки в локтях",
+      "Разогните руки, вернув штангу вверх"
+    ],
+    "description": "Упражнение для трицепсов",
+    "gifUrl": "/exercises/gifs/skull_crusher.gif"
+  },
+  {
+    "id": "add_031",
+    "name": "Жим лежа узким хватом",
+    "nameEn": "Close Grip Bench Press",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Лягте на скамью, возьмите штангу узким хватом",
+      "Опустите штангу к груди",
+      "Выжмите штангу вверх"
+    ],
+    "description": "Упражнение для трицепсов и внутренней части груди",
+    "gifUrl": "/exercises/gifs/close_grip_bench.gif"
+  },
+  {
+    "id": "add_032",
+    "name": "Разгибание рук на верхнем блоке",
+    "nameEn": "Tricep Pushdown",
+    "category": "strength",
+    "muscleGroup": "arms",
+    "equipment": ["cable"],
+    "instructions": [
+      "Встаньте у верхнего блока, возьмитесь за рукоятку",
+      "Разогните руки вниз, напрягая трицепсы",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Изолирующее упражнение для трицепсов",
+    "gifUrl": "/exercises/gifs/tricep_pushdown.gif"
+  },
+  {
+    "id": "add_033",
+    "name": "Скручивания",
+    "nameEn": "Crunches",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": ["bodyweight"],
+    "instructions": [
+      "Лягте на пол, согните ноги в коленях",
+      "Руки за головой или на груди",
+      "Поднимите верхнюю часть тела, напрягая пресс",
+      "Опуститесь вниз"
+    ],
+    "description": "Классическое упражнение для пресса",
+    "gifUrl": "/exercises/gifs/crunches.gif"
+  },
+  {
+    "id": "add_034",
+    "name": "Велосипед",
+    "nameEn": "Bicycle Crunch",
+    "category": "strength",
+    "muscleGroup": "abs",
+    "equipment": ["bodyweight"],
+    "instructions": [
+      "Лягте на пол, руки за головой",
+      "Поднимите ноги и плечи",
+      "Подтягивайте локоть к противоположному колену",
+      "Чередуйте стороны"
+    ],
+    "description": "Упражнение для косых мышц пресса",
+    "gifUrl": "/exercises/gifs/bicycle_crunch.gif"
+  }
+]
+
