@@ -43,7 +43,7 @@ export default function EditTemplatePage() {
       exercise,
       sets: 3,
       reps: 10,
-      restTimer: 90,
+      restTimer: user?.settings?.restTimerDefault || 90,
     };
     setExercises([...exercises, newExercise]);
     setShowExercisePicker(false);

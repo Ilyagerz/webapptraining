@@ -537,6 +537,57 @@
     ],
     "description": "Упражнение для косых мышц пресса",
     "gifUrl": "/exercises/gifs/bicycle_crunch.gif"
+  },
+  {
+    "id": "add_035",
+    "name": "Жим штанги лежа",
+    "nameEn": "Barbell Bench Press",
+    "category": "strength",
+    "muscleGroup": "chest",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Лягте на скамью, ноги на полу",
+      "Возьмите штангу хватом чуть шире плеч",
+      "Опустите штангу к груди, контролируя движение",
+      "Выжмите штангу вверх, разгибая руки",
+      "Не отрывайте ягодицы от скамьи"
+    ],
+    "description": "Базовое упражнение для грудных мышц",
+    "gifUrl": "/exercises/gifs/barbell_bench_press.gif"
+  },
+  {
+    "id": "add_036",
+    "name": "Становая тяга",
+    "nameEn": "Deadlift",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": ["barbell"],
+    "instructions": [
+      "Встаньте перед штангой, ноги на ширине плеч",
+      "Наклонитесь и возьмите штангу хватом на ширине плеч",
+      "Держите спину прямой, грудь поднятой",
+      "Выпрямитесь, поднимая штангу вдоль ног",
+      "Опустите штангу, контролируя движение"
+    ],
+    "description": "Базовое упражнение для всего тела",
+    "gifUrl": "/exercises/gifs/deadlift.gif"
+  },
+  {
+    "id": "add_037",
+    "name": "Тяга нижнего блока",
+    "nameEn": "Seated Cable Row",
+    "category": "strength",
+    "muscleGroup": "back",
+    "equipment": ["cable"],
+    "instructions": [
+      "Сядьте в тренажер, упритесь ногами в платформу",
+      "Возьмитесь за рукоятку",
+      "Подтяните рукоятку к животу, сводя лопатки",
+      "Держите спину прямой",
+      "Вернитесь в исходное положение"
+    ],
+    "description": "Упражнение для широчайших и средней части спины",
+    "gifUrl": "/exercises/gifs/seated_cable_row.gif"
   }
 ]
 

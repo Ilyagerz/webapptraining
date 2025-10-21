@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, Search, Dumbbell, Plus, Info } from 'lucide-react';
+import { X, Search, Dumbbell, Plus, Info, Trash2 } from 'lucide-react';
 import { getExercises, MUSCLE_GROUP_NAMES } from '@/lib/exercises-data';
 import type { Exercise, MuscleGroup } from '@/types';
 import { ExerciseDetailModal } from './ExerciseDetailModal';
@@ -14,7 +14,7 @@ interface ExercisePickerProps {
 }
 
 export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
-  const { customExercises, addCustomExercise } = useAppStore();
+  const { customExercises, addCustomExercise, deleteCustomExercise } = useAppStore();
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [filteredExercises, setFilteredExercises] = useState<Exercise[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -167,6 +167,11 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
                   >
                     <h3 className="font-semibold mb-1 text-black dark:text-white">
                       {exercise.name}
+                      {exercise.isCustom && (
+                        <span className="ml-2 text-xs px-2 py-0.5 bg-electric-lime/20 text-electric-lime rounded-full">
+                          Мое
+                        </span>
+                      )}
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-300">
                       {MUSCLE_GROUP_NAMES[exercise.muscleGroup]}
@@ -184,6 +189,22 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
                   >
                     <Info size={20} className="text-gray-600 dark:text-gray-400" />
                   </button>
+
+                  {/* Delete Button (только для кастомных упражнений) */}
+                  {exercise.isCustom && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (confirm(`Удалить упражнение "${exercise.name}"?`)) {
+                          deleteCustomExercise(exercise.id);
+                        }
+                      }}
+                      className="flex-shrink-0 p-2 rounded-lg hover:bg-red-100 dark:hover:bg-red-900/20 transition-colors"
+                      title="Удалить упражнение"
+                    >
+                      <Trash2 size={20} className="text-red-500" />
+                    </button>
+                  )}
                 </div>
               ))}
             </div>

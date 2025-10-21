@@ -177,22 +177,7 @@ export default function HistoryPage() {
         </Link>
 
         <button
-          onClick={() => {
-            if (!user) return;
-            const newWorkout: Workout = {
-              id: generateId(),
-              userId: user.id,
-              name: 'Новая тренировка',
-              startedAt: new Date(),
-              exercises: [],
-              totalVolume: 0,
-              totalSets: 0,
-              totalReps: 0,
-              isActive: true,
-            };
-            setActiveWorkout(newWorkout);
-            router.push('/workout/active');
-          }}
+          onClick={() => router.push('/dashboard')}
           className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover border border-gray-200 dark:border-gray-700"
         >
           <Dumbbell size={24} className="text-gray-700 dark:text-white" />

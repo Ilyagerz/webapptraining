@@ -206,21 +206,35 @@ export function playSound(type: 'complete' | 'timer' | 'record' = 'complete'): v
 }
 
 // Получение недель для графика
-export function getWeeksData(workouts: Workout[], weeksCount: number = 12): number[] {
-  const now = new Date();
-  const weeks: number[] = new Array(weeksCount).fill(0);
+export function getWeeksData(workouts: Workout[], daysCount: number = 7): Array<{ day: string; workouts: number }> {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
   
-  workouts.forEach(workout => {
-    const workoutDate = new Date(workout.startedAt);
-    const diffTime = now.getTime() - workoutDate.getTime();
-    const diffWeeks = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 7));
+  const dayNames = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+  const days: Array<{ day: string; workouts: number }> = [];
+  
+  // Создаем массив последних daysCount дней
+  for (let i = daysCount - 1; i >= 0; i--) {
+    const date = new Date(today);
+    date.setDate(today.getDate() - i);
     
-    if (diffWeeks >= 0 && diffWeeks < weeksCount) {
-      weeks[weeksCount - 1 - diffWeeks]++;
-    }
-  });
+    const dayOfWeek = date.getDay();
+    const dayName = dayNames[dayOfWeek];
+    
+    // Подсчитываем тренировки в этот день
+    const workoutCount = workouts.filter(workout => {
+      const workoutDate = new Date(workout.completedAt || workout.startedAt);
+      workoutDate.setHours(0, 0, 0, 0);
+      return workoutDate.getTime() === date.getTime();
+    }).length;
+    
+    days.push({
+      day: dayName,
+      workouts: workoutCount
+    });
+  }
   
-  return weeks;
+  return days;
 }
 
 // Описание RPE

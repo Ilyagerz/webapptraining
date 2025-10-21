@@ -100,7 +100,7 @@ export default function MeasurementsPage() {
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         {/* Latest Metrics Grid */}
         <div>
-          <h2 className="text-lg font-bold mb-4">Текущие показатели</h2>
+          <h2 className="text-lg font-bold mb-4 text-black dark:text-white">Текущие показатели</h2>
           <div className="grid grid-cols-2 gap-4">
             {metrics.map((metric) => {
               const latest = getLatestValue(metric.key);
@@ -110,15 +110,15 @@ export default function MeasurementsPage() {
               return (
                 <div
                   key={metric.key}
-                  className={`glass-effect rounded-xl p-4 cursor-pointer transition-all ${
+                  className={`rounded-xl p-4 cursor-pointer transition-all ${
                     selectedMetric === metric.key
-                      ? 'ring-2 ring-electric-lime'
-                      : ''
+                      ? 'ring-2 ring-electric-lime bg-gray-100 dark:bg-gray-800'
+                      : 'bg-gray-100 dark:bg-gray-800'
                   }`}
                   onClick={() => setSelectedMetric(metric.key)}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <Icon size={18} className="text-muted-foreground" />
+                    <Icon size={18} className="text-gray-600 dark:text-gray-400" />
                     {change !== null && (
                       <div
                         className={`flex items-center space-x-1 text-xs ${
@@ -126,7 +126,7 @@ export default function MeasurementsPage() {
                             ? 'text-green-500'
                             : change < 0
                             ? 'text-red-500'
-                            : 'text-muted-foreground'
+                            : 'text-gray-600 dark:text-gray-400'
                         }`}
                       >
                         {change > 0 ? (
@@ -140,10 +140,10 @@ export default function MeasurementsPage() {
                       </div>
                     )}
                   </div>
-                  <div className="text-2xl font-bold">
+                  <div className="text-2xl font-bold text-black dark:text-white">
                     {latest !== null && latest !== undefined ? latest.toFixed(1) : '-'}
                   </div>
-                  <div className="text-xs text-muted-foreground mt-1">
+                  <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                     {metric.label} ({metric.unit})
                   </div>
                 </div>
@@ -153,9 +153,9 @@ export default function MeasurementsPage() {
         </div>
 
         {/* Graph */}
-        <div className="glass-effect rounded-2xl p-6">
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-2xl p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-bold">
+            <h3 className="font-bold text-black dark:text-white">
               График: {metrics.find((m) => m.key === selectedMetric)?.label}
             </h3>
           </div>
@@ -196,15 +196,15 @@ export default function MeasurementsPage() {
 
         {/* History */}
         <div>
-          <h2 className="text-lg font-bold mb-4">
+          <h2 className="text-lg font-bold mb-4 text-black dark:text-white">
             История замеров ({measurements.length})
           </h2>
 
           {measurements.length === 0 ? (
-            <div className="glass-effect rounded-xl p-12 text-center">
-              <Scale size={48} className="mx-auto mb-4 text-muted-foreground opacity-50" />
-              <h3 className="font-semibold mb-2">Нет замеров</h3>
-              <p className="text-sm text-muted-foreground mb-6">
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-12 text-center">
+              <Scale size={48} className="mx-auto mb-4 text-gray-400 dark:text-gray-500 opacity-50" />
+              <h3 className="font-semibold mb-2 text-black dark:text-white">Нет замеров</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
                 Начни отслеживать свой прогресс
               </p>
               <button
@@ -225,11 +225,11 @@ export default function MeasurementsPage() {
                   : null;
 
                 return (
-                  <div key={measurement.id} className="glass-effect rounded-xl p-4">
+                  <div key={measurement.id} className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4">
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <div className="font-semibold">{formatDate(measurement.date)}</div>
-                        <div className="text-sm text-muted-foreground">
+                        <div className="font-semibold text-black dark:text-white">{formatDate(measurement.date)}</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
                           {new Date(measurement.date).toLocaleDateString('ru-RU', {
                             weekday: 'long',
                           })}
@@ -245,10 +245,10 @@ export default function MeasurementsPage() {
                     {/* Main Metrics */}
                     <div className="grid grid-cols-2 gap-3 mb-3">
                       {measurement.weight && (
-                        <div className="p-3 bg-gray-50 dark:bg-nubo-dark rounded-lg">
-                          <div className="text-xs text-muted-foreground mb-1">Вес</div>
+                        <div className="p-3 bg-white dark:bg-gray-900 rounded-lg">
+                          <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Вес</div>
                           <div className="flex items-center space-x-2">
-                            <span className="text-xl font-bold">{measurement.weight} кг</span>
+                            <span className="text-xl font-bold text-black dark:text-white">{measurement.weight} кг</span>
                             {weightChange !== null && (
                               <span
                                 className={`text-xs ${
@@ -256,7 +256,7 @@ export default function MeasurementsPage() {
                                     ? 'text-green-500'
                                     : weightChange < 0
                                     ? 'text-red-500'
-                                    : 'text-muted-foreground'
+                                    : 'text-gray-600 dark:text-gray-400'
                                 }`}
                               >
                                 {weightChange > 0 ? '+' : ''}
@@ -267,9 +267,9 @@ export default function MeasurementsPage() {
                         </div>
                       )}
                       {measurement.bodyFat && (
-                        <div className="p-3 bg-gray-50 dark:bg-nubo-dark rounded-lg">
-                          <div className="text-xs text-muted-foreground mb-1">% жира</div>
-                          <div className="text-xl font-bold">{measurement.bodyFat}%</div>
+                        <div className="p-3 bg-white dark:bg-gray-900 rounded-lg">
+                          <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">% жира</div>
+                          <div className="text-xl font-bold text-black dark:text-white">{measurement.bodyFat}%</div>
                         </div>
                       )}
                     </div>
@@ -282,8 +282,8 @@ export default function MeasurementsPage() {
                           const metric = metrics.find((m) => m.key === key);
                           return (
                             <div key={key} className="text-center">
-                              <div className="text-xs text-muted-foreground">{metric?.label}</div>
-                              <div className="font-medium">{value} см</div>
+                              <div className="text-xs text-gray-600 dark:text-gray-400">{metric?.label}</div>
+                              <div className="font-medium text-black dark:text-white">{value} см</div>
                             </div>
                           );
                         })}
@@ -292,8 +292,8 @@ export default function MeasurementsPage() {
 
                     {/* Notes */}
                     {measurement.notes && (
-                      <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-800">
-                        <p className="text-sm text-muted-foreground">{measurement.notes}</p>
+                      <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                        <p className="text-sm text-gray-600 dark:text-gray-400">{measurement.notes}</p>
                       </div>
                     )}
                   </div>

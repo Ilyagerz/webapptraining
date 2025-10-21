@@ -144,7 +144,7 @@ export default function ActiveWorkoutPage() {
         },
       ],
       notes: '',
-      restTimer: 90,
+      restTimer: user?.settings?.restTimerDefault || 90,
     };
 
     updateWorkout({
