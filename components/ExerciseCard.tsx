@@ -89,8 +89,8 @@ export function ExerciseCard({
         const storeData = typeof window !== 'undefined' ? localStorage.getItem('nubo-training-storage') : null;
         if (!storeData) return;
 
-        const { state } = JSON.parse(storeData);
-        const workouts = state.workouts || [];
+        const store = JSON.parse(storeData);
+        const workouts = store.state?.workouts || [];
 
         // Находим последнюю завершенную тренировку с этим упражнением
         const relevantWorkouts = workouts

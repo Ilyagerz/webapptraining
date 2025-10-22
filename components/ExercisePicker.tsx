@@ -29,8 +29,8 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
       try {
         const allExercises = await getExercises(customExercises);
         console.log(`✅ ExercisePicker: Загружено ${allExercises.length} упражнений (${customExercises.length} кастомных)`);
-        setExercises(allExercises);
-        setFilteredExercises(allExercises);
+    setExercises(allExercises);
+    setFilteredExercises(allExercises);
       } catch (error) {
         console.error('Ошибка загрузки упражнений:', error);
       } finally {
@@ -87,12 +87,12 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
             >
               <Plus size={24} className="text-gray-700 dark:text-white hover:text-nubo-dark" />
             </button>
-            <button
-              onClick={onClose}
+          <button
+            onClick={onClose}
               className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-            >
+          >
               <X size={24} className="text-gray-700 dark:text-white" />
-            </button>
+          </button>
           </div>
         </div>
 
@@ -174,9 +174,9 @@ export function ExercisePicker({ onSelect, onClose }: ExercisePickerProps) {
                       )}
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-300">
-                      {MUSCLE_GROUP_NAMES[exercise.muscleGroup]}
-                    </p>
-                  </button>
+                    {MUSCLE_GROUP_NAMES[exercise.muscleGroup]}
+                  </p>
+                </button>
 
                   {/* Info Button */}
                   <button

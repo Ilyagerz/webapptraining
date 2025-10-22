@@ -58,8 +58,12 @@ export default function StatsPage() {
       }
 
       const store = JSON.parse(storeData);
-      const workouts = store.state?.workouts || store.workouts || [];
+      const workouts = store.state?.workouts || [];
       console.log('📊 Stats: загружено тренировок:', workouts.length);
+      
+      if (workouts.length === 0) {
+        console.warn('⚠️ Нет тренировок в store. Структура:', Object.keys(store));
+      }
 
       // Подсчет статистики
       const totalWorkouts = workouts.length;

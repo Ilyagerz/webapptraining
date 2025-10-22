@@ -50,8 +50,10 @@ export default function WorkoutSummaryPage() {
         // Загружаем тренировку из Zustand store (localStorage)
         const storedData = typeof window !== 'undefined' ? localStorage.getItem('nubo-training-storage') : null;
         if (storedData) {
-          const { state } = JSON.parse(storedData);
-          const loadedWorkout = state.workouts?.find((w: Workout) => w.id === workoutId);
+          const store = JSON.parse(storedData);
+          const workouts = store.state?.workouts || [];
+          console.log('🔍 Ищем тренировку ID:', workoutId, 'Всего тренировок:', workouts.length);
+          const loadedWorkout = workouts.find((w: Workout) => w.id === workoutId);
           
           if (loadedWorkout) {
             console.log('✅ Workout loaded:', loadedWorkout);
@@ -72,7 +74,7 @@ export default function WorkoutSummaryPage() {
             });
           } else {
             console.error('❌ Workout not found in store. WorkoutId:', workoutId);
-            console.log('Available workouts:', state.workouts?.map((w: any) => ({ id: w.id, name: w.name })));
+            console.log('Available workouts:', workouts.map((w: any) => ({ id: w.id, name: w.name })));
           }
         }
       } catch (error) {

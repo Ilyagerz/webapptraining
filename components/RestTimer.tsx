@@ -58,6 +58,10 @@ export function RestTimer() {
       if (timeLeft === 0) {
         vibrate([200, 100, 200]);
         playSound();
+        // Автоматически закрываем таймер через 2 секунды после завершения
+        setTimeout(() => {
+          setRestTimer(false, 0);
+        }, 2000);
       }
       return;
     }
@@ -74,7 +78,7 @@ export function RestTimer() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [restTimerActive, timeLeft, isPaused]);
+  }, [restTimerActive, timeLeft, isPaused, setRestTimer]);
 
   if (!restTimerActive) return null;
 
