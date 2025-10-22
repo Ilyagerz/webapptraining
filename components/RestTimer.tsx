@@ -58,10 +58,8 @@ export function RestTimer() {
       return;
     }
     
-    if (timeLeft <= 0) {
-      vibrate([200, 100, 200]);
-      playSound();
-      // Автоматически закрываем таймер когда время истекло
+    // Таймер завершился - закрываем
+    if (timeLeft === 0) {
       setTimeout(() => {
         setRestTimer(false, 0);
       }, 500);
@@ -70,12 +68,12 @@ export function RestTimer() {
 
     const interval = setInterval(() => {
       setTimeLeft((prev) => {
-        if (prev <= 1) {
+        const newValue = prev - 1;
+        if (newValue === 0) {
           vibrate([200, 100, 200]);
           playSound();
-          return 0;
         }
-        return prev - 1;
+        return newValue;
       });
     }, 1000);
 

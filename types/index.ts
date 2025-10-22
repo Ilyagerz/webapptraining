@@ -19,6 +19,7 @@ export interface UserSettings {
   vibrationEnabled: boolean;
   autoStartTimer: boolean;
   weightUnit: 'kg' | 'lbs';
+  weeklyGoal?: number; // Цель тренировок в неделю (по умолчанию 3)
 }
 
 export interface Exercise {

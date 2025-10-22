@@ -43,14 +43,16 @@ export function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalPr
     setLoading(true);
     try {
       // Получаем данные из localStorage (Zustand persist)
-      const storeData = localStorage.getItem('nubo-training-store');
+      const storeData = localStorage.getItem('nubo-training-storage');
       if (!storeData) {
+        console.warn('⚠️ ExerciseDetailModal: No data in localStorage');
         setLoading(false);
         return;
       }
 
       const store = JSON.parse(storeData);
       const workouts = store.state?.workouts || [];
+      console.log(`📊 ExerciseDetailModal: Загружено ${workouts.length} тренировок для ${exercise.name}`);
       
       // Фильтруем тренировки, где было это упражнение
       const relevantWorkouts = workouts
