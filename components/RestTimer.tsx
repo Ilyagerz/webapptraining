@@ -57,14 +57,6 @@ export function RestTimer() {
     if (!restTimerActive || isPaused) {
       return;
     }
-    
-    // Таймер завершился - закрываем
-    if (timeLeft === 0) {
-      setTimeout(() => {
-        setRestTimer(false, 0);
-      }, 500);
-      return;
-    }
 
     const interval = setInterval(() => {
       setTimeLeft((prev) => {
@@ -72,13 +64,14 @@ export function RestTimer() {
         if (newValue === 0) {
           vibrate([200, 100, 200]);
           playSound();
+          return 0; // Остаемся на 0, НЕ закрываем
         }
         return newValue;
       });
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [restTimerActive, timeLeft, isPaused, setRestTimer]);
+  }, [restTimerActive, timeLeft, isPaused]);
 
   if (!restTimerActive) return null;
 

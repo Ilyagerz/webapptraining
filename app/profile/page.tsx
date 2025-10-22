@@ -69,6 +69,61 @@ export default function ProfilePage() {
     }
   };
 
+  const exportData = () => {
+    try {
+      const data = localStorage.getItem('nubo-training-storage');
+      if (!data) {
+        alert('Нет данных для экспорта');
+        return;
+      }
+      
+      const blob = new Blob([data], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `nubo-backup-${new Date().toISOString().split('T')[0]}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      
+      alert('✅ Данные экспортированы успешно!');
+    } catch (error) {
+      console.error('Ошибка экспорта:', error);
+      alert('❌ Ошибка при экспорте данных');
+    }
+  };
+
+  const importData = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    
+    input.onchange = (e: any) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        try {
+          const data = event.target?.result as string;
+          // Проверяем, что это валидный JSON
+          JSON.parse(data);
+          
+          if (confirm('⚠️ Импорт данных заменит текущие данные. Продолжить?')) {
+            localStorage.setItem('nubo-training-storage', data);
+            alert('✅ Данные импортированы! Страница перезагрузится.');
+            location.reload();
+          }
+        } catch (error) {
+          console.error('Ошибка импорта:', error);
+          alert('❌ Некорректный файл данных');
+        }
+      };
+      reader.readAsText(file);
+    };
+    
+    input.click();
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-nubo-dark pb-24 pt-22">
       {/* Header */}
@@ -176,6 +231,43 @@ export default function ProfilePage() {
             </div>
             <span className="text-gray-600 dark:text-gray-300">→</span>
           </Link>
+        </div>
+
+        {/* Экспорт/Импорт данных */}
+        <div className="px-6 pb-6 space-y-3">
+          <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400">
+            🛡️ Резервное копирование
+          </h3>
+          
+          <button
+            onClick={exportData}
+            className="w-full flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-electric-lime dark:hover:border-electric-lime transition-colors shadow-sm"
+          >
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
+                <Download size={20} className="text-green-600 dark:text-green-500" />
+              </div>
+              <div className="text-left">
+                <div className="font-medium text-black dark:text-white">Экспорт данных</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Сохранить резервную копию</div>
+              </div>
+            </div>
+          </button>
+
+          <button
+            onClick={importData}
+            className="w-full flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-electric-lime dark:hover:border-electric-lime transition-colors shadow-sm"
+          >
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
+                <Upload size={20} className="text-blue-600 dark:text-blue-500" />
+              </div>
+              <div className="text-left">
+                <div className="font-medium text-black dark:text-white">Импорт данных</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Восстановить из файла</div>
+              </div>
+            </div>
+          </button>
         </div>
 
         {/* Settings Panel */}

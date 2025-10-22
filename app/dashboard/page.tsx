@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { getWeeksData, generateId } from '@/lib/utils';
+import { getWeeklyStats } from '@/lib/weekly-utils';
 import type { Workout } from '@/types';
 
 export default function DashboardPage() {
@@ -74,6 +75,9 @@ export default function DashboardPage() {
   };
 
   const [weekData, setWeekData] = useState<any[]>([]);
+  const [weeklyData, setWeeklyData] = useState<{ week: string; workouts: number }[]>([]);
+  const [isEditingGoal, setIsEditingGoal] = useState(false);
+  const [goalInput, setGoalInput] = useState('');
 
   useEffect(() => {
     if (!user) {
@@ -85,6 +89,13 @@ export default function DashboardPage() {
     const weeklyData = getWeeksData(workouts, 7);
     console.log('📊 Недельная активность:', weeklyData, 'Тренировок:', workouts.length);
     setWeekData(weeklyData);
+    
+    // Загружаем данные за 9 недель
+    const nineWeeks = getWeeklyStats(workouts, 9);
+    console.log('📊 9 недель:', nineWeeks);
+    setWeeklyData(nineWeeks);
+    
+    setGoalInput(String(user?.settings?.weeklyGoal || 3));
   }, [user, workouts]);
 
   if (!user) {
@@ -109,69 +120,113 @@ export default function DashboardPage() {
           <h2 className="text-lg font-bold text-black dark:text-white">
             Панель мониторинга
           </h2>
-          <button className="text-blue-500 text-sm font-medium flex items-center gap-1">
-            <span className="text-xl">+</span> Виджет
+          <button 
+            onClick={() => setIsEditingGoal(!isEditingGoal)}
+            className="text-black dark:text-white"
+          >
+            <Target size={20} />
           </button>
         </div>
 
-        {/* Виджет - Тренировки за неделю */}
+        {/* Виджет - Тренировки за неделю (9 недель) */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-200 dark:border-gray-700 shadow-sm">
-          <h3 className="text-base font-semibold mb-4 text-black dark:text-white">
-            Тренировки за неделю
-          </h3>
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-base font-semibold text-black dark:text-white">
+              Тренировки за неделю
+            </h3>
+            
+            {/* Редактируемая цель */}
+            {isEditingGoal ? (
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-600 dark:text-gray-400">Цель:</span>
+                <input
+                  type="number"
+                  value={goalInput}
+                  onChange={(e) => setGoalInput(e.target.value)}
+                  onBlur={() => {
+                    const newGoal = parseInt(goalInput) || 3;
+                    useAppStore.getState().updateUser({
+                      settings: {
+                        ...user.settings,
+                        weeklyGoal: newGoal
+                      }
+                    });
+                    setIsEditingGoal(false);
+                  }}
+                  className="w-12 px-2 py-1 text-center border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-black dark:text-white"
+                  min="1"
+                  max="20"
+                  autoFocus
+                />
+                <span className="text-sm text-gray-600 dark:text-gray-400">тренировок</span>
+              </div>
+            ) : (
+              <button
+                onClick={() => setIsEditingGoal(true)}
+                className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+              >
+                Цель: {user.settings?.weeklyGoal || 3} тренировок
+              </button>
+            )}
+          </div>
           
-          <div className="mb-1">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-600 dark:text-gray-400">Активность</span>
+          {/* Ось Y - количество тренировок */}
+          <div className="flex gap-4 mb-2">
+            <div className="flex flex-col justify-between text-xs text-gray-500 dark:text-gray-400" style={{ height: '150px' }}>
+              <span>{user.settings?.weeklyGoal || 3}</span>
+              <span>{Math.floor((user.settings?.weeklyGoal || 3) / 2)}</span>
+              <span>0</span>
             </div>
             
-            {/* Столбчатая диаграмма как на скрине */}
-            <div className="flex items-end justify-between gap-2 mb-3" style={{ height: '120px' }}>
-              {weekData.map((day, index) => {
-                const maxWorkouts = Math.max(...weekData.map(d => d.workouts), 1);
-                const height = day.workouts > 0 ? (day.workouts / maxWorkouts) * 100 : 5;
-                const isActive = day.workouts > 0;
-                
-                return (
-                  <div key={index} className="flex-1 flex flex-col items-center gap-2">
-                    <div className="w-full flex items-end justify-center" style={{ height: '100px' }}>
-                      <div
-                        className={`w-full rounded-lg transition-all duration-300 ${
-                          isActive
-                            ? 'bg-gradient-to-t from-purple-600 to-purple-400'
-                            : 'bg-gray-200 dark:bg-gray-700'
-                        }`}
-                        style={{
-                          height: `${height}%`,
-                          minHeight: '8px',
-                        }}
-                      />
-                    </div>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
-                      {day.day}
+            {/* Столбчатая диаграмма 9 недель */}
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs text-gray-600 dark:text-gray-400">Активность</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-600 to-purple-400 flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">
+                      {weeklyData[weeklyData.length - 1]?.workouts || 0}
                     </span>
                   </div>
-                );
-              })}
-            </div>
-
-            {/* Цель справа снизу */}
-            <div className="flex items-center justify-end">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-purple-400 flex items-center justify-center">
-                  <span className="text-white text-lg font-bold">
-                    {weekData.filter(d => d.workouts > 0).length}
+                  <span className="text-lg font-bold text-black dark:text-white">
+                    {weeklyData[weeklyData.length - 1]?.workouts || 0}
+                  </span>
+                  <span className="text-gray-400 text-xs">
+                    / {user.settings?.weeklyGoal || 3}
                   </span>
                 </div>
-                <span className="text-2xl font-bold text-black dark:text-white">
-                  {weekData.filter(d => d.workouts > 0).length}
-                </span>
-                <span className="text-gray-400 text-sm ml-1">
-                  / {user.settings?.weeklyGoal || 3}
-                </span>
               </div>
-            </div>
+              
+              <div className="flex items-end justify-between gap-1" style={{ height: '130px' }}>
+                {weeklyData.map((week, index) => {
+                  const maxWorkouts = user.settings?.weeklyGoal || 3;
+                  const height = week.workouts > 0 ? (week.workouts / maxWorkouts) * 100 : 3;
+                  const isActive = week.workouts > 0;
+              
+              return (
+                    <div key={index} className="flex-1 flex flex-col items-center gap-1">
+                      <div className="w-full flex items-end justify-center" style={{ height: '100px' }}>
+                        <div
+                          className={`w-full rounded-md transition-all duration-300 ${
+                            isActive
+                              ? 'bg-gradient-to-t from-purple-600 to-purple-400'
+                          : 'bg-gray-200 dark:bg-gray-700'
+                      }`}
+                      style={{
+                            height: `${Math.min(height, 100)}%`,
+                            minHeight: '4px',
+                      }}
+                    />
+                  </div>
+                      <span className="text-[10px] text-gray-500 dark:text-gray-400 font-medium">
+                        {week.week}
+                    </span>
+                </div>
+              );
+            })}
           </div>
+        </div>
+      </div>
         </div>
       </div>
 
@@ -266,15 +321,15 @@ export default function DashboardPage() {
           href="/profile"
           className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-2 card-hover border border-gray-200 dark:border-gray-700"
         >
-          {user.photoUrl ? (
-            <img
-              src={user.photoUrl}
-              alt="Profile"
+            {user.photoUrl ? (
+              <img
+                src={user.photoUrl}
+                alt="Profile"
               className="w-6 h-6 rounded-full object-cover"
-            />
-          ) : (
+              />
+            ) : (
             <User size={24} className="text-gray-700 dark:text-white" />
-          )}
+            )}
           <span className="text-xs font-medium text-center text-gray-700 dark:text-white">
             Профиль
           </span>
