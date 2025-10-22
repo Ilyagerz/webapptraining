@@ -62,7 +62,7 @@ export default function DashboardPage() {
         })),
         notes: '',
         restTimer: te.restTimer || 90,
-        supersetId: null,
+        supersetId: undefined,
       })),
       startedAt: new Date(),
       isActive: true,
