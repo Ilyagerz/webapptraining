@@ -255,8 +255,23 @@ export default function ActiveWorkoutPage() {
       totalReps,
     };
 
+    // СНАЧАЛА сохраняем локально (важно!)
+    addWorkout(workoutData);
+    storeCompleteWorkout();
+
+    // Закрываем таймер отдыха
+    setRestTimer(false, 0);
+
+    console.log('✅ Тренировка сохранена локально:', workoutData.id);
+    console.log('📊 Статистика:', {
+      totalVolume,
+      totalSets,
+      totalReps,
+      exercises: workoutData.exercises.length
+    });
+
+    // Пытаемся сохранить на сервер (опционально)
     try {
-      // Сохранить на сервер
       const response = await fetch('/api/workouts', {
         method: 'POST',
         headers: {
@@ -266,25 +281,15 @@ export default function ActiveWorkoutPage() {
         body: JSON.stringify(workoutData),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to save workout');
+      if (response.ok) {
+        console.log('✅ Тренировка также сохранена на сервере');
       }
-
-      const savedWorkout = await response.json();
-
-      // Также сохраняем локально
-      addWorkout(savedWorkout);
-      storeCompleteWorkout();
-
-      // Закрываем таймер отдыха
-      setRestTimer(false, 0);
-
-      console.log('✅ Тренировка сохранена:', savedWorkout.id);
-      router.push(`/workout/summary?workoutId=${savedWorkout.id}`);
     } catch (error) {
-      console.error('Error saving workout:', error);
-      alert('Ошибка сохранения тренировки');
+      console.warn('⚠️ Не удалось сохранить на сервер (не критично):', error);
     }
+
+    // Переходим на экран результатов
+    router.push(`/workout/summary?workoutId=${workoutData.id}`);
   };
 
   const handleCancelWorkout = () => {

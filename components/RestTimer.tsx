@@ -54,15 +54,14 @@ export function RestTimer() {
   }, [restTimeRemaining]);
 
   useEffect(() => {
-    if (!restTimerActive || timeLeft <= 0 || isPaused) {
-      if (timeLeft === 0) {
-        vibrate([200, 100, 200]);
-        playSound();
-        // Автоматически закрываем таймер через 2 секунды после завершения
-        setTimeout(() => {
-          setRestTimer(false, 0);
-        }, 2000);
-      }
+    if (!restTimerActive || isPaused) {
+      return;
+    }
+    
+    if (timeLeft <= 0) {
+      vibrate([200, 100, 200]);
+      playSound();
+      // НЕ закрываем таймер автоматически - пользователь сам закроет кнопкой X
       return;
     }
 
