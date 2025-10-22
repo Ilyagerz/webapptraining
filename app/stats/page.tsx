@@ -25,6 +25,7 @@ export default function StatsPage() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [timeRange, setTimeRange] = useState<'week' | 'month' | 'year'>('month');
+  const [selectedMuscleGroup, setSelectedMuscleGroup] = useState<string>('all');
 
   useEffect(() => {
     if (!user) {
@@ -57,7 +58,8 @@ export default function StatsPage() {
       }
 
       const store = JSON.parse(storeData);
-      const workouts = store.state?.workouts || [];
+      const workouts = store.state?.workouts || store.workouts || [];
+      console.log('📊 Stats: загружено тренировок:', workouts.length);
 
       // Подсчет статистики
       const totalWorkouts = workouts.length;
@@ -317,6 +319,23 @@ export default function StatsPage() {
             <TrendingUp size={20} className="text-electric-lime" />
             <span>Прогресс объема</span>
           </h3>
+          
+          {/* Muscle Group Filter */}
+          <div className="flex space-x-2 overflow-x-auto pb-4 mb-4">
+            {['all', 'chest', 'back', 'shoulders', 'legs', 'arms', 'abs'].map(group => (
+              <button
+                key={group}
+                onClick={() => setSelectedMuscleGroup(group)}
+                className={`px-3 py-1.5 rounded-lg font-medium whitespace-nowrap text-sm transition-all ${
+                  selectedMuscleGroup === group
+                    ? 'bg-electric-lime text-nubo-dark'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+                }`}
+              >
+                {group === 'all' ? 'Все' : group === 'chest' ? 'Грудь' : group === 'back' ? 'Спина' : group === 'shoulders' ? 'Плечи' : group === 'legs' ? 'Ноги' : group === 'arms' ? 'Руки' : 'Пресс'}
+              </button>
+            ))}
+          </div>
           {stats?.progressData && stats.progressData.length > 0 ? (
             <div className="h-48 flex items-end justify-between space-x-1">
               {stats.progressData.map((item, index) => {

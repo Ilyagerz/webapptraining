@@ -119,31 +119,7 @@ export default function ProfilePage() {
           )}
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
-            <Dumbbell size={24} className="mx-auto mb-2 text-electric-lime" />
-            <div className="text-2xl font-bold text-black dark:text-white">{totalWorkouts}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-300">Тренировок</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
-            <TrendingUp size={24} className="mx-auto mb-2 text-electric-lime" />
-            <div className="text-2xl font-bold text-black dark:text-white">
-              {totalVolume > 1000 ? `${(totalVolume / 1000).toFixed(1)}т` : `${totalVolume}кг`}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-300">Объем</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
-            <Award size={24} className="mx-auto mb-2 text-yellow-500" />
-            <div className="text-2xl font-bold text-black dark:text-white">{totalRecords}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-300">Рекордов</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 shadow-sm">
-            <Activity size={24} className="mx-auto mb-2 text-electric-lime" />
-            <div className="text-2xl font-bold text-black dark:text-white">{currentStreak}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-300">Дней подряд</div>
-          </div>
-        </div>
+        {/* Stats Grid - УБРАНО по запросу пользователя */}
 
         {/* Quick Actions */}
         <div className="space-y-3">
@@ -153,7 +129,7 @@ export default function ProfilePage() {
           >
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-electric-lime/20 flex items-center justify-center">
-                <Ruler size={20} className="text-electric-lime" />
+                <Ruler size={20} className="text-black dark:text-electric-lime" />
               </div>
               <div>
                 <div className="font-semibold text-black dark:text-white">Замеры</div>
@@ -171,7 +147,7 @@ export default function ProfilePage() {
           >
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
-                <Award size={20} className="text-yellow-500" />
+                <Award size={20} className="text-black dark:text-yellow-500" />
               </div>
               <div>
                 <div className="font-semibold text-black dark:text-white">Рекорды</div>
@@ -189,7 +165,7 @@ export default function ProfilePage() {
           >
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-electric-lime/20 flex items-center justify-center">
-                <TrendingUp size={20} className="text-electric-lime" />
+                <TrendingUp size={20} className="text-black dark:text-electric-lime" />
               </div>
               <div>
                 <div className="font-semibold text-black dark:text-white">Статистика</div>

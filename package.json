@@ -17,7 +17,12 @@
     "exercises:apply-translations": "node scripts/apply-manual-translations.js",
     "exercises:get-all": "node scripts/get-all-exercise-names.js",
     "exercises:add": "node scripts/add-exercises.js",
-    "exercises:update": "npm run exercises:fetch-api && npm run exercises:translate"
+    "exercises:update": "npm run exercises:fetch-api && npm run exercises:translate",
+    "exercises:fetch-gifs": "node scripts/fetch-exercisedb-gifs.js",
+    "exercises:search-gif": "node scripts/search-gif.js",
+    "exercises:auto-match-gifs": "node scripts/auto-match-gifs.js",
+    "exercises:gif-stats": "node scripts/gif-stats.js",
+    "exercises:missing-gifs": "node scripts/missing-gifs.js"
   },
   "dependencies": {
     "next": "14.2.0",

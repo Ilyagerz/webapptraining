@@ -83,6 +83,48 @@ export function ExerciseCard({
       } catch (error) {
         console.error('Error fetching previous workout data:', error);
       }
+      
+      // FALLBACK: Загрузка из localStorage
+      try {
+        const storeData = typeof window !== 'undefined' ? localStorage.getItem('nubo-training-storage') : null;
+        if (!storeData) return;
+
+        const { state } = JSON.parse(storeData);
+        const workouts = state.workouts || [];
+
+        // Находим последнюю завершенную тренировку с этим упражнением
+        const relevantWorkouts = workouts
+          .filter((w: any) => 
+            w.completedAt && 
+            w.exercises?.some((e: any) => e.exerciseId === exercise.exerciseId)
+          )
+          .sort((a: any, b: any) => 
+            new Date(b.completedAt).getTime() - new Date(a.completedAt).getTime()
+          );
+
+        if (relevantWorkouts.length > 0) {
+          const lastWorkout = relevantWorkouts[0];
+          const exerciseData = lastWorkout.exercises.find(
+            (e: any) => e.exerciseId === exercise.exerciseId
+          );
+
+          if (exerciseData && exerciseData.sets) {
+            const prevSets: PreviousSetData[] = exerciseData.sets
+              .filter((s: any) => s.completed && !s.isWarmup)
+              .map((set: any) => ({
+                weight: set.weight || 0,
+                reps: set.reps || 0,
+              }));
+            
+            if (prevSets.length > 0) {
+              console.log(`📊 ${exercise.exercise.name}: Найдено ${prevSets.length} подходов из прошлого раза`);
+              setPreviousData(prevSets);
+            }
+          }
+        }
+      } catch (localError) {
+        console.error('Error loading from localStorage:', localError);
+      }
     };
 
     fetchPreviousData();

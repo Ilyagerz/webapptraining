@@ -27,6 +27,7 @@ export default function ActiveWorkoutPage() {
     completeWorkout: storeCompleteWorkout,
     addWorkout,
     addTemplate,
+    setRestTimer,
   } = useAppStore();
 
   const [elapsedTime, setElapsedTime] = useState(0);
@@ -222,21 +223,36 @@ export default function ActiveWorkoutPage() {
       if (!confirm) return;
     }
 
+    // Вычисляем реальную статистику
+    let totalVolume = 0;
+    let totalSets = 0;
+    let totalReps = 0;
+
+    activeWorkout.exercises.forEach((exercise) => {
+      exercise.sets.forEach((set) => {
+        if (set.completed && !set.isWarmup) {
+          totalSets++;
+          totalReps += set.reps || 0;
+          totalVolume += (set.weight || 0) * (set.reps || 0);
+        }
+      });
+    });
+
     const workoutData = {
       id: generateId(),
       userId: user.id,
-      name: activeWorkout.templateName || 'Тренировка',
+      name: activeWorkout.templateName || activeWorkout.name || 'Тренировка',
       templateId: activeWorkout.templateId,
-      templateName: activeWorkout.templateName || 'Тренировка',
+      templateName: activeWorkout.templateName,
       exercises: activeWorkout.exercises,
       startedAt: activeWorkout.startedAt,
       completedAt: new Date(),
       duration: elapsedTime,
       notes: activeWorkout.notes || '',
       isActive: false,
-      totalVolume: 0,
-      totalSets: 0,
-      totalReps: 0,
+      totalVolume,
+      totalSets,
+      totalReps,
     };
 
     try {
@@ -260,6 +276,10 @@ export default function ActiveWorkoutPage() {
       addWorkout(savedWorkout);
       storeCompleteWorkout();
 
+      // Закрываем таймер отдыха
+      setRestTimer(false, 0);
+
+      console.log('✅ Тренировка сохранена:', savedWorkout.id);
       router.push(`/workout/summary?workoutId=${savedWorkout.id}`);
     } catch (error) {
       console.error('Error saving workout:', error);

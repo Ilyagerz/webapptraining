@@ -54,6 +54,8 @@ export default function WorkoutSummaryPage() {
           const loadedWorkout = state.workouts?.find((w: Workout) => w.id === workoutId);
           
           if (loadedWorkout) {
+            console.log('✅ Workout loaded:', loadedWorkout);
+            
             // Преобразуем даты из строк в Date объекты
             const workout = {
               ...loadedWorkout,
@@ -69,7 +71,8 @@ export default function WorkoutSummaryPage() {
               records,
             });
           } else {
-            console.error('Workout not found in store');
+            console.error('❌ Workout not found in store. WorkoutId:', workoutId);
+            console.log('Available workouts:', state.workouts?.map((w: any) => ({ id: w.id, name: w.name })));
           }
         }
       } catch (error) {
@@ -184,7 +187,19 @@ export default function WorkoutSummaryPage() {
   }
 
   if (!workout) {
-    return null;
+    console.error('❌ Workout not found for ID:', workoutId);
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center pt-22 bg-white dark:bg-nubo-dark p-6">
+        <h1 className="text-2xl font-bold mb-4 text-black dark:text-white">Тренировка не найдена</h1>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">Не удалось загрузить данные тренировки</p>
+        <Link
+          href="/dashboard"
+          className="px-6 py-3 bg-electric-lime text-nubo-dark rounded-xl font-semibold"
+        >
+          На главную
+        </Link>
+      </div>
+    );
   }
 
   const hasRecords = workout.records && workout.records.length > 0;
@@ -286,10 +301,10 @@ export default function WorkoutSummaryPage() {
 
         {/* Exercises List */}
         <div className="glass-effect rounded-2xl p-6">
-          <h3 className="text-lg font-bold mb-4">Выполненные упражнения</h3>
+          <h3 className="text-lg font-bold mb-4 text-black dark:text-white">Выполненные упражнения</h3>
 
           <div className="space-y-4">
-            {workout.exercises.map((exercise, index) => {
+            {(workout.exercises || []).map((exercise, index) => {
               const completedSets = exercise.sets.filter((s) => s.completed);
               const totalExerciseVolume = completedSets.reduce(
                 (sum, set) => sum + (set.weight || 0) * (set.reps || 0),

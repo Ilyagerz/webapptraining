@@ -16,7 +16,7 @@ import type { Workout } from '@/types';
 
 export default function DashboardPage() {
   const router = useRouter();
-  const { user, workouts, templates, setActiveWorkout } = useAppStore();
+  const { user, workouts, templates, setActiveWorkout, startWorkout } = useAppStore();
 
   const startEmptyWorkout = () => {
     if (!user) return;
@@ -36,6 +36,43 @@ export default function DashboardPage() {
     setActiveWorkout(newWorkout);
     router.push('/workout/active');
   };
+
+  const startWorkoutFromTemplate = (templateId: string) => {
+    const template = templates.find((t) => t.id === templateId);
+    if (!template) return;
+
+    // Создаем тренировку из шаблона
+    const workout = {
+      id: generateId(),
+      name: template.name,
+      templateId: template.id,
+      templateName: template.name,
+      exercises: template.exercises.map((te) => ({
+        id: generateId(),
+        exerciseId: te.exerciseId,
+        exercise: te.exercise,
+        sets: Array.from({ length: te.sets }, (_, i) => ({
+          id: generateId(),
+          setNumber: i + 1,
+          reps: te.reps || 0,
+          weight: 0,
+          completed: false,
+          isWarmup: false,
+          setType: 'standard' as const,
+        })),
+        notes: '',
+        restTimer: te.restTimer || 90,
+        supersetId: null,
+      })),
+      startedAt: new Date(),
+      isActive: true,
+      notes: '',
+    };
+
+    startWorkout(workout);
+    router.push('/workout/active');
+  };
+
   const [weekData, setWeekData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -45,7 +82,9 @@ export default function DashboardPage() {
     }
 
     // Генерируем данные недели из РЕАЛЬНЫХ тренировок
-    setWeekData(getWeeksData(workouts, 7));
+    const weeklyData = getWeeksData(workouts, 7);
+    console.log('📊 Недельная активность:', weeklyData, 'Тренировок:', workouts.length);
+    setWeekData(weeklyData);
   }, [user, workouts]);
 
   if (!user) {
@@ -135,16 +174,16 @@ export default function DashboardPage() {
             </div>
             <div className="space-y-2">
               {templates.slice(0, 3).map((template) => (
-                <Link
+                <button
                   key={template.id}
-                  href={`/workout/new?templateId=${template.id}`}
-                  className="block p-3 bg-gray-50 dark:bg-gray-700 rounded-xl card-hover"
+                  onClick={() => startWorkoutFromTemplate(template.id)}
+                  className="block w-full p-3 bg-gray-50 dark:bg-gray-700 rounded-xl card-hover text-left"
                 >
                   <div className="font-medium text-sm text-black dark:text-white">{template.name}</div>
                   <div className="text-xs text-gray-600 dark:text-gray-300">
                     {template.exercises.length} упражнений
                   </div>
-                </Link>
+                </button>
               ))}
             </div>
           </div>
