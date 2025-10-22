@@ -21,6 +21,8 @@ import {
   Calendar,
   Clock,
   X,
+  Download,
+  Upload,
 } from 'lucide-react';
 import Link from 'next/link';
 

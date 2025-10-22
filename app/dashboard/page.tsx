@@ -9,6 +9,9 @@ import {
   User,
   Plus,
   FileText,
+  Target,
+  Download,
+  Upload,
 } from 'lucide-react';
 import Link from 'next/link';
 import { getWeeksData, generateId } from '@/lib/utils';
@@ -17,7 +20,7 @@ import type { Workout } from '@/types';
 
 export default function DashboardPage() {
   const router = useRouter();
-  const { user, workouts, templates, setActiveWorkout, startWorkout } = useAppStore();
+  const { user, workouts, templates, setActiveWorkout, startWorkout, updateSettings } = useAppStore();
 
   const startEmptyWorkout = () => {
     if (!user) return;
@@ -145,11 +148,8 @@ export default function DashboardPage() {
                   onChange={(e) => setGoalInput(e.target.value)}
                   onBlur={() => {
                     const newGoal = parseInt(goalInput) || 3;
-                    useAppStore.getState().updateUser({
-                      settings: {
-                        ...user.settings,
-                        weeklyGoal: newGoal
-                      }
+                    updateSettings({
+                      weeklyGoal: newGoal
                     });
                     setIsEditingGoal(false);
                   }}
