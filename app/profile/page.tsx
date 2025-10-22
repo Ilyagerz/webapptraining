@@ -235,42 +235,6 @@ export default function ProfilePage() {
           </Link>
         </div>
 
-        {/* Экспорт/Импорт данных */}
-        <div className="px-6 pb-6 space-y-3">
-          <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400">
-            🛡️ Резервное копирование
-          </h3>
-          
-          <button
-            onClick={exportData}
-            className="w-full flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-electric-lime dark:hover:border-electric-lime transition-colors shadow-sm"
-          >
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
-                <Download size={20} className="text-green-600 dark:text-green-500" />
-              </div>
-              <div className="text-left">
-                <div className="font-medium text-black dark:text-white">Экспорт данных</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">Сохранить резервную копию</div>
-              </div>
-            </div>
-          </button>
-
-          <button
-            onClick={importData}
-            className="w-full flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-electric-lime dark:hover:border-electric-lime transition-colors shadow-sm"
-          >
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
-                <Upload size={20} className="text-blue-600 dark:text-blue-500" />
-              </div>
-              <div className="text-left">
-                <div className="font-medium text-black dark:text-white">Импорт данных</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">Восстановить из файла</div>
-              </div>
-            </div>
-          </button>
-        </div>
 
         {/* Settings Panel */}
         {showSettings && (

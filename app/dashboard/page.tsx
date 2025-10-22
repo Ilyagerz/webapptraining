@@ -180,21 +180,8 @@ export default function DashboardPage() {
             
             {/* Столбчатая диаграмма 9 недель */}
             <div className="flex-1">
-              <div className="flex items-center justify-between mb-2">
+              <div className="mb-2">
                 <span className="text-xs text-gray-600 dark:text-gray-400">Активность</span>
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-600 to-purple-400 flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">
-                      {weeklyData[weeklyData.length - 1]?.workouts || 0}
-                    </span>
-                  </div>
-                  <span className="text-lg font-bold text-black dark:text-white">
-                    {weeklyData[weeklyData.length - 1]?.workouts || 0}
-                  </span>
-                  <span className="text-gray-400 text-xs">
-                    / {user.settings?.weeklyGoal || 3}
-                  </span>
-                </div>
               </div>
               
               <div className="flex items-end justify-between gap-1" style={{ height: '130px' }}>
