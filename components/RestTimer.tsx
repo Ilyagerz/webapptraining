@@ -61,7 +61,10 @@ export function RestTimer() {
     if (timeLeft <= 0) {
       vibrate([200, 100, 200]);
       playSound();
-      // НЕ закрываем таймер автоматически - пользователь сам закроет кнопкой X
+      // Автоматически закрываем таймер когда время истекло
+      setTimeout(() => {
+        setRestTimer(false, 0);
+      }, 500);
       return;
     }
 

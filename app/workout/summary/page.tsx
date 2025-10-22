@@ -189,19 +189,8 @@ export default function WorkoutSummaryPage() {
   }
 
   if (!workout) {
-    console.error('❌ Workout not found for ID:', workoutId);
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center pt-22 bg-white dark:bg-nubo-dark p-6">
-        <h1 className="text-2xl font-bold mb-4 text-black dark:text-white">Тренировка не найдена</h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">Не удалось загрузить данные тренировки</p>
-        <Link
-          href="/dashboard"
-          className="px-6 py-3 bg-electric-lime text-nubo-dark rounded-xl font-semibold"
-        >
-          На главную
-        </Link>
-      </div>
-    );
+    // НЕ показываем ошибку сразу - даем время загрузиться
+    return null;
   }
 
   const hasRecords = workout.records && workout.records.length > 0;
@@ -221,44 +210,44 @@ export default function WorkoutSummaryPage() {
 
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         {/* Workout Info */}
-        <div className="glass-effect rounded-2xl p-6">
-          <h2 className="text-2xl font-bold mb-1">{workout.name}</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+          <h2 className="text-2xl font-bold mb-1 text-black dark:text-white">{workout.name}</h2>
           {workout.templateName && (
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
               Программа: {workout.templateName}
             </p>
           )}
 
           {/* Main Stats Grid */}
-          <div className="grid grid-cols-3 gap-4">
-            <div className="text-center p-4 bg-gray-50 dark:bg-nubo-dark rounded-xl">
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            <div className="text-center p-4 bg-gradient-to-br from-electric-lime/10 to-green-400/10 border border-electric-lime/20 rounded-xl">
               <Clock size={24} className="mx-auto mb-2 text-electric-lime" />
-              <div className="text-2xl font-bold">
+              <div className="text-2xl font-bold text-black dark:text-white">
                 {workout.duration ? formatDuration(workout.duration) : '-'}
               </div>
-              <div className="text-xs text-muted-foreground mt-1">Время</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Время</div>
             </div>
 
-            <div className="text-center p-4 bg-gray-50 dark:bg-nubo-dark rounded-xl">
+            <div className="text-center p-4 bg-gradient-to-br from-electric-lime/10 to-green-400/10 border border-electric-lime/20 rounded-xl">
               <TrendingUp size={24} className="mx-auto mb-2 text-electric-lime" />
-              <div className="text-2xl font-bold">{workout.totalVolume}</div>
-              <div className="text-xs text-muted-foreground mt-1">кг объем</div>
+              <div className="text-2xl font-bold text-black dark:text-white">{workout.totalVolume || 0}</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">кг объем</div>
             </div>
 
-            <div className="text-center p-4 bg-gray-50 dark:bg-nubo-dark rounded-xl">
+            <div className="text-center p-4 bg-gradient-to-br from-electric-lime/10 to-green-400/10 border border-electric-lime/20 rounded-xl">
               <Dumbbell size={24} className="mx-auto mb-2 text-electric-lime" />
-              <div className="text-2xl font-bold">{workout.totalSets}</div>
-              <div className="text-xs text-muted-foreground mt-1">подходов</div>
+              <div className="text-2xl font-bold text-black dark:text-white">{workout.totalSets || 0}</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">подходов</div>
             </div>
           </div>
         </div>
 
         {/* Records */}
         {hasRecords && (
-          <div className="glass-effect rounded-2xl p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-yellow-200 dark:border-yellow-800 shadow-sm">
             <div className="flex items-center space-x-2 mb-4">
               <Award size={24} className="text-yellow-500" />
-              <h3 className="text-xl font-bold">
+              <h3 className="text-xl font-bold text-black dark:text-white">
                 Новые рекорды! ({workout.records!.length})
               </h3>
             </div>
@@ -275,8 +264,8 @@ export default function WorkoutSummaryPage() {
                         <Award size={20} className="text-yellow-500" />
                       </div>
                       <div>
-                        <h4 className="font-semibold">{record.exerciseName}</h4>
-                        <p className="text-sm text-muted-foreground">
+                        <h4 className="font-semibold text-black dark:text-white">{record.exerciseName}</h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
                           {record.type === 'weight' && 'Максимальный вес'}
                           {record.type === '1rm' && 'Расчетный 1RM'}
                           {record.type === 'volume' && 'Объем'}
@@ -302,7 +291,7 @@ export default function WorkoutSummaryPage() {
         )}
 
         {/* Exercises List */}
-        <div className="glass-effect rounded-2xl p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
           <h3 className="text-lg font-bold mb-4 text-black dark:text-white">Выполненные упражнения</h3>
 
           <div className="space-y-4">
@@ -321,19 +310,19 @@ export default function WorkoutSummaryPage() {
               return (
                 <div
                   key={exercise.id}
-                  className="p-4 bg-gray-50 dark:bg-nubo-dark rounded-xl"
+                  className="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center space-x-2">
-                      <span className="text-sm font-medium text-muted-foreground">
+                      <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
                         #{index + 1}
                       </span>
-                      <h4 className="font-semibold">{exercise.exercise.name}</h4>
+                      <h4 className="font-semibold text-black dark:text-white">{exercise.exercise.name}</h4>
                       {hasRecord && (
                         <Award size={16} className="text-yellow-500" />
                       )}
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm font-semibold text-electric-lime">
                       {totalExerciseVolume} кг
                     </div>
                   </div>
@@ -342,18 +331,18 @@ export default function WorkoutSummaryPage() {
                     {completedSets.map((set) => (
                       <div
                         key={set.id}
-                        className="flex items-center justify-between text-sm"
+                        className="flex items-center justify-between text-sm py-1"
                       >
-                        <span className="text-muted-foreground">
+                        <span className="text-gray-600 dark:text-gray-400">
                           Подход {set.setNumber}
                           {set.isWarmup && ' (Разминка)'}
                         </span>
                         <div className="flex items-center space-x-4">
-                          <span className="font-medium">
+                          <span className="font-medium text-black dark:text-white">
                             {set.weight} кг × {set.reps}
                           </span>
                           {set.rpe && (
-                            <span className="text-xs text-muted-foreground">
+                            <span className="text-xs text-gray-500 dark:text-gray-400">
                               RPE {set.rpe}
                             </span>
                           )}

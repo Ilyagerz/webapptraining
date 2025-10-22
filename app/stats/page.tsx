@@ -75,22 +75,39 @@ export default function StatsPage() {
       const exerciseCounts: { [key: string]: { name: string; count: number } } = {};
 
       workouts.forEach((workout: any) => {
+        // Используем totalVolume из тренировки если есть
+        if (workout.totalVolume) {
+          totalVolume += workout.totalVolume;
+        }
+        if (workout.totalSets) {
+          totalSets += workout.totalSets;
+        }
+        if (workout.totalReps) {
+          totalReps += workout.totalReps;
+        }
+
         workout.exercises?.forEach((exercise: any) => {
           // Подсчет топа упражнений
-          if (exercise.name) {
-            if (!exerciseCounts[exercise.exerciseId]) {
-              exerciseCounts[exercise.exerciseId] = { name: exercise.name, count: 0 };
+          const exerciseName = exercise.exercise?.name || exercise.name;
+          const exerciseId = exercise.exerciseId || exercise.id;
+          
+          if (exerciseName && exerciseId) {
+            if (!exerciseCounts[exerciseId]) {
+              exerciseCounts[exerciseId] = { name: exerciseName, count: 0 };
             }
-            exerciseCounts[exercise.exerciseId].count++;
+            exerciseCounts[exerciseId].count++;
           }
 
-          exercise.sets?.forEach((set: any) => {
-            if (set.completed) {
-              totalSets++;
-              totalReps += set.reps || 0;
-              totalVolume += (set.weight || 0) * (set.reps || 0);
-            }
-          });
+          // Если нет totalVolume в тренировке, считаем вручную
+          if (!workout.totalVolume) {
+            exercise.sets?.forEach((set: any) => {
+              if (set.completed && !set.isWarmup) {
+                totalSets++;
+                totalReps += set.reps || 0;
+                totalVolume += (set.weight || 0) * (set.reps || 0);
+              }
+            });
+          }
         });
       });
 

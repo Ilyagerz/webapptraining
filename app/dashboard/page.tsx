@@ -110,34 +110,39 @@ export default function DashboardPage() {
             Активность за неделю
           </h2>
           
-          <div className="flex justify-between items-end h-32 gap-2">
+          <div className="flex justify-between items-end h-40 gap-3">
             {weekData.map((day, index) => {
               const maxWorkouts = Math.max(...weekData.map(d => d.workouts), 1);
-              const height = day.workouts > 0 ? (day.workouts / maxWorkouts) * 100 : 10;
+              const height = day.workouts > 0 ? (day.workouts / maxWorkouts) * 100 : 5;
               
               return (
                 <div key={index} className="flex-1 flex flex-col items-center gap-2">
-                  <div className="flex-1 w-full flex items-end">
-                    <div
-                      className={`w-full rounded-t-lg transition-all ${
-                        day.workouts > 0
-                          ? 'bg-electric-lime'
-                          : 'bg-gray-200 dark:bg-gray-700'
-                      }`}
-                      style={{
-                        height: `${height}%`,
-                        minHeight: '10%',
-                      }}
-                    />
+                  {/* Столбик */}
+                  <div className="w-full flex items-end" style={{ height: '160px' }}>
+                    <div className="relative w-full group">
+                      <div
+                        className={`w-full rounded-t-xl transition-all duration-300 ${
+                          day.workouts > 0
+                            ? 'bg-gradient-to-t from-electric-lime to-green-400'
+                            : 'bg-gray-200 dark:bg-gray-700'
+                        }`}
+                        style={{
+                          height: `${height}%`,
+                          minHeight: '8px',
+                        }}
+                      />
+                      {/* Tooltip при наведении */}
+                      {day.workouts > 0 && (
+                        <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 hidden group-hover:block bg-black/90 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+                          {day.workouts} тренир.
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+                  {/* День недели */}
+                  <span className="text-xs text-gray-600 dark:text-gray-400 font-semibold">
                     {day.day}
                   </span>
-                  {day.workouts > 0 && (
-                    <span className="text-xs text-electric-lime font-bold">
-                      {day.workouts}
-                    </span>
-                  )}
                 </div>
               );
             })}
