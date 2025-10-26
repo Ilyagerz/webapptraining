@@ -141,12 +141,28 @@ export default function ProfilePage() {
               </Link>
               <h1 className="text-2xl font-bold">Профиль</h1>
             </div>
-            <button
-              onClick={() => setShowSettings(!showSettings)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-nubo-gray"
-            >
-              <Settings size={24} />
-            </button>
+            <div className="flex items-center gap-1">
+              <button
+                onClick={exportData}
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-nubo-gray transition-colors"
+                title="Экспорт данных"
+              >
+                <Download size={20} className="text-green-600 dark:text-green-500" />
+              </button>
+              <button
+                onClick={importData}
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-nubo-gray transition-colors"
+                title="Импорт данных"
+              >
+                <Upload size={20} className="text-blue-600 dark:text-blue-500" />
+              </button>
+              <button
+                onClick={() => setShowSettings(!showSettings)}
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-nubo-gray"
+              >
+                <Settings size={24} />
+              </button>
+            </div>
           </div>
         </div>
       </div>

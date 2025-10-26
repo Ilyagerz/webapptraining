@@ -54,7 +54,7 @@ export function RestTimer() {
   }, [restTimeRemaining]);
 
   useEffect(() => {
-    if (!restTimerActive || isPaused) {
+    if (!restTimerActive || isPaused || timeLeft <= 0) {
       return;
     }
 
