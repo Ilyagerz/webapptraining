@@ -121,7 +121,7 @@ export function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalPr
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 backdrop-blur-sm sm:p-4" onClick={onClose}>
+    <div className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center bg-black/50 backdrop-blur-sm sm:p-4" onClick={onClose}>
       <div 
         className="w-full h-[95vh] sm:max-w-2xl sm:h-auto sm:max-h-[90vh] bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl rounded-t-3xl sm:rounded-3xl flex flex-col shadow-2xl border border-white/20 dark:border-gray-700/20 overflow-hidden" 
         onClick={(e) => e.stopPropagation()}

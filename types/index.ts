@@ -64,7 +64,7 @@ export type Equipment =
   | 'bands'       // Резинки
   | 'other';
 
-export type SetType = 'standard' | 'amrap' | 'emom';
+export type SetType = 'standard' | 'warmup' | 'failure' | 'drop';
 
 export interface WorkoutSet {
   id: string;

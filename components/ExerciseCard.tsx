@@ -49,6 +49,7 @@ export function ExerciseCard({
   const [showEMOMTimer, setShowEMOMTimer] = useState(false);
   const [activeSetIndex, setActiveSetIndex] = useState<number | null>(null);
   const [previousData, setPreviousData] = useState<PreviousSetData[]>([]);
+  const [showSetTypeMenu, setShowSetTypeMenu] = useState<number | null>(null);
 
   // Загрузка предыдущих данных
   useEffect(() => {
@@ -135,7 +136,7 @@ export function ExerciseCard({
   const supersetColor = exercise.superset ? getSupersetColor(exercise.superset) : '';
   const supersetPosition = exercise.superset ? getSupersetPosition(exercise) : null;
 
-  const addSet = (setType: 'standard' | 'amrap' | 'emom' = 'standard') => {
+  const addSet = (setType: 'standard' | 'warmup' | 'failure' | 'drop' = 'standard') => {
     const lastSet = exercise.sets[exercise.sets.length - 1];
     const newSet: WorkoutSet = {
       id: generateId(),
@@ -143,9 +144,8 @@ export function ExerciseCard({
       reps: lastSet?.reps || 0,
       weight: lastSet?.weight || 0,
       completed: false,
-      isWarmup: false,
+      isWarmup: setType === 'warmup',
       setType,
-      targetTime: setType === 'amrap' ? 60 : setType === 'emom' ? 60 : undefined,
     };
 
     onUpdate({
@@ -312,35 +312,13 @@ export function ExerciseCard({
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      addSet('amrap');
-                      setShowMenu(false);
-                    }}
-                    className="w-full px-4 py-2 text-left hover:bg-muted/20 flex items-center space-x-2"
-                  >
-                    <Zap size={16} />
-                    <span>AMRAP подход</span>
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      addSet('emom');
-                      setShowMenu(false);
-                    }}
-                    className="w-full px-4 py-2 text-left hover:bg-muted/20 flex items-center space-x-2"
-                  >
-                    <Timer size={16} />
-                    <span>EMOM подход</span>
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
                       onRemove();
                       setShowMenu(false);
                     }}
                     className="w-full px-4 py-2 text-left hover:bg-red-500/10 text-red-500 flex items-center space-x-2"
                   >
                     <Trash2 size={16} />
-                    <span>Удалить</span>
+                    <span>Удалить упражнение</span>
                   </button>
                 </div>
               )}
@@ -378,13 +356,77 @@ export function ExerciseCard({
                         set.completed ? 'bg-green-500/5' : ''
                       }`}
                     >
-                      <td className="px-2 py-2 text-sm font-medium">
-                        {index + 1}
-                        {set.setType === 'amrap' && (
-                          <Zap size={12} className="inline ml-1 text-orange-500" />
-                        )}
-                        {set.setType === 'emom' && (
-                          <Timer size={12} className="inline ml-1 text-blue-500" />
+                      <td className="px-2 py-2 text-sm font-medium relative">
+                        <button
+                          onClick={() => setShowSetTypeMenu(showSetTypeMenu === index ? null : index)}
+                          className="flex items-center gap-1 hover:bg-gray-100 dark:hover:bg-gray-700 px-2 py-1 rounded"
+                        >
+                          {set.setType === 'warmup' && <span className="text-orange-500 font-bold">W</span>}
+                          {set.setType === 'failure' && <span className="text-red-500 font-bold">F</span>}
+                          {set.setType === 'drop' && <span className="text-blue-500 font-bold">D</span>}
+                          {set.setType === 'standard' && <span>{index + 1}</span>}
+                          {set.setType !== 'standard' && <span className="ml-1">{index + 1}</span>}
+                        </button>
+                        
+                        {/* Меню выбора типа подхода */}
+                        {showSetTypeMenu === index && (
+                          <div className="absolute left-0 top-full mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg overflow-hidden z-[100] min-w-[200px]">
+                            <button
+                              onClick={() => {
+                                updateSet(index, { setType: 'warmup', isWarmup: true });
+                                setShowSetTypeMenu(null);
+                              }}
+                              className="w-full px-4 py-2 text-left hover:bg-orange-500/10 flex items-center gap-2"
+                            >
+                              <span className="text-orange-500 font-bold text-lg">W</span>
+                              <span className="text-black dark:text-white">Разминочный сет</span>
+                            </button>
+                            <button
+                              onClick={() => {
+                                updateSet(index, { setType: 'standard', isWarmup: false });
+                                setShowSetTypeMenu(null);
+                              }}
+                              className="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2"
+                            >
+                              <span className="font-bold text-lg">1</span>
+                              <span className="text-black dark:text-white">Обычный сет</span>
+                            </button>
+                            <button
+                              onClick={() => {
+                                updateSet(index, { setType: 'failure', isWarmup: false });
+                                setShowSetTypeMenu(null);
+                              }}
+                              className="w-full px-4 py-2 text-left hover:bg-red-500/10 flex items-center gap-2"
+                            >
+                              <span className="text-red-500 font-bold text-lg">F</span>
+                              <span className="text-black dark:text-white">Сет в отказ</span>
+                            </button>
+                            <button
+                              onClick={() => {
+                                updateSet(index, { setType: 'drop', isWarmup: false });
+                                setShowSetTypeMenu(null);
+                              }}
+                              className="w-full px-4 py-2 text-left hover:bg-blue-500/10 flex items-center gap-2"
+                            >
+                              <span className="text-blue-500 font-bold text-lg">D</span>
+                              <span className="text-black dark:text-white">Дроп-сет</span>
+                            </button>
+                            <button
+                              onClick={() => {
+                                // Удаляем подход
+                                const updatedSets = exercise.sets.filter((_, i) => i !== index);
+                                onUpdate({
+                                  ...exercise,
+                                  sets: updatedSets.map((s, i) => ({ ...s, setNumber: i + 1 })),
+                                });
+                                setShowSetTypeMenu(null);
+                              }}
+                              className="w-full px-4 py-2 text-left hover:bg-red-500/10 text-red-500 flex items-center gap-2 border-t border-gray-200 dark:border-gray-700"
+                            >
+                              <span className="text-red-500 font-bold text-lg">✕</span>
+                              <span>Удалить сет</span>
+                            </button>
+                          </div>
                         )}
                       </td>
 
@@ -400,53 +442,32 @@ export function ExerciseCard({
                       </td>
 
                       <td className="px-2 py-2">
-                        {set.setType === 'standard' ? (
-                          <input
-                            type="number"
-                            value={set.weight || ''}
-                            onChange={(e) =>
-                              updateSet(index, {
-                                weight: parseFloat(e.target.value) || 0,
-                              })
-                            }
-                            placeholder={previousData[index]?.weight ? String(previousData[index].weight) : ''}
-                            className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
-                            step="0.5"
-                          />
-                        ) : (
-                          <span className="text-muted-foreground text-sm">-</span>
-                        )}
+                        <input
+                          type="number"
+                          value={set.weight || ''}
+                          onChange={(e) =>
+                            updateSet(index, {
+                              weight: parseFloat(e.target.value) || 0,
+                            })
+                          }
+                          placeholder={previousData[index]?.weight ? String(previousData[index].weight) : ''}
+                          className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                          step="0.5"
+                        />
                       </td>
 
                       <td className="px-2 py-2">
-                        {set.setType === 'standard' ? (
-                          <input
-                            type="number"
-                            value={set.reps || ''}
-                            onChange={(e) =>
-                              updateSet(index, {
-                                reps: parseInt(e.target.value) || 0,
-                              })
-                            }
-                            placeholder={previousData[index]?.reps ? String(previousData[index].reps) : ''}
-                            className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
-                          />
-                        ) : set.completed ? (
-                          <span className="text-sm">{set.reps || 0}</span>
-                        ) : (
-                          <button
-                            onClick={() => {
-                              if (set.setType === 'amrap') {
-                                startAMRAP(index);
-                              } else if (set.setType === 'emom') {
-                                startEMOM(index);
-                              }
-                            }}
-                            className="px-3 py-1 bg-electric-lime text-nubo-dark rounded text-xs font-semibold"
-                          >
-                            Старт
-                          </button>
-                        )}
+                        <input
+                          type="number"
+                          value={set.reps || ''}
+                          onChange={(e) =>
+                            updateSet(index, {
+                              reps: parseInt(e.target.value) || 0,
+                            })
+                          }
+                          placeholder={previousData[index]?.reps ? String(previousData[index].reps) : ''}
+                          className="w-16 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:border-gray-400 dark:focus:border-gray-500 focus:outline-none text-center text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                        />
                       </td>
 
                       {/* RPE Column */}
