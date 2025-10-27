@@ -44,6 +44,11 @@ export default function RootLayout({
                   console.log('✅ Telegram Web App SDK loaded');
                   window.Telegram.WebApp.ready();
                   window.Telegram.WebApp.expand();
+                  // Отключаем вертикальные свайпы для предотвращения сворачивания
+                  window.Telegram.WebApp.disableVerticalSwipes();
+                  // Альтернативный способ
+                  window.Telegram.WebApp.isVerticalSwipesEnabled = false;
+                  console.log('🚫 Vertical swipes disabled');
                   console.log('📱 Telegram user:', window.Telegram.WebApp.initDataUnsafe?.user);
                 } else {
                   console.log('ℹ️ Not running in Telegram Web App');

@@ -79,15 +79,92 @@ export default function ProfilePage() {
         return;
       }
       
-      const blob = new Blob([data], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `nubo-backup-${new Date().toISOString().split('T')[0]}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
+      // Проверяем, поддерживается ли скачивание файлов
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const isTelegram = !!(window as any).Telegram?.WebApp;
       
-      alert('✅ Данные экспортированы успешно!');
+      if (isIOS || isTelegram) {
+        // Для iOS и Telegram показываем данные для копирования
+        const formattedData = JSON.stringify(JSON.parse(data), null, 2);
+        const popup = document.createElement('div');
+        popup.style.cssText = `
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: white;
+          padding: 20px;
+          border-radius: 12px;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+          max-width: 90%;
+          max-height: 80vh;
+          overflow: auto;
+          z-index: 9999;
+        `;
+        
+        const darkMode = document.documentElement.classList.contains('dark');
+        if (darkMode) {
+          popup.style.background = '#1a1a1a';
+          popup.style.color = '#fff';
+        }
+        
+        popup.innerHTML = `
+          <div style="margin-bottom: 15px;">
+            <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Экспорт данных</h3>
+            <p style="font-size: 14px; color: ${darkMode ? '#aaa' : '#666'}; margin-bottom: 15px;">
+              Скопируйте текст ниже и сохраните в файл .json
+            </p>
+            <textarea readonly style="
+              width: 100%;
+              min-height: 200px;
+              padding: 10px;
+              border: 1px solid ${darkMode ? '#444' : '#ddd'};
+              border-radius: 8px;
+              font-family: monospace;
+              font-size: 12px;
+              background: ${darkMode ? '#2a2a2a' : '#f5f5f5'};
+              color: ${darkMode ? '#fff' : '#000'};
+            ">${formattedData}</textarea>
+            <div style="margin-top: 15px; display: flex; gap: 10px;">
+              <button onclick="navigator.clipboard.writeText(this.parentElement.previousElementSibling.value); alert('✅ Скопировано!')" style="
+                flex: 1;
+                padding: 12px;
+                background: #CCFF00;
+                color: #000;
+                border: none;
+                border-radius: 8px;
+                font-weight: bold;
+                cursor: pointer;
+              ">Копировать</button>
+              <button onclick="this.closest('div[style*=fixed]').remove()" style="
+                flex: 1;
+                padding: 12px;
+                background: ${darkMode ? '#333' : '#eee'};
+                color: ${darkMode ? '#fff' : '#000'};
+                border: none;
+                border-radius: 8px;
+                font-weight: bold;
+                cursor: pointer;
+              ">Закрыть</button>
+            </div>
+          </div>
+        `;
+        
+        document.body.appendChild(popup);
+      } else {
+        // Для остальных устройств - обычное скачивание
+        const blob = new Blob([data], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `nubo-backup-${new Date().toISOString().split('T')[0]}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        alert('✅ Данные экспортированы успешно!');
+      }
     } catch (error) {
       console.error('Ошибка экспорта:', error);
       alert('❌ Ошибка при экспорте данных');

@@ -38,16 +38,19 @@
   * {
     @apply border-gray-200 dark:border-gray-800;
   }
+  
+  html {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  
   body {
     @apply bg-white dark:bg-nubo-dark text-black dark:text-white;
     font-feature-settings: "rlig" 1, "calt" 1;
     /* Предотвращаем bounce эффект при скролле в iOS/Telegram */
-    overscroll-behavior-y: none;
+    overscroll-behavior: none;
     -webkit-overflow-scrolling: touch;
-  }
-  
-  html {
-    overscroll-behavior-y: none;
+    touch-action: pan-y;
   }
 }
 

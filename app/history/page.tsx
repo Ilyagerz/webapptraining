@@ -11,7 +11,7 @@ import { WorkoutCalendar } from '@/components/WorkoutCalendar';
 
 export default function HistoryPage() {
   const router = useRouter();
-  const { user, setActiveWorkout } = useAppStore();
+  const { user, setActiveWorkout, workouts: storeWorkouts } = useAppStore();
   const [workouts, setWorkouts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCalendar, setShowCalendar] = useState(false);
@@ -23,20 +23,32 @@ export default function HistoryPage() {
     }
 
     loadWorkouts();
-  }, [user]);
+  }, [user, storeWorkouts]);
 
   const loadWorkouts = async () => {
     try {
+      // Сначала берем данные из локального хранилища
+      console.log('📦 Loading workouts from store:', storeWorkouts.length);
+      
+      // Пробуем загрузить с сервера
       const response = await fetch('/api/workouts', {
         credentials: 'include',
       });
 
       if (response.ok) {
         const data = await response.json();
+        console.log('🌐 Loaded workouts from server:', data.workouts?.length || 0);
         setWorkouts(data.workouts || []);
+      } else {
+        // Если сервер не ответил, используем локальные данные
+        console.log('⚠️ Server failed, using local store');
+        setWorkouts(storeWorkouts);
       }
     } catch (error) {
-      console.error('Failed to load workouts:', error);
+      console.error('❌ Failed to load workouts from server:', error);
+      // В случае ошибки всегда используем локальные данные
+      console.log('📦 Using local store as fallback');
+      setWorkouts(storeWorkouts);
     } finally {
       setLoading(false);
     }
